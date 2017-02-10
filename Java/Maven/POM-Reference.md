@@ -35,13 +35,24 @@ Classifier: an optional & arbitrary string that -if present- is appended to the 
 Type: corresponds to an artifact's packaging type. Refer back to Maven POM Ref.
 
 Scope: There are 5 scopes, refers to the classpath of the task at hand (compiling, runtime, etc), & scope is also how to limit transitive dependencies.
-* compile
-* provided
-* runtime
-* test
-* system
+* compile - default scope
+* provided - ?
+* runtime - indicates the dependency is not required for compilation, but is required for execution
+* test - not required for normal use of application, and is only available for test & execution phases
+* system - similar to provided (?) except that you have to provide the jar which contains it explicitly, the artifact is always available and not looked up in a repository.
 
+systemPath: this requires an absolute path and should only be used if the scope is system.
 
+optional: used when a projects (Project A) own dependency isn't necessary if another project (Project B) is using that project (Project A). See Maven's POM Ref.
+
+Non-Maven dependcies rquire workarounds to use in a maven project. Maven really wants you to only use dependcies which are also Maven Projects. If that's just not possible, then there are 3 workarounds:
+
+1. Install the dependency locally:
+`mvn install:install-file -Dfile=non-maven-proj.jar -DgroupId=com.some.groupId -DartifactId=non-maven-proj -Dversion=1 -Dpackaging=jar`
+
+2. Create a repo and deploy there, deploy:deploy-file, this is basically the same as option 1, but better if a team is working on the project.
+
+3. Set the dependency scope to system and define systemPath. This is not recommended.
 
 
 
