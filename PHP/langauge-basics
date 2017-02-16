@@ -1,0 +1,32 @@
+# Variables
+PHP is a dynamic language, although strict types can be used.
+
+`
+$myVar = 1;
+`
+
+Strict types: TODO
+
+# Arrays
+
+
+# Conditionals
+If
+
+Switch
+
+# Loops
+As with conditionals, there are two syntactic options for loops, braces or colon.
+
+```
+//Braces
+for($i = 0; $i <= 10; $i++) {
+  echo $i;
+}
+
+//Colon
+<?php for($i = 0; $i <= 10; $i++) : ?>
+  <p><?= $i ?></p>
+<?php endfor ?>
+
+```
