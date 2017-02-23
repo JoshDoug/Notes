@@ -101,7 +101,24 @@ From Maven's POM Reference, verbatim: According to the POM 4.0.0 XSD (XML Schema
 To break it down, the same xml element build is used for both, but has different corresponding elements based on the context/placement in the POM, but also shares a set of base elements, right? The two contexts are the 'project build' as a direct child of project, the root node, & the 'profile build' which is nested in the profile element.
 
 ### The BaseBuild Element Set
+```
+<build>
+  <defaultGoal>install</defaultGoal>
+  <directory>${basedir}/target</directory>
+  <finalName>${artifactId}-${version}</finalName>
+  <filters>
+    <filter>filters/filter1.properties</filter>
+  </filters>
+  ...
+</build>
+```
 
+* defaultGoal :
+* directory : build target directory
+* finalName :
+* filter :
+
+#### Resources
 
 
 ### The Build Element Set
