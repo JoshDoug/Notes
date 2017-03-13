@@ -1,0 +1,30 @@
+# Man Pages
+Linux distros typically come with the man utility or it can be compiled in (like LFS).
+There are a number of standard man pages for the OS as well as for the common commands.
+Most commands and programs have their own man pages.
+
+Common man pages:
+* man builtin
+* man man-pages
+* man 1 intro
+* man 8 intro
+
+## Man Page Sections:
+
+1. User Commands
+2. System Calls
+3. Library Functions
+4. Special Files
+5. File Formats
+6. Games
+7. Conventions and Miscellany
+8. Administration and Privileged Commands
+
+Errata:
+* L: Math Library Functions
+* N: TCL Functions
+
+Useful links:
+* https://linux.die.net/man/
+* http://tldp.org/
+* http://explainshell.com/

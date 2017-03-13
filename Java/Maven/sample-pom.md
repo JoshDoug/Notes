@@ -13,7 +13,7 @@ This can deal with the issue of Mavens java versioning, and sets the mainClass w
     <version>0.0</version>
     <packaging>jar</packaging>
 
-    <name>LearningJavaFXML</name>
+    <name>artifactName</name>
     <url>http://maven.apache.org</url>
 
     <properties>

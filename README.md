@@ -3,10 +3,6 @@ A collection of notes, divided up into folders by topic.
 
 Current Structure:
 
-Java
-* JavaFX
-* Maven
-
 ```
 C/
 CSS/
@@ -22,6 +18,18 @@ PHP/
 WebFrameworks
 ├── BootStrap
 └── Skeleton
+NIX/
+├── Commands/
+│   ├── ls
+│   └── grep
+├── Vim
+├── Emacs
+├── Tmux
+├── Man Pages
+├── SAR
+└── Nano
+Windows/
+└── PowerShell
 ```
 
 Example structure using bootstap's layout:
