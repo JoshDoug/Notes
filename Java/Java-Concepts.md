@@ -25,6 +25,7 @@ Create the project directory and files within it:
 
 ```
 mkdir -pv HelloWorld/{build/{classes,jar},src/oata}
+cd HelloWorld
 ```
 Then create the HelloWorld java source file:
 ```
