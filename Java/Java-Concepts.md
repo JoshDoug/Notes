@@ -53,6 +53,6 @@ echo "Main-Class: oata.HelloWorld" > myManifest
 
 Then create and run a jar of it:
 ```
-jar cfm build/jar/HelloWorld.jar myManifest -C build/classes
+jar cfm build/jar/HelloWorld.jar myManifest -C build/classes .
 java -jar build/jar/HelloWorld.jar
 ```
