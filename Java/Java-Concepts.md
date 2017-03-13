@@ -24,7 +24,7 @@ Setting up and running a project from the command line (HelloWorld)
 Create the project directory and files within it:
 
 ```
-mkdir HelloWorld/{build/{classes,jar},src/oata}
+mkdir -pv HelloWorld/{build/{classes,jar},src/oata}
 ```
 Then create the HelloWorld java source file:
 ```
