@@ -82,6 +82,17 @@ Used to add new files or edit files to the staging index
 * Add several specific files: `git add file1.txt file2.txt`
 * Add with wildcards: `git add file*` could add file1.txt and file2.txt
 
+## Remove files from git
+If you simply delete a file from the folder it will still show up in git status, to remove it run 'git rm fileToDelete.txt' and then commit that change, as you would a git add.
+
+Can also use `git rm fileToRemove.txt` to remove from git, delete it, and stage the change ready to be committed in one go, this will erase it though, not put it in the Trash or stop tracking it.
+
+## Moving files in git
+### Manually:
+If the file is manually renamed, then git thinks a file has been deleted and a new file has been added, if the original file is `git rm file.txt` removed and the renamed file is added, then running git status will show that git has at this point realised the file was just renamed (even if they aren't identical, just similar), it can then be committed normally.
+
+### With git:
+As is typicaly on NIX, moving and renaming can both be done with mv, it works the same with git: `git mv ogfile.txt aDirectory/newfilename.txt`, this will move it into a the directory, rename it, and add it to the staging index as well.
 
 ## Git Commit
 Commit messages can have a short single-line summary with an optional lengthier description. Commit messages should describe the changes and the effects in the present tense, what the commit does not what you have done. E.g. "fix bug", "fixes bug", not "fixed bug". Although the commit itself should be more descriptive..which bug? Fix bug is too vague, be clear and descriptive. Also keep it relevant to the commit, don't include comments that aren't about the commit e.g. "we should discuss this later" - bad, save that for email/JIRA/etc.
