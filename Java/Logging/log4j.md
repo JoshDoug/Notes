@@ -15,5 +15,45 @@ Programmatic configuration:
 * Extending Log4j 2: https://logging.apache.org/log4j/2.x/manual/extending.html
 * Programmatic Log4j Configuration: https://logging.apache.org/log4j/2.x/manual/customconfig.html
 
+# Resolving log4j dependencies:
+https://logging.apache.org/log4j/2.x/maven-artifacts.html
+## Using Log4j in your Apache Maven build
+To build with Apache Maven, add the dependencies listed below to your pom.xml file.
+
+pom.xml
+```
+<dependencies>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.8.1</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.8.1</version>
+  </dependency>
+</dependencies>
+```
+## Using Log4j in your Apache Ivy build
+To build with Apache Ivy, add the dependencies listed below to your ivy.xml file.
+
+ivy.xml
+```
+<dependencies>
+  <dependency org="org.apache.logging.log4j" name="log4j-api" rev="2.8.1" />
+  <dependency org="org.apache.logging.log4j" name="log4j-core" rev="2.8.1" />
+</dependencies>
+```
+## Using Log4j in your Gradle build
+To build with Gradle, add the dependencies listed below to your build.gradle file.
+
+build.gradle
+```
+dependencies {
+  compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8.1'
+  compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.1'
+}
+```
 # SLF4J
 These notes should probably also cover SLF4J - The Simple Logging Facade for Java, as this can be used with log4j to avoid lock in, but also seems to cause issues right off the bat if you don't know how to configure log4j properly (and how the h*ck do you do that).

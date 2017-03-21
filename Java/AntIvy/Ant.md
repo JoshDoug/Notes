@@ -3,6 +3,9 @@ Ant is a built tool, typically used with Ivy - a dependency management(? or fetc
 
 Ant uses build files written in XML.
 
+Installing Ant (with ivy): `brew install ant --with-ivy`.
+It's allso possible to just copy the ivy jar into the ant lib or libexec/lib directory, if you're using windows for example.
+
 ## Build Files
 A buildfile contains on project and at least one (default target.
 Targets contains task elements (?). Each task element of the buildfile can have an ```id``` attribute with which it can latter be referred to by. An id has to be unique (duh).
