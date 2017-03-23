@@ -100,6 +100,35 @@ Commit messages can have a short single-line summary with an optional lengthier 
 Commit: `git commit -m "Commit Message"`
 * -m for message
 
+Add & Commit: `git commit -am "Commit Message"`
+* use carefully
+
+### Amending Commits
+You can't amend any commit later than the current most recent commit that HEAD is pointing to.
+
+`git commit --amend -m "Changing commit message to something useful"`
+Can be used to change code committed, or even just the commit message.
+
+### Retrieving old Versions
+Instead of amending older commits (which would violate git's data integrity) you can make new commits which undo what was done in the older commits - ensures the log of commits is accurate.
+
+Resetting a file to a specific point:
+`git checkout 290salkd94wq -- file.txt` where 290sa.. is the hash for the commit you want the file to be reverted to. This file is then put in the staging area.
+
+Reverting using the git revert command:
+`git revert 290salkd94wq`
+This will open up your editor to give you a chance to edit the commit message. The command simply flips all the changes from the previous commit (deletes additions, adds deletions) and immediately commits it.
+
+## Undo Changes
+### Undo changes in the working directory
+Undo changes on a file: `git checkout -- file.txt`
+The `--` is used to avoid a potential name conflict with a branch, as git checkout can also be used to switch to another branch.
+
+### Unstaging files from staging index
+Useful if you've grouping commits into sensible steps (if you've fixed two different bugs in one session they should probably still have separate commits) and you've accidentally added/staged files you don't want to commit.
+
+`git reset HEAD file.txt`
+
 ## Git diff
 Compare working directory and repository: `git diff`
 Or working and staging if there are differences there?
@@ -107,6 +136,8 @@ Or working and staging if there are differences there?
 Diff for a specific file: `git diff file1.txt`
 Diff for a staged file: `git diff --staged file1.txt`
 Diffs the staged file vs the repo, not the working dir
+
+Diff just the changed words: `git diff --color-words file.txt`
 
 So if you have a file that has been committed, then that same file has been edited and staged and then that same file has been edited again so that it has different version in the working dir, staging index, and repository, then *git diff* will show difference between working and staged and *git diff --staged* will show difference between staged and repository.
 
