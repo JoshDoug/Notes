@@ -139,6 +139,9 @@ Diffs the staged file vs the repo, not the working dir
 
 Diff just the changed words: `git diff --color-words file.txt`
 
+Diff branches: `git diff origin/master..master`
+Best to put the branch that is behind first (otherwise newer additions will show as deletions and vice versa)
+
 So if you have a file that has been committed, then that same file has been edited and staged and then that same file has been edited again so that it has different version in the working dir, staging index, and repository, then *git diff* will show difference between working and staged and *git diff --staged* will show difference between staged and repository.
 
 ## Git logs
@@ -157,6 +160,8 @@ The author name doesn't have to match exactly.
 
 Grep commits: `git log --grep="Init*"`
 This will only grep messages, not authors etc.
+
+Squash log: `git log --oneline`
 
 # Git Head
 Just a pointer that points to the most recent commit on the current branch.
