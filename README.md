@@ -16,7 +16,6 @@ Java/
 ├── Logging
 ├── Servers
 ├── Spring
-│
 └── Maven
 JavaScript/
 PHP/
@@ -36,17 +35,4 @@ NIX/
 └── Nano
 Windows/
 └── PowerShell
-```
-
-Example structure using bootstap's layout:
-```
-bootstrap/
-├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   └── bootstrap.min.css.map
-└── js/
-    ├── bootstrap.js
-    └── bootstrap.min.js
 ```

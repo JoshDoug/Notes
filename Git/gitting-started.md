@@ -129,6 +129,30 @@ Useful if you've grouping commits into sensible steps (if you've fixed two diffe
 
 `git reset HEAD file.txt`
 
+### Git Reset
+Powerful yet dangerous, moves the HEAD pointer to an earlier commit so that you can start from there.
+
+There are different types of git resets: Soft, Mixed, Hard
+
+#### Soft Reset - the safest reset
+Soft moves the HEAD pointer to the specified commit, but it doesn't change the staging index or the working directory at the same time. It just moves the pointer. So the repository is at an earlier version, but the working and staging directories are the same as they were before the reset. So if you committed everything you would be back to where you were before the reset, but your git log/history would be messed up. You could run a diff to see all the changes that have happened from the commit where the HEAD has been reset to.
+
+`git reset --soft <commit hash>`
+
+If you reset to an earlier commit, you can still move back to the latest by running reset again, with the commit hash of the latest commit. But you will need to have this saved somewhere because git log will not show it anymore (it will only show commits up to the current point where the HEAD is). What happens if you've made changes and commits since and want to revert back? I do not know, TODO: find out. -- Seems like new commits will obliterate any commits beyond where HEAD is pointing.
+
+#### Mixed Reset
+Moves the repository back to the commit, changes the staging directory to match the repository, but leaves the working directory alone.
+
+`git reset --mixed`
+
+#### Hard Reset
+Moves the repository, staging index, and working directory back to the point of the commit (staging and working will be the same as the repo) and everything that was committed after that commit will have been obliterated. Use only when absolutely necessary.
+
+You could still revert to the latest commit, but any working or staging index changes will have been lost. And this wont be an option after making further commits. (I think -hmm maybe not. It would eventually get 'garbage collected' but if you saved the hash it would be accessible, apparently).
+
+`git reset --hard`
+
 ## Git diff
 Compare working directory and repository: `git diff`
 Or working and staging if there are differences there?
@@ -162,6 +186,15 @@ Grep commits: `git log --grep="Init*"`
 This will only grep messages, not authors etc.
 
 Squash log: `git log --oneline`
+
+## Git Clean
+Remove untracked files
+
+Test run (shows what would be removed but doesn't do anything):
+`git clean -n`
+
+Removes any untracked files (deletes them):
+`git clean -f`
 
 # Git Head
 Just a pointer that points to the most recent commit on the current branch.
