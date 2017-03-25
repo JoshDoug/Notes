@@ -44,8 +44,10 @@ To list configurations: `git config --list`
 Other configurations:
 
 `git config --global core.editor "vim"`
-`git config --global core.editor "vim -wl1"` Not sure if this is just for mate?
+`git config --global core.editor "vim -wl1"` Not sure if this is just for mate (textmate)?
 `git config --global color.ui true`
+`git config --global core.excludesfile ~/.gitignore_global`
+
 
 Git Autocompletion:
 In the home directory run (that's a capital 'oh' not a 'zero'):
