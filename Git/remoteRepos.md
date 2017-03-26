@@ -39,6 +39,27 @@ Fetch often - no reason not to do it often
 ## Branches
 Does this make sense in this file? Not really.
 
-* `git branch`
+* `git branch` view branches (but not remotes)
+* `git branch newbranch` creat a new branch called newbranch
 * `git branch -r` lists remote branches
 * `git branch -a` lists all branches
+
+Switch branches: `git checkout test_branch`
+Create branch and switch to it: `git checkout -b new_branch`
+
+Comparing branches:
+`git diff branch1..branch2`
+
+Renaming branches: `git branch -m new_feature better_name` rename new_feature branch as better_name, -m is the same as --move
+
+Deleting branches, switch to master first (cannot delete the branch you are currently on): `git branch -d branch_to_delete` -d or --delete
+
+If you have unmerged commits then git will warn you not to delete it, but you can override this by passing -D instead of -d.
+
+Show current branch on command prompt:
+Add the file to prompt and source it (like .git-completion.bash etc)
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+On macOS or Linux add following to bashrc: `PS1='$(__git_ps1 "(%s)")\u:\W\$ '` where `$(__git_ps1 "(%s)")` is the important part for showing the branch. The rest is just additional prompt example additions.
+
+On Windows: should already be setup when installing git! If not you can create and edit a bash_profile or bashrc used within git bash. E.g. `export PS1='\W$(__git_ps1 "(%s)") > '` saved as .bash_profile in the normal windows user home directory.
