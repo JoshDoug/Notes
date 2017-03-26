@@ -165,10 +165,15 @@ Diffs the staged file vs the repo, not the working dir
 
 Diff just the changed words: `git diff --color-words file.txt`
 
-Diff branches: `git diff origin/master..master`
+Diff branches:
+* `git diff origin/master..master`
+* `git diff --color-words branch1..branch2`
+* `git diff --color-words branch1..branch2^` compare branch1 with previous commit to branch2 (blowing my mind a little)
 Best to put the branch that is behind first (otherwise newer additions will show as deletions and vice versa)
 
 So if you have a file that has been committed, then that same file has been edited and staged and then that same file has been edited again so that it has different version in the working dir, staging index, and repository, then *git diff* will show difference between working and staged and *git diff --staged* will show difference between staged and repository.
+
+See if a branch contains all the changes of another branch (all changes have been merged into it), compared to the current branch: `git branch --merged`
 
 ## Git logs
 Get the commit log: `git log`
@@ -176,10 +181,18 @@ Get the commit log: `git log`
 Display last 5 commits: `git log -n 5`
 
 Get commits from a date: `git log --since=2017-03-20`
+Can also use --after, it is synonymous with --since
 
 Get commits until a date: `git log --until=2017-03-21`
+Can also use --before, it is synonymous with --until
 
-Can combine since & until for a date range.
+Can combine since & until for a date range, and specify dates in other ways:
+* `git log --since=2 weeks ago" --until="3 days ago"`
+* `git log --since=2.weeks --until=3.days`
+
+Show a range of commits:
+* `git log 2907d12..acf8750` Has to be old..new to show any commits, wrong way around will not have any output.
+* `git log c4b913e.. index.html` Show a range from the hash specified up until the latest commit for this file (ignore commits that didn't modify that file)
 
 Get commits from a specific author: `git log --author="Joshua"`
 The author name doesn't have to match exactly.
@@ -188,6 +201,46 @@ Grep commits: `git log --grep="Init*"`
 This will only grep messages, not authors etc.
 
 Squash log: `git log --oneline`
+Squash to certain number of commits: `git log --oneline -5`
+Squash but show full hash: `git log --format=oneline`
+
+Get patch detail: `git log -p` This will show the additions/removals/changes as well as the usual log info.
+
+* `git log --stat --summary`
+* `git log --stat` visualises additions and removals
+* `git log --summary` adds info on creation and removal of files
+* `git log --format=short` shortens log messages
+* `git log --format=medium` the default
+* `git log --format=full`
+* `git log --format=fuller`
+* `git log --format=email`
+* `git log --format=raw`
+* `git log --oneline --graph --all --decorate` nice combination of options
+
+`git log --graph` great for showing branches etc, if you're just working on master then it's linear
+
+## Git Show - look at a specific commit
+Get info on a specific commit - hash, author, date, comment, diff, etc:
+* `git show <hash>`
+* E.g. `git show d790639`
+
+### Comparing commits
+`git diff <hash>` shows differences between current working dir and the repo at the point of that commit, e.g. `git show d790639`
+
+Get changes for a specific file from a certain commit compared to the file currently in the working directory: `git diff <hash> file.txt`
+
+Compare two arbritary commits: `git diff <hash>..<hash>`, e.g. `git diff 795fd46..c2b39b4`
+
+Differences between two commits for a specific file: `git diff <hash>..<hash> file.txt`, e.g. `git diff 795fd46..c2b39b4 build.xml`
+
+Can also use the parent referencing: `git diff <hash>..HEAD^^`
+
+Ignoring whitespace changes: `git diff -b` & `git diff --ignore-space-change` or `git diff -w` or `git diff --ignore-all-space`
+
+Useful example combinations:
+* `git diff --stat --summary <hash>..HEAD`
+* `git diff --stat --summary b3c8900..HEAD`
+* `git diff -b`
 
 ## Git Clean
 Remove untracked files
@@ -198,9 +251,41 @@ Test run (shows what would be removed but doesn't do anything):
 Removes any untracked files (deletes them):
 `git clean -f`
 
+# Git Stash
+
+# Git Squash
+
+# Git Rebase
+
 # Git Head
 Just a pointer that points to the most recent commit on the current branch.
 
 Interact with head:
 * `cat .git/HEAD`
 * `git log HEAD`
+
+## Navigating the commit tree
+### Tree-ish
+Tree-ish is a reference to a commit, or directory(?).
+A reference to a commit can be a full SHA-1 hash, or a shortened SHA-1. A shortened SHA-1 hash has to be at least 4 characters and should be unambiguous - this will depend on the number of commits to a project, but a safe choice is usually 8-10 characters.
+
+So tree-ish can refer to:
+* full SHA-1 hash
+* short SHA-1 hash
+* A HEAD pointer
+* A branch reference, tag reference
+* ancestry (parent commits)
+  * HEAD^, acf87504^, master^
+  * The caret refers to the parent (points up on the tree)
+  * HEAD~1, HEAD~, HEAD~3, number denotes how many generations back
+  * HEAD^^, HEAD~2 - grandparent commit
+  * HEAD^^^, HEAD~3, acf87504^^^, master~3 (mix and match)
+
+Looking at a tree:
+* `git ls-tree HEAD`
+* `git ls-tree master`
+* `git ls-tree master directory/` - shows how a specific directory looks
+* `git ls-tree master^ directory` - shows how a specific directory looked one commit back (Using the caret, ^)
+* `git ls-tree f504912e05a9dad` - using the hash from running ls-tree (so...not a git commit hash)
+
+Everything is either shown as a tree or a blob. A blob is a file (any file, not just binary files), and a tree is a directory. Every file (blob) and directory (tree) has its own SHA-1 hash associated with it, which will change if the contents are changed (even the directory hash will change).
