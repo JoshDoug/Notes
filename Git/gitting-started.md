@@ -105,6 +105,8 @@ Commit: `git commit -m "Commit Message"`
 Add & Commit: `git commit -am "Commit Message"`
 * use carefully
 
+Commit with message and description: `git commit` this will open up vim, then just enter a message, hit enter twice and add the description and git & github will treat it as a description - https://stackoverflow.com/questions/16122234/how-to-commit-a-change-with-both-message-and-description-from-the-command-li
+
 ### Amending Commits
 You can't amend any commit later than the current most recent commit that HEAD is pointing to.
 
