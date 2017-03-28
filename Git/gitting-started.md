@@ -254,6 +254,29 @@ Removes any untracked files (deletes them):
 `git clean -f`
 
 # Git Stash
+A place to store changes temporarily without having to commit them to the repository. It is not part of the repo, staging index, or working directory, it is a special 4th area separate from the others. They are made in a way similar to commits but not identical, they don't have an associated hash.
+
+Useful for when you want to switch branches but you have uncommitted changes on the current branch that you're not ready to commit. This allows you to shove it in a temporary draw out of sight for a bit.
+The stash can also be used for switching the changes you've made to another branch, if for example you've been working on the wrong branch but haven't committed the changes yet. Who hasn't done this?
+The stash is purely local, so the messages are just for you.
+
+Create a stash: `git stash save "message to yourself"`
+
+Git then does a reset head and sets the staging and working directory to the status of the repo at HEAD. You can now switch branches.
+
+Viewing stashed changes: `git stash list` the stash is available on any branch.
+
+View more info about a specific stash: `git stash show stash@{0}` where stash@{0} is taken from the stash list, and this displays a diff stat. Use -p to see a proper diff: `git stash show -p stash@{0}`
+
+Retrieving a stash. As with merges, if you've made changes on the branch since the code was stashed, then there can be conflicts, these can be resolved the same way a merge conflict would be resolved. There are two commands to pull items out of the stash:
+
+`git stash pop` - moves it out of the stash and into the working directory, probably the one that will be used most regularly. If a stash is not specified then it will pop the first stash out. The stashs are 0 indexed, so for the third stash you would run: `git stash pop stash@{2}`.
+
+`git stash apply` - copies it out of the stash, leaving a copy in the stash. This would allow you to apply the same stash to multiple branches - hmm. The stashs are 0 indexed, so for the third stash you would run: `git stash apply stash@{2}`.
+
+Removing stashed changes: `git stash drop stash@{1}`
+
+Clear entire stash: `git stash clear`
 
 # Git Squash
 
