@@ -65,6 +65,20 @@ Windows : `$HOME\.gitconfig`
 ### Project
 my_project/.git/config
 
+### Git Aliases
+Creating aliases for common git commands, a common set:
+* `git config --global alias.st "status"`
+* `git config --global alias.co checkout`
+* `git config --global alias.ci commit` ci as in *check in*, you check in your changes by committing them.
+* `git config --global alias.br branch`
+* `git config --global alias.df diff`
+* `git config --global alias.dfs "diff --staged"`
+* `git config --global alias.logg "log --graph --decorate --oneline --abrev-commit --all"`
+
+Double quotes around the command are only really necessary if there's a space.
+
+To see an alias, just *cat* the relevant gitconfig file, typically global.
+
 ## Git Help
 Using `git help`
 
