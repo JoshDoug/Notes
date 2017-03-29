@@ -180,3 +180,24 @@ Person 1, again:
 5. Make sure master is up to date: `git checkout master`, `git fetch`, `git merge origin/master`, or `git pull`
 6. `git merge <branch>`
 7. `git push`
+
+# Setting up SSH Keys
+Bleh
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+# Git Hosting
+## Self Hosting
+From git-scm: https://git-scm.com/book/en/v1/Git-on-the-Server
+
+gitosis (dead) - https://github.com/tv42/gitosis
+gitolite (based on gitosis)
+* http://gitolite.com/gitolite/index.html
+* https://github.com/sitaramc/gitolite
+* https://git-scm.com/book/en/v1/Git-on-the-Server-Gitolite
+
+## Hosting Companies
+Hosting git - https://git-scm.com/book/en/v1/Git-on-the-Server-Hosted-Git
+
+GitHub
+BitBucket - https://bitbucket.org/
+GitLab - https://about.gitlab.com/
