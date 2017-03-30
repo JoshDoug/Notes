@@ -17,6 +17,35 @@ DAO - Data Access Object
 
 OSGi - Open Services Gateway Initiative
 
+# Java Tutorials
+Main tutorial page: https://docs.oracle.com/javase/tutorial/index.html
+
+JavaSE Docs:
+https://docs.oracle.com/javase/8/docs/
+
+JavaEE Docs:
+https://docs.oracle.com/javaee/7/index.html
+## JavaFX Tutorials and Documentation
+https://docs.oracle.com/javase/8/javase-clienttechnologies.htm
+
+# Java Properties
+Setting Java version on mac:
+```
+export JAVA_HOME=`/usr/libexec/java_home -v '1/8*'`
+
+or
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_121`
+```
+See the java_home man page.
+
+For a rather subpar overview of JDK install on macOS: https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html
+
+## Properties
+https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
+
+https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+
 # Running from the CLI
 Setting up and running a project from the command line (HelloWorld)
 (Using the pre-Ant part of Ant's tutorial)
@@ -60,6 +89,7 @@ java -jar build/jar/HelloWorld.jar
 For more argument options see:
 * man java
 * man javac
+* man java_home
 * man jar
 * man javah - C header and stub file generator
 * man jps
