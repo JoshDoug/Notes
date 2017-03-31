@@ -46,22 +46,10 @@ https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
 
 https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
 
-# Java Annotations - where does this make sense?
-Annotations are a form of metadata about a program but are not part of the program itself and have no direct effect on the operation of the code they annotate.
+# Java Manifest
+Setting up the manifest.
 
-They have a number of uses:
-* Information for the compiler - to detect errors or supress warnings
-* Compile-time and deployment-time processing - Software tools can process annotation information to generate code, XML files, etc
-* Runtime processing - Some annotations are available to be examined at runtime
-
-An annotation: `@Entity`, the @ signifies to the compiler that it is an annotation. An annatation can include elements:
-```
-@Author(
-    name = "JoshDoug",
-    date = "3/27/2014"
-  )
-  class DemoClass() {...}
-```
+https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
 
 # Running from the CLI
 Setting up and running a project from the command line (HelloWorld)
