@@ -48,3 +48,20 @@ class ExClass {...}
 
 ## Where Annotations Can Be Used
 Annotations can be applied to declarations: declarations of classes, fields, methods, and other program elements.
+
+They can also be applied to *type use*, so anywhere that you use a type, an annotation can be used. A few examples of where types are used are class instance creation expressions (new), casts, implements clauses, and throws clauses. This form of annotation is called a type annotation, examples:
+
+Class instance creation expression:
+* `new @Interned MyObject();`
+
+Type cast:
+* `myString = (@NonNull String) str;`
+
+implements clause:
+* `class UnmodifiableList<T> implements @Readonly List<@Readonly T> { ... }`
+
+Thrown exception declaration:
+* `void monitorTemperature() throws @Critical TemperatureException { ... }`
+
+## Predefined Annotations
+https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
