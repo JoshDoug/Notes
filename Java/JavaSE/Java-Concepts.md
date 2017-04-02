@@ -41,10 +41,7 @@ See the java_home man page.
 
 For a rather subpar overview of JDK install on macOS: https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html
 
-## Properties
-https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
-
-https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+More on Java Properties in Platform-Environment.md.
 
 # Java Manifest
 Setting up the manifest.
