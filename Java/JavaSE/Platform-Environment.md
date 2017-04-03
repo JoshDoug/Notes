@@ -134,6 +134,35 @@ When a Java application uses a ProcessBuilder object to create a new process, th
 * Services - [Service Loader](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) & [Extensions](https://docs.oracle.com/javase/tutorial/ext/index.html)
 
 ## System Utilities
+Using the [System](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html) class.
 
+### Command-Line I/O Objects
+System provides several predefined I/) objects useful for Java apps launched from a CLI. See [I/O from the Command Line](https://docs.oracle.com/javase/tutorial/essential/io/cl.html) Oracle tutorial for more info.
+
+## System Properties
+The System class maintains a Properties object that describes the configuration of the current working environment.
+
+To see all Java property values picked up by a JVM: `java -XshowSettings:all`
+
+Table covering some of the most important system properties:
+
+| Key           | Meaning     |
+| ------------- |-------------|
+|"file.separator"|Character that separates components of a file path. This is "/" on UNIX and "\" on Windows.|
+|"java.class.path"|Path used to find directories and JAR archives containing class files. Elements of the class path are separated by a platform-specific character specified in the path.separator property.|
+|"java.home"|Installation directory for Java Runtime Environment (JRE)|
+|"java.vendor"|JRE vendor name|
+|"java.vendor.url"|JRE vendor URL|
+|"java.version"|JRE version number|
+|"line.separator"|Sequence used by operating system to separate lines in text files|
+|"os.arch"|Operating system architecture|
+|"os.name"|Operating system name|
+|"os.version"|Operating system version|
+|"path.separator"|Path separator character used in java.class.path|
+|"user.dir"|User working directory|
+|"user.home"|User home directory|
+|"user.name"|User account name|
+
+Access to system properties can be restricted by the [Security Manager](https://docs.oracle.com/javase/tutorial/essential/environment/security.html), but mostly only an issue with Applets.
 
 ## PATH & CLASSPATH
