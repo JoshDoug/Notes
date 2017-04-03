@@ -124,6 +124,15 @@ public class Env {
 
 When accessing System Properties it's best to access them using the java provided way of accessing them, instead of via environment variables to avoid inconsistencies between operating systems.
 
+#### Passing Environment Variables to New Processes
+When a Java application uses a ProcessBuilder object to create a new process, the default set of environment variables passed to the new process is the same set provided to the application's virtual machine process. The application can change this set using ProcessBuilder.environment.
+
+### Other Configuration Utilities
+* [Preferences API](https://docs.oracle.com/javase/8/docs/technotes/guides/preferences/index.html)
+* JAR Manifest - more info [here](https://docs.oracle.com/javase/tutorial/deployment/jar/index.html)
+* Java Web Start uses a JNLP file - [JWS Tutorial](https://docs.oracle.com/javase/tutorial/deployment/webstart/index.html)
+* Services - [Service Loader](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) & [Extensions](https://docs.oracle.com/javase/tutorial/ext/index.html)
+
 ## System Utilities
 
 
