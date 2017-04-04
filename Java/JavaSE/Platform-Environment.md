@@ -181,3 +181,78 @@ Only really relevant to applets, so [link](https://docs.oracle.com/javase/tutori
 `exit` causes the JVM to shut down, can specify an integer value which is available to the process that launched the application. The integer indicates that cause for the shutdown, e.g. an exit status of 0 is by convention just a normla shutdown, while any other number is typically an error code.
 
 ## PATH & CLASSPATH
+Oracle tutorial on [PATH and CLASSPATH](https://docs.oracle.com/javase/tutorial/essential/environment/paths.html)
+
+Rough JDK directory structure (JavaSE 8) (run `tree -dL 3`):
+```
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+├── bin
+├── db
+│   ├── bin
+│   └── lib
+├── include
+│   └── darwin
+├── jre
+│   ├── bin
+│   └── lib
+│       ├── applet
+│       ├── cmm
+│       ├── ext
+│       ├── fonts
+│       ├── images
+│       ├── jfr
+│       ├── jli
+│       ├── management
+│       ├── security
+│       └── server
+├── lib
+│   ├── missioncontrol
+│   │   ├── Java\ Mission\ Control.app
+│   │   ├── __MACOSX
+│   │   ├── configuration
+│   │   ├── dropins
+│   │   ├── features
+│   │   ├── p2
+│   │   └── plugins
+│   └── visualvm
+│       ├── etc
+│       ├── platform
+│       ├── profiler
+│       └── visualvm
+└── man
+    ├── ja
+    ├── ja_JP.UTF-8
+    │   └── man1
+    └── man1
+```
+
+Restricted to directories only and a depth of 3.
+
+### Setting the PATH Variable
+On windows 7:
+1. From the desktop, right click the Computer icon.
+2. Choose Properties from the context menu.
+3. Click the Advanced system settings link.
+4. Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. Click Edit. If the PATH environment variable does not exist, click New.
+5. In the Edit System Variable (or New System Variable) window, specify the value of the PATH environment variable. Click OK. Close all remaining windows by clicking OK.
+
+Example PATH env variable: `C:\Java\jdk1.7.0\bin;C:\Windows\System32\;C:\Windows\;C:\Windows\System32\Wbem`
+
+On NIX, something like:
+`export PATH=/usr/local/jdk1.7.0/bin:$PATH`
+
+On macOS:
+```
+export JAVA_HOME=`/usr/libexec/java_home -v '1/8*'`
+```
+No need to add it to PATH.
+
+### Checking the CLASSPATH variable, all platforms
+Edit it as you would any other variable on a platform.
+Don't set it when using Ant.
+
+Windows: `echo %CLASSPATH%`
+
+NIX: `echo $CLASSPATH`
+
+More info: [Setting the Class Path](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html)
