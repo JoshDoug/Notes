@@ -165,4 +165,19 @@ Table covering some of the most important system properties:
 
 Access to system properties can be restricted by the [Security Manager](https://docs.oracle.com/javase/tutorial/essential/environment/security.html), but mostly only an issue with Applets.
 
+Other properties to do with Java [RIA](https://docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/properties.html)
+
+From Oracle's Tutorial:
+> The setProperties method changes the set of system properties for the current running application. These changes are not persistent. That is, changing the system properties within an application will not affect future invocations of the Java interpreter for this or any other application. The runtime system re-initializes the system properties each time its starts up. If changes to system properties are to be persistent, then the application must write the values to some file before exiting and read them in again upon startup.
+
+### Security Manager
+Only really relevant to applets, so [link](https://docs.oracle.com/javase/tutorial/essential/environment/security.html) instead of notes. On macOS (and presumably Windows & Linux) running `System.getSecurityManager` returns null instead of the SecurityManager object. Outside of Applets, an application will usually only have a SecManager if one has been created by the application itself, instead of it being externally enforced by, for example, a browser.
+
+### Misc System Methods
+`arrayCopy`
+
+`currentTimeMillis` & `nanoTime` which are useful for measuring time intervals, whereas `java.util.Calendar.getInstance` is a better option for getting the current time.
+
+`exit` causes the JVM to shut down, can specify an integer value which is available to the process that launched the application. The integer indicates that cause for the shutdown, e.g. an exit status of 0 is by convention just a normla shutdown, while any other number is typically an error code.
+
 ## PATH & CLASSPATH
