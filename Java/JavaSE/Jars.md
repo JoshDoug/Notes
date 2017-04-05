@@ -77,7 +77,12 @@ Created-By: 1.7.0_06 (Oracle Corporation)
 
 These lines illustrates how manifest entries are set, using "header: value" pairs.
 
-## Modifying a Manifest File
+## [Modifying a Manifest File](https://docs.oracle.com/javase/tutorial/deployment/jar/modman.html)
+Creating a jar with a modified manifest, the basic command has this format: `jar cfm jar-file manifest-addition input-file(s)`
+
+The `manifest addition` if a file with additions to the default manifest file that gets added, not a replacement per se, at least as far as I understand it. The m option in the manifest *seems* to refer to merging options rather than standing for manifest. So you are merging options from your own manifest, not specifying the manifest. In practice this might be irrelevant.
+
+Regarding the example, the m and f options must be in the same order as the corresponding arguments.
 
 # Signing and Verifying JAR Files
 
