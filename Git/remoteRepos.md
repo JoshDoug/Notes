@@ -181,6 +181,8 @@ Person 1, again:
 6. `git merge <branch>`
 7. `git push`
 
+What looks like an excellent collaboration workflow tutorial: https://www.atlassian.com/git/tutorials/comparing-workflows
+
 # Setting up SSH Keys
 Bleh
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
