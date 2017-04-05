@@ -37,6 +37,7 @@ E.g.
 git config --system user.name "Joshua Stringfellow"
 git config --global user.name "Joshua Stringfellow"
 git config --local user.name "Joshua Stringfellow K1460846"
+git config --local user.email "username@email.com"
 ```
 
 To list configurations: `git config --list`
