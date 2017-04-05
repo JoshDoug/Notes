@@ -56,9 +56,23 @@ Where audio and images are folders containing assets used by Main, then to packa
 
 To create a JAR from the project where all the files are in the parent directory, run: `jar cf ImageAudio.jar -C images . -C audio .`, with the full stop. The -C images part of this command directs the Jar tool to go to the images directory, and the . following -C images directs the Jar tool to archive all the contents of that directory. The -C audio . part of the command then does the same with the audio directory
 
-## Viewing the Contents of a JAR File
+## [Viewing the Contents of a JAR File](https://docs.oracle.com/javase/tutorial/deployment/jar/view.html)
+Basic command to view JAR contents: `jar tf jar-file`
+* The t option specifies a table of contents
+* The f options specifies the JAR file
+* You can also add the v option, for verbose, which provides additional info such as file sizes and dates modified
 
-## Extracting the Contents of a JAR File
+The order of t and f doesn't matter, but there must not be any space in between them.
+
+## [Extracting the Contents of a JAR File](https://docs.oracle.com/javase/tutorial/deployment/jar/unpack.html)
+Basic command to extract JAR contents: `jar xf jar-file`
+To speciffy specific files to extract: `jar xf jar-file archived-files(s)` specify multiple files with a space seperated list
+* x option is to extract
+* f option is to specify the jar file
+
+When extracting a JARs contents, the contents are copied out and the original JAR remains unchanged. The extracted files and directories reflect the relevant file paths and directories within the JAR.
+
+Caution: When it extracts files, the Jar tool will overwrite any existing files having the same pathname as the extracted files.
 
 ## Updating a JAR File
 
