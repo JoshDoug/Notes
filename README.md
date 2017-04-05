@@ -36,3 +36,4 @@ NIX/
 Windows/
 └── PowerShell
 ```
+To update current directory structure, just run tree and copy over the output.
