@@ -74,9 +74,23 @@ When extracting a JARs contents, the contents are copied out and the original JA
 
 Caution: When it extracts files, the Jar tool will overwrite any existing files having the same pathname as the extracted files.
 
-## Updating a JAR File
+## [Updating a JAR File](https://docs.oracle.com/javase/tutorial/deployment/jar/update.html)
+The Jar tool provides a `u` option which you can use to update the contents of an existing JAR file by modifying its manifest or by adding files.
+The basic command to do this: `jar uf jar-file input-file(s)`
 
-## Running JAR-Packaged Software
+Any files already in the archive having the same pathname as a file being added will be overwritten.
+
+So if you wanted to add a new image to the images directory in a jar you've already made, you could run: `jar uf TicTacToe.jar images/new.gif` instead of needing to recreate the jar. If you're unsure of what files and directory structure the jar has, then you can just view the contents first.
+
+## [Running JAR-Packaged Software](https://docs.oracle.com/javase/tutorial/deployment/jar/run.html)
+Link also covers applets packaged in JAR files, but who cares about applets.
+
+The basic command to run a jar: `java -jar jar-file`
+
+The -jar flag tells the launcher that the app is packaged in the JAR format. You can only specify one JAR file, whcih must contain all of the application-specific code. To run this command the jar must have a specified entry point, either in the JAR's manifest, or in the command itself.
+In the manifest the entry point is specified like so: `Main-Class: classname`.
+
+To run a jar without a manifest specified entry point, run: `jar -cp jar-file com.package.MainClassName` where MainClassName refers to the entry point/Main class.
 
 # Working with Manifest Files: The Basics
 
