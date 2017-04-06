@@ -70,7 +70,7 @@ To speciffy specific files to extract: `jar xf jar-file archived-files(s)` speci
 * x option is to extract
 * f option is to specify the jar file
 
-When extracting a JARs contents, the contents are copied out and the original JAR remains unchanged. The extracted files and directories reflect the relevant file paths and directories within the JAR.
+When extracting a JARs contents, the contents are copied out and the original JAR remains unchanged. The extracted files and directories reflect the relevant file paths and directories within the JAR. This also means that to extract a file in a directory, you also have to specify the directory it is in within the jar. E.g. to extract the manifest: `jar xf example.jar META-INF/MANIFEST.MF`.
 
 Caution: When it extracts files, the Jar tool will overwrite any existing files having the same pathname as the extracted files.
 
@@ -90,9 +90,10 @@ The basic command to run a jar: `java -jar jar-file`
 The -jar flag tells the launcher that the app is packaged in the JAR format. You can only specify one JAR file, whcih must contain all of the application-specific code. To run this command the jar must have a specified entry point, either in the JAR's manifest, or in the command itself.
 In the manifest the entry point is specified like so: `Main-Class: classname`.
 
-To run a jar without a manifest specified entry point, run: `jar -cp jar-file com.package.MainClassName` where MainClassName refers to the entry point/Main class.
+To run a jar without a manifest specified entry point, run: `jar -cp dir/jar-file com.package.MainClassName` where MainClassName refers to the entry point/Main class. This also shows how you can run a jar from another directory, just pass the path to it, relevant or absolute.
 
 # Working with Manifest Files: The Basics
+The manifest is a special file that can contain information about the files packaged in a JAR file. By tailoring this "meta" information that the manifest contains, you enable the JAR file to serve a variety of purposes.
 
 ## [Understanding the Default Manifest](https://docs.oracle.com/javase/tutorial/deployment/jar/defman.html)
 When a JAR is created, it automatically gets a default manifest file, an archive can only have one manifest, and it always has the relative path `META-INF/MANIFEST.MF`
@@ -108,9 +109,39 @@ These lines illustrates how manifest entries are set, using "header: value" pair
 ## [Modifying a Manifest File](https://docs.oracle.com/javase/tutorial/deployment/jar/modman.html)
 Creating a jar with a modified manifest, the basic command has this format: `jar cfm jar-file manifest-addition input-file(s)`
 
-The `manifest addition` if a file with additions to the default manifest file that gets added, not a replacement per se, at least as far as I understand it. The m option in the manifest *seems* to refer to merging options rather than standing for manifest. So you are merging options from your own manifest, not specifying the manifest. In practice this might be irrelevant.
+The `manifest addition` if a file with additions to the default manifest file that gets added, not a replacement per se, at least as far as I understand it. The m option in the manifest *seems* to refer to merging options rather than standing for manifest. So you are merging options from your own manifest, not specifying the manifest. In practice this might be irrelevant. The name of the manifest is also irrelevant, as is the file extension, myManifest, myManifest.txt, and myManifest.md will all work as long as the contents are plaintext.
 
 Regarding the example, the m and f options must be in the same order as the corresponding arguments.
+
+Warning: The text file must end with a new line or carriage return. The last line will not be parsed properly if it does not end with a new line or carriage return.
+
+## Setting an Application's Entry Point
+To specify a the entry point for a JAR use the `Main-Class` header in the manifest: `Main-Class: classname`.
+The entry point it just a class that has a main method.
+
+Use the `e` flag to create or override the manifest's Main-Class attribute, this can be used while creating or updating a JAR.
+
+To set the class to AnotherMain.class: `jar cfe app.jar MyApp MyApp.class`, then you can run the jar as normal: `java -jar app.jar`.
+
+When specifying the entry point class it can either be done the package way `com.package.Main` or relative directory `com/package/Main.class`, not sure if .class is absolutely necessary.
+
+## Adding Classes to the JAR File's Classpath
+Sometimes you need to reference classes in other JAR files from within a JAR file, as dependencies.
+
+To do this you specify classes to include in the Class-Path header field in the manifest file of an application. The Class-Path header takes the following form: `Class-Path: jar1-name jar2-name directory-name/jar3-name`
+
+By using the Class-Path header in the manifest, you can avoid having to specify a long -classpath or -cp flag when invoking Java to run the application.
+
+### Example
+You have an application jar, app.jar, that is dependent on another jar, say util.jar. They are in the same directory.
+To set the classpath for app.jar to include util.jar, follow the steps:
+
+Create a text file, e.g. manifest.txt, that contains `Class-Path: util.jar`, no path needed since they are in the same dir.
+Then create the app.jar by running: `jar cfm app.jar manifest.txt src/*.class`.
+
+Now when app.jar is run it can load the classes from util.jar.
+
+## Setting Package Version Information
 
 # Signing and Verifying JAR Files
 
