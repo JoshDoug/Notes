@@ -115,7 +115,7 @@ Regarding the example, the m and f options must be in the same order as the corr
 
 Warning: The text file must end with a new line or carriage return. The last line will not be parsed properly if it does not end with a new line or carriage return.
 
-## Setting an Application's Entry Point
+## [Setting an Application's Entry Point](https://docs.oracle.com/javase/tutorial/deployment/jar/appman.html)
 To specify a the entry point for a JAR use the `Main-Class` header in the manifest: `Main-Class: classname`.
 The entry point it just a class that has a main method.
 
@@ -125,7 +125,7 @@ To set the class to AnotherMain.class: `jar cfe app.jar MyApp MyApp.class`, then
 
 When specifying the entry point class it can either be done the package way `com.package.Main` or relative directory `com/package/Main.class`, not sure if .class is absolutely necessary.
 
-## Adding Classes to the JAR File's Classpath
+## [Adding Classes to the JAR File's Classpath](https://docs.oracle.com/javase/tutorial/deployment/jar/downman.html)
 Sometimes you need to reference classes in other JAR files from within a JAR file, as dependencies.
 
 To do this you specify classes to include in the Class-Path header field in the manifest file of an application. The Class-Path header takes the following form: `Class-Path: jar1-name jar2-name directory-name/jar3-name`
@@ -137,11 +137,43 @@ You have an application jar, app.jar, that is dependent on another jar, say util
 To set the classpath for app.jar to include util.jar, follow the steps:
 
 Create a text file, e.g. manifest.txt, that contains `Class-Path: util.jar`, no path needed since they are in the same dir.
-Then create the app.jar by running: `jar cfm app.jar manifest.txt src/*.class`.
+Then create the app.jar by running: `jar cfm app.jar manifest.txt build/classes/*.class`.
 
 Now when app.jar is run it can load the classes from util.jar.
 
-## Setting Package Version Information
+## [Setting Package Version Information](https://docs.oracle.com/javase/tutorial/deployment/jar/packageman.html)
+If you need to, you can include package version information in a manifest:
+
+|Header|Definition|
+|------|----------|
+|Name|The name of the specification|
+|Specification-Title|The title of the specification|
+|Specification-Version|The version of the specification|
+|Specification-Vendor|The vendor of the specification|
+|Implementation-Title|The title of the implementation|
+|Implementation-Version|The build number of the implementation|
+|Implementation-Vendor|The vendor of the implementation|
+
+The definitions seem a little redundant.
+
+One set of these headers can be assigned to each package. The versioning headers should appear directly beneath the `Name` header for the package:
+```
+Name: java/util/
+Specification-Title: Java Utility Classes
+Specification-Version: 1.2
+Specification-Vendor: Example Tech, Inc.
+Implementation-Title: java.util
+Implementation-Version: build57
+Implementation-Vendor: Example Tech, Inc.
+```
+
+More info on package version headers: [Package Versioning Specification](https://docs.oracle.com/javase/8/docs/technotes/guides/versioning/spec/versioning2.html#wp89936)
+
+## [Sealing Packages within a JAR](https://docs.oracle.com/javase/tutorial/deployment/jar/sealman.html)
+
+
+## [Enhancing Security with Manifest Attributes](https://docs.oracle.com/javase/tutorial/deployment/jar/secman.html)
+
 
 # Signing and Verifying JAR Files
 
