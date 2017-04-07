@@ -170,10 +170,23 @@ Implementation-Vendor: Example Tech, Inc.
 More info on package version headers: [Package Versioning Specification](https://docs.oracle.com/javase/8/docs/technotes/guides/versioning/spec/versioning2.html#wp89936)
 
 ## [Sealing Packages within a JAR](https://docs.oracle.com/javase/tutorial/deployment/jar/sealman.html)
+Packages within JAR files can be optionally sealed, which means that all classes defined in that package must be archived in the same JAR file. You might want to seal a package, for example, to ensure version consistency among the classes in your software.
+
+Does this mean you cannot optionally update a jar with new versions of classes within that jar that are part of packages which have been sealed?
+
+A package is sealed by setting the header in the manifest under the package name:
+
+```
+Name: com/companyName/packageName
+Sealed: true
+```
+
+Still not clear on this.
+TODO: Re-read and research.
 
 
 ## [Enhancing Security with Manifest Attributes](https://docs.oracle.com/javase/tutorial/deployment/jar/secman.html)
-
+These attributes only seem to be relevant to Java Applets and Java Web Start applications, so not of interest but link is available.
 
 # Signing and Verifying JAR Files
 
