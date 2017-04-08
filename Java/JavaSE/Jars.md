@@ -189,5 +189,26 @@ TODO: Re-read and research.
 These attributes only seem to be relevant to Java Applets and Java Web Start applications, so not of interest but link is available.
 
 # Signing and Verifying JAR Files
+Allows users to verify the signatures of JARs, and the JARs can be granted additional software security priveleges they wouldn't normally get (is that only for Applets/RIAs).
+
+## [Understanding Signing and Verification](https://docs.oracle.com/javase/tutorial/deployment/jar/intro.html)
+Probably never gonna use this, so check the link.
+
+[X.509 Cets](https://docs.oracle.com/javase/8/docs/technotes/guides/security/cert3.html)
+
+## [Signing JAR Files](https://docs.oracle.com/javase/tutorial/deployment/jar/signing.html)
+Basic command for signing a jar: `jarsigner jar-file alias` where alias is typically the name of the key owner and can be used to identify a key in a keystore.
+* `alias` is the alias identifying the private key that's to be used to sign the JAR file, and the key's associated certificate.
+
+The jarsigner tool prompts for a password for the keystore and alias.
+
+### How does one create a keystore, eh?
+Would be good to know, eh.
+
+## [Verifying Signed JAR Files](https://docs.oracle.com/javase/tutorial/deployment/jar/verify.html)
+Often the Java Runtime Environment can verify signed applets & jars, but you can also do this yourself, ya nerds.
+Useful for testing your own signed jars have been signed properly.
+
+Basic command: `jarsigner -verify jar-file` easy. This just tests that the signature included with the jar matches the jar.
 
 # Using JAR-related APIs
