@@ -212,3 +212,17 @@ Useful for testing your own signed jars have been signed properly.
 Basic command: `jarsigner -verify jar-file` easy. This just tests that the signature included with the jar matches the jar.
 
 # Using JAR-related APIs
+Some of the APIs:
+* The [`java.util.jar`](https://docs.oracle.com/javase/8/docs/api/java/util/jar/package-summary.html) package
+* The [`java.net.JarURLConnection`](https://docs.oracle.com/javase/8/docs/api/java/net/JarURLConnection.html) class
+* The [`java.net.URLClassLoader`](https://docs.oracle.com/javase/8/docs/api/java/net/URLClassLoader.html) class
+
+The example used for this by Oracle also contains some reflection stuff.
+
+## [The JarClassLoader Class](https://docs.oracle.com/javase/tutorial/deployment/jar/jarclassloader.html)
+The [JarClassLoader Class](https://docs.oracle.com/javase/tutorial/deployment/jar/examples/JarClassLoader.java)
+
+## T[he JarRunner Class](https://docs.oracle.com/javase/tutorial/deployment/jar/jarrunner.html)
+The [JarRunner Class](https://docs.oracle.com/javase/tutorial/deployment/jar/examples/JarRunner.java)
+
+
