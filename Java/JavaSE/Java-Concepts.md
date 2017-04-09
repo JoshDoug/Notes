@@ -1,6 +1,11 @@
 # OO Patterns, General Java Concepts etc
 Might extend to cover JVM, JRE, JDK usage and options.
 
+Tutorials provided by Oracle:
+* [Java Tutorials Learning Paths](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
+* [The Java Tutorials](https://docs.oracle.com/javase/tutorial/index.html)
+
+Lots of overlap, not sure why there are two pages for basically the same thing.
 
 POJO - Plain Old Java Object
 * An object that has both attributes and behavior
