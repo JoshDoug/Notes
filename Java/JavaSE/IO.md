@@ -31,12 +31,16 @@ Covers File IO, in particular NIO - new input output.
 Examining the concept of a path on a file system.
 
 ### [The Path Class](https://docs.oracle.com/javase/tutorial/essential/io/pathClass.html)
+The Path Class is the cornerstone class of the `java.nio.file` package.
 
 ### [Path Operations](https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html)
+Looks at methods in the `Path` class that deal with syntactic operations.
 
 ### [File Operations](https://docs.oracle.com/javase/tutorial/essential/io/fileOps.html)
+Introduces concepts common to many of the file IO methods.
 
 ### [Checking a File or Directory](https://docs.oracle.com/javase/tutorial/essential/io/check.html)
+Shows how to check a file's existence and its level of accessibility.
 
 ### [Deleting a File or Directory](https://docs.oracle.com/javase/tutorial/essential/io/delete.html)
 
@@ -45,21 +49,31 @@ Examining the concept of a path on a file system.
 ### [Moving a File or Directory](https://docs.oracle.com/javase/tutorial/essential/io/move.html)
 
 ### [Managing Metadata](https://docs.oracle.com/javase/tutorial/essential/io/fileAttr.html)
+Explains how to read and set file attributes.
 
 ### [Reading, Writing, and Creating Files](https://docs.oracle.com/javase/tutorial/essential/io/file.html)
+Shows the stream and channels methods for reading and writing files.
 
 ### [Random Access Files](https://docs.oracle.com/javase/tutorial/essential/io/rafs.html)
+Shows how to read or write files in a non-sequential manner.
 
 ### [Creating and Reading Directories](https://docs.oracle.com/javase/tutorial/essential/io/dirs.html)
+Covers APIs specific to directories, such as how to list a directory's contents.
 
 ### [Links, Symobolic or Otherwise](https://docs.oracle.com/javase/tutorial/essential/io/links.html)
+Covers issues specific to symbolic and hard linkes.
 
 ### [Walking the File Tree](https://docs.oracle.com/javase/tutorial/essential/io/walk.html)
+Demonstrates how to recursively visit each file and directory in a file tree.
 
 ### [Finding Files](https://docs.oracle.com/javase/tutorial/essential/io/find.html)
+Shows how to search for files using pattern matching.
 
 ### [Watching a Directory for Changes](https://docs.oracle.com/javase/tutorial/essential/io/notification.html)
+Shows how to use the watch service to detect files that are added, removed, or updated in one or more directories.
 
 ### [Other Useful Methods](https://docs.oracle.com/javase/tutorial/essential/io/misc.html)
+Covers important APIs that didn't fit in prior sections.
 
 ### [Legacy File IO Code](https://docs.oracle.com/javase/tutorial/essential/io/legacy.html)
+Shows how to leverage Path functionality with older code using the `java.io.File` class, with a table mapping the `java.io.File` API to `java.nio.file`.
