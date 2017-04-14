@@ -2,9 +2,55 @@
 Covers I/O, focusing on streams, also covers serialisation, and file io.
 
 ## [I/O Streams](https://docs.oracle.com/javase/tutorial/essential/io/streams.html)
+An IO Stream represents nad input source or output destination. A stream can represent many kinds of sources and destinations, such as disk files, devices, other programs, memory arrays, network sockets, as well as supporting many different kinds of data, including simple bytes, primitive data types, localised characters, and objects. Streams can be used to just transfer data, or to manipulate and transform the data as well. At its heart a stream is a sequence of data.
+
+A program uses an input stream to read data from a source and an output stream to write data to a destination.
 
 ### [Byte Streams](https://docs.oracle.com/javase/tutorial/essential/io/bytestreams.html)
 Byte Streams handle IO of raw binary data.
+
+Programs use byte streams to perform io of 8-bit bytes, all byte stream classes are descended from [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) and [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html). There are several byte stream classes, but the example here uses file IO byte streams, FileInputStream and FileOutputStream, other byte streams are used in much the same way.
+
+TODO: Link to github project example and remove code?
+
+```
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class CopyBytes {
+    public static void main(String[] args) throws IOException {
+
+        FileInputStream in = null;
+        FileOutputStream out = null;
+
+        try {
+            in = new FileInputStream("baconIpsum.txt");
+            out = new FileOutputStream("outagain.txt");
+            int c;
+
+            while ((c = in.read()) != -1) {
+                out.write(c);
+            }
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+            if (out != null) {
+                out.close();
+            }
+        }
+    }
+}
+```
+
+Here the program is mostly centered around the simple loop which reads a byte from the input stream and writes it to the output stream, one at a time.
+
+#### Always Close Streams
+Closing a stream when it's no longer needed is very important (eek!), in the example a finally block is used to gurantee that the stream is closed even if an error occurs, this helps avoid serious resource leaks.
+
+#### When to use byte streams
+Byte streams should only really be used for the most primitive IO. Here, since the example file uses character data a better approach would be to use character streams. There are other streams for more complex data types.
 
 ### [Character Streams](https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html)
 Character Streams handle IO of character data, automatically handling translation to and from the local character set.
