@@ -2,6 +2,8 @@
 [Meet IntelliJ IDEA](https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html)
 Starter page linking to tutorials.
 
+[JetBrains Confluence Page](https://confluence.jetbrains.com)
+
 ## [Discover IntelliJ IDEA](https://www.jetbrains.com/help/idea/2017.1/discover-intellij-idea.html)
 Walkthrough of the IDE.
 
@@ -49,7 +51,17 @@ To toggle between hiding & showing all tool windows: ⇧⌘F12 (Shift-Command-Fn
 ***E.g. with the cursor in a variable, this will highlight where else the variable is used and allow to shift between them with `⌘G`. Not sure what exactly symbol refers to though...
 
 ### Code Completion
+Access basic completion by pressing `^Space` to get basic suggestions for variables, types, methods, expressions, etc. Press it again to get more results, including private members and non-imported static members.
 
+Access smart completion by pressing `^⇧Space`, this offers options relevant to the context inlcuding chains.
+
+[Statement Completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#statements_completion) is iniated by pressing `⇧⌘⏎`, this will automatically add missing parentheses, brackets, braces, and the necessary formatting.
+
+To see suggested parameters for any method or constructor press `⌘P`.
+
+The [PostFix Completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#postfix_completion)
+
+Still not totally sure how basic and smart completion differ, although on an empty line smart sometimes adds code without providing options, such as methods and arguments in methods. In other cases, such as calling a method on an object, basic and smart will have the same options. Further reading on [basic completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#basic_completion) and [smart completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#smart_completion)
 
 ## [Keyboard Shortcuts](https://www.jetbrains.com/help/idea/2017.1/keyboard-shortcuts-you-cannot-miss.html)
 
