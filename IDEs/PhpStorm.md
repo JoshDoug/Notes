@@ -35,3 +35,9 @@ Adding the Debugger - [Xdebug](https://confluence.jetbrains.com/display/PhpStorm
 Useful guide: https://lukearmstrong.github.io/2016/12/setup-apache-mysql-php-homebrew-macos-sierra/
 See also: PHP/language-basics.md
 
+* [Configure PHP, Apache, and MySQL](https://confluence.jetbrains.com/display/PhpStorm/Installing+and+Configuring+MAMP+with+PhpStorm+IDE), ignore the MAMP stuff, doesn't really matter.
+* [Xdebug](https://confluence.jetbrains.com/display/PhpStorm/Xdebug+Installation+Guide), should have been installed with homebrew already at this point.
+
+With everything setup and working (PHP, Xdebug, Apache, MySQL, PHPMyAdmin, with no errors showing and a phpinfo page loaded), add everything into PhpStorm.
+
+In settings, add PHP which should automatically find Xdebug, Apache just specifies the location under Deployment > Servers, MySQL is set up in the Databases part, select + and choose MySQL (or whichever relevant DB driver).
