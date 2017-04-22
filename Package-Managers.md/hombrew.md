@@ -1,9 +1,10 @@
 # brew.sh
+
 The missing package manger for macOS!
 
 Useful links:
-* github page for homebrew services: https://github.com/Homebrew/homebrew-services
 
+* [github page for homebrew services](https://github.com/Homebrew/homebrew-services)
 
 ## Using brew to manage services
 
