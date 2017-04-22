@@ -75,11 +75,33 @@ A set of configuration rules to change and add functionality to the http server,
 
 #### mod_rewrite
 
+It could make sense to split directives like this into their own files.
 This module helps clean up URL/URIs by using rule-based rewrites to rewrite and serve a requested URL on the fly. It can be used to:
 
 * map a URL to a filesystem path
 * redirect one URL to another URL
 * invoke an internal proxy fetch
+* can be per server (httpd.conf), per virtual host, or per directory (.htaccess files and [`<Directory>`](https://httpd.apache.org/docs/current/mod/core.html#directory) blocks)
+
+Detailed Apache mod_rewrite [documentation](https://httpd.apache.org/docs/current/rewrite/).
+
+* [mod_rewrite reference documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
+* [Introduction to regular expressions and mod_rewrite](https://httpd.apache.org/docs/current/rewrite/intro.html)
+* [Using mod_rewrite for redirection and remapping of URLs](https://httpd.apache.org/docs/current/rewrite/remapping.html)
+* [Using mod_rewrite to control access](https://httpd.apache.org/docs/current/rewrite/access.html)
+* [Dynamic virtual hosts with mod_rewrite](https://httpd.apache.org/docs/current/rewrite/vhosts.html)
+* [Dynamic proxying with mod_rewrite](https://httpd.apache.org/docs/current/rewrite/proxy.html)
+* [Using RewriteMap](https://httpd.apache.org/docs/current/rewrite/rewritemap.html)
+* [Advanced techniques](https://httpd.apache.org/docs/current/rewrite/advanced.html)
+* [When NOT to use mod_rewrite](https://httpd.apache.org/docs/current/rewrite/avoid.html)
+* [RewriteRule Flags](https://httpd.apache.org/docs/current/rewrite/flags.html)
+* [Technical details](https://httpd.apache.org/docs/current/rewrite/tech.html)
+
+##### mod_rewrite reference documentation
+
+###### Logging
+
+Shouldn't be set unless debugging because it can drastically slow down a server.
 
 ## Management/Using httpd
 
@@ -89,6 +111,11 @@ This module helps clean up URL/URIs by using rule-based rewrites to rewrite and 
 * [Stopping & Restarting](https://httpd.apache.org/docs/current/stopping.html)
 
 Or using brew: `brew services httpd24 run|start|stop|restart`
+
+If Listen is set for port 80 or any port below 1024 then httpd will need to be launched with root priveledges and httpd will run as root, but any child processes spawned will run as a less priveleged user.
+
+The location of the configuration file used is set at compile time, but a different file can be passed when starting up e.g.:
+`/usr/local/apache2/bin/apachectl -f /usr/local/apache2/conf/alternative-httpd.conf`
 
 ### Logs
 
