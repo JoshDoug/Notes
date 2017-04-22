@@ -1,6 +1,8 @@
 # Apache HTTP Server (httpd) 2.4
 Info covering the Apache httpd server.
 
+## [Documentation](https://httpd.apache.org/docs/current/)
+
 ## Installing
 httpd can be installed in a number of ways:
 * macOS - compiled, pre-installed system version (often outdated), homebrew install, MAMP
@@ -50,9 +52,26 @@ Confusing
 
 
 ## Configuration
+Typically configured using http.conf and then subconfig files that can be included in a subdirectory, e.g. instead of having several vhosts listed in httpd.conf it is typical to create a vhosts directory and include it in httpd.conf.
 
+### httpd.conf
 
-## Management
+### vhosts
+
+### Directives
+A set of configuration rules to change and add functionality to the http server, typically involve enabling additional modules, e.g. mod_rewrite.
+
+* [Directive Index](https://httpd.apache.org/docs/current/mod/directives.html)
+* [Directive Dictionary](https://httpd.apache.org/docs/current/mod/directive-dict.html)
+* [Directive Quick Reference](https://httpd.apache.org/docs/current/mod/quickreference.html)
+
+## Management/Using httpd
+
+### Starting & Stopping
+* [Starting](https://httpd.apache.org/docs/current/invoking.html)
+* [Stopping & Restarting](https://httpd.apache.org/docs/current/stopping.html)
+
+Or using brew: `brew services httpd24 run|start|stop|restart`
 
 ### Logs
 Located at: `/usr/local/var/log/apache2/error_log` when using brew, useful for diagnosing issues.
