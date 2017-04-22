@@ -22,4 +22,37 @@ Might be easier to just use IIS.
 RPM based systems: https://httpd.apache.org/docs/current/platform/rpm.html
 Compiling from scratch: https://httpd.apache.org/docs/current/install.html
 
+[Distro Default Layouts](https://wiki.apache.org/httpd/DistrosDefaultLayout) - The location and naming of configuration files and the application itself can differ between distros, so this page helpfully summaries the defaults and distro conventions.
+
+### Install Options (from brew, there may be additional options)
+Options given by running `brew options httpd24`:
+```
+--with-http2
+	Build and enable the HTTP/2 shared Module
+--with-ldap
+	Include support for LDAP
+--with-mpm-event
+	Use the Event Multi-Processing Module instead of Prefork
+--with-mpm-worker
+	Use the Worker Multi-Processing Module instead of Prefork
+--with-privileged-ports
+	Use the default ports 80 and 443 (which require root privileges), instead of 8080 and 8443
+```
+
+
+Preworker, MPM Event, MPM Worker:
+Confusing
+* https://httpd.apache.org/docs/2.4/mpm.html
+* https://serverfault.com/questions/231628/apache-mpms-worker-vs-prefork
+* https://serverfault.com/questions/383526/how-do-i-select-which-apache-mpm-to-use
+* http://www.binarytides.com/apache-mpm-php-server-api/
+* https://www.liquidweb.com/kb/apache-mpms-explained/
+
+
 ## Configuration
+
+
+## Management
+
+### Logs
+Located at: `/usr/local/var/log/apache2/error_log` when using brew, useful for diagnosing issues.
