@@ -3,8 +3,6 @@
 Covers notes on HTTP Servers, the related *AMP* stack, other stacks and integrating with related components.
 Notes should be scoped to mention of and a quick summary of a server and relevant versions, links to sites and documentation, and info on integrating with other relevant components. If the explanation gets beyond a certain point it should be moved into its own file.
 
-Java Servers are covered in Java > Servers.
-
 ## Apache HTTPD 2.4
 
 ### Combined with PHP
@@ -23,10 +21,34 @@ mod_rewrite with PHP fpm/FastCGI issues:
 
 Apache with PHP homebrew gist, lots of *no thanks* stuff in it, but useful to look over, [gist here](https://gist.github.com/vitorbritto/4fea3514fa09ef298b1f)
 
-## Tomcat - [Tomcat Site](tomcat.apache.org)
+## [Nginx](https://nginx.org/)
+
+## [lighttpd](https://www.lighttpd.net/)
+
+Designed to be lightweight.
+
+## [Caddy](https://caddyserver.com/)
+
+Written in Go, free and open source with pricing options for Enterprise and sponsorship.
+
+## [IIS](https://www.iis.net/)
+
+## Java Focused Servers
+
+Java Servers are covered in Java > Servers.
+
+## [Apache Tomcat](tomcat.apache.org)
 
 * Current Stable Version of Tomcat: 8.5.+
 * Older Stable: 8.0.+
 * Preview version: 9.+
 
 As Tomcat is java based there isn't a lengthy install, just unzip the binary in a directory and configure it, either in an IDE or with the OS.
+
+## [Apache TomEE](https://tomee.apache.org/)
+
+## [Jetty](https://www.eclipse.org/jetty/)
+
+An Eclipse Project.
+
+## [GlassFish](https://glassfish.java.net/)
