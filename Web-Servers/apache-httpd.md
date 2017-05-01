@@ -65,6 +65,12 @@ Typically configured using http.conf and then subconfig files that can be includ
 
 ### vhosts
 
+Setting php proxy or handler in vhosts to allow .htaccess to actually handle php files, can't get this to work: [serverfault answer doesn't work for me though](https://serverfault.com/questions/611097/apache-2-4-mod-proxy-fcgi-not-honouring-htaccess-work-around-needed).
+
+* [I give up with php stuff](http://z-issue.com/wp/apache-2-4-the-event-mpm-php-via-mod_proxy_fcgi-and-php-fpm-with-vhosts/)
+* [and this](https://ma.ttias.be/apache-2-4-proxypass-for-php-taking-precedence-over-filesfilesmatch-in-htaccess/)
+* [and this too]
+
 ### Directives
 
 A set of configuration rules to change and add functionality to the http server, typically involve enabling additional modules, e.g. mod_rewrite.
@@ -97,11 +103,38 @@ Detailed Apache mod_rewrite [documentation](https://httpd.apache.org/docs/curren
 * [RewriteRule Flags](https://httpd.apache.org/docs/current/rewrite/flags.html)
 * [Technical details](https://httpd.apache.org/docs/current/rewrite/tech.html)
 
-##### mod_rewrite reference documentation
+##### [mod_rewrite reference documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
 
 ###### Logging
 
-Shouldn't be set unless debugging because it can drastically slow down a server.
+Shouldn't be set unless debugging because it can drastically slow down a server. More info covered by official docs.
+
+###### RewriteBase Directive
+
+Sets the base URL for per-directory rewrites. Could be replaced with an [Alias](https://httpd.apache.org/docs/current/mod/mod_alias.html#alias) mapping or [mod_userdir](https://httpd.apache.org/docs/current/mod/mod_userdir.html).
+
+###### RewriteCond Directive
+
+Describes a condition under which rewriting will take place.
+
+###### RewriteEngine Directive
+
+* Description: Enables or disables runteime rewriting engine.
+* Syntax: `RewriteEngine on|off`
+* Default: `RewriteEngine off`
+* Context: server config, virtual host, directory, .htaccess
+
+Rewrite configurations are not inherited by virtual hosts, so each vhost needs a RewriteEngine on directive to use rewrite rules.
+
+###### Rewrite Examples
+
+This is used for stopping a 'vulnerability' with httpd server, but Apache denies this is an actual problem and info on it actually being an issue seems very limited, but here is a stack exhange [answer](https://security.stackexchange.com/questions/56955/is-the-http-trace-method-a-security-vulnerability), a note from apache saying it is not an [issue](https://httpd.apache.org/docs/2.4/mod/core.html#traceenable) and an example of it nonetheless:
+
+```.htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+```
 
 ## Management/Using httpd
 
