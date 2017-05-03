@@ -60,6 +60,7 @@ Byte streams should only really be used for the most primitive IO. Here, since t
 ### [Character Streams](https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html)
 
 Character Streams handle IO of character data, automatically handling translation to and from the local character set.
+Character streams are often 'wrappers' for byte streams, using the byte stream to perform physical IO while performing the translation between chars and bytes itself. FileReader for example uses FileInputStream and FileWriter uses FileOutputStream.
 
 ### [Buffered Streams](https://docs.oracle.com/javase/tutorial/essential/io/buffers.html)
 
