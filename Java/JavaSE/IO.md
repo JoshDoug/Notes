@@ -61,13 +61,74 @@ Byte streams should only really be used for the most primitive IO. Here, since t
 
 Character Streams handle IO of character data, automatically handling translation to and from the local character set.
 
+Character streams are often 'wrappers' for byte streams, using the byte stream to perform physical IO while performing the translation between chars and bytes itself. FileReader for example uses FileInputStream and FileWriter uses FileOutputStream.
+
+TODO: Code example and test in IDE.
+
 ### [Buffered Streams](https://docs.oracle.com/javase/tutorial/essential/io/buffers.html)
 
 Buffered Streams optimise input and output by reducing the number of calls to the native API.
 
+This is done by reading additional info into a buffer and/or writing out to a buffer at a time, reducing the amount of native API calls necessary. The native API then only needs to be called once the buffer is empty (when reading) or full (when outputting). An unbuffered stream can be converted into a buffered stream by wrapping it/nesting it within a buffered stream. For example:
+
+```java
+inputStream = new BufferedReader(new FileReader("inputCharFile.txt"));
+outputStream = new BufferedWriter(new FileWriter("outputCharFile.txt"));
+```
+
+#### Flushing Buffered Streams
+
+It often makes sense to write out a buffer at critical points, without waiting for it to fill, this is known af *flushing* the buffer.
+Flushing a buffer can sometimes be done automatically at key events when autoflush is specified by an optional constructor argument, or manually when the *flush* method is invoked. The flush method can be called on any output stream but has no effect unless the stream is buffered.
+
 ### [Scanning and Formatting](https://docs.oracle.com/javase/tutorial/essential/io/scanfor.html)
 
 Scanning and Formatting allows a program to read and write formatted text.
+
+These two APIs aid in translating to and from formatted (human readable) data
+
+#### [Scanning](https://docs.oracle.com/javase/tutorial/essential/io/scanning.html)
+
+Objects of type [Scanner](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html) can be used to break down formatted input into tokens and translating individual tokens according to their data type. But, like, what does that mean?
+
+##### Breaking Input into Tokens
+
+By default a scanner uses white space to seperate tokens, white space chars include blanks, tabs, line terminators, these can be checked via [Character.isWhitespace](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-). An example of this reads in the individual words of a program and ten prints out each word on a new line:
+
+```java
+import java.io.*;
+import java.util.Scanner;
+
+public class ScanXan {
+    public static void main(String[] args) throws IOException {
+
+        Scanner s = null;
+
+        try {
+            s = new Scanner(new BufferedReader(new FileReader("xanadu.txt")));
+
+            while (s.hasNext()) {
+                System.out.println(s.next());
+            }
+        } finally {
+            if (s != null) {
+                s.close();
+            }
+        }
+    }
+}
+```
+
+The token separator can be changed using *useDelimiter()* with a regular expression as an argument, e.g. to change the token separator to a comma optionally followed by white space, you could use: `s.useDelimiter(",\\s*");`
+
+##### Translating Individual Tokens
+
+The prior example treats all input tokens as simple String values. Scanner also supports tokens for all of the Java language's primitive types except for char, as well as BigInteger and BigDecimal. Also, numeric values can use thousands separators/delimiters so in a US locale, Scanner can read the string "32,767" as representing an integer value. Nice.
+
+TODO: Finish this section.
+
+#### [Formatting](https://docs.oracle.com/javase/tutorial/essential/io/formatting.html)
+
 
 ### [I/O from the Command Line](https://docs.oracle.com/javase/tutorial/essential/io/cl.html)
 
