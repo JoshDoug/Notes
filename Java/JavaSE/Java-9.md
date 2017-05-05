@@ -4,6 +4,7 @@ Documentation:
 https://docs.oracle.com/javase/9/
 
 # [What's new in Java 9 Video](https://youtu.be/9PFcTwRlASY?t=1497)
+[Blog Post](https://blogs.oracle.com/java/features-in-java-8-and-9)
 
 ## Behind the scenes improvements
 Lots of benefits of moving to JDK9 without even making any changes, don't even need to recompile.
@@ -65,6 +66,8 @@ Modular Java Application Packaging - jlink again
 Cont:
 * New version string: 9.x.x using semver, Semantic Versioning, instead of 1.9_X.xblah weirdness
 * JEP 295: AOT Compilation (Ahead of time compilation), tool `jaotc`
-
+* Unified GC Logging
+* Make G1 the Default Garbage Collector
 
 ## Removed
+Check video
