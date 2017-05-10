@@ -129,6 +129,7 @@ TODO: Finish this section.
 
 #### [Formatting](https://docs.oracle.com/javase/tutorial/essential/io/formatting.html)
 
+Stream objects that implement formatting are instances of either PrintWriter (a chcaracter stream class), or PrintStream (a byte stream class).
 
 ### [I/O from the Command Line](https://docs.oracle.com/javase/tutorial/essential/io/cl.html)
 
