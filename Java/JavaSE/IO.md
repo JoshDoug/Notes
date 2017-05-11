@@ -125,7 +125,7 @@ The token separator can be changed using *useDelimiter()* with a regular express
 
 The prior example treats all input tokens as simple String values. Scanner also supports tokens for all of the Java language's primitive types except for char, as well as BigInteger and BigDecimal. Also, numeric values can use thousands separators/delimiters so in a US locale, Scanner can read the string "32,767" as representing an integer value. Nice.
 
-TODO: Finish this section.
+For this to work the locale has to be correct, this should probably work by default as your input data is likely from sources in the same locale, but if an application might have to deal with sources all over it might need to specify a specific locale. This is just done by calling a method on the scanner object, e.g. `scanObj.useLocale(Locale.US);` for the US. These tokens can then be manipulated using methods such as `scanObj.hasNextDouble()` and `scanObj.nextDouble()`.
 
 #### [Formatting](https://docs.oracle.com/javase/tutorial/essential/io/formatting.html)
 
