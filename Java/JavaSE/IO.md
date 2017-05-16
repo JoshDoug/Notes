@@ -129,7 +129,14 @@ For this to work the locale has to be correct, this should probably work by defa
 
 #### [Formatting](https://docs.oracle.com/javase/tutorial/essential/io/formatting.html)
 
-Stream objects that implement formatting are instances of either PrintWriter (a chcaracter stream class), or PrintStream (a byte stream class).
+Stream objects that implement formatting are instances of either [PrintWriter](http://download.java.net/java/jdk9/docs/api/java/io/PrintWriter.html) (a chcaracter stream class), or [PrintStream](http://download.java.net/java/jdk9/docs/api/java/io/PrintStream.html) (a byte stream class).
+
+*Note: The only PrintStream object that you are likely to need are System.out and System.err, which are public static fields/member variables of the static System class. They seem to be for use by convention, rather than doing anything special, as it seems they are basically both just statically accessible PrintStream objects.*
+
+Like all byte and char stream objects, instances of PrintStream and PrintWriter implement a standard set of `write` methods for simple byte and char output. In addition, both PrintStream and PrintWriter implement the same set of methods for converting internal data into formatted output. There are two levels of formatting:
+
+* `print` and `println` format individual values in a standard way.
+* `format` formats almost any number of values based on a format string, with many options for precise formatting.
 
 ### [I/O from the Command Line](https://docs.oracle.com/javase/tutorial/essential/io/cl.html)
 
