@@ -21,10 +21,38 @@ Apparently using exceptions to manager errors has some advantages over tradition
 
 Code that might throw certain exceptions has to either Catch or Specify, this means either using a try-catch statement or specifying on a method what exceptions it might throw so that a method that uses it uses a try-catch to handle any exceptions that are thrown.
 
+### The Three Kinds of Exceptions
+
+First kind: the checked exception. These are exceptions that a well designed application should anticipate and recover from. Involves a try-catch.
+
+Second kind: the error. These are exception conditions external to the application that the application usually can't anticipate or recover from. E.g. caused by a system or hardware malfunction when reading a file. These could still be caught, but javac will still compile the code without a handler for such an error. Can be caught with try-catch, not required.
+
+Third kind: the runtime exception. These are exceptional conditions that are internal to an application that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such as logic errors or improper API use. Can be caught with a try-catch, but not required and probably best to eliminiate the bug that is the root cause of the exception.
+
+Errors and runtime exceptions are collectively known as unchecked exceptions and are not subject to the 'Catch or Specify Requirement'.
+
+### Bypassing Catch or Specify
+
+[Contreversial](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html).
+
+## [Catching and Handling Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html)
+
+The three exception handler components - the `try`, `catch`, and `finally` blocks - to write an exception handler, and `try`-with, introduced in Java SE7, which is suited to situations with Closeable resources, such as streams.
+
 ## How to Throw Exceptions
+
+THe throw statemtn, and the throwable class and its subclasses.
 
 ## The try-with-resources Statement
 
+The try-with statement is a try statement that declares one or more resources, a resource is an object that must be closed after the program is finished with it. The try-with-resources ensures that each resource is closed at the end of the statement.
+
+Hmm, what does this mean??
+
 ## Unchecked Exceptions - The Convtroversy
 
+THe correct and incorrect use of unchecked excpetions indicated by subclasses of RuntimeException.
+
 ## Advantages of Exceptions
+
+The advantages of exceptions to manage errors over traditional error-management techniques.
