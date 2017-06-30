@@ -107,6 +107,8 @@ The finally block is a key tool for preventing resource leaks. Using try-with-re
 
 ### The `try`-with-resources Statement
 
+The try-with statement is a try statement that declares one or more resources, a resource is an object that must be closed after the program is finished with it. The try-with-resources ensures that each resource is closed at the end of the statement.
+
 This is a try block with closable resources specified as parameters which must be closed after the program is finished with it. This covers any object that implements java.lang.AutoCloseable, which includes all objects with implemnt java.io.Closeable.
 
 Example using try-with-resources:
@@ -171,15 +173,35 @@ AutoCloseable and Closeable javadoc should show which classes implemnt these int
 
 Link to well explained example.
 
+## Specifying the Exceptions Thrown by a Method
+
+Instead of handling exceptions within a method, it sometimes makes more sense to specify exceptions thrown by the methods so that code that uses it has to handle the potential exceptions.
+
 ## How to Throw Exceptions
 
 THe throw statemtn, and the throwable class and its subclasses.
 
-## The try-with-resources Statement
+### The throw Statement
 
-The try-with statement is a try statement that declares one or more resources, a resource is an object that must be closed after the program is finished with it. The try-with-resources ensures that each resource is closed at the end of the statement.
+TODO
 
-Hmm, what does this mean??
+### Throwable Class and Its Subclasses
+
+TODO
+
+#### Error Class
+
+TODO
+
+#### Exception Class
+
+TODO
+
+### Chained Exceptions
+
+
+### Creating Exception Classes
+
 
 ## Unchecked Exceptions - The Convtroversy
 
