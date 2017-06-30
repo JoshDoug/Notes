@@ -39,6 +39,76 @@ Errors and runtime exceptions are collectively known as unchecked exceptions and
 
 The three exception handler components - the `try`, `catch`, and `finally` blocks - to write an exception handler, and `try`-with, introduced in Java SE7, which is suited to situations with Closeable resources, such as streams.
 
+Example: `PrintWriter out = new PrintWriter(new FileWriter("OutFile.txt"));`
+Instantiating a FileWriter needs to be caught or specified, the compiler will enforce this.
+
+Example: `out.println("Value at: " + i + " = " + list.get(i));`
+Getting an item that doesn't exist from an array could cause an IndexOutOfBoundsException, but the compiler won't enforce a try-catch for this and it's probably due to a programming bug.
+
+### The `try` Block
+
+Code that might throw an exception is enclosed within a `try` block:
+
+```java
+try {
+  // Code that could throw an exception
+} catch() {} finally {}
+```
+
+Code that might throw an exception can be handled by individual try blocks or can be grouped and have multiple handlers.
+
+### THe `catch` Blocks
+
+Exception handlers are associated with a try block, multiple exception handlers can be associated with the same try block, and they are chained together like an if-elseif statement.
+
+```java
+try {
+
+} catch(ExceptionType name) {
+
+} catch(ExceptionType name) {
+
+}
+```
+
+Each catch block is an exception handler that handles the type of exception indicated by its argument, this must be a class that inherits from the Throwable class.
+If the catch block is invoked then it executes the code block it contains. The handler is invoked by the runtime system when it is the first handler found in the call stack that matches the ExceptionType of the exception thrown.
+
+In Java SE7+ a single catch block can handle more than one type of exception by specifying multiple types in the catch clause, like so:
+
+```java
+catch(IOException | IndexOutOfBoundsException e) {
+  logger.log(ex);
+  throw ex; //What does this do?
+}
+```
+
+If a catch block handles more than one exception type then the catch parameter is implicitly final and therefore no values can be assigned to it within the catch block. Hmm?
+
+### The `finally` Block
+
+This block always executes when the try block exits, even if an exception occurs*. This is the place to put cleanup code.
+The finally block can be used for cleanup such as closing streams.
+
+```java
+finally {
+    if (out != null) {
+        System.out.println("Closing Stream");
+        out.close();
+    } else {
+        System.out.println("Stream not open");
+    }
+}
+```
+
+The finally block is a key tool for preventing resource leaks. Using try-with-resources can do this automatically.
+
+\* Unless the JVM exits or thread the try-catch-finally is on is interrupted or killed
+
+### The `try`-with-resources Statement
+
+This is a try block with closable resources specified as parameters which must be closed after the program is finished with it. This covers
+
 ## How to Throw Exceptions
 
 THe throw statemtn, and the throwable class and its subclasses.
