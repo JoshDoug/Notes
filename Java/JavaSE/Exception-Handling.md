@@ -107,7 +107,55 @@ The finally block is a key tool for preventing resource leaks. Using try-with-re
 
 ### The `try`-with-resources Statement
 
-This is a try block with closable resources specified as parameters which must be closed after the program is finished with it. This covers
+This is a try block with closable resources specified as parameters which must be closed after the program is finished with it. This covers any object that implements java.lang.AutoCloseable, which includes all objects with implemnt java.io.Closeable.
+
+Example using try-with-resources:
+
+```java
+static String readFirstLineFromFile(String path) throws IOException {
+  try (BufferedReader br
+      = new BufferedReader(new FileReader(path))) {
+      return br.readLine();
+  }
+}
+```
+
+vs normal try-finally
+
+```java
+static String readFirstLineFromFileWithFinallyBlock(String path) throws IOException {
+    BufferedReader br = new BufferedReader(new FileReader(path));
+    try {
+        return br.readLine();
+    } finally {
+        if (br != null) br.close();
+    }
+}
+```
+
+Example try-with-resources with multiple resources:
+
+public static void writeToFileZipFileContents(String zipFileName, String outputFileName) throws IOException {
+
+```java
+/* public static void writeToFileZipFileContents(String zipFileName, String outputFileName) throws IOException {
+  Charset charset = StandardCharsets.US_ASCII;
+  Path outputFilePath = Paths.get(outputFileName);
+
+  // Open zip file and create output file using try-with-resources statement
+  try (ZipFile zf = new ZipFile(zipFileName); BufferedWriter writer = Files.newBufferedWriter(outputFilePath, charset)) {
+    // Enumerate each entry
+    String newLine = System.getProperty("line.separator");
+    for (Enumeration entries = zf.entries(); entries.hasMoreElements();) {
+      // Get the entry name and write it to the output file
+      String zipEntryName = ((ZipEntry)entries.nextElement()).getName() + newLine;
+      writer.write(zipEntryName, 0, zipEntryName.length());
+    }
+  }
+} */
+```
+
+In this example, the try-with-resources statement contains two declarations that are separated by a semicolon: ZipFile and BufferedWriter. When the block of code that directly follows it terminates, either normally or because of an exception, the close methods of the BufferedWriter and ZipFile objects are automatically called in this order. Note that the close methods of resources are called in the opposite order of their creation - worth noting, as this is probably relevant to if the streams are nested or whatever? Maybe it's irrelevant?
 
 ## How to Throw Exceptions
 
