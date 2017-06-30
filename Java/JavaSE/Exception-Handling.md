@@ -157,6 +157,20 @@ public static void writeToFileZipFileContents(String zipFileName, String outputF
 
 In this example, the try-with-resources statement contains two declarations that are separated by a semicolon: ZipFile and BufferedWriter. When the block of code that directly follows it terminates, either normally or because of an exception, the close methods of the BufferedWriter and ZipFile objects are automatically called in this order. Note that the close methods of resources are called in the opposite order of their creation - worth noting, as this is probably relevant to if the streams are nested or whatever? Maybe it's irrelevant?
 
+A try-with-resources statement can have catch and finally blocks like a normal try-catch-finally but any resources declared will have been closed before the catch or finally are run.
+
+#### Suppressed Exceptions
+
+Some exceptions are suppressed but you can also retrieve them but it doesn't say how beyond using `Throwable.getSuppressed()`??
+
+#### Classes That Implement the AutoCloseable or Closeable Interface
+
+AutoCloseable and Closeable javadoc should show which classes implemnt these interfaces so they can be used with try-with-resources. They also throw slightly different exceptions...?
+
+### [Putting It All Together](https://docs.oracle.com/javase/tutorial/essential/exceptions/putItTogether.html)
+
+Link to well explained example.
+
 ## How to Throw Exceptions
 
 THe throw statemtn, and the throwable class and its subclasses.
