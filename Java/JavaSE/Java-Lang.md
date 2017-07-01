@@ -1,5 +1,8 @@
 # Java Language
 
+* [General Oracle Documentation](http://docs.oracle.com/en/)
+* [Java 9 Early Access Documentation](https://docs.oracle.com/javase/9/)
+
 ## Lambdas
 Lambdas are just functions, useful to replace code like anonymous inner classes.
 

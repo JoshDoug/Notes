@@ -147,7 +147,18 @@ When a variable is concatenated within the arguments of a method the conversion 
 
 ##### The `format` Method
 
-Hey, it looks like a c pritnf function!
+The `format` method formats multiple arguments based on a *format string*. The format string consists of static text embedded with *format specifiers*; except for the format specifiers, the format string is output unchanged. Basically a printf from C?
+
+API Spec covering [format string syntax](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax).
+
+For example to print a date in UK format, with leading 0 for days, and the year formatted to the last two digits with leading 0s if necessary:
+
+```java
+Calendar c = Calendar.getInstance();
+String s = String.format("Today's Date: %1$td,%1$tm,%1$ty", c);
+```
+
+Output: `Today's Date: 22,05,17` (well this example will be outdated in a few hours...)
 
 ### [I/O from the Command Line](https://docs.oracle.com/javase/tutorial/essential/io/cl.html)
 
