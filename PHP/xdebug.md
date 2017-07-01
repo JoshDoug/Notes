@@ -12,4 +12,4 @@ Just set the IDE Key in the extension, or maybe in PHPSTORM (might be unneccessa
 
 ## Create Bookmarklets with the Jetbrains [PhpStorm Bookmarklet Page](https://www.jetbrains.com/phpstorm/marklets/)
 
-Handy way of creating bookmarks to use to start and stop the debugger, alternatively use the xdebugger chrome extension.
+Handy way of creating bookmarks to use to start and stop the debugger, alternatively use the xdebugger chrome extension. Also works for the zend debugger.
