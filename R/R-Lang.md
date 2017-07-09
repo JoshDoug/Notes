@@ -14,6 +14,8 @@ A general collection of R information, sections - such as IO - can be split into
 
 `ls()` - function that lists the current objects, when using RStudio these are already listed in the workspace tab.
 
+`? barplot` - find help on any R function, shows in editor help tab
+
 ### Variables
 
 `x <- 1:5` # Assigning the values 1 to 5 to variable x, sometimes described as 'x *gets* values 1 to 5'
@@ -34,6 +36,28 @@ A general collection of R information, sections - such as IO - can be split into
 ### Turning data into bar charts
 
 Creating bar charts for categorical variables.
+
+Feed the csv into a data frame, as you would when reading in a csv spreadsheet normally, with headers preferably: `data.csv <- read.csv("data.csv", header = T)`
+
+Create a table from the data for a specific column: `data.freq <- table(date.csv$ColumnName` # The column name is case sensitive.
+
+Create the barchart: `barplot(data.freq)` # This is a very simple bar chart, with no additional options set.
+
+Additional options:
+
+* `barplot(data.freq[order(data.freq, decreasing = T)])` to creat the barchart in decreasing order
+* `barplot(data.freq[order(data.freq)], horiz = T)` make the barchart ordered (defaults to increasing) and horizontal
+
+Create a vector of colour specifications: `colomnColours <- c(rep("gray", 5), rgb(59, 89, 152, maxColorValue = 255))` # Rep repeats gray five times, setting that colour for five colours, and then the final colour is blue.
+
+* `barplot(data.freq[order(data.freq)], horiz = T, col = columnColours)` # Extend prior barplot to use specific colours using vector created above.
+
+Other paramters:
+
+* `border = NA` - turn of borders
+* `xlim = c(0,100)` - set x limits to 0 and 100, needs to be a vector
+* `main = "Title of Graph\nA second line of Title"` - set a title, this can include newline chars to make it multiline
+* `xlab = "Description of X"` - title of X axis, presumably `ylab` is the y axis equivalent.
 
 ### Packages
 
