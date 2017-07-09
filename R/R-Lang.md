@@ -30,3 +30,27 @@ A general collection of R information, sections - such as IO - can be split into
 
 * Path can use forward slashes on Windows which don't need to be escaped, can also handle relative paths.
 * For header/column names add parameter: `header = TRUE` or `header = T`.
+
+### Turning data into bar charts
+
+Creating bar charts for categorical variables.
+
+### Packages
+
+CRAN - the Comprehensive R Archive Network is a package repository for R.
+
+`browseURL("http://cran.r-project.org/web/views/")` - link to CRAN package list, can be run from within R to open a tab in default browser, [embedded link]("http://cran.r-project.org/web/views/").
+`browseURL("http://cran.stat.ucla.edu./web/packages/available_packages_by_name.html")` - same as above, but for UCLA's package list, [embedded link]("http://cran.stat.ucla.edu./web/packages/available_packages_by_name.html").
+
+* `library()` - list currently installed & available packages
+* `search()` - list currently active installed packages
+* `install.packages("packageName")` - download and install a package (but doesn't activate/load it), e.g. `install.packages("psych")`
+* `library("packageName")` - load the library for scripts that use it later on
+* `require("packageName")` - loads the library, but probably complains like php's require/include mechanism if the resource cannot be found
+* `library(help = "packageName")` - loads up a man page for the package in the editor window (or maybe in Less from CLI?)
+* `vignette(packge = "packageName")` - brings up a list of vignettes (examples) in the editor window
+* `browseVignettes(package = "packageName")` - opens the examples page in the browser, with PDFs, etc
+* `vignette()` - bring up a list of all vignettes for currently installed packages
+* `browseVignettes()` - bring up list of all vignettes in the browser
+* `update.packages()` - checks for updates and gives option to install updates in console
+* `detach("package:packageName", unload=TRUE)` - deactivate a package
