@@ -10,6 +10,8 @@ typically dominated by SAS, SPSS, Stata, and MATLAB.
 R is useful for vector based mathematics, which is a more mathematical way to say working with data in arrays.
 It can be easier to work with arrays of numbers without for loops.
 
+R is a multi-paradigm language: Array, OO, imperative, functional, procedural, and reflective.
+
 ## Competing languages and software
 
 SAS:
