@@ -32,25 +32,3 @@ Matlab:
 
 * [MATLAB Wikipedia](https://en.wikipedia.org/wiki/MATLAB)
 * [MATLAB website](https://uk.mathworks.com/products/matlab.html)
-
-## R Environment
-
-Comments in R: `#`.
-
-`1:100` prints out 1 to 100.
-
-R print statement: `print("Hello World)` # No semicolons necessary in R.
-
-### Variables
-
-`x <- 1:5` # Assigning the values 1 to 5 to variable x, sometimes described as 'x *gets* values 1 to 5'
-
-`y <- c(6,7,8,9,10)` # The concatenate function, useful for specifying data to put in the variable
-
-`x + y` # Add the contents of each vector/array, such that the output would be: 7,9,11,13,15
-
-`x * 2` # Multiplies each element in the vector, such that the output would be: 2,4,6,8,10
-
-## RStudio
-
-To run a line: `cmd-enter`.
