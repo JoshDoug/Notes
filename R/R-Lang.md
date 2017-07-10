@@ -33,6 +33,8 @@ A general collection of R information, sections - such as IO - can be split into
 * Path can use forward slashes on Windows which don't need to be escaped, can also handle relative paths.
 * For header/column names add parameter: `header = TRUE` or `header = T`.
 
+## Charts and Statistics for One Variable
+
 ### Turning data into bar charts
 
 Creating bar charts for categorical variables. A categorical variable is a variable that can take on one of a limited, and usually fixed, number of possible values, assigning each individual or other unit of observation to a particular group or nominal category on the basis of some qualitative property.
@@ -76,6 +78,20 @@ Creating histograms for quantitative variables. Variables that have are measured
 `summary(data.csv$ColumnName)` - gets a summary of the data in the specified column
 
 Tukey's five-number summary: minimum, lower-hinge (first quartile), median, upper-hinge (third quartile), maximum, doesn't print labels though: `fivenum(data.csv$ColumnName)` - doesn't seem that useful though for general use, but is apparently what's used to draw the box plots.
+
+## Modifying Data
+
+### Recoding Variables
+
+Recoding variables with the psych package. Gonna need to rewatch this explainer.
+
+### Computing New Variables
+
+Gonna need to rewatch this.
+
+## Charts ofr Associations
+
+### Creating simple bar charts of group means
 
 ### R Colours
 
