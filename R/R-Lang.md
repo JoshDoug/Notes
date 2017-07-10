@@ -35,11 +35,11 @@ A general collection of R information, sections - such as IO - can be split into
 
 ### Turning data into bar charts
 
-Creating bar charts for categorical variables.
+Creating bar charts for categorical variables. A categorical variable is a variable that can take on one of a limited, and usually fixed, number of possible values, assigning each individual or other unit of observation to a particular group or nominal category on the basis of some qualitative property.
 
 Feed the csv into a data frame, as you would when reading in a csv spreadsheet normally, with headers preferably: `data.csv <- read.csv("data.csv", header = T)`
 
-Create a table from the data for a specific column: `data.freq <- table(date.csv$ColumnName` # The column name is case sensitive.
+Create a table from the data for a specific column: `data.freq <- table(data.csv$ColumnName` # The column name is case sensitive.
 
 Create the barchart: `barplot(data.freq)` # This is a very simple bar chart, with no additional options set.
 
@@ -58,6 +58,28 @@ Other paramters:
 * `xlim = c(0,100)` - set x limits to 0 and 100, needs to be a vector
 * `main = "Title of Graph\nA second line of Title"` - set a title, this can include newline chars to make it multiline
 * `xlab = "Description of X"` - title of X axis, presumably `ylab` is the y axis equivalent.
+
+### Creating Histograms
+
+Creating histograms for quantitative variables. Variables that have are measured on a numeric or quantitative scale. Ordinal, interval and ratio scales are quantitative. A country's population, a person's shoe size, or a car's speed are all quantitative variables. Variables that are not quantitative are known as qualitative variables (aka catergorical variables).
+
+`hist(data.csv$ColumnName)` - create a simple histogram, other parameters are similar to barplots.
+
+### Calculating Frequencies
+
+`prop.table(data.freq` - converts the data into proportions, this often produces results with lots of decimal places, this can be simplified with round!
+`round(prop.table(site.freq), 2)` - this will round the result to 2 decimal places, how can you rounad to significant figures?
+
+### Calculating Descriptives
+
+`summary(data.csv)` - gets a summary of the data, qualitative and quantitative.
+`summary(data.csv$ColumnName)` - gets a summary of the data in the specified column
+
+Tukey's five-number summary: minimum, lower-hinge (first quartile), median, upper-hinge (third quartile), maximum, doesn't print labels though: `fivenum(data.csv$ColumnName)` - doesn't seem that useful though for general use, but is apparently what's used to draw the box plots.
+
+### R Colours
+
+R colours: [R Colour Palette](http://research.stowers.org/mcm/efg/R/Color/Chart/)
 
 ### Packages
 
