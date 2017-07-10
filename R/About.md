@@ -12,6 +12,8 @@ It can be easier to work with arrays of numbers without for loops.
 
 R is a multi-paradigm language: Array, OO, imperative, functional, procedural, and reflective.
 
+R colours: [R Colour Palette](http://research.stowers.org/mcm/efg/R/Color/Chart/)
+
 ## Competing languages and software
 
 SAS:
