@@ -6,8 +6,6 @@ A general collection of R information, sections - such as IO - can be split into
 
 `#` - a comment in R.
 
-`1:100` - simple loop that prints out 1 to 100.
-
 `print("Hello World)` # Print Statement, no semicolons necessary in R.
 
 `x` - running this will just print the variable to the console.
@@ -22,16 +20,72 @@ A general collection of R information, sections - such as IO - can be split into
 
 `x <- 1:5` # Assigning the values 1 to 5 to variable x, sometimes described as 'x *gets* values 1 to 5'
 
-`y <- c(6,7,8,9,10)` # The concatenate/collection/combine function, useful for specifying non-sequential data to put in the variable
-
 `x + y` # Add the contents of each vector/array, such that the output would be: 7,9,11,13,15 (but no assignment)
 
 `x * 2` # Multiplies each element in the vector, such that the output would be: 2,4,6,8,10 (but no assignment)
 
 #### Vectors
 
-`c(4, 7, 9)` - an array of a values of a single type
+`c(4, 7, 9)` - an array of a values of a single type, c is short for combine, but is also commonly reffered to as concatenate and collection
 
+`y <- c(6,7,8,9,10)` # The ccombine function is useful for specifying non-sequential data to put in the variable
+
+`hi <- c("Hello", " ", "world", "!")` - another example
+
+`1:10` - this is a sequence vector which uses a `start:end` notation to create a sequence of - in this case - numbers
+
+`x <- 1:100` - creates a vector of 1 to 100 and assigns to x
+
+`9:5` - can also be reversed
+
+`seq(5, 9)` - can also be used to create sequences, but also allows increments to be specified
+
+`seq(5, 9, 0.5)` - this time with an increment of 0.5 specified, if it is not set then it defaults to an increment of 1 I guess.
+
+`hi[3]` - retrieve a value from a vector, in R array indices start at 1 instead of 0. In this case it would return "world", from the vector above.
+
+`hi[3] <- "England"` - change the value in the 3rd indice, from world to England.
+
+`hi[4] <- "nice"` - extend the vector with new values, the vector will grow to accomadate them
+
+`hi[c(1,3)]` - retrieve multiple values from the vector by specifying the indices to retrieve within another vector
+
+`hi[1:3]` - you can also retrieve a range of values
+
+`hi[5:7] <- c('some', 'more', 'words')` - you can also set ranges of values by providing them in a vector
+
+Vector Names, crikey - like a HashMap...kind of?
+
+`ranks <- 1:3` - create a vector of numbers 1 to 3
+
+`names(ranks) <- c("first", "second", "third")` - assign names to a vector's elements by passing a second vector filled with names to the `names` assignment function
+
+`ranks` - this will now print out the names and associated values of each indice
+
+`ranks["first"]` - this will retrieve the value associated with the name
+
+`ranks["third"] <- 4` - the name can then be used to refer to a value of the vector when reassigning values
+
+Plotting One Vector
+
+* `vesselsSunk <- c(4, 5, 1)` - create simple vector
+* `barplot(vesselsSunk)` - create a barplot from it, which will be 3 columns of heights 4, 5, and 1.
+
+Use the `names` assignment function to label each bar.
+
+* `names(vesselsSunk) <- c("England", "France", "Norway")` - nothing new here
+* `barplot(vesselsSunk)` - now the barplot will be nicely labelled
+
+Barplots also accept ranges, and other vectors
+
+`barplot(1:100)` - displays a barplot of 100 columns at heights 1 to 100
+
+Vector Math
+
+`a <- c(1, 2, 3)` - create a vector
+`a + 1` - add one to it, this will add 1 to each value, so this will return: `2, 3, 4` (not the vector has not changed, as the result has not been reassigned to it, the values are just returned)
+`a / 2` - it can also be multiplied or divided, this will return: `0.5, 1, 1.5`
+`a * 2` - returns `2, 4, 6`
 
 ### Popular Functions
 
