@@ -16,6 +16,8 @@ A general collection of R information, sections - such as IO - can be split into
 
 `? barplot` - find help on any R function, shows in editor help tab
 
+`T` and `F` are shorthands for `TRUE` & `FALSE`
+
 ### Variables
 
 `x <- 1:5` # Assigning the values 1 to 5 to variable x, sometimes described as 'x *gets* values 1 to 5'
@@ -26,7 +28,34 @@ A general collection of R information, sections - such as IO - can be split into
 
 `x * 2` # Multiplies each element in the vector, such that the output would be: 2,4,6,8,10 (but no assignment)
 
-### Reading data in from a spreadsheet
+#### Vectors
+
+`c(4, 7, 9)` - an array of a values of a single type
+
+
+### Popular Functions
+
+#### Maths
+
+`sum(1, 4, 8)` - takes however many numbers and returns the sum
+
+`rep("Repeat", times = 4)` - repeats the first argument by the number of times specified, in this case "Repeat" is repeated 4 times.
+
+`sqrt(16)` - take the square root of the argument
+
+#### Files & IO
+
+`list.files()` - list files in the current directory, or the directory specified in the parameters. The function can also take additional parameters such as masks, recursive listing, etc
+
+`source("code.R")` - source an R script
+
+#### Misc
+
+`help(functionName)` - brings up help for the specified function, e.g. `help(sum)`
+
+`example(functionName)` - brings up examples for the specified function
+
+### IO - Reading data in from a spreadsheet
 
 `data.csv <- read.csv("/path/to/data.csv")` # Read in a csv, provide the path to it.
 
