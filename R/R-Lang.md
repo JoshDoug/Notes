@@ -87,6 +87,43 @@ Vector Math
 `a / 2` - it can also be multiplied or divided, this will return: `0.5, 1, 1.5`
 `a * 2` - returns `2, 4, 6`
 
+`b <- c(4, 5, 6)` - create a second vector
+`a + b` - returns `5, 7, 9`
+`a - b` - returns `-3, -3, -3`
+
+`a == c(1, 99, 3)` - compare two vectors, which returns TRUE or FALSE for each indice that is equal to the corresponding indice (R doesn't test whether the whole vectors are equal to each other)
+`a < c(1, 99, 3)` - checks if each value in a is less than in the compared vector
+
+NA Values
+
+If data is missing certain values these values are set as NA, and many functions treat this value specially. Most functions will reject vectors or other data contianing NA, e.g. sum and will just return NA, but functions can be told to handle NA values if they occur.
+
+`a <- c(1, 3, NA, 7, 9)` - create a vector with a missing value, NA.
+`sum(a)` - running this will just return the value NA.
+`sum(a, na.rm = T)` - this will tell sum to remove/ignore NA values and sum will return the value of 20 in this case. `na.rm` is false by default, and presumably means 'remove NA valyes'.
+
+#### Matrices
+
+Matrices, for working with data that isn't just a simple list of values. Matrices are useful when data is in rows and columns, and the data structure is essentially a 2-dimensional array.
+The matrix function takes values in the form of data, row number, column number. So `matrix(0, 3, 4)` would produce a matrix 4 columns by 3 rows with all fields set to 0.
+You can also use a vector to initialise a matrix's value, the length of the vecotr has to align with the number of fields, so a 4 by 3 matrix would need a 12-item vector to set its values. Or, more specifically, the vector needs to be a sub-multiple or multiple of the number of rows, according to the warning message.
+
+`a <- 1:12` - create a vector containing 1 to 12
+`matrix(a, 3, 4)` - create a 3 row, 4 column matrix
+
+`b <- 1:8` - create a vector contianing 1 to 8
+`dim(b) <- c(2, 4)` - b is then converted in place from a vector to a 2x4 matrix
+
+To get a value back from a matrix you have to provide two indices instead of one, e.g. `b[2, 3]` would fetch the value in the indice of the 3rd column on the 2nd row, which is 6 in this case.
+New values are also assigned in the same way:
+
+`b[1, 4] <- 0` - assign 0 to the indice at 4th column of the 1st row.
+
+Access an entire row or column of a matrix:
+
+`b[2,]` - retrieves the 2nd row
+`b[,4]` - retrieves the 4th column
+
 ### Popular Functions
 
 #### Maths
@@ -96,6 +133,10 @@ Vector Math
 `rep("Repeat", times = 4)` - repeats the first argument by the number of times specified, in this case "Repeat" is repeated 4 times.
 
 `sqrt(16)` - take the square root of the argument
+
+`a <- c(1, 2, 3)` - create a vector
+`sin(a)` - get the sine of each value in the vector
+`sqrt(a)` - get the square root of each value in the vector
 
 #### Files & IO
 
@@ -109,6 +150,8 @@ Vector Math
 
 `example(functionName)` - brings up examples for the specified function
 
+`print(variable)` - not sure how this is different from just running a variable on its own, but yeah, this'll print it
+
 ### IO - Reading data in from a spreadsheet
 
 `data.csv <- read.csv("/path/to/data.csv")` # Read in a csv, provide the path to it.
@@ -117,6 +160,14 @@ Vector Math
 * For header/column names add parameter: `header = TRUE` or `header = T`.
 
 ## Charts and Statistics for One Variable
+
+### Scatter Plots
+
+The plot function takes two vectors, one for X values and one for Y values, and draws a graph of them.
+
+`x <- seq(1, 20, 0.1)` - create a vector from 1 to 20 in 0.1 increments
+`y <- sin(x)` - create a vector of x values run through the sine function
+`plot(x, y)` - plot the scatter graph!
 
 ### Turning data into bar charts
 
