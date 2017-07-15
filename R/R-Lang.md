@@ -136,6 +136,10 @@ Matrix plotting examples:
 `persp(volcano, expand=0.2)` - this uses a default dataset provided by R (literally, just run this and it will work, not setup), result is cool
 `image(volcano)` - creates a heatmap using the volcano matrix
 
+#### Factors
+
+wat
+
 ### Popular Functions
 
 #### Maths
@@ -150,6 +154,7 @@ Matrix plotting examples:
 `sin(a)` - get the sine of each value in the vector
 `sqrt(a)` - get the square root of each value in the vector
 `mean(a)` - gets the mean
+`sd(a)` - gets the Standard Deviation, but should really be on a larger dataset
 
 #### Files & IO
 
@@ -207,6 +212,16 @@ Other paramters:
 * `xlim = c(0,100)` - set x limits to 0 and 100, needs to be a vector
 * `main = "Title of Graph\nA second line of Title"` - set a title, this can include newline chars to make it multiline
 * `xlab = "Description of X"` - title of X axis, presumably `ylab` is the y axis equivalent.
+
+Add a mean, median, etc line to the barchart: `abline(h = mean(data.freq))`, `abline(h = median(data.freq))`, this will not create a barchart, but will instead alter a prior barchart:
+
+```R
+pounds <- c(45000, 50000, 35000, 40000, 35000, 45000, 10000, 15000)
+barplot(pounds) # Without this line to plot the barchart then the abline doesn't do anything
+meanValue <- mean(pounds)
+meanValue
+abline(h = meanValue)
+```
 
 ### Creating Histograms
 
