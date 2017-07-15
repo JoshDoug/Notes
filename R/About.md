@@ -14,6 +14,13 @@ R is a multi-paradigm language: Array, OO, imperative, functional, procedural, a
 
 R colours: [R Colour Palette](http://research.stowers.org/mcm/efg/R/Color/Chart/)
 
+## Documentation and Tutorials
+
+* [Package Documentation](https://www.rdocumentation.org/)
+* [Advanced R Style Guide](http://adv-r.had.co.nz/Style.html)
+* [Data Camp Intro to R](https://www.datacamp.com/courses/free-introduction-to-r)
+* [Try R tutorial](http://tryr.codeschool.com/)
+
 ## Competing languages and software
 
 SAS:
