@@ -2,6 +2,8 @@
 
 To run a line: `cmd-enter`.
 
+To clear the console: `ctrl-L`
+
 To install a package: Tools > Install Package, and select a package.
 
 To update packages: Tools > Check for package updates, or select Packages tab and select update
