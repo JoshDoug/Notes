@@ -184,6 +184,12 @@ Access data from a Data Frame:
 
 Reading in data frames is covered by the IO section.
 
+Merging Data Frames
+
+The merge function takes arguments with an x frame and a y frame. By default the frames are joined by columns with the same name: `merge(x, y)`
+
+Not sure what else there is to it ... what happens if the frames are different lengths? Don't know!
+
 ### Popular Functions
 
 #### Maths
