@@ -123,6 +123,18 @@ Access an entire row or column of a matrix:
 
 `b[2,]` - retrieves the 2nd row
 `b[,4]` - retrieves the 4th column
+`b[,2:4]` - retrieve multiple rows or columns by providing a sequence, columns 2, 3, 4 in this case, this returns a matrix of it's own
+
+Matrix plotting examples:
+
+`elevation <- matrix(1, 10, 10)` - create a 10 by 10 matrix filled with 1.
+`elevation[4, 6] <- 0` - set row 4 column 6 to 0
+`contour(elevation)` - creates a contour map of the values
+`persp(elevation)` - creates a 3D perspective plot, but this looks a little odd because it aligns with the top
+`persp(elevation, expand=0.2)` - makes it look better...not sure how this works, but it limits the vertical expansion, in this case by 0.2 or 1/5th.
+
+`persp(volcano, expand=0.2)` - this uses a default dataset provided by R (literally, just run this and it will work, not setup), result is cool
+`image(volcano)` - creates a heatmap using the volcano matrix
 
 ### Popular Functions
 
@@ -137,6 +149,7 @@ Access an entire row or column of a matrix:
 `a <- c(1, 2, 3)` - create a vector
 `sin(a)` - get the sine of each value in the vector
 `sqrt(a)` - get the square root of each value in the vector
+`mean(a)` - gets the mean
 
 #### Files & IO
 
@@ -190,7 +203,7 @@ Create a vector of colour specifications: `colomnColours <- c(rep("gray", 5), rg
 
 Other paramters:
 
-* `border = NA` - turn of borders
+* `border = NA` - turn off borders
 * `xlim = c(0,100)` - set x limits to 0 and 100, needs to be a vector
 * `main = "Title of Graph\nA second line of Title"` - set a title, this can include newline chars to make it multiline
 * `xlab = "Description of X"` - title of X axis, presumably `ylab` is the y axis equivalent.
