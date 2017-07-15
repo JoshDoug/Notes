@@ -138,7 +138,51 @@ Matrix plotting examples:
 
 #### Factors
 
-wat
+`valuableMaterials <- c('gold', 'silver', 'gems', 'gold', 'gems')` # create a vector of strings
+`types <- factor(valuableMaterials)` # factor them into types
+
+The factor groups the unique values as levels, and then the values are just integer references to these levels, i think.
+
+```R
+> print(types)
+[1] gold   silver gems   gold   gems
+Levels: gems gold silver
+
+> as.integer(types)
+[1] 2 3 1 2 1
+
+> levels(types)
+[1] "gems"   "gold"   "silver"
+```
+
+Plots with Factors:
+
+`weights <- c(300, 200, 100, 250, 150)` - create a couple vectors
+`prices <- c(9000, 5000, 12000, 7500, 18000)`
+`plot(weights, prices)` - plot it, just creates a simple plot of weight and price
+
+This plot isn't too useful though, as it's not clear which chest is which, so we can add symbols and a legend.
+
+`plot(weights, prices, pch=as.integer(types))` - here pch is used to add a symbol to each point unique to its legened, pch is short for 'plotting character'.
+`legend("topright", c("gems", "gold", "silver"), pch=1:3)` - adds the legend, but this is hardcoded and isn't the best way to do
+`legend("topright", levels(types), pch=1:length(levels(types)))` - looks more complex, but doesn't break if the vector changes
+
+#### Data Frames
+
+Data frames are a way to tie together other data structures into a cohesive unit that is easier to work with. So from the last example which has a vector for valuable materials, and a factor created from it for types, weights vector, prices vector. This works well to begin with, but falls apart should any change need to be made to the data, say adding a new weight sample would involve altering 3 data structures which are not synced together.
+
+This is where Data Frames come in, which act like a database table or excel spreadsheet. It has a specific number of columns with expected types of values and an indeterminate number of rows.
+Carrying on from the last example:
+
+`treasure <- data.frame(weights, prices, types)` - create the data frame!
+
+Access data from a Data Frame:
+
+`treasure[[2]]` - access the second column, prices, from the frame.
+`treasure[["prices]]` - you can also use the name of the column
+`treasure$prices` - this is a shorthand for getting a column
+
+Reading in data frames is covered by the IO section.
 
 ### Popular Functions
 
