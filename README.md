@@ -1,9 +1,10 @@
 # Notes
+
 A collection of notes, divided up into folders by topic.
 
 Current Structure:
 
-```
+```tree
 C/
 CSS/
 Git/
@@ -36,4 +37,5 @@ NIX/
 Windows/
 └── PowerShell
 ```
+
 To update current directory structure, just run tree and copy over the output.
