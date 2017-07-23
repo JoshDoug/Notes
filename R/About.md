@@ -17,6 +17,8 @@ R colours: [R Colour Palette](http://research.stowers.org/mcm/efg/R/Color/Chart/
 ## Documentation and Tutorials
 
 * [Package Documentation](https://www.rdocumentation.org/)
+* [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
+* [Berkley intro to R - functions](https://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf)
 * [Advanced R Style Guide](http://adv-r.had.co.nz/Style.html)
 * [Data Camp Intro to R](https://www.datacamp.com/courses/free-introduction-to-r)
 * [Try R tutorial](http://tryr.codeschool.com/)
