@@ -6,6 +6,9 @@ typically dominated by SAS, SPSS, Stata, and MATLAB.
 * [R language](https://www.r-project.org/)
 * [RStudio Website](https://www.rstudio.com/) with resources, blogs, and download for the RStudio IDE.
 * [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
+* [Array Programming Paradigm](https://en.wikipedia.org/wiki/Array_programming)
+* [CRAN Packages](http://cran.stat.ucla.edu./web/packages/available_packages_by_name.html)
+* [CRAN Task Views](https://cran.r-project.org/web/views/)
 
 R is useful for vector based mathematics, which is a more mathematical way to say working with data in arrays.
 It can be easier to work with arrays of numbers without for loops.
@@ -22,6 +25,7 @@ R colours: [R Colour Palette](http://research.stowers.org/mcm/efg/R/Color/Chart/
 * [Advanced R Style Guide](http://adv-r.had.co.nz/Style.html)
 * [Data Camp Intro to R](https://www.datacamp.com/courses/free-introduction-to-r)
 * [Try R tutorial](http://tryr.codeschool.com/)
+* [DataCamp's Intro to R](https://www.datacamp.com/courses/free-introduction-to-r)
 
 ## Competing languages and software
 
@@ -45,3 +49,8 @@ Matlab:
 
 * [MATLAB Wikipedia](https://en.wikipedia.org/wiki/MATLAB)
 * [MATLAB website](https://uk.mathworks.com/products/matlab.html)
+
+## Datasets
+
+* [Kaggle](https://www.kaggle.com/)
+* [Data World](https://data.world/)

@@ -224,6 +224,8 @@ Not sure what else there is to it ... what happens if the frames are different l
 
 `print(variable)` - not sure how this is different from just running a variable on its own, but yeah, this'll print it
 
+Dates - [Creating and formatting dates in R](https://www.stat.berkeley.edu/~s133/dates.html), [Dates in R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/as.Date.html)
+
 ### IO - Reading data in from a spreadsheet
 
 `data.csv <- read.csv("/path/to/data.csv")` # Read in a csv, provide the path to it.
