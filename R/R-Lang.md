@@ -182,6 +182,10 @@ Access data from a Data Frame:
 `treasure[["prices]]` - you can also use the name of the column
 `treasure$prices` - this is a shorthand for getting a column
 
+`treasure[2]` - this will also access the data in the second column, but returns it in a slightly different format, as the vector originally used to create the data frame printed in a column format, whereas double bracket seems to return a raw vector with no column header and output normally instead of as a column.
+
+`treasure[4,2]` - this will return the value in the fourth row of the second column, double brackets don't seem to make a difference here and just returns the same value, seemingly in the same format.
+
 Reading in data frames is covered by the IO section.
 
 Merging Data Frames
@@ -281,8 +285,8 @@ Creating histograms for quantitative variables. Variables that have are measured
 
 ### Calculating Frequencies
 
-`prop.table(data.freq` - converts the data into proportions, this often produces results with lots of decimal places, this can be simplified with round!
-`round(prop.table(site.freq), 2)` - this will round the result to 2 decimal places, how can you rounad to significant figures?
+`prop.table(data.freq)` - converts the data into proportions, this often produces results with lots of decimal places, this can be simplified with round!
+`round(prop.table(site.freq), 2)` - this will round the result to 2 decimal places, how can you round to significant figures?
 
 ### Calculating Descriptives
 
