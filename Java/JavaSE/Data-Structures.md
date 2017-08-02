@@ -3,7 +3,15 @@
 A data structures stores objects and data primitives. Beyond storage, data structures provide operations for accessing and manipulating the data, and can be thought of as a container object that stores other objects or data primitives.
 
 Collections are part of the [java.util package](https://docs.oracle.com/javase/8/docs/api/index.html).
-Java 9 documentation (link might break), where collections are still part of the java.util package, which is part of the java.base module, [Java 9 documentation here](http://download.java.net/java/jdk9/docs/api/java/util/package-summary.html.
+Java 9 documentation (link might break), where collections are still part of the java.util package, which is part of the java.base module, [Java 9 documentation here](http://download.java.net/java/jdk9/docs/api/java/util/package-summary.html).
+
+Collections are sometimes referred to as containers. They are used to store, retrieve, manipulate, and aggregate. Java has two types of contianers. Some containers store a collection of elements, other containers store key-value pairs, called maps.
+
+## Links
+
+* [Java Collections Trail](http://docs.oracle.com/javase/tutorial/collections/index.html)
+* [Collections Framework Documentation: Overview, API Outline, Design Rationale](http://download.java.net/java/jdk9/docs/api/java/util/doc-files/coll-index.html)
+* [JavaDoc](http://download.java.net/java/jdk9/docs/api/java/util/package-summary.html)
 
 ## Types of Data Structures
 
@@ -14,13 +22,14 @@ Java 9 documentation (link might break), where collections are still part of the
 
 Types:
 
+* Lists - store an ordered collection of elements (ArrayList, LinkedList..)
+* Set - stores a group of nonduplicate elements
+* Queue - stores objects that are processed in FIFO order
 * ArrayList - stores objects and can grow and shrink.
 * LinkedList - uses pointers to keep track of elements
 * Vector - can grow and shrink; provides synchronisation
 * Stack - operates on last in, first out (LIFO)
 * Queue - operates on first in, first out (FIFO)
-
-![Collection Interfaces](../../Assets/CollectionsDiagram.png)
 
 ArrayList and Vector Advantages:
 
@@ -49,3 +58,37 @@ Disadvantage:
 * Elements are not stored sequentially in memory (as they are in an ArrayList)
 * Random access to elements can be inefficient (gotta read each preceding element to get to the one you want)
 * Slower iterations and extra memory overhead required (in order to keep track of the pointer to the next element in the list)
+
+## Using Data Structures
+
+### Collection Interface
+
+Diagram that shows (some of) the data structures that implement the Collection interface and their hierarchy:
+
+![Collection Interfaces](../../Assets/CollectionsDiagram.png)
+
+The Collection interface defines common operations for data structures. it provides basic operations for add and remove (or enforces it, right?), it also provides important query operations such as getting the length of a collection.
+
+Other enforced methods are toArray(), or to convert from an array to a list, use Arrays.toList().
+
+There is also a Collections class that provides static methods to sort, search, copy, and fill data structures as long as they implement interfaces relevant to the operation.
+
+### Iterable Interface
+
+Each collection has an Iterator object to traverse the elements. This provides tools for walking through a data structure and hides the details of how data is stored. The Collection interface extends the Iterable interface.
+
+The Iterable interface enforces 3 methods, iterator(), forEach(), and spliterator()...?
+
+The iterator() method returns an Iterator object. This can then be used to walk the collection using hasNext() and next() and to remove elemnents from it in a safe way.
+
+In addition to the Iterable interface, there is a ListIterator, which is used for list data structures.
+
+### ArrayLists
+
+### LinkedLists
+
+### Vectors
+
+### Stacks
+
+### Queues
