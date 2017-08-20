@@ -81,9 +81,15 @@ The Iterable interface enforces 3 methods, iterator(), forEach(), and spliterato
 
 The iterator() method returns an Iterator object. This can then be used to walk the collection using hasNext() and next() and to remove elemnents from it in a safe way.
 
-In addition to the Iterable interface, there is a ListIterator, which is used for list data structures.
+In addition to the Iterable interface, there is a ListIterator, which is used for list data structures, e.g. LinkedLists. This adds functionality such as traversing a list backwards using previous(), hasPrevious(), and previousIndex() methods.
 
 ### ArrayLists
+
+The ArrayList is probably the most frequently used data structure (certainly in my case), and like the LinkedList it implememnts the List interface. The ArrayList approach to implementing the List interface is to define an object array and increase the size of that array as necessary to support the number of elements contained within the collection.
+
+* ArrayLists can contain duplicate elements and null values.
+* An ArrayList isn't inherently thread safe, so modifications need to be synchronised.
+* Quick access is provided to elements based on index position, elements can be added or removed by index value.
 
 ### LinkedLists
 
