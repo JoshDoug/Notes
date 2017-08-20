@@ -43,3 +43,27 @@ System.out.println(c1.compareTo("Monday")); //Date cannot be compared to a strin
 Comparable<Date> c2 = new Date();
 System.out.println(c2.compareTo("Monday")); //No clumsy casting so caught by IDE or at compile time
 ```
+
+## Syntax
+
+Type parameters are delimited by angle brackets, the type follows the class name immediately. The class can have multiple type parameters.
+
+Syntax for a generic class: `class name<T1, T2, ..., TN> {...}`
+
+Type parameter names:
+
+* E - Element (used extensively by Java Collections)
+* K - Key
+* N - Number
+* T - Type, T is a generic Type
+* V - Value (as in a primitive value?)
+
+Syntax for a generic method: `public static <E> void print(E[] list) {...}`
+
+For a method, the generic type is specified before the return type (which in the above example is void). The method expects an ArrayList of elements of type E.
+
+Syntax for a generic interface: `public interface GenericInterface<K,V> {...}`
+
+A generic interface can also have multiple type parameters, such as a pair of key value objects shown in the example above.
+
+ArrayList example:
