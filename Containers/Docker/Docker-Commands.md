@@ -43,14 +43,29 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 Creating a docker image, docker image commands, and writing a Dockerfile.
 
 * `docker image` prints the help for the image command, adding `help` and `--help` are optional and thus redundant.
+* `docker pull store/oracle/serverjre:8` pull the specified image down so it is stored locally ready for use
 * `docker image ls` list current images
+* `docker image build --help` get help for the build command
 * `docker image build -t helloworld .` build the dockerfile in the current directory with the tag helloworld, this image can then be run as a container as any other image would be.
+* `docker build -t helloworld .` - shorter and also works, `build` part of command is redundant
+* `docker build -t helloworld:2 .` - build and tag the 2nd version of the image helloworld
 * `docker history helloworld` see how the image helloworld was built
 
 ### Dockerfile Reference
 
 * FROM - this has to be the first instruction, which is not a comment.
-* CMD - the command the container should run, be it starting a service or just running a UNIX tool
+* COPY - Copy files or directories to the container filesystem
+* ADD - Copy a file, such as a tar file and then extract it, e.g. `ADD app.tar.gz /opt/var/myapp`
+* EXPOSE - network ports on which the container is listening
+  * E.g. `EXPOSE 9990`
+  * This only exposes the port for the container, when running the container -P or -p are still necessary to publish the host port
+* VOLUME - creates a mount point with the specified name
+* RUN - useful for updating a container, installing a package, running a script on the container, etc. Examples:
+  * `RUN apt-get update && apt-get install -y git`
+  * `RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin#007 - silent`
+* ENTRYPOINT - configures the container executable, defaults to `/bin/sh -c`, can be overridden from CLI with --entrypoint
+  * ENTRYPOINT ["/entrypoint.sh"]
+* CMD - the command the container should run, be it starting a service or just running a UNIX tool, the last CMD in the dockerfile overwrites any prior CMD commands, including on the image pulled into the Dockerfile, and can itself be overriden when a container is run from the CLI.
 
 Dockerfile reference [documentation](https://docs.docker.com/engine/reference/builder/).
 
