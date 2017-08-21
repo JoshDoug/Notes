@@ -60,11 +60,17 @@ Creating a docker image, docker image commands, and writing a Dockerfile.
   * E.g. `EXPOSE 9990`
   * This only exposes the port for the container, when running the container -P or -p are still necessary to publish the host port
 * VOLUME - creates a mount point with the specified name
+  * `VOLUME /opt/couchbase/var` - set up the mount point
+  * `docker container run -v ~/data:/opt/couchbase/var image_name`
 * RUN - useful for updating a container, installing a package, running a script on the container, etc. Examples:
   * `RUN apt-get update && apt-get install -y git`
   * `RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin#007 - silent`
 * ENTRYPOINT - configures the container executable, defaults to `/bin/sh -c`, can be overridden from CLI with --entrypoint
   * ENTRYPOINT ["/entrypoint.sh"]
+* USER - sets the username or UID to use when running the image
+* HEALTHCHECK - performs a healthcheck on the application inside the container
+  * `HEALTHCHECK --interval=5s timeout=3s CMD curl --fail http://localhost:8091/pools || exit 1`
+  * In the example a check will be made on the couchbase container every 5 seconds, if after 3 seconds the container doesn't return a result mark the container as unhealthy.
 * CMD - the command the container should run, be it starting a service or just running a UNIX tool, the last CMD in the dockerfile overwrites any prior CMD commands, including on the image pulled into the Dockerfile, and can itself be overriden when a container is run from the CLI.
 
 Dockerfile reference [documentation](https://docs.docker.com/engine/reference/builder/).
@@ -74,6 +80,24 @@ FROM alpine
 
 CMD echo "Hello World"
 ```
+
+## Tagging and Sharing Docker Images
+
+Tag an image: `docker image tag helloworld:2 helloworld:latest` - tag v2 of helloworld as the latest version
+
+Push an image to docker hub:
+
+* Create an account on docker hub.
+* Login to docker hub via CLI using `docker login` and following prompts.
+* Tag an image with a namespace: `docker image tag helloworld:2 joshdoug/helloworld:latest`
+* Push image: `docker push joshdoug/helloworld:latest`
+
+Using a local registry:
+
+* Run registry container: `docker run -d -p 5000:5000 --restart always registry registry:2.6.0`
+* Tag image: `docker tag helloworld:latest localhost:5000/joshdoug/helloworld:latest`
+  * The format for the tag is registry:namespace:image:tag
+* Push the image to the local registry: `docker image push localhost:5000/joshdoug/helloworld:latest`
 
 ## Other shortcuts and commands
 
