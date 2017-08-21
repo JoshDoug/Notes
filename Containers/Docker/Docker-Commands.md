@@ -29,13 +29,41 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 * `docker container rm container_name other_container another_container` - remove multiple containers
 * `docker container rm -f container_name` - stop and remove a container
 
+### Examples
+
+* Create & run a jenkinsci/blueocean container: `docker run -d -p 8080:8080 jenkinsci/blueocean`
+
 ### Old Contaienr Commands - could possibly be deprecated and removed in the future
 
 * `docker ps` - see running containers
 * `docker ps -a` - see all containers, including stopped containers
 
+## Image Commands
+
+Creating a docker image, docker image commands, and writing a Dockerfile.
+
+* `docker image` prints the help for the image command, adding `help` and `--help` are optional and thus redundant.
+* `docker image ls` list current images
+* `docker image build -t helloworld .` build the dockerfile in the current directory with the tag helloworld, this image can then be run as a container as any other image would be.
+* `docker history helloworld` see how the image helloworld was built
+
+### Dockerfile Reference
+
+* FROM - this has to be the first instruction, which is not a comment.
+* CMD - the command the container should run, be it starting a service or just running a UNIX tool
+
+Dockerfile reference [documentation](https://docs.docker.com/engine/reference/builder/).
+
+```Dockerfile
+FROM alpine
+
+CMD echo "Hello World"
+```
+
+## Other shortcuts and commands
+
 Escape sequence to exit a container without stopping it: `Ctrl-p + Ctrl-q`
 
-Create & run a jenkinsci/blueocean container: `docker run -p 8080:8080 jenkinsci/blueocean`
+## Tutorials and Blog Posts
 
 Blog post on creating a container with [SQL Server on Linux in Docker on a Mac with Visual Studio Code](http://thedatafarm.com/data-access/mashup-sql-server-on-linux-in-docker-on-a-mac-with-visual-studio-code/) pretty cool stuff
