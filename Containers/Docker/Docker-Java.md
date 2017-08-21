@@ -13,6 +13,10 @@ FROM openjdk:9
 CMD java -version
 ```
 
+Other image tag options:
+
+* `openjdk:jdk-alpine` - get the latest JDK on Alpine Linux
+
 Oracle Java SE Image:
 
 Prerequisites:
@@ -24,4 +28,22 @@ Prerequisites:
 FROM store/oracle/serverjre:8
 
 CMD java -version
+```
+
+IBM Java Image:
+
+```Dockerfile
+FROM ibmjava
+
+CMD java -version
+```
+
+## Examples
+
+Setting up a webapp on Wildfly:
+
+```Dockerfile
+FROM jboss/wildfly
+
+COPY webapp.war /opt/jboss/wildfly/standalone/deployments/webapp.war
 ```
