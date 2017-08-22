@@ -1,5 +1,9 @@
 # Docker Compose
 
+* [Getting Started with Docker Compose](https://docs.docker.com/compose/gettingstarted/)
+* [Overview of Docker Compose](https://docs.docker.com/compose/overview/)
+* [Docker Compose Documentation](https://docs.docker.com/compose/)
+
 Most applications have multiple components, e.g. a webserver, database, application server, etc. So if an application is made up of multilple components it ideally would be modularised, each component run as a container, and this is where Docker Compose comes in. Docker Compose makes it easy to run multicontainer applications.
 
 Configuration is defined in one or more files, docker-compose.yml by default. A docker-compose.override.yml can also exist which overrides certain parts of the docker-compose.yml and is merged into a single Docker Compose definiton.
