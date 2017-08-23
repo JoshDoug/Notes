@@ -65,6 +65,39 @@ ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-comple
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion /usr/local/etc/bash_completion.d/docker-compose
 ```
 
+## [Multi-CPU Architecture Support](https://docs.docker.com/docker-for-mac/multi-arch/)
+
+Docker for Mac can run containers for different Linux architectures, with a few caveats. Covered in the link, because it's complex.
+
+## [Networking](https://docs.docker.com/docker-for-mac/networking/)
+
+* VPN Passthrough
+* Port Mapping
+* HTTP/HTTPS Proxy Support
+
+### Known Limitations, Use Cases, and Workarounds
+
+* no docker0 bridge on macOS, this interface is actually within `HyperKit`
+* cannot ping containers - sad!
+* Per-container IP addressing is not possible: the docker (Linux) bridge network is not reachable from the macOS host
+
+### [Use Cases and Workarounds](https://docs.docker.com/docker-for-mac/networking/#use-cases-and-workarounds)
+
+Use cases and workarounds covered by the above link:
+
+* Connecting from a container to a service on the host
+* Connecting to a container from macOS
+
+## [File System Sharing](https://docs.docker.com/docker-for-mac/osxfs/)
+
+Info about File System sharing, osxfuse, and potential issues, all covered in the link above.
+
+Performance tuning for volume mounts (shared filesystems) covered [here](https://docs.docker.com/docker-for-mac/osxfs-caching/). I guess I'll read this if I have any performance problems.
+
+## [Logs and Troubleshooting](https://docs.docker.com/docker-for-mac/troubleshoot/#diagnose-problems-send-feedback-and-create-github-issues)
+
+Lots of interesting info in the link above, although the console app info is outdated.
+
 ## Creating a docker-machine host
 
 Containers work and run without doing this, so I'm not sure why it's necessary...except for getting environment variables which are most likely necessary to integrate Docker with an IDE.
