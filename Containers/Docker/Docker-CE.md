@@ -9,10 +9,13 @@ General information about what Docker is, how containers work, what containers a
 * [Reference Documentation](https://docs.docker.com/reference/)
 * [Samples](https://docs.docker.com/samples/)
 
-## [What is Docker](https://www.docker.com/what-docker)
+## Tutorials and Blog Posts
 
+* Blog post on creating a container with [SQL Server on Linux in Docker on a Mac with Visual Studio Code](http://thedatafarm.com/data-access/mashup-sql-server-on-linux-in-docker-on-a-mac-with-visual-studio-code/) pretty cool stuff
 * Docker 101: [Introduction to Docker](https://www.youtube.com/watch?v=V9IJj4MzZBc) on YouTube.
 * [Play with Docker Classroom](http://training.play-with-docker.com/)
+
+## [What is Docker](https://www.docker.com/what-docker)
 
 Docker is a software container platform. According to Docker's marketing speel it helps do the following:
 

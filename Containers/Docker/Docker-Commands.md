@@ -27,6 +27,7 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 * `docker container ls -a` - list all containers, including stopped containers
 * `docker container rm container_name` - remove a container
 * `docker container rm container_name other_container another_container` - remove multiple containers
+* `docker system prune` - remove all stopped containers
 * `docker container rm -f container_name` - stop and remove a container
 
 ### Examples
@@ -102,7 +103,3 @@ Using a local registry:
 ## Other shortcuts and commands
 
 Escape sequence to exit a container without stopping it: `Ctrl-p + Ctrl-q`
-
-## Tutorials and Blog Posts
-
-Blog post on creating a container with [SQL Server on Linux in Docker on a Mac with Visual Studio Code](http://thedatafarm.com/data-access/mashup-sql-server-on-linux-in-docker-on-a-mac-with-visual-studio-code/) pretty cool stuff
