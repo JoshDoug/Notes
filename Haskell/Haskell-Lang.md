@@ -35,6 +35,18 @@ Starting the REPL with `stack ghci` lands you on a prompt called Prelude where y
 * `:type "String"` returns `"String" :: [Char]`
 * `:info Bool`
 
+Working with files in GHCI:
+
+* Set editor: `:set editor vim` - set the editor to vim, or emacs, or nano, etc
+* Load a file: `:load file.txt`
+* Run a method: `:load method`
+* Run main: `:main`
+* Edit file: `:edit` - this will auto reload the file when exiting the editor
+
+## Compiling source code
+
+* Compiling a single file: `stack ghc test.hs` - this will create some intermediate files and an executable
+
 ## Built-in Data Structures
 
 ### Lists
