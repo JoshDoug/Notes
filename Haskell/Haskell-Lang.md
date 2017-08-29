@@ -47,6 +47,31 @@ Working with files in GHCI:
 
 * Compiling a single file: `stack ghc test.hs` - this will create some intermediate files and an executable
 
+## Simple variables
+
+To assign a value to a variable in GHCI: `let varName = "A value"`
+
+## Functions
+
+Basic function definitions
+
+A function called add, which takes parameters a and b, and returns a + b: `add a b = a + b` and use the function: `add 12 4` which returns `16`.
+
+Example of a function, called add:
+
+* Function declaration which takes parameters a and b, and returns a + b: `add a b = a + b`
+* Calling the function with parameters: `add 12 4` which returns `16`
+* Add a type signature before the declaration: `add :: Int -> Int -> Int` - not sure why this is important?
+
+Types
+
+Partial functions - Return a value or an error?
+Total functions? - Return a value and always works?
+
+Currying
+
+Point-free style
+
 ## Built-in Data Structures
 
 ### Lists
@@ -74,6 +99,9 @@ Simples list examples:
 * `(1, "String", False)` try running `:type` on this
 * `[("one", 1), ("two", 2), ("three", 3)]` a list of tuples, can be used like an enum?
 
-Simple dictionary with lookup
+Simple example of a basic dictionary with lookup using a tuple:
 
-Maybe
+* Create tuple dictionary thing: `let dict = [("one", 1), ("two", 2), ("three", 3)]`
+* Use lookup function to find corresponding value: `lookup "one" dict`, which returns `Just 1`
+
+Maybe - it may or may not be set? It may or may not return a certain type?
