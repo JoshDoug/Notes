@@ -27,8 +27,37 @@ Starting the REPL with `stack ghci` lands you on a prompt called Prelude where y
 * `:?` list of commands
 * `:quit` to quit the REPL
 * `123 + 123` returns `246`
+* `['H','e','l','l','o']` returns "Hello", Strings in Haskell are just char arrays
 * `length "Hello"` returns 5
 * `:type True` returns `True :: Bool`
 * `:type pi` returns `pi :: Floating a => a` - what?
 * `:type 123` returns `123 :: Num t => t`
-* `:info`
+* `:type "String"` returns `"String" :: [Char]`
+* `:info Bool`
+
+## Built-in Data Structures
+
+### Lists
+
+Simples list examples:
+
+* `['H','e','l','l','o']`
+* `[1,2,3,4]`
+* `[1.0, 2.0, 3.0, 4.0]`
+* `[1..10]` sets a range which returns an array of 1 to 10, similar to R
+* `[1,2..10]` returns 1 to 10 but `[1,3..10]` returns `[1,3,5,7,9]` ?
+* `1 : []` returns `[1]`, prepends the values to the empty list
+* `1 : [2]` returns `[1,2]`
+* `1 : 2 : []` returns `[1,2]`
+* `1 : [2,3]` returns `[1,2,3]`
+* `'h' : 'e' : 'l' : 'l' : 'o' : []` returns `"hello"`
+* `'h' : 'e' : "llo"` returns `"hello"`
+* `[1,2,3] ++ [4,5,6]` returns `[1,2,3,4,5,6]`
+* `head [1,2,3]` returns `1`
+* `tail [1,2,3]` returns `[2,3]`
+
+### Tuples
+
+Simple dictionary with lookup
+
+Maybe
