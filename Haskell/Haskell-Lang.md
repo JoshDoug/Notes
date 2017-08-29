@@ -58,6 +58,10 @@ Simples list examples:
 
 ### Tuples
 
+* `(1,2,3,4,5,6)` a tuple of numbers
+* `(1, "String", False)` try running `:type` on this
+* `[("one", 1), ("two", 2), ("three", 3)]` a list of tuples, can be used like an enum?
+
 Simple dictionary with lookup
 
 Maybe
