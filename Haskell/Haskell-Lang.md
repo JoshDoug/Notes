@@ -76,6 +76,18 @@ In Haskell, expressions are not evaluated until their results are actually neede
 
 Speaks for itself: Every Haskell expression has a type, and types are all checked at compile-time. Programs with type errors will not even compile, much less run.
 
+Haskell's type system is apparently great, and not annoying like Java and C++'s type systems are (not sure I've found them annoying though). Part of this is down to Haskell's type system being more expressive.
+
+It helps clarify thinking and express program structure. The first step in writing a Haskell program is usually to write down all the types. Because Haskell's  type ssystem is so expressive, this is a non-trivial design step. *So far this is actually sounding more annoying.*
+
+Serves as a form of documentation. Given an expressive type system, just looking at a function's type tells you a lot about what the function might do and how it can be used, even before you've read a single word of written documentation. *Okay but with well written Java you should be able to garner the same amount of info from a method signature right?*
+
+Turns run-time errors into compile-time errors, some of the time. Okay, so the same as all statically typed langauges then, if you're not doing anything too pesky with generics.
+
+### Abstraction
+
+### Wholemeal programming
+
 ## Using GHCi - Consider splitting into own section
 
 Starting the REPL with `stack ghci` lands you on a prompt called Prelude where you can test out haskell options.
