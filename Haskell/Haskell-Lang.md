@@ -36,7 +36,47 @@ Components:
 * [You Could Have Invented Monads! (And Maybe You Already Have.)](http://blog.sigfpe.com/2006/08/you-could-have-invented-monads-and.html)
 * [Monads for functional programming](http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf)
 
-## Using GHCi
+## [What is Haskell](https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/1-haskell-basics#what-is-haskell-)
+
+Haskell is a lazy, functional programming language created by a committee of academics in the 1980s using the best ideas from exisiting functional langauges, and a few new ideas of their own.
+
+### Functional
+
+Haskell conforms to the functional programming paradigm:
+
+* Functions are first-class - functions are values which can be used in exactly the same ways as any other sort of value.
+* The meaning of Haskell programs is centered around evaluating expressions rather than executing instructions.
+
+This resuolts in an entirely different way of thinking about programming, apparently.
+
+### Pure
+
+Haskell expressions are always referentially transparent (not all functional languages are pure):
+
+* No mutation - Everything (variables, data structures, ...) is immutable.
+* No Side effects - expressions never have 'side effects' such as updating global variables or printing to the screen.
+* Consistent results - calling the same function with the same arguments results in the same output every time.
+
+This does require a shift in thinking.
+
+* Equational reasoning and refactoring - In Haskell one can always “[replace equals by equals](https://stackoverflow.com/questions/30145271/what-is-meant-by-replace-equals-by-equals)”.
+* Parallelism - Evaluating expressions in parallel is easy when they are guaranteed not to affect one another.
+* Fewer headaches - Haskell elimintes unrestricted effects and action-at-a-distance which makes for programs that are hard to debug, maintain, and reason about.
+
+### Lazy
+
+In Haskell, expressions are not evaluated until their results are actually needed. This has some consequences, which include:
+
+* Easy to define a new control structure just by defining a function
+* Possible to define and work with infinite data structures
+* Enables a more compositional programming style
+* One major downside though - reasoning about time and space usage becomes much more complicated
+
+### Statically Typed
+
+Speaks for itself: Every Haskell expression has a type, and types are all checked at compile-time. Programs with type errors will not even compile, much less run.
+
+## Using GHCi - Consider splitting into own section
 
 Starting the REPL with `stack ghci` lands you on a prompt called Prelude where you can test out haskell options.
 
