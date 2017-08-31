@@ -8,6 +8,15 @@ Haskell has 3 installation options, because why not.
 * Stack - the modern recommended install, can be installed with Homebrew on macOS
 * Haskell Platform - everything included
 
+Links:
+
+* [Haskell Site](https://www.haskell.org/)
+* [Haskell Wiki](https://wiki.haskell.org/Haskell)
+* [Tutorials](https://wiki.haskell.org/Tutorials)
+* [Learning Haskell](https://wiki.haskell.org/Learning_Haskell)
+* [School of Haskell](https://www.schoolofhaskell.com/)
+* [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf)
+
 ## Using Haskell with Stack
 
 Going with the assumption Haskell was installed with Stack from now on.
@@ -105,3 +114,10 @@ Simple example of a basic dictionary with lookup using a tuple:
 * Use lookup function to find corresponding value: `lookup "one" dict`, which returns `Just 1`
 
 Maybe - it may or may not be set? It may or may not return a certain type?
+
+## Building Data Structures
+
+```Haskell
+data Compass = North | East | South | West
+    deriving(Eq, Ord, Enum, Show)
+```
