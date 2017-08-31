@@ -1,6 +1,19 @@
 # Haskell Basics
 
-## Simple variables
+Haskell language basics, such as using variables, creating functions, and common language features. Anything requireing an extensive explanation can be broken into a seperate section.
+
+## Comments
+
+A comment in Haskell: `-- This is a comment, because it is preceded by two hyphens`
+
+A multiline comment:
+
+```haskell
+{- this is a multiline comment
+    because it is enclosed in a curly brace hypen pair -}
+```
+
+## Declarations and Variables
 
 To assign a value to a variable in GHCI: `let varName = "A value"`
 
