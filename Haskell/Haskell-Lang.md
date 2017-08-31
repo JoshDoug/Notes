@@ -86,7 +86,40 @@ Turns run-time errors into compile-time errors, some of the time. Okay, so the s
 
 ### Abstraction
 
+Haskell is good for abstraction with features like parametric polymorphism, higher-order functions, and type classes which all aid in the fight against repetition.
+
 ### Wholemeal programming
+
+A quote from Ralf Hinze:
+
+> “Functional languages excel at wholemeal programming, a term coined by Geraint Jones. Wholemeal programming means to think big: work with an entire list, rather than a sequence of elements; develop a solution space, rather than an individual solution; imagine a graph, rather than a single path. The wholemeal approach often offers new insights or provides new perspectives on a given problem. It is nicely complemented by the idea of projective programming: first solve a more general problem, then extract the interesting bits and pieces by transforming the general program into more specialised ones.”
+
+#### Example
+
+Consider this C style pseudocode:
+
+```java
+lst = [2,3,5,7,11]
+
+int total = 0;
+for ( int i = 0; i < lst.length; i++) {
+  total = total + 3 * lst[i];
+}
+
+print total;
+```
+
+This code suffers from what Richard Bird refers to as “indexitis”: it has to worry about the low-level details of iterating over an array by keeping track of a current index. It also mixes together what can more usefully be thought of as two separate operations: multiplying every item in a list by 3, and summing the results.
+
+Vs Haskell, which is more readable, concise, and is less likely to have errors:
+
+```haskell
+lst = [2,3,5,7,11]
+
+total = sum (map (3*) lst)
+
+main = print total
+```
 
 ## Using GHCi - Consider splitting into own section
 
