@@ -32,3 +32,7 @@ Java's newer functional features:
 ## Functional Programming
 
 * [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf)
+* [Why Haskell Matters](https://wiki.haskell.org/Why_Haskell_Matters)
+* [Monads](https://en.wikipedia.org/wiki/Monad_(functional_programming))
+* [Functional lang FAQ](http://www.cs.nott.ac.uk/~pszgmh//faq.html)
+* [Functional Programming Course Notes](http://www.staff.science.uu.nl/~fokke101/courses/fp-eng.pdf)
