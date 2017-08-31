@@ -28,3 +28,7 @@ Java's newer functional features:
 * [Lambdas in Java 8](http://www.deadcoderising.com/why-you-should-embrace-lambdas-in-java-8/)
 * [Higher Order Functions](https://en.wikipedia.org/wiki/Higher-order_function)
 * [Lazy Evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation)
+
+## Functional Programming
+
+* [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf)
