@@ -44,6 +44,56 @@ y = y + 1
 
 resulting in an infinite loop.
 
+### Basic Types
+
+```haskell
+i :: Int
+i = -78
+```
+
+Ints can accomadate values at least up to ±2^29, and on most 64-bit archs the range is ±2^63, which is a big number, run the following to find the limit on your computer:
+
+```haskell
+main = print
+-- show
+  (minBound :: Int, maxBound :: Int)
+-- /show
+```
+
+Mine output `(-9223372036854775808,9223372036854775807)`
+
+In addition to the `Int` type, there is the `Integer` type which is only limited by the amount of memory the machine has.
+
+For floating-point numbers there is `Double`:
+
+```haskell
+d1, d2 :: Double
+d1 = 4.5387
+d2 = 6.2831e-4
+```
+
+Note that multiple variables can have their type declared on a single line.
+There is also a single-precision floating point type, `Float`, but it is not used much. But isn't that always the case?
+
+Some more type examples with Bools, Chars, and Strings (char arrays):
+
+```haskell
+-- Booleans
+b1, b2 :: Bool
+b1 = True
+b2 = False
+
+-- Unicode characters
+c1, c2, c3 :: Char
+c1 = 'x'
+c2 = 'Ø'
+c3 = 'ダ'
+
+-- Strings are lists of characters with special syntax
+s :: String
+s = "Hello, Haskell!"
+```
+
 ## Functions
 
 Basic function definitions
