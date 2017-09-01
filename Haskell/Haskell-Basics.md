@@ -15,7 +15,34 @@ A multiline comment:
 
 ## Declarations and Variables
 
-To assign a value to a variable in GHCI: `let varName = "A value"`
+It looks quite simple:
+
+```haskell
+x :: Int -- read :: as 'has type'
+x = 3
+```
+
+But note that because variables in Haskell are immutable, the value of x cannot be changed, setting `x = 4` a few lines later would result in the error `Multiple declarations of 'x'`. In Haskell, variables are not mutable boxes; they are just names for values!
+
+Put another way, = does not denote assignment like it does in many other languages. Instead,  = denotes definition, like it does in mathematics. That is, x = 4 should not be read as “x gets 4” or “assign 4 to x”, but as “x is defined to be 4”.
+
+And watch out:
+
+```haskell
+y :: Int
+y = y + 1
+```
+
+Now clearly this doesn't make a whole lot of sense because Haskell variables are immutable, so you can't assign a variable to itself + 1 as you would in other languages to increment a value. The type signature is also specified above it, indicating that this is the first time the value `y` is assigned, so in most languages this would fail as you cannot add 1 to a null value and assign it. So what is going on? Well because in Haskell = denotes definition rather than assignment, this does not increment the value of `y`. Instead, this statement is taken as a recursive definition; evaluation of `y` yields
+
+```haskell
+y = y + 1
+  = (y + 1) + 1
+  = ((y + 1) + 1) + 1
+-- repeat ad infinitum
+```
+
+resulting in an infinite loop.
 
 ## Functions
 
