@@ -75,7 +75,7 @@ d2 = 6.2831e-4
 Note that multiple variables can have their type declared on a single line.
 There is also a single-precision floating point type, `Float`, but it is not used much. But isn't that always the case?
 
-Some more type examples with Bools, Chars, and Strings (char arrays):
+Some more type examples with Bools, Chars, and Strings (char list):
 
 ```haskell
 -- Booleans
@@ -93,6 +93,50 @@ c3 = 'ダ'
 s :: String
 s = "Hello, Haskell!"
 ```
+
+### Arithmetic
+
+Probably makes sense to try these in GHCi:
+
+```haskell
+ex01 = 3 + 2
+ex02 = 19 - 27
+ex03 = 2.35 * 8.6
+ex04 = 8.7 / 3.1
+ex05 = mod 19 3
+ex06 = 19 `mod` 3 -- the `backticks` make a function into an infix operator
+ex07 = 7 ^ 222
+ex08 = (-3) * (-7) -- negative numbers must often be surrounded by parentheses, to avoid having the negation sign parsed as subtraction
+```
+
+Addition is only between values of the same numeric type, and Haskell doesn't do implicit conversion so this will give an error:
+
+```haskell
+i = 30 :: Int
+n = 10 :: Integer
+main = print (i + n)
+```
+
+Instead it is necessary to explicitly convert with:
+
+* `fromIntegral`: convert from any integral type (`Int` or `Integer`) to any other numeric type
+* `round`, `floor`, `ceiling`: convert floating-point numbers to `Int` or `Integer`
+
+This example will also give an error:
+
+```haskell
+i = 30 :: Int
+main = print (i / i)
+```
+
+This is an error since / performs floating-point division only. For integer division we can use `div`:
+
+```haskell
+i = 30 :: Int
+main = print (i `div` i, 12 `div` 5)
+```
+
+Quite annoying if you're used to a language with implicit conversion of numeric types, an argument against implicit conversion are that is encourages sloppy thinking about numeric code.
 
 ## Functions
 
