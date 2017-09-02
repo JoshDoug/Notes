@@ -138,6 +138,26 @@ main = print (i `div` i, 12 `div` 5)
 
 Quite annoying if you're used to a language with implicit conversion of numeric types, an argument against implicit conversion are that is encourages sloppy thinking about numeric code.
 
+## Boolean Logic
+
+As with most languages, Boolean values can be compared with `&&` (logical and), and `||`, although Haskell uses `not` instead of `!`.
+
+```haskell
+ex11 = True && False -- Evaluates to False
+ex12 = not (False || True) -- Evaluates to False
+```
+
+Comparing for equality is also fairly typical with `==`, `<`, `>`, `<=` `>=`, although not equal is different: `/=`.
+
+```haskell
+ex13 = ('a' == 'a')
+ex14 = (16 /= 3)
+ex15 = (5 > 3) && ('p' <= 'q')
+ex16 = "Haskell" > "C++"
+```
+
+Haskell also has `if` expressions: `if b then t else f` is an expression which evaluates to `t` if the Boolean expression `b` evaluates to `True`, and `f` if `b` evaluates to `False`. Note that Haskell has `if` *expressions* not `if` *statements*, this is important because with an `if` *statement* the `else` part can be optional, whereas with an `if` expression the `else` part is required since the `if` *expression* must result in some value. TL:DR when using `if` in Haskell the `else` is also required.
+
 ## Functions
 
 Basic function definitions
