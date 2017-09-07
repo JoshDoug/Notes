@@ -160,7 +160,18 @@ Haskell also has `if` expressions: `if b then t else f` is an expression which e
 
 ## Functions
 
-Basic function definitions
+In Haskell functions are called by writing the function name, a space and then the parameters, also separated by spaces, e.g. `min 8 14`, as opposed to typical C-Style syntax which might look like: `min(8,14);`. Function application (calling a function by putting a space after it and then typing out the parameters) has the highest precedence of them all. What that means for us is that these two statements are equivalent:
+
+```haskell
+ghci> succ 9 + max 5 4 + 1
+16
+ghci> (succ 9) + (max 5 4) + 1
+16
+```
+
+This means that to get the successor of the product of numbers 9 and 10, `succ 9 * 10` wouldn't work because that would get the successor of 9, which would then be multiplied by 10. So 100. Instead write `succ (9 * 10)` to get 91.
+
+### Basic function definitions
 
 A function called add, which takes parameters a and b, and returns a + b: `add a b = a + b` and use the function: `add 12 4` which returns `16`.
 
@@ -178,6 +189,12 @@ Total functions? - Return a value and always works?
 Currying
 
 Point-free style
+
+### Infix Functions
+
+These are functions in Haskell (and other languages such as Kotlin) that are placed between two arguments, operators such as `+` or `*` are *infix* operators (which are functions). This is different to most functions in Haskell which are typically *prefix* functions, or *prefix* notation where the function comes before the arguments.
+
+If a prefix function takes two parameters then it can also be called as an infix function by surrounding it with backticks.
 
 ## Built-in Data Structures
 
