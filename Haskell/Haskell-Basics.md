@@ -194,7 +194,7 @@ Point-free style
 
 These are functions in Haskell (and other languages such as Kotlin) that are placed between two arguments, operators such as `+` or `*` are *infix* operators (which are functions). This is different to most functions in Haskell which are typically *prefix* functions, or *prefix* notation where the function comes before the arguments.
 
-If a prefix function takes two parameters then it can also be called as an infix function by surrounding it with backticks.
+If a prefix function takes two parameters then it can also be called as an infix function by surrounding it with backticks. For instance, the `div` function takes two integers and does integral division between them. Doing `div 92 10` results in a 9 (as opposed to 9.2). When calling it using *prefix* syntax there could be some confusion as to which number is doing the division and which one is being divided, so it can be called as an infix function like so: ```92 `div` 10```, which clears it up a little.
 
 ## Built-in Data Structures
 
