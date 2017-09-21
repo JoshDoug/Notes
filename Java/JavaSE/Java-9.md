@@ -1,10 +1,9 @@
 # Up and Running with Java 9
 
-Documentation:
-https://docs.oracle.com/javase/9/
-
-# [What's new in Java 9 Video](https://youtu.be/9PFcTwRlASY?t=1497)
-[Blog Post](https://blogs.oracle.com/java/features-in-java-8-and-9)
+* [Documentation](https://docs.oracle.com/javase/9/)
+* [What's new in Java 9 Video](https://youtu.be/9PFcTwRlASY?t=1497)
+* [Blog Post](https://blogs.oracle.com/java/features-in-java-8-and-9)
+* [Keynote that demos JShell, modules, linking modules](https://www.youtube.com/watch?v=e9eSPtpiGkA)
 
 ## Behind the scenes improvements
 Lots of benefits of moving to JDK9 without even making any changes, don't even need to recompile.
@@ -68,6 +67,3 @@ Cont:
 * JEP 295: AOT Compilation (Ahead of time compilation), tool `jaotc`
 * Unified GC Logging
 * Make G1 the Default Garbage Collector
-
-## Removed
-Check video
