@@ -12,6 +12,19 @@ Lots of benefits of moving to JDK9 without even making any changes, don't even n
 * Strings are more effeciently managed by the JVM
 * JavaDoc gets a search box, niceeeeeee
 
+## New Release Cycle
+
+There will be a new release every 6 months which are only supported for 6 months, with an LTS every 3 years.
+
+Types of support:
+
+* Public updates: Feature additions, maybe sorta.
+* Premier Support: Free public support.
+* Extended Support: Support, if you pay for it.
+* Sustaining Support: Support on a case by case basis that would be very expensive.
+
+[Oracle Java Support page](http://www.oracle.com/technetwork/java/eol-135779.html).
+
 ## New features & functionality
 
 ### Project Jigsaw - modularised the Java Platform
