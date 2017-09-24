@@ -18,9 +18,9 @@ There will be a new release every 6 months which are only supported for 6 months
 
 Types of support:
 
-* Public updates: Feature additions, maybe sorta.
-* Premier Support: Free public support.
-* Extended Support: Support, if you pay for it.
+* Public updates: Free public support, possibly with new features.
+* Premier Support: Support, if you pay for it.
+* Extended Support: Support, if you pay even more for it.
 * Sustaining Support: Support on a case by case basis that would be very expensive.
 
 [Oracle Java Support page](http://www.oracle.com/technetwork/java/eol-135779.html).
