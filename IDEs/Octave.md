@@ -20,6 +20,7 @@ The full documentation can be displayed using `doc`, but this is more easily nav
 
 ## Built in Commands
 
+* Clear command window: `clc`
 * Alter significant figures shown: `format long` and `format short` change the number of signifcant figures displayed by following commands/output, such as `pi`.
 * Display the content of a variable: `disp(a)`, short for display, but just the variable on its own on a line will have the same effect.
 * Generate a random value: `b = rand()` sets `b` to a random decimal number between 0 and 1. Alternatively `randn()` will generated a random number based on a normal distrobution with a mean of 0 and a standard deviation of 1.
