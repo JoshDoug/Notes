@@ -14,3 +14,15 @@ By default, MatLab considers any variable to be a double, so 1 would be a double
 * Assignment with suppressed output: `b = pi;` assigns `pi` to `b` but doesn't display the result.
 * String assignment: `c = 'Hello World'`, single or double quotes work.
 * Optionally specify the type of a variable on assignment: `d = uint16(1)` would set to 1 with a class/type of an unsigned 16 bit integer, instead of a double.
+* A vector or array: `e = [1 2 3]` or `e = [1,2,3]`, either works. This is still technically a matrix.
+
+### Matrices
+
+* `a = [1,2;3,4]` or `a = [1 2;3 4]`, commas don't seem to matter. This would set up a 2x2 matrix.
+
+Output:
+
+```matrix
+1 2
+3 4
+```
