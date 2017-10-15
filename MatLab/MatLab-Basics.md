@@ -5,6 +5,48 @@ Everything is a matrix, when `a = 1`, a is a 1x1 matrix.
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
 
+## Common Functions and Commands
+
+* Alter significant figures shown: `format long` and `format short` change the number of signifcant figures displayed by following commands/output, such as `pi`.
+* Display the content of a variable: `disp(a)`, short for display, but just the variable on its own on a line will have the same effect.
+* Generate a random value: `b = rand()` sets `b` to a random decimal number between 0 and 1. Alternatively `randn()` will generated a random number based on a normal distrobution with a mean of 0 and a standard deviation of 1.
+* To bring up documentation: `doc`
+
+### Useful Built-in Mathematical Functions
+
+* `sqrt(x)`
+* `nthroot(x, n)` e.g. `nthroot(27,3)` returns `3` as it's the cube root.
+* `fix(x)` truncates a number and returns just the integer part, it doesn't round the number, so `fix(1.9)` will return `1`.
+* `ceil(x)` rounds a number up
+* `floor(x)` rounds a number down
+* `round(x)` rounds a number to the closes integer (.5 goes up)
+* `max(x)` finds the largest number in a set
+* `min(x)` finds the smallest number in a set
+* `factorial(x)` finds the factorial of an input, e.g. 5! is 120.
+* `primes(x)` returns primes up to and including `x`
+* `list_primes(x)` lists the first `x` primes
+
+## Operators
+
+As with most languages there are two types of operators, mathematical operators, and logical operators.
+
+Mathematical operators, few surprises here:
+
+* Addition `+`
+* Subtraction `-`
+* Multiplication `*`
+* Division `/`
+* Exponenation `^`: `6^3`
+* Modular division `mod(x,y)` where `x` is the number being divided and `y` is the divisor.
+
+Logical operators, 0 is false, 1 is true:
+
+* Equality `==`
+* Not equal `~=`
+* AND `&&`
+* OR `||`
+* XOR `xor(x, y)`, determines whether one of the values is true but not both
+
 ## Variables
 
 MatLab is a weakly typed language, variable types do not need to be declared.
@@ -17,6 +59,14 @@ Datastructures in MatLab are typically Scalar (single value), Vector (an array o
 * Optionally specify the type of a variable on assignment: `d = uint16(1)` would set to 1 with a class/type of an unsigned 16 bit integer, instead of a double.
 * A scalar: `x = 1`, with a class of double, and which is really a 1x1 matrix.
 * A vector or array: `e = [1 2 3]` or `e = [1,2,3]`, either works. This is still technically a matrix.
+
+### Strings
+
+String manipulation and concatenation.
+
+* Class char: `a = 'Test'` sets `a` to the string `Test`, MatLab requires single quotes to be used, Octave allows double quotes.
+* Class string: `b = string('Test')`, this stores `Test` as a String with double quotes. `b = "Test"` would cause an error.
+* Concatenate strings: `strcat(s1, s2...)`, concatenates however many strings are included as arguments, literals or variables. This function also removes whitespace at the end of each string.
 
 ### Matrices
 
