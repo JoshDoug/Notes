@@ -67,6 +67,16 @@ String manipulation and concatenation.
 * Class char: `a = 'Test'` sets `a` to the string `Test`, MatLab requires single quotes to be used, Octave allows double quotes.
 * Class string: `b = string('Test')`, this stores `Test` as a String with double quotes. `b = "Test"` would cause an error.
 * Concatenate strings: `strcat(s1, s2...)`, concatenates however many strings are included as arguments, literals or variables. This function also removes whitespace at the end of each string.
+* Convert numbers to strings: `num2str(x)`, `num2str(x,n)` converts to a string rounded to `n` significant figures.
+* Compare strings: `strcmp(s1, s2)`
+* Compare strings and ignore case: `strcmpi(s1, s2)`
+* Compare the first n characters of two strings: `strncmp(s1, s2, n)`
+* Compare first n chars and ignore case: `strncmpi(s1, s2, n)`
+
+Trimming and processing strings:
+
+* Remove trailing whitespace from a string or arrya: `deblank(s)`
+* Remove leading and trailing whitespace: `strtrim(s)`
 
 ### Matrices
 
