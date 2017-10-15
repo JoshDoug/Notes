@@ -5,6 +5,8 @@ Everything is a matrix, when `a = 1`, a is a 1x1 matrix.
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
 
+A comment in MatLab is the percentage symbol: `%`
+
 ## Common Functions and Commands
 
 * Alter significant figures shown: `format long` and `format short` change the number of signifcant figures displayed by following commands/output, such as `pi`.
