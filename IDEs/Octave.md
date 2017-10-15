@@ -52,3 +52,37 @@ Mathematical operators are the same with a couple of changes:
 Logical operators, 0 is false, 1 is true:
 
 * Not equal `!=`, or `~=`, although the tilde version is outdated.
+
+## Conditionals
+
+If statement:
+
+```MatLab
+if (condition)
+    statements
+endif
+```
+
+If else:
+
+```MatLab
+if (condition)
+    statements
+else
+    statement
+endif
+```
+
+If else if:
+
+```MatLab
+if (condition)
+    statements
+elseif (condition)
+    statement
+else
+    statement
+endif
+```
+
+## Loops
