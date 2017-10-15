@@ -33,6 +33,7 @@ String concatenation and manipulation:
 
 * String assignment: `c = 'Hello World'`, single or double quotes work.
 * Concatenate strings but keep whitespace: `cstrcat(s1, s2...)`
+* Truncate a string to length `n`: `strtrunc(s, n)`
 
 ### Sets
 
