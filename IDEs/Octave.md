@@ -4,7 +4,7 @@ Octave is an Open Source Matlab replacement, that provides a source compatible l
 
 These notes cover Octave IDE and langauge specific variations to MatLab, for the MatLab language check MatLab notes section.
 
-The prompt can be changed in a way similar to bash, e.g. `PS1 >>` would change the prompt to `>>`, `PS1 '>> '` to add a space after the prompt. This change only lasts for the duration of the session.
+A comment in Octave is either the percentage symbol: `%`, or a hash or pound sign: `#`, only `%` works in MatLab.
 
 ## Installing
 
@@ -22,6 +22,8 @@ To get help on help: `help help`
 The full documentation can be displayed using `doc`, but this is more easily navigated online. The default macOS installation is incomplete and doesn't include doc.
 
 ## Built in Commands
+
+The prompt can be changed in a way similar to bash, e.g. `PS1 >>` would change the prompt to `>>`, `PS1 '>> '` to add a space after the prompt. This change only lasts for the duration of the session.
 
 ## Variables
 
