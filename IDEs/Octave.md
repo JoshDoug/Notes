@@ -2,9 +2,9 @@
 
 Octave is an Open Source Matlab replacement, that provides a source compatible language compiler and an equivalent - although not identical - IDE/GUI environment.
 
-These notes cover Octave IDE and langauge specific variations to MatLab, for the MatLab language check MatLab notes section.
-
-A comment in Octave is either the percentage symbol: `%`, or a hash or pound sign: `#`, only `%` works in MatLab.
+* These notes cover Octave IDE and langauge specific variations to MatLab, for the MatLab language check MatLab notes section.
+* A comment in Octave is either the percentage symbol: `%`, or a hash or pound sign: `#`, only `%` works in MatLab.
+* [Differences between MatLab and Octve](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB)
 
 ## Installing
 
@@ -18,8 +18,21 @@ To get help on help: `help help`
 
 * Help on pi: `help pi`
 * Help on classes and types: `help class`
+* [Help with getting help](https://www.gnu.org/software/octave/doc/interpreter/Getting-Help.html)
 
 The full documentation can be displayed using `doc`, but this is more easily navigated online. The default macOS installation is incomplete and doesn't include doc.
+
+## Octave CLI
+
+* Documentation on [Command Line Editing](https://www.gnu.org/software/octave/doc/interpreter/Command-Line-Editing.html)
+* Option when running octave: `octave --help` or `octave -h`
+* Clear workspace: `clear`, not to be confused with clearing the terminal (`clc`)
+* Quit Octave: `exit` or `quit`, more info [exiting Octave](https://www.gnu.org/software/octave/doc/interpreter/Quitting-Octave.html).
+
+## Octave Scripts
+
+* [Octave Startup Configuration Files](https://www.gnu.org/software/octave/doc/interpreter/Startup-Files.html)
+* [Running Octave Scripts](https://www.gnu.org/software/octave/doc/interpreter/Executable-Octave-Programs.html)
 
 ## Built in Commands
 
