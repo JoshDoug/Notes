@@ -91,6 +91,29 @@ Output:
 3 4
 ```
 
+* Matrix transpose: `a'`, the `'` apostrophe/single quote transposes a matrix, basically flipping it on its side.
+* Matrix product transpose: `a' * a`
+
+Transpose example:
+
+```MatLab
+b = [1 2 3; 4 5 6; 7 8 9]
+
+b =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+b' % Transpose b
+
+ans =
+
+   1   4   7
+   2   5   8
+   3   6   9
+```
+
 Matrix of matrices: create four matrices, e.g. `a = [1,2;3,4]` x4, these can then be made into a 'super matrix' using a slightly different syntax: `e = {a,b;c,d}`, which is also accessed with that syntax, so to get `a` use `e{1,1}`
 
 #### 3D Matrix
