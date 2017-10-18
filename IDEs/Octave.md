@@ -128,3 +128,33 @@ endif
 ```
 
 ## Loops
+
+## Functions
+
+Basic function that displays 5 to 1, but skips 3 & 2 because they're commented out using a block comment:
+
+```Octave
+function countdown
+    # Count Down from 5 to 1
+    disp(5);
+    disp(4);
+    #{ skip 3 and 2
+    disp(3);
+    disp(2);
+    £}
+    disp(1);
+endfunction
+```
+
+```MatLab
+function countdown
+    # Count Down from 5 to 1
+    disp(5);
+    disp(4);
+    #{ skip 3 and 2
+    disp(3);
+    disp(2);
+    £}
+    disp(1);
+endfunction
+```
