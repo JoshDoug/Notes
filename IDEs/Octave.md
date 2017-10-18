@@ -134,11 +134,12 @@ endif
 Basic function that displays 5 to 1, but skips 3 & 2 because they're commented out using a block comment:
 
 ```Octave
-function countdown
+function quick_countdown
     # Count Down from 5 to 1
     disp(5);
     disp(4);
-    %{ skip 3 and 2
+    %{
+        # skip 3 and 2
         disp(3);
         disp(2);
     %}
@@ -146,15 +147,22 @@ function countdown
 endfunction
 ```
 
+Functions can have a descriptive block of code that the `help` command can find and return as a documentation string:
+
 ```MatLab
-function countdown
+function quick_countdown
+
     # Count Down from 5 to 1
+    # Skips 3 and 2 to demonstrate a block comment
+    # This is a Octave function doc
+
     disp(5);
     disp(4);
-    %{ skip 3 and 2
+    #{
+        # skips 3 and 2
         disp(3);
         disp(2);
-    %}
+    #}
     disp(1);
 endfunction
 ```
