@@ -138,10 +138,10 @@ function countdown
     # Count Down from 5 to 1
     disp(5);
     disp(4);
-    #{ skip 3 and 2
+    %{ skip 3 and 2
     disp(3);
     disp(2);
-    #}
+    %}
     disp(1);
 endfunction
 ```
@@ -151,10 +151,10 @@ function countdown
     # Count Down from 5 to 1
     disp(5);
     disp(4);
-    #{ skip 3 and 2
+    %{ skip 3 and 2
     disp(3);
     disp(2);
-    #}
+    %}
     disp(1);
 endfunction
 ```
