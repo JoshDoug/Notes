@@ -63,7 +63,9 @@ Customising the Promp:
 
 ## Built in Commands
 
-Built in Commands - delete section?
+* `type x` - Display the contents of `x` and describe it ass a file, function, variable, operator, or keyword.
+* `typeinfo (x)` - Display the type of a variable, e.g. `x` where `x` equals `1` would be scalar.
+* `typeinfo` - Without an argument then just return a cell array of strings containing all currently installed data types.
 
 ## Variables
 
@@ -149,7 +151,7 @@ endfunction
 
 Functions can have a descriptive block of code that the `help` command can find and return as a documentation string:
 
-```MatLab
+```Octave
 function quick_countdown
 
     # Count Down from 5 to 1
