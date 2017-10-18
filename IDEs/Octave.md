@@ -10,6 +10,8 @@ Octave is an Open Source Matlab replacement, that provides a source compatible l
 
 Ports and Homebrew can be used to install Octave, but Homebrew doesn't currently support the a version with a GUI due to Qt incompatibilities. Ports and Homebrew may not play well either, so don't just try Ports if already using Brew. The alternative is to just install the version provided by GNU, it doesn't look great, but it does work (mostly).
 
+* [Octave Forge - Addon Octave Packages](https://octave.sourceforge.io/packages.php)
+
 ## Help System
 
 Octave has [online documentation here](https://www.gnu.org/software/octave/doc/interpreter/), and a handy [wiki](https://wiki.octave.org/GNU_Octave_Wiki).
@@ -28,6 +30,20 @@ The full documentation can be displayed using `doc`, but this is more easily nav
 * Option when running octave: `octave --help` or `octave -h`
 * Clear workspace: `clear`, not to be confused with clearing the terminal (`clc`)
 * Quit Octave: `exit` or `quit`, more info [exiting Octave](https://www.gnu.org/software/octave/doc/interpreter/Quitting-Octave.html).
+
+Cursor Motion:
+
+* `C-b` - Move back one char
+* `C-f` - Move forward one char
+* `C-d` - Delete the char beneeath the cursor
+* `M-f` - Move forward a word (this is the `esc` key on Mac..)
+* `M-b` - Move back a word
+* `C-a` - Move to the start of a line
+* `C-e` - Move to the end of the line
+* `C-l` - Clear the screen, reprinting the current line at the top
+* `C-_` - Undo the last action (`C-/` should work the same, but does nothing on Mac)
+* `M-r` - Undo all changes made to the line
+* `C-k` - Kill the text from the cursor to the end of the line (killing is like cutting, it can still be yanked/pasted back later)
 
 ## Octave Scripts
 
