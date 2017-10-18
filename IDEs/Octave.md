@@ -4,6 +4,7 @@ Octave is an Open Source Matlab replacement, that provides a source compatible l
 
 * These notes cover Octave IDE and langauge specific variations to MatLab, for the MatLab language check MatLab notes section.
 * A comment in Octave is either the percentage symbol: `%`, or a hash or pound sign: `#`, only `%` works in MatLab.
+* Multiline comments: enclose between matching `#{` and `#}` pr `%{` and `%}`
 * [Differences between MatLab and Octve](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB)
 
 ## Installing
@@ -44,6 +45,16 @@ Cursor Motion:
 * `C-_` - Undo the last action (`C-/` should work the same, but does nothing on Mac)
 * `M-r` - Undo all changes made to the line
 * `C-k` - Kill the text from the cursor to the end of the line (killing is like cutting, it can still be yanked/pasted back later)
+* `C-y` - Yank/paste the most recently killed text
+* `C-p` - Move up through history
+* `C-n` - Move down through history
+* `C-r` - Search history to repeat a command
+
+Customising the Promp:
+
+* [Customising the Prompt Docs](https://www.gnu.org/software/octave/doc/interpreter/Customizing-the-Prompt.html)
+* The prompt can be changed in a way similar to bash, e.g. `PS1 >>` would change the prompt to `>>`, `PS1 '>> '` to add a space after the prompt. This change only lasts for the duration of the session.
+* Prompt example: `PS1 '\#>> '` To set the prompt to a number, `>>`,` and a space after.
 
 ## Octave Scripts
 
@@ -52,7 +63,7 @@ Cursor Motion:
 
 ## Built in Commands
 
-The prompt can be changed in a way similar to bash, e.g. `PS1 >>` would change the prompt to `>>`, `PS1 '>> '` to add a space after the prompt. This change only lasts for the duration of the session.
+Built in Commands - delete section?
 
 ## Variables
 
