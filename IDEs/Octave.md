@@ -141,7 +141,7 @@ function countdown
     #{ skip 3 and 2
     disp(3);
     disp(2);
-    £}
+    #}
     disp(1);
 endfunction
 ```
@@ -154,7 +154,7 @@ function countdown
     #{ skip 3 and 2
     disp(3);
     disp(2);
-    £}
+    #}
     disp(1);
 endfunction
 ```
