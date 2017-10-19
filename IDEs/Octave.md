@@ -86,12 +86,16 @@ Creating an array/vector/set is really just a single line matrix (and `typeinfo(
 
 * `a = [1, 3, 4, 9]`
 
+But a vector can be either a row vector or a column vector, so a column vector would be created like so:
+
+* `b = [1; 2; 3; 4]`, or `a` could be transposed: `b = a'`, or in one step: `b = [1 2 3 4]'`
+
 Creating a matrix:
 
-* `b = [1 2 3; 4 5 6; 7 8 9]`
+* `c = [1 2 3; 4 5 6; 7 8 9]`
 
 A matrix can have different numbers of columns and rows, the values can be seperated with a space of a comma and each row is seperated with a semicolon.
-When referring to the size of a matrix the number of rows is always mentioned first, and then the number of columns. So a matrix with 2 rows and 3 columns would be refferred to as a '2x3' or '2 by 3' matrix.
+When referring to the size of a matrix the number of rows is always mentioned first, and then the number of columns. So `[1 2 3; 4 5 6]` is a matrix with 2 rows and 3 columns which would be refferred to as a '2x3' or '2 by 3' matrix.
 
 ## Operators
 
