@@ -80,11 +80,18 @@ String concatenation and manipulation:
 * Concatenate strings but keep whitespace: `cstrcat(s1, s2...)`
 * Truncate a string to length `n`: `strtrunc(s, n)`
 
-### Sets
+### Matrices
 
-A set is similar to an array or vector ?
+Creating an array/vector/set is really just a single line matrix (and `typeinfo(x)` will report this):
 
-* a = [1, 3, 4, 9]
+* `a = [1, 3, 4, 9]`
+
+Creating a matrix:
+
+* `b = [1 2 3; 4 5 6; 7 8 9]`
+
+A matrix can have different numbers of columns and rows, the values can be seperated with a space of a comma and each row is seperated with a semicolon.
+When referring to the size of a matrix the number of rows is always mentioned first, and then the number of columns. So a matrix with 2 rows and 3 columns would be refferred to as a '2x3' or '2 by 3' matrix.
 
 ## Operators
 
