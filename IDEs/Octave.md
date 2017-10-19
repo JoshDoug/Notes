@@ -25,7 +25,7 @@ To get help on help: `help help`
 
 The full documentation can be displayed using `doc`, but this is more easily navigated online. The default macOS installation is incomplete and doesn't include doc.
 
-## Octave CLI
+## Octave CLI and Interpreter
 
 * Documentation on [Command Line Editing](https://www.gnu.org/software/octave/doc/interpreter/Command-Line-Editing.html)
 * Option when running octave: `octave --help` or `octave -h`
@@ -56,16 +56,17 @@ Customising the Promp:
 * The prompt can be changed in a way similar to bash, e.g. `PS1 >>` would change the prompt to `>>`, `PS1 '>> '` to add a space after the prompt. This change only lasts for the duration of the session.
 * Prompt example: `PS1 '\#>> '` To set the prompt to a number, `>>`,` and a space after.
 
-## Octave Scripts
-
-* [Octave Startup Configuration Files](https://www.gnu.org/software/octave/doc/interpreter/Startup-Files.html)
-* [Running Octave Scripts](https://www.gnu.org/software/octave/doc/interpreter/Executable-Octave-Programs.html)
-
 ## Built in Commands
 
 * `type x` - Display the contents of `x` and describe it ass a file, function, variable, operator, or keyword.
 * `typeinfo (x)` - Display the type of a variable, e.g. `x` where `x` equals `1` would be scalar.
 * `typeinfo` - Without an argument then just return a cell array of strings containing all currently installed data types.
+* `source script.m` - run a script in the local directory, scripts in different locations can be run by specifying a relative or absolute file path
+
+## Octave Scripts
+
+* [Octave Startup Configuration Files](https://www.gnu.org/software/octave/doc/interpreter/Startup-Files.html)
+* [Running Octave Scripts](https://www.gnu.org/software/octave/doc/interpreter/Executable-Octave-Programs.html)
 
 ## Variables
 
