@@ -28,6 +28,13 @@ A comment in MatLab is the percentage symbol: `%`
 * `primes(x)` returns primes up to and including `x`
 * `list_primes(x)` lists the first `x` primes
 
+### Timing functions
+
+* `tic` - Starts a built-in millisecond stopwatch
+* `toc` - Returns the time elapsed since the last tic
+
+Basic setup is simpyl putting the `tic` before the code block/line to be measured and the `toc` after. These can be easily run from the interpeter as well. The value of `toc` can be stored in a variable which is useful when measuring multiple parts of a program.
+
 ## Operators
 
 As with most languages there are two types of operators, mathematical operators, and logical operators.
@@ -116,14 +123,64 @@ ans =
 
 Matrix of matrices: create four matrices, e.g. `a = [1,2;3,4]` x4, these can then be made into a 'super matrix' using a slightly different syntax: `e = {a,b;c,d}`, which is also accessed with that syntax, so to get `a` use `e{1,1}`
 
+Matrix generation functions:
+
+* `zeros`
+* `ones`
+* `rand`
+* `randn`
+
+#### Matrix and Scalar Operations
+
+Piece wise Matrix operations involve using a `.` after the first matrix, e.g. `a.*b`, each cell only interacts with its corresponding cell, in this case multiplying them together. Unlike `a*b` which would multiple by rows and columns (get the dot product of each cell?).
+
 #### 3D Matrix
 
-* Defining an all zero 3D matrix `zero(2,2,2)`, this creates a 2x2x2 matrix of zeros. MatLab display it in slices.
+* Defining an all zero 3D matrix `zeros(2,2,2)`, this creates a 2x2x2 matrix of zeros. MatLab display it in slices.
 * `ones()` creates a matrix filled with ones, `rand()` creates a matrix with number between 0 and 1, `randn()` creates a matrix of normally distributed random numbers.
 
-Parts of the matrix can be specified and set to other values easily, so a 2x2x2 matrix `a`, set to all zeroes like so `a = zeroes(2,2,2)` can be changed to have the 2nd slice (or 2nd z index) to a different matrix like so: `a(:,:,2) = [1,2;3,4]`. MatLab arrays start at 1, not 0.
+Parts of the matrix can be specified and set to other values easily, so a 2x2x2 matrix `a`, set to all zeroes like so `a = zeros(2,2,2)` can be changed to have the 2nd slice (or 2nd z index) to a different matrix like so: `a(:,:,2) = [1,2;3,4]`. MatLab arrays start at 1, not 0.
 
 ### Structures
 
 Structures are a storage mechanism allowing multiple peices of data to be associated, similar to an array of objects.
 A structure is built up via a name.attribute, so for example a structure of people could be started with the name: `person.name = 'John Doe`, then the address could be set with `person.address = "Fake Address 1"`, this on its own is similar in concept to an object, but it can be extended to multiple of these objects very easily. To add a second person: `person(2).name = "Joe Bloggs` and `person(2).address = "Fake Address 2"`. As this is MatLab this structure is still considered a matrix.
+
+## Control Flow
+
+Simple if-else statement:
+
+```MATLAB
+if a != b
+    print('A doesn't equal b.')
+else
+    print('A equals b.')
+end
+```
+
+Switch statement:
+
+```MATLAB
+switch a(3,3)
+    case 3
+        a = a';
+    otherwise
+        a = inv(a);
+end
+```
+
+Switches can also have a `break` and `continue`. Using `break` jumps out of the loop/conditional and resumes at the corresponding `end` statement, `continue` jumps back to the beginning of a loop and increments that counter as if the loop had completed normally.
+
+## Functions
+
+Boilerplate function:
+
+```MATLAB
+function [ output_args ] = UntitledFunction( input_args )
+% UntitledFunction Summary of the function goes here
+%   Detailed explanation goes here
+
+% Function code
+
+end
+```
