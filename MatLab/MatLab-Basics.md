@@ -5,7 +5,15 @@ Everything is a matrix, when `a = 1`, a is a 1x1 matrix.
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
 
+## Comments
+
 A comment in MatLab is the percentage symbol: `%`
+
+A mutliline comment: `%{` commented out code `%}`
+
+An inline comment: `...`, the elipsis is weird to use, but can be used to break code over several lines with comments within.
+
+A help comment: this is the first comment, or set of comments, within a script of function (I think?).
 
 ## Common Functions and Commands
 
@@ -130,6 +138,8 @@ Matrix generation functions:
 * `rand`
 * `randn`
 
+These matrix generation functins can be useful when it comes to performance. Creating a 100x100 matrix and then filling each cell is more efficient than creating a 1x1 matrix and then adding additional columns and rows.
+
 #### Matrix and Scalar Operations
 
 Piece wise Matrix operations involve using a `.` after the first matrix, e.g. `a.*b`, each cell only interacts with its corresponding cell, in this case multiplying them together. Unlike `a*b` which would multiple by rows and columns (get the dot product of each cell?).
@@ -184,3 +194,7 @@ function [ output_args ] = UntitledFunction( input_args )
 
 end
 ```
+
+## Graphing and Drawing
+
+* `gcf` returns a handle to the current figure, or creates one if no figures are active.
