@@ -1,5 +1,7 @@
 # Typical Tmux Commands
 
+Tmux commands and shortcuts. Some of the shortcuts such as the pane resizing shortcuts are not the default bindings, these notes are specific to the linked configuration.
+
 Leader key (LK) default binding: `C-b`
 
 LK rebound to: ``` ` ```
