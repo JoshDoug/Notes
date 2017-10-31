@@ -15,6 +15,15 @@ Basics & Titbits:
 
 To start a new session, just run `tmux`. The session number is shown at the bottom left of the window, like so: `[0]`.
 
+* Detach from a session: `LK d`
+* List sessions: `tmux ls`
+* Attach to a session:
+  * If only a single session exists: `tmux attach`, this will also connect to the most recently used session.
+  * List sessions and select the name or number: `tmux attach -t 2`, or `tmux attach -t working` for a session named working.
+* Rename session: `LK $`, this is done from within a session.
+* List and select sessions from within tmux: `LK s`, this gives a list of sessions that allows for easy switching between sessions.
+* Kill a session: `tmux kill-session -t n`, where n is the name or number of the session. Detach from the session to be killed first, although it can still be done from within another tmux session.
+
 ## Tmux Windows
 
 * Create window: `LK c`
