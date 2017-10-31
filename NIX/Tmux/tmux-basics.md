@@ -46,3 +46,12 @@ To start a new session, just run `tmux`. The session number is shown at the bott
 * Resize panes in larger increments: `LK Esc-arrow key`, this is also a default that doesn't work well on macOS.
 * Promote pane to its own window: `LK !`
 * Kill/close pane: `LK x`
+
+## Tmux CLI
+
+The Tmux Commandline Interface can be used to run more complex commands to interact with panes, windows, and sessions, as well as set options on tmux itself. Everything (probably) doable via a keyboard shortcut can be done with the more verbose Tmux CLI, but there are some things that can only be done via the CLI (or possibly the .tmux.conf).
+To access the tmux CLI: `LK :`, need to use shift otherwise it would be a semi-colon.
+
+* New named window: `:new-window -n name`
+* Start window in a specific folder: `:new-window -c /some/folder`
+* Set windows to monitor activity: `:set-option -g monitor-activity on`
