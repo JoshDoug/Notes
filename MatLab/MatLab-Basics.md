@@ -1,6 +1,6 @@
 # MatLab - Matrix Labratory
 
-Everything is a matrix, when `a = 1`, a is a 1x1 matrix.
+Everything is a matrix, when `a = 1`, `a` is a 1x1 matrix.
 
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
