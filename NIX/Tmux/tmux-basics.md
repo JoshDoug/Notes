@@ -10,12 +10,14 @@ Tmux configuration [here](https://github.com/JoshDoug/dotfiles/blob/master/.tmux
 
 Tmux version: `tmux -V`, no idea why but it needs to be a capital V, who cares about consistency or convention right?
 
-Tmux Windows:
+## Tmux Sessions
+
+## Tmux Windows
 
 * Create window: `LK c`
 * Name window: `LK ,`
 
-Tmux panes:
+## Tmux panes
 
 * Vertical split pane: `LK |` (includes Shift for the pipe symbol)
 * Horizontal split pane: `LK -`
