@@ -124,3 +124,27 @@ Type `%` while on a bracket to move to the matching bracket, this works for pare
 * `:%s/old/new/g` - change every occurrence within the file
 * `:%s/old/new/gc` - change every occurrence in the file with a prompt on whether to make the change or not
 * `#,#s/old/new/g` - change every occurrence between the line numbers, where `#,#` are the line numbers.
+
+## Execute an External Command
+
+Type `:!` followed by an external command and `<ENTER>` to execute that command, e.g. `:!ls`, this allows the running of shell commands. Commands can also take options and arguments like normal, but importantly aliases will not work.
+
+Examples:
+
+* `:w testfile` - this writes out the current file to testfile
+* `:!rm testfile` - remove the testfile created previously, tab complete would work for completing the filename here
+
+## Selecting Text to Write
+
+Select text to save to another file: `v motion :w Filename`
+
+1. Use `v` to enter Visual Mode, then navigating with the cursor will highlight the seleced text from that point.
+2. Typing `:` will cause `:'<,'>` to appear at the prompt.
+3. Type `w TEST` at the prompt after the other characters to write out the hightlighted portion to the file TEST.
+4. The full prompt should look like this before the command is entered: `:'<,'>w TEST`
+
+To toggle Visual Mode off type `v` again, to cancel.
+
+## Retrieving and Merging Files
+
+To insert the contents of a file (not sure how often this is useful) use: `:r filename`, the file will be inserted on a new line below the cursor. The `r` command is short for retrieve. This command will also work with shell commands, so `:r !ls` will insert the output of `ls`.
