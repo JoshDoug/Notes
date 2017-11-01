@@ -10,3 +10,4 @@ Vim has a wealth of plugins and several plugin managers to manage them with.
 * [vim-plug](https://github.com/junegunn/vim-plug) - minimalist Vim plugin manager, specifies NeoVim support
 * [VAM - Vim Addon Manager](https://github.com/MarcWeber/vim-addon-manager) - least popular by GitHub starts, but seems well maintained & responsive to issues
 * [Pathogen](https://github.com/tpope/vim-pathogen) - Tim Pope, guy who maintaines Vim
+* Vim 8 (and Neovim?) have some built in plugin/package management support.
