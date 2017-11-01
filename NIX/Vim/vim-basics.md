@@ -97,3 +97,30 @@ Replace a character with the `r` operator followed by the character to replace i
 ## The Change Operator
 
 The change operator is `c`, which can be combined with motions to change a word, line, etc. It's basically the same as the delete operator but automatically switches to insert as well.
+
+## Cursor Location and File Status
+
+* `C-g` - shows the current line number of the cursor along with the filename at the bottom of the page.
+* `G` - move to the last line of the file
+* `gg` - move to the first line of the file
+* `489G` - move to line 489 in the file
+
+## The Search Command
+
+* Type `/` followed by the phrase to find, the `/` will appear at the end of the file with the cursor along with any text that's typed.
+* Hit enter to find the first instance of the text after the cursor.
+* To move to the next instance of a phrase type `n`, to move to a prior instance type `N`.
+* To search for a phrase in the reverse direction use `?` instead of `/`.
+* To go back to where the cursor was during the search: `C-o`, while `C-i` goes forward.
+
+## Matching Parentheses Search
+
+Type `%` while on a bracket to move to the matching bracket, this works for parentheses, brackets, and curly braces. Handy for jumping a code block or finding mismatched brackets.
+
+## The Substitue Command
+
+* `:s/old/new` - change the first occurrence of the word old on the current line to new.
+* `:s/old/new/g` - change all occurrences of the world old on the current line to new, g means change globally within the line.
+* `:%s/old/new/g` - change every occurrence within the file
+* `:%s/old/new/gc` - change every occurrence in the file with a prompt on whether to make the change or not
+* `#,#s/old/new/g` - change every occurrence between the line numbers, where `#,#` are the line numbers.
