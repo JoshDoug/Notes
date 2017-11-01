@@ -69,7 +69,7 @@ A count, operator, and motion can be combined.
 * `operator count motion`
 * `count operator motion`
 
-These will have the same result be behave slightly differently, and can have subtle afteraffects relating to what is available in the copy buffer.
+These will have the same result be behave slightly differently, and can have subtle afteraffects relating to what is available in the copy buffer/register.
 
 * `d2w` - deletes two words
 * `2dd` - delete two lines, alternately `d2d` will also delete two lines, although only the second line will be 'yanked' and still be pasteable.
@@ -79,3 +79,21 @@ These will have the same result be behave slightly differently, and can have sub
 * `u` - undo the last command
 * `U` - undo the changes to a whole line
 * `C-r` - redo a command/undo an undo
+
+## The Put Command
+
+I don't know why this isn't just called the paste command. Type `p` to put previously deleted or yanked text after the cursor.
+
+* `p` - this will put the text after the cursor, if it's an entire line it will put it on the line below
+* `P` - this will put the text before the cursor, if it's an entire line it will put it on the line above
+
+## The Replace Command
+
+Replace a character with the `r` operator followed by the character to replace it with.
+
+* `rx` will replace the current character the cursor is on with x.
+* `R` switches into replace mode and will overwrite characters until returning to normal mode
+
+## The Change Operator
+
+The change operator is `c`, which can be combined with motions to change a word, line, etc. It's basically the same as the delete operator but automatically switches to insert as well.
