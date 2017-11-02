@@ -28,8 +28,10 @@ Saving edits: switch to normal mode, enter `:w`, this will write the fill out, s
 * Remove a character by navigating the cursor to it and typing `x`.
 * Insert text by pressing `i` at the point where text is to be inserted, this will insert it before the character the cursor is currently on.
 * Insert at the beginning of the current line with `I`.
-* Insert text after the character the cursor is currently on with `a`.
-* Insert text at the end of the current line with `A`.
+* Append text after the character the cursor is currently on with `a`.
+* Append text at the end of the current line with `A`.
+* Open a new line below the cursor with `o`.
+* Open a new line above the cursor with `O`.
 
 ## Deletion Commands
 
@@ -92,7 +94,7 @@ I don't know why this isn't just called the paste command. Type `p` to put previ
 Replace a character with the `r` operator followed by the character to replace it with.
 
 * `rx` will replace the current character the cursor is on with x.
-* `R` switches into replace mode and will overwrite characters until returning to normal mode
+* `R` switches into replace mode and will overwrite characters until returning to normal mode. Replace mode is like Insert mode except every typed character deletes an existing character. Using the backspace/delete key over replaced text will undo the replacement.
 
 ## The Change Operator
 
@@ -112,6 +114,7 @@ The change operator is `c`, which can be combined with motions to change a word,
 * To move to the next instance of a phrase type `n`, to move to a prior instance type `N`.
 * To search for a phrase in the reverse direction use `?` instead of `/`.
 * To go back to where the cursor was during the search: `C-o`, while `C-i` goes forward.
+* To ignore case for a specific search add `\c` to the end of the search, e.g. `/testsearch\c`
 
 ## Matching Parentheses Search
 
@@ -148,3 +151,22 @@ To toggle Visual Mode off type `v` again, to cancel.
 ## Retrieving and Merging Files
 
 To insert the contents of a file (not sure how often this is useful) use: `:r filename`, the file will be inserted on a new line below the cursor. The `r` command is short for retrieve. This command will also work with shell commands, so `:r !ls` will insert the output of `ls`.
+
+## Copy and Paste Text
+
+Use `y`, yank, and `p`, paste to copy and paste text. Text can be copied with visual mode, or used as an operator with counts and motions.
+
+* In visual mode select the text to be copied and then type `y` to yank it.
+* In normal mode `y` can be used as an operator, copy a word with `yw`, a line with `yy`, two lines with `2yy` or `y2y`
+
+Pasting has already been covered by the Put command above.
+
+## Set Option
+
+Options can be set via the CLI that last for the duration of the Vim session:
+
+* `:set ic` - sets Vim to ignore case while searching using `/`
+* `:set noic` - sets Vim to ignore case while searching
+* `:set hls is` - sets the `hlsearch` and `incsearch` options using their shorthands
+* `:set nohlsearch` - turns of search highlighting
+* To switch an option off use the same set command but prepend the feature name with 'no'
