@@ -4,9 +4,12 @@ Using Vim.
 
 Tutorials and useful links:
 
-* `vimtutor` - tutorial program, can also be accessed from within Vim using `:Tutor`
+* `vimtutor` - tutorial program, Neovim has its own tutorial accessible via `:Tutor`
 * [Vim Home Page](vim.org)
 * [Vim FAQ on Sourceforge](vimdoc.sf.net)
+* [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) (kinda old)
+* [Learning Vim in 2014](http://benmccormick.org/learning-vim-in-2014/) (also kinda old)
+* [Bram Moolenaar's Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 
 ## Vim Modes
 
