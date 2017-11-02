@@ -4,7 +4,9 @@ Using Vim.
 
 Tutorials and useful links:
 
-* vimtutor
+* `vimtutor` - tutorial program, can also be accessed from within Vim using `:Tutor`
+* [Vim Home Page](vim.org)
+* [Vim FAQ on Sourceforge](vimdoc.sf.net)
 
 ## Vim Modes
 
@@ -17,6 +19,14 @@ Vim has n modes: insert mode, normal mode, replace mode?, visual mode?, what els
 * `:qa` - quit Vim even if multiple files are open (but don't force it incase changes haven't been saved)
 * `:qa!` - force quit Vim with multiple files open, any changes will be lost
 
+## Scrolling
+
+* `C-e` - scroll down a line
+* `C-y` - scroll up a line
+* `zz` - scroll current line to the middle of the screen
+* `zt` - scroll current line to the top of the screen
+* `zb` - scroll current line to the bottom of the screen
+
 ## Using Vim Help
 
 ## Using Panes and Tabs/Windows
@@ -24,3 +34,13 @@ Vim has n modes: insert mode, normal mode, replace mode?, visual mode?, what els
 * To list the current open buffers: `:ls`
 * Make the current pane the only pane visible: `:only`, useful when just checking help without any files open, to do this in one go: `:h | only`
 * Open help in a new tab: `:tab h`
+* To close a pane or window: `C-w c`
+* To switch panes: `C-w w` or `C-w C-w`
+
+## Vim CLI
+
+Access the CLI from normal mode by typing `:`.
+
+* Chain commands: `:tabnew | h quickref | only` - this would open a new tab, open the quickreference help, and then make the help pane fullsize.
+* Use shell commands: `:r !ls` to read the contents of `ls` into the current file
+* Check Vim Environment Variables: `echo $MYVIMRC` - Vim environmnet variables are only accessibly within Vim unless they're set manually (or some other way I don't know about), another EV example is `$VIMRUNTIME`
