@@ -20,6 +20,7 @@ Current Structure:
 │   ├── Language-Basics.md
 │   └── Visual-Studio-Mac.md
 ├── CSS
+│   ├── CSS.md
 │   └── SASS.md
 ├── Containers
 │   └── Docker
@@ -41,8 +42,16 @@ Current Structure:
 │   ├── gitignore.md
 │   ├── gitting-started.md
 │   └── remoteRepos.md
+├── HTML
+│   └── HTML.md
+├── Haskell
+│   ├── GHCi.md
+│   ├── Haskell-Basics.md
+│   ├── Haskell-Lang.md
+│   └── Stack.md
 ├── IDEs
 │   ├── Intellij-IDEA.md
+│   ├── Octave.md
 │   └── PhpStorm.md
 ├── ISAs-and-ASM
 │   └── overview.md
@@ -87,6 +96,9 @@ Current Structure:
 │   └── UnitTesting
 │       └── junit.md
 ├── JavaScript
+├── MatLab
+│   ├── MatLab-Basics.md
+│   └── MatLab-IDE.md
 ├── NIX
 │   ├── Commands
 │   │   └── commands.md
@@ -94,8 +106,16 @@ Current Structure:
 │   ├── Man\ Pages
 │   │   └── overview
 │   ├── Nano
+│   ├── NeoVim
+│   │   └── nvim.md
+│   ├── Tmux
+│   │   ├── tmux-basics.md
+│   │   └── tmux-config.md
 │   └── Vim
 │       ├── normalMode.md
+│       ├── vim-basics.md
+│       ├── vim-plugins.md
+│       ├── vim.md
 │       └── vimrc.md
 ├── Networking
 │   └── About.md
@@ -117,6 +137,9 @@ Current Structure:
 ├── Scala
 │   ├── About.md
 │   └── Scala-Lang.md
+├── Software-Development
+│   ├── Programming-Paradigms.md
+│   └── Software-Development.md
 ├── Web-Servers
 │   ├── apache-httpd.md
 │   └── web-servers.md
@@ -127,6 +150,8 @@ Current Structure:
 │   └── normalize.md
 └── Windows
     └── PowerShell
+
+49 directories, 92 files
 ```
 
 To update current directory structure, just run tree and copy over the output.
