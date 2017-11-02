@@ -42,3 +42,8 @@ The help command can also accept wildcards such as `*` and `?`, Vim will use the
 Useful help pages are listed on the main help page, but also here:
 
 * `:h options` - options that can be set via vimrc, also `:h option-list`
+
+## Useful Help Pages
+
+* `:h help-summary` - summary of useful help searches
+* `:h index` - get a complete index of all Vim commands
