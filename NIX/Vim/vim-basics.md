@@ -169,4 +169,28 @@ Options can be set via the CLI that last for the duration of the Vim session:
 * `:set noic` - sets Vim to ignore case while searching
 * `:set hls is` - sets the `hlsearch` and `incsearch` options using their shorthands
 * `:set nohlsearch` - turns of search highlighting
-* To switch an option off use the same set command but prepend the feature name with 'no'
+* To switch an option off use the same set command but prepend the feature name with 'no', e.g. `:set nois` to turn off incremental search
+
+## Getting Help
+
+To get help in Vim use `:help`, this will open the main help menu which explains how to use it.
+
+To get help with something more specific add the search term after the help command: `:help w` to get help on writing to a file. Other examples:
+
+* `:help c_CTRL-D`
+* `:help insert-index`
+* `:help user-manual`
+
+Use `C-w C-w to jump from one window to another` and `:q` to quit help.
+
+## Create a Startup Script
+
+Enable Vim Features with a startup script. An example vimrc file is at `$VIMRUNTIME/vimrc_example.vim` and vimrc help can be found using `:help vimrc-intro`.
+
+## Completion
+
+Command line completion with `C-d` and `<TAB>`.
+
+1. Set Vim to 'not compatible' mode with `:set nocp`, this breaks compatibility with Vi.
+2. Type the start of a command, e.g. `:e` and press `C-d`, this will show a list of the possible commands that start with 'e', these can then cycled through by tabbing.
+3. Now that `:edit` has been entered `C-d` can be used to list files (although there needs to be a space after the edit command) and tab complete can be used as well.
