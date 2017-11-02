@@ -23,6 +23,8 @@ Exiting Vim, everyone's favourite joke (although I found exiting Emacs harder?!)
 
 Saving edits: switch to normal mode, enter `:w`, this will write the fill out, setting the changes and saving it. These commands can be combined to save a file and quit vim: `:wq`.
 
+To start editing the original file use `:e!`, this will revert to the last saved version, so Vim will revert any changes made since the last use of `:w`.
+
 ## Text Editing - Deletion, Insertion, Appending
 
 * Remove a character by navigating the cursor to it and typing `x`.
