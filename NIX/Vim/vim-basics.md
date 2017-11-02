@@ -187,6 +187,8 @@ Use `C-w C-w to jump from one window to another` and `:q` to quit help.
 
 Enable Vim Features with a startup script. An example vimrc file is at `$VIMRUNTIME/vimrc_example.vim` and vimrc help can be found using `:help vimrc-intro`.
 
+The location of the starup script can be found from within Vim using the command: `:echo $MYVIMRC`. When using Neovim for example, the fie is at `~/.config/nvim/init.vim`, although this file also sources a normal .vimrc in my home directory.
+
 ## Completion
 
 Command line completion with `C-d` and `<TAB>`.
