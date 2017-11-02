@@ -1,6 +1,6 @@
 # Vim Basics
 
-Notes on the basics of using Vim, as covered by the vimtutor tool.
+Notes on the basics of using Vim, as covered by the vimtutor tool and Neovim `:Tutor`.
 
 ## Moving the Cursor
 
@@ -124,6 +124,7 @@ Type `%` while on a bracket to move to the matching bracket, this works for pare
 
 * `:s/old/new` - change the first occurrence of the word old on the current line to new.
 * `:s/old/new/g` - change all occurrences of the world old on the current line to new, g means change globally within the line.
+* `:s/old/new/gc` - change all occurrences of the world old on the current line to new, with a prompt asking whether or not to make the change, `c` stands for confirmation.
 * `:%s/old/new/g` - change every occurrence within the file
 * `:%s/old/new/gc` - change every occurrence in the file with a prompt on whether to make the change or not
 * `#,#s/old/new/g` - change every occurrence between the line numbers, where `#,#` are the line numbers.
@@ -170,6 +171,7 @@ Options can be set via the CLI that last for the duration of the Vim session:
 * `:set hls is` - sets the `hlsearch` and `incsearch` options using their shorthands
 * `:set nohlsearch` - turns of search highlighting
 * To switch an option off use the same set command but prepend the feature name with 'no', e.g. `:set nois` to turn off incremental search
+* The Neovim tutorial mentions prepending an option with `inv` to toggle it, e.g. `:set invic`, 'inv' is presumably short for invert.
 
 ## Getting Help
 
@@ -181,7 +183,7 @@ To get help with something more specific add the search term after the help comm
 * `:help insert-index`
 * `:help user-manual`
 
-Use `C-w C-w to jump from one window to another` and `:q` to quit help.
+Use `C-w C-w` to jump from one window to another and `:q` to quit help.
 
 ## Create a Startup Script
 
