@@ -291,3 +291,53 @@ This is the runtime configuration file for Vim, with Vim/MacVim etc it is `~/.vi
 Setting options in this file is as easy as adding a line such as `set ignorecase` so that case is always ignored in searches.
 
 Shortcut to edit this file: `:edit $MYVIMRC`.
+
+### 05.2 Example vimrc explained
+
+The example vimrc that comes with neovim (don't think vim comes with one), available from `$VIMRUNTIME`, Neovim will tab complete this environment variable.
+
+* `set showcmd` - show the current incomplete command, e.g. `2f` will show in the bottom right corner of the page until the search character is typed.
+* `map Q gq` - defines a key mapping, in this case mapping `Q` to the command `gq`, this also stops the current `Q` command from working which enters Ex mode (not a very useful feature).
+* `filetype plugin indent on` - this does 3 things
+  * Filetype detection: VIm will recognise the type of file which can be useful for syntax hightlighting, it can tell from a file ending, e.g. `.c` or a hashbang at the start of a file `#!/bin/sh`. See 'filetypes' for more info in help.
+  * Using filetype plugin files
+  * Using indent files, allows Vim to compute the indent of a line automatically, see the help for options 'filetype-indent-on' and 'indentexpr'.
+
+Example vimscript if statement that checks if colours are available before setting syntax and search hylighting:
+
+```vim
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+```
+
+There's more info in the manual section that isn't covered here.
+
+### 05.3 Simple Mappings
+
+A mapping makes it possible to bind a set of Vim commands to a single key. E.g. to surround certain words with curly braces using F5 use: `:map <F5> i{<Esc>ea}<Esc>`, to use this simply place the cursor on the first letter and then hit `<F5>`. The command works the same way that manually doing the process does, switches to inset mode and types the curly braces, switches to normal mode and moves to end of word, appends curly brace and switches back to normal mode. The danger here is in overriding an existing Vim command which will then no longer work.
+
+A key that can be safely (?) used with personal mappigns is the backslash, `\`.
+The `:map` command lists the current mappings, `:imap` for Interactive mode mappings.
+
+### 05.4 Adding a Package
+
+A package is a set of files that can be added to Vim, simples. There are two kinds: optional and automatically loaded on startup.
+
+Vim comes with with a few packages that can be optionally used, e.g. the vimball plugin which supports creating and using vimballs (self-installing Vim plugin archives). To start using the vimball plugin add the line `packadd vimball` to .vimrc, or try it out with the colon command. For more about vimball see `:help vimball` (vimball needs to be enabled first).
+
+For help on packages see `:h packages`.
+
+### 05.5 Adding a Plugin
+
+A plugin extends Vim's functionality and is just a Vim script file that is loaded automatically when Vim starts. A plugin can be added by dropping it in the plugin directory.
+
+There are two types of plugins:
+
+* global plugin: used for all kinds of file
+* filetype plugin: only used for specific type of file (e.g. language specific)
+
+#### Global Plugins
+
+#### Filetype Plugins
