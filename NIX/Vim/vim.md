@@ -29,6 +29,8 @@ Vim has n modes: insert mode, normal mode, replace mode?, visual mode?, what els
 * `C-y` - scroll up a line
 * `C-f` - scroll forward a page
 * `C-b` - scroll backwards a page
+* `C-d` - scrolls down half a page
+* `C-u` - scrolls up half a page
 * `zz` - scroll current line to the middle of the screen
 * `zt` - scroll current line to the top of the screen
 * `zb` - scroll current line to the bottom of the screen
