@@ -80,6 +80,8 @@ To move by whitespace seperated words (and ignore punctuation) use uppercase mot
 
 The single-character search command is `f`, which combined with another character, and optionally a count, will search for that character within the current line to the right of the cursor. To reverse the search use `F` to search to the left of the cursor. The command `f` is short for 'find'. A similar command is the `t` command, short for 'to' which works the same but stops a character before the specified letter, similarly the reverse is `T`. These commands can be repeated with `;`, and to reverse the direction `,`. Repeating the command will not move onto another line.
 
+The find command can be combined with other commands, e.g. `dfn` this would delete from the cursor to the first n in the current line.
+
 ### 03.4 Matching a Parenthesis
 
 The `%` switches to the corresponding bracket/brace/parenthesis, this can be configured with the 'matchpairs' option.
@@ -174,3 +176,105 @@ Special marks:
 * `"` - the cursor position when last editing the file
 * `[` - start of the last change
 * `]` - end of the last change
+
+## 04 Making Small Changes `user_04.txt`
+
+### 04.1 Operators and Motions
+
+* `d` is the delete operator
+* `dw` deletes a word, starting from the point of the cursor within the word to the start of the next word
+* `d3w` use a count to delete multiple words, here 3 words would be deleted
+* `de` delete to the end of a word, this works like `dw` but leaves the space at the end of the word
+* `d$` delete to the end of the line, including the character the cursor is on
+
+Whether the character under the cursor is deleted depends on the command, `d$` for example is inclusive and will delete the character.
+
+### 04.2 Changing Text
+
+The change operator, `c`, works the same as the `d` operator except vim switches to insert mode after. Another difference is when `cw` is used the space after the word isn't deleted.
+
+* `cc` - change a whole line, but leaves the indent intact
+* `c$` - delete to the end of the line and append, basically the same as `d$a`
+
+Shortcuts:
+
+* `x`  stands for  dl  (delete character under the cursor)
+* `X`  stands for  dh  (delete character left of the cursor)
+* `D`  stands for  d$  (delete to end of the line)
+* `C`  stands for  c$  (change to end of the line)
+* `s`  stands for  cl  (change one character) (why not just use `r`?)
+* `S`  stands for  cc  (change a whole line)
+
+#### Where to put the count
+
+The commands `3dw` and `d3w` both delete three words, but `3dw` deletes one word three times and `d3w` deletes three words once. Functionally there's no difference and `p` will paste the same contents. Counts can also be chained, so `2d3w` would delete 6 words, but this doesn't seem too useful.
+
+### 04.3 Repeating a Change
+
+The `.` command is a simple yet powerful command, it repeats the last change. Specifically it repeats the last command, do `df>` can be used to delete HTML tags regardless of which tag it is or whether it's a start or an end tag as the command will simply delete upto and including the `>`. The `.` command works for all changes made except for those made with `u`, `C-r`, and colon commands (`:`). This could be used as an alternative to interactive find and replace, instead search for a word, then use the change command, then go to the next instance with `n` and use `.` to change it.
+
+### 04.4 Visual Mode
+
+Visual mode is accessed with `v` or `V` and then normal navigation can be used to select text. When text is selected it can be written out to a file with `:w` or deleted with `d`, etc. Visual mode can easily be combined with other commands. To escape Visual mode just use `<Esc>`.
+
+* `v` - enter visual mode
+* `V` - enter visual mode and select whole lines
+* `C-v` - enter visual mode and select via a block
+* `o` - while in visual mode switch the end of the selection, use `O` to switch diagonals when in block selection mode
+
+### 04.5 Moving Text
+
+* `p` pastes text after the cursor or on the line below
+* `P` pastes text before the cursor or on the line above
+* Counts can be used with `p` and `P`
+* `xp` swapping two characters, useful when correcting common typos such a 'teh' to 'the'
+
+### 04.6 Copying Text
+
+Yanking is used to copy text in Vim, `c` was already taken so `y` had to make do.
+
+* `yw` - yanks a word
+* `y2w` - yanks two words
+* `ye` - copy a word and avoid copying the whitespace after a word
+* `YY` - copies a whole line
+* `y$` - yanks to the end of the line
+
+### 04.7 Using the Clipboard
+
+This is inconsistent between vim, neovim, and gvim (GUI Vim).
+
+Pasting with `Cmd-V`:
+
+In TUI Vim/Neovim `Cmd-V` will work in insert mode only (it seems).
+In gvim it will work in normal and insert mode, and in visual mode it will replace any highlighted text.
+
+An alternative way to paste is `:r !pbpaste` which will read in the contents of the clipboard to the current cursor location.
+
+Vim native way to copy and paste with clipboard:
+
+* `"*y` this will yank, combined with a motion, e.g. `"*ye` will yank the current word, this can be combined with visual mode, select the text to copy and then use `"*y` while in visual mode
+* `"*p` this will paste/put, `"*P` will paste before the cursor. It can also be combined with a count, e.g. `"*5p` will paste the contetns five times.
+
+### 04.8 Text Objects
+
+When the cursor is in the middle of a word and the word is to be deleted, it may seem like the way to do it is `bdw`, but an alternative is `daw`, read as 'delete a word'. In this instance the `d` is an operator and the `aw` is a text object. Text objects are the third way to makes changes in Vim after operator-motion and Visual mode. This adds operator-text objects. The main differntiator here is the location of the cursor matters less and instead treats the text object as a whole (of course the cursor still needs to be within the text object).
+
+* `daw` - deletes a word, regardless of where the cursor is in the word
+* `2daw` - delete two words, cursor can be midway through first word, `d2aw` also works
+* `cis` - 'change in sentence' deletes a sentence and switches to insert mode. This works across multiple lines even with line breaks/carriage returns.
+* `dis` - deletes a sentence
+* `as` - 'as sentence' or 'a sentence' text object, the difference to the `is` 'is sentence' text object is that `as` includes the white space after the sentence.
+
+Text objects also work in Visual mode, so `vas` would select the current sentence, using `as` again would select a second sentence, using `oas` would switch direction and select a sentence at the other end.
+
+The help pages have a list of text objects at 'text-objects'.
+
+TKTK - lots more to text objects than what's written here.
+
+### 04.10 Conclusion
+
+Additional commands:
+
+* `~` - can be used to change the case of a character, when used in visual mode any highlighted character is affected, can be configured with option 'tildeop'
+* `10~` - change 10 characters case
+* `vjj~` - switch to visual mode, move forward two lines, convert all highlighted characters to opposite case.
