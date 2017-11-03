@@ -101,7 +101,8 @@ To tell the current position within a file use `C-g`, alternatively with the 'ru
 Additional options set to add info about current position within a file are:
 
 * `set number` - set absolute line numbers
-* `set relativenumber` - set relative line numbers, when combined with `set number` the current line has an absolute number while the rest are relative
+* `set relativenumber` - set relative line numbers
+* `set relativenumber number` - when combined the current line has an absolute number while the rest are relative
 * `set ruler` - add info on current line and column at the bottom left of the status bar
 
 ### 03.7 Scrolling Around
@@ -278,3 +279,15 @@ Additional commands:
 * `~` - can be used to change the case of a character, when used in visual mode any highlighted character is affected, can be configured with option 'tildeop'
 * `10~` - change 10 characters case
 * `vjj~` - switch to visual mode, move forward two lines, convert all highlighted characters to opposite case.
+
+## 05 Set Your Settings
+
+Tuning Vim, this chapter shows how to configure Vim with startup options, add packages and plugins, and define macros.
+
+### 05.1 The vimrc file
+
+This is the runtime configuration file for Vim, with Vim/MacVim etc it is `~/.vimrc`, but with Neovim which adheres to the XDG specification it is `~/.config/nvim/init.vim`. Although the Neovim file can be set up to source the normal .vimrc from its usual location. With Neovim check `:h init.vim` for more options.
+
+Setting options in this file is as easy as adding a line such as `set ignorecase` so that case is always ignored in searches.
+
+Shortcut to edit this file: `:edit $MYVIMRC`.
