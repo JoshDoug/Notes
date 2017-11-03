@@ -58,6 +58,10 @@ Access the CLI from normal mode by typing `:`.
 * Use shell commands: `:r !ls` to read the contents of `ls` into the current file
 * Check Vim Environment Variables: `echo $MYVIMRC` - Vim environmnet variables are only accessibly within Vim unless they're set manually (or some other way I don't know about), another EV example is `$VIMRUNTIME`
 
+## Yank to Clipboard
+
+To copy text to the macOS clipboard, pbcopy, first visually select the text (don't yank it), then run `:'<,'>w !pbcopy`, the angle bracket stuff will be auto inserted when the colon is typed. This is especially useful when Vim's mouse mode is enabled which automatically sets Visual mode when highlighting with they trackpad/mouse and disabled `Cmd-C` to copy.
+
 ## Vim Help
 
 Check the vim-help.md section for more in depth notes. Two useful help pages:
