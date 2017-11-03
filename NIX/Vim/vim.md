@@ -10,6 +10,7 @@ Tutorials and useful links:
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) (kinda old)
 * [Learning Vim in 2014](http://benmccormick.org/learning-vim-in-2014/) (also kinda old)
 * [Bram Moolenaar's Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
+* [Shapeshed blog on Vim package management](https://shapeshed.com/vim-packages/)
 
 ## Vim Modes
 
