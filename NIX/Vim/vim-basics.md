@@ -96,6 +96,7 @@ I don't know why this isn't just called the paste command. Type `p` to put previ
 Replace a character with the `r` operator followed by the character to replace it with.
 
 * `rx` will replace the current character the cursor is on with x.
+* `3rx` will replace three characters with x.
 * `R` switches into replace mode and will overwrite characters until returning to normal mode. Replace mode is like Insert mode except every typed character deletes an existing character. Using the backspace/delete key over replaced text will undo the replacement.
 
 ## The Change Operator
