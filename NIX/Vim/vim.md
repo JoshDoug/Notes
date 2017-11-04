@@ -11,6 +11,7 @@ Tutorials and useful links:
 * [Learning Vim in 2014](http://benmccormick.org/learning-vim-in-2014/) (also kinda old)
 * [Bram Moolenaar's Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 * [Shapeshed blog on Vim package management](https://shapeshed.com/vim-packages/)
+* [Neovim Wiki Plugin List](https://github.com/neovim/neovim/wiki/Related-projects#plugins)
 
 ## Vim Modes
 
