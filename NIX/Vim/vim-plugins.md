@@ -2,6 +2,10 @@
 
 Vim has a wealth of plugins and several plugin managers to manage them with.
 
+## Links to useful plugins and tutorials
+
+* [Vim Java Plugins](https://spacevim.org/use-vim-as-a-java-ide/)
+
 ## Plugin Managers
 
 * [NeoBundle](https://github.com/Shougo/neobundle.vim) - no longer actively developed, just bug fixes, specifies Vim/Neovim support
@@ -29,3 +33,5 @@ call plug#end()
 
 * Restart vim or source the vimrc `:source ~/.config/nvim/init.vim`
 * Run `:PlugInstall`, `PlugUpdate`, `PlugUpgrade` to ensure plugins are installed, updated, and then vim-plug itself is updated.
+
+## Plugins
