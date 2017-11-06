@@ -208,7 +208,3 @@ function [ output_args ] = UntitledFunction( input_args )
 
 end
 ```
-
-## Graphing and Drawing
-
-* `gcf` returns a handle to the current figure, or creates one if no figures are active.
