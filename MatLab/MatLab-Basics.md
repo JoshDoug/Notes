@@ -77,13 +77,17 @@ Datastructures in MatLab are typically Scalar (single value), Vector (an array o
 * A scalar: `x = 1`, with a class of double, and which is really a 1x1 matrix.
 * A vector or array: `e = [1 2 3]` or `e = [1,2,3]`, either works. This is still technically a matrix.
 
+Use `whos` to check the class or data type.
+
 ### Strings
 
-String manipulation and concatenation.
+String manipulation and concatenation, MatLab is a stickler for single quotes, double quotes wont do.
 
 * Class char: `a = 'Test'` sets `a` to the string `Test`, MatLab requires single quotes to be used, Octave allows double quotes.
+* Assign text that includes a single quote: `'You''re right'`, need to use a second single quote to cancel it out, the result is `You're right`
 * Class string: `b = string('Test')`, this stores `Test` as a String with double quotes. `b = "Test"` would cause an error.
 * Concatenate strings: `strcat(s1, s2...)`, concatenates however many strings are included as arguments, literals or variables. This function also removes whitespace at the end of each string.
+* Concatenate text: `longText = [text1, text2]`, or `longText = [text1, ' and ', text2]`
 * Convert numbers to strings: `num2str(x)`, `num2str(x,n)` converts to a string rounded to `n` significant figures.
 * Compare strings: `strcmp(s1, s2)`
 * Compare strings and ignore case: `strcmpi(s1, s2)`
@@ -182,6 +186,16 @@ end
 Switches can also have a `break` and `continue`. Using `break` jumps out of the loop/conditional and resumes at the corresponding `end` statement, `continue` jumps back to the beginning of a loop and increments that counter as if the loop had completed normally.
 
 ## Functions
+
+### Calling Functions
+
+* call a function with a single argument: `max(A)` (where `A` is a vector)
+* call a function with multiple arguments, seperated by commas: `max(A,B)` (where `A` & `B` are vectors)
+* get output from a function: `result = max(A)`
+* get multiple outputs from a function: `[result, location] = max(A)` (order here seems to matter)
+* call a function with no inputs/outputs, just call the name, no parentheses needed: `clc`
+
+### Writing Functions
 
 Boilerplate function:
 
