@@ -327,6 +327,8 @@ A package is a set of files that can be added to Vim, simples. There are two kin
 
 Vim comes with with a few packages that can be optionally used, e.g. the vimball plugin which supports creating and using vimballs (self-installing Vim plugin archives). To start using the vimball plugin add the line `packadd vimball` to .vimrc, or try it out with the colon command. For more about vimball see `:help vimball` (vimball needs to be enabled first).
 
+What differntiates a package and a plugin?
+
 For help on packages see `:h packages`.
 
 ### 05.5 Adding a Plugin
@@ -341,3 +343,19 @@ There are two types of plugins:
 #### Global Plugins
 
 #### Filetype Plugins
+
+### 05.6 Adding a help file
+
+Explains how to manually add the help files of a plugin and generate the tags, which is covered by using a plugin manager. May revisit this.
+
+### 05.7 The Option Window
+
+To find an option there are a couple options (heh), the options help page or the `:options` command, there's also the 'option-list' linked to from the help page.
+
+The `:options` command opens a new window with a list of options, grouped by subject, each with a one-line explainer. A subject can be jumped to via the cursor and `<Enter>`, to jump back use `<Enter>` again or `C-o`. Hitting `<Enter>` on one of these options will toggle it, which will be shown by the line switching the two options e.g. `set wrap    nowrap` will switch to `set nowrap    wrap`. Hitting enter (anywhere) on the line above with the description of the option will open the full help for it (instead of the short description).
+
+For options that take a non-boolean (String or number) value, these can be manually edited, to apply the edit use `<Enter>`.
+
+### 05.8 Often Used Options
+
+Some of the more useful options that can be set (to find out more about them use single quotes with the help command e.g.: `h 'wrap'`)
