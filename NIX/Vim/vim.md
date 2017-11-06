@@ -12,6 +12,8 @@ Tutorials and useful links:
 * [Bram Moolenaar's Seven habits of effective text editing](http://www.moolenaar.net/habits.html)
 * [Shapeshed blog on Vim package management](https://shapeshed.com/vim-packages/)
 * [Neovim Wiki Plugin List](https://github.com/neovim/neovim/wiki/Related-projects#plugins)
+* [Vim File Explorer](http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/)
+* [Awesome Vim - list of resources and tutorials etc](https://github.com/akrawchyk/awesome-vim)
 
 ## Vim Modes
 
