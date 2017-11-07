@@ -5,6 +5,7 @@ Everything is a matrix, when `a = 1`, `a` is a 1x1 matrix.
 * [MatLab Documentation](https://uk.mathworks.com/help/)
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
+* [MatLab Scripts](https://uk.mathworks.com/help/matlab/learn_matlab/scripts.html)
 
 ## Comments
 
@@ -209,3 +210,8 @@ function [ output_args ] = UntitledFunction( input_args )
 
 end
 ```
+
+## Help and Documentation
+
+* `help command` - short explainer for a command
+* `doc command` - lengthier indepth explanation
