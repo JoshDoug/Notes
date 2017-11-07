@@ -4,6 +4,7 @@ Graphing and graphics with MatLab.
 
 * [MatLab Documentation](https://uk.mathworks.com/help/)
 * [MathWorks 2-D and 3-D Plots](https://uk.mathworks.com/help/matlab/learn_matlab/plots.html)
+* [MatLab Plot Examples, 2-D & 3-D](https://uk.mathworks.com/help/matlab/examples.html)
 
 ## 2D Plots
 
@@ -40,6 +41,16 @@ legend('sin', 'cos')
 
 When used, `hold on` will ensure all plots appear in the current figure window until `hold off`, `close`, or another figure is used (probably). If there are multiple figures open then `close all` can be used to close all of them in one go.
 
+## [3D Plots](https://uk.mathworks.com/help/matlab/examples/creating-3-d-plots.html)
+
+Three dimensional plots just need to take a 3rd set of coordinates in the z-axis. Example:
+
+```MatLab
+[X,Y] = meshgrid(-2:.2:2); % Create a mesh grid from -2 to 2 in increments of 0.2
+Z = X .* exp(-X.^2 - Y.^2); % Generate Z index from X & Y
+surf(X,Y,Z)
+```
+
 ## Subplots
 
 Multiple plots can be made in the same window using the subplot function. Each plot is preceded by a call to `subplot` which specifies the size of the subplot grid (they're set in a grid layout with rows and columns) and the place within the grid of the plot. E.g. `subplot(2, 2, 3)` would specify a 2x2 grid with the plot in the 3rd portion, which would place it in column 1, row 2.
@@ -54,7 +65,9 @@ subplot(2,2,3); mesh(Z); title('Z');
 subplot(2,2,4); mesh(X,Y,Z); title('X,Y,Z');
 ```
 
-## 3D Plots
+## Surf & Mesh
+
+These functions are useful for plotting 3-D coordinates, `mesh` creates a wireframe, `surf` creates a wireframe with filled surfaces.
 
 ## Graphing and Drawing
 
