@@ -38,7 +38,21 @@ plot(x, y2, ':')
 legend('sin', 'cos')
 ```
 
-When used, `hold on` will ensure all plots appear in the current figure window until `hold off`, `close`, or another figure is used (probably).
+When used, `hold on` will ensure all plots appear in the current figure window until `hold off`, `close`, or another figure is used (probably). If there are multiple figures open then `close all` can be used to close all of them in one go.
+
+## Subplots
+
+Multiple plots can be made in the same window using the subplot function. Each plot is preceded by a call to `subplot` which specifies the size of the subplot grid (they're set in a grid layout with rows and columns) and the place within the grid of the plot. E.g. `subplot(2, 2, 3)` would specify a 2x2 grid with the plot in the 3rd portion, which would place it in column 1, row 2.
+
+```MatLab
+% Sample 2x2 Subplot
+t = 0:pi/10:2*pi;
+[X,Y,Z] = cylinder(4*cos(t));
+subplot(2,2,1); mesh(X); title('X');
+subplot(2,2,2); mesh(Y); title('Y');
+subplot(2,2,3); mesh(Z); title('Z');
+subplot(2,2,4); mesh(X,Y,Z); title('X,Y,Z');
+```
 
 ## 3D Plots
 
