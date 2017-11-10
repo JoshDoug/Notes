@@ -35,3 +35,11 @@ call plug#end()
 * Run `:PlugInstall`, `PlugUpdate`, `PlugUpgrade` to ensure plugins are installed, updated, and then vim-plug itself is updated.
 
 ## Plugins
+
+* [vim-airline](https://github.com/vim-airline/vim-airline)
+* [solarized](https://github.com/altercation/vim-colors-solarized)
+* [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
+* [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
+* [neco-vim](https://github.com/Shougo/neco-vim)
+* [vim-octave](https://github.com/jvirtanen/vim-octave)
+* [vim-easymotion](https://github.com/easymotion/vim-easymotion)
