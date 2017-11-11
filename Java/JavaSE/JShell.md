@@ -144,3 +144,53 @@ jshell> /list 1 3
        }
    3 : divide(5, 0)
 ```
+
+## Snippet Tab Completion
+
+Tab completion can be used to try and determine what's being entered, if it can't be determined then possible options are listed.
+
+* `div<Tab>` - this will tab complete to the divide method from the Exception snippet examples above
+* `System.c<Tab>` - as there are multiple possibilities here, they are listed below the prompt, although any common characters will be added.
+
+At a method call's open parenthesis, tab completion will list possible parameter types:
+
+```Java
+jshell> "hello".startsWith(
+startsWith(   
+
+jshell> "hello".startsWith(
+Signatures:
+boolean String.startsWith(String prefix, int toffset)
+boolean String.startsWith(String prefix)
+
+<press tab again to see documentation>
+
+jshell> "hello".startsWith(
+```
+
+Tabbing again will list documentation for the method:
+
+```Java
+jshell> "hello".startsWith(
+boolean String.startsWith(String prefix, int toffset)
+Tests if the substring of this string beginning at the specified index starts with the
+specified prefix.
+
+Parameters:
+prefix - the prefix.
+toffset - where to begin looking in this string.
+
+Returns:
+true if the character sequence represented by the argument is a prefix of the substring of this
+          object starting at index toffset ; false otherwise. The result is false if toffset is
+          negative or greater than the length of this String object; otherwise the result is
+          the same as the result of the expression
+                    this.substring(toffset).startsWith(prefix)
+
+
+<press tab to see next documentation>
+
+jshell> "hello".startsWith(
+```
+
+Tabbing again will provide additional documentation (e.g. different parameters), and tabbing again will list all possible completions.
