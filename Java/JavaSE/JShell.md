@@ -44,3 +44,8 @@ No public/private is necessary when creating methods. To change a method just re
   * `/list -all`  - list all snippets including failed, overwritten, dropped, and start-up snippets
   * `/list <name>` - list snuppets with the specified name (preference for active snippets)
   * `/list <id>` - list the snippet with the specified id
+* Set feedback level (toggle verbose mode)
+  * `/set feedback silent` - no feedback, simplifies prompt
+  * `/set feedback concise` - lowers the amount of feedback
+  * `/set feedback normal` - set default feedback
+  * `/set feedback verbose` - set verbose feedback, same as starting JShell with `-v` option
