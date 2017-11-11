@@ -110,3 +110,37 @@ jshell> volume(2)
 |          return 4.0 / 3.0 * PI * cube(radius);
 |                 ^------------^
 ```
+
+## Exceptions
+
+In an exception backtrace, feedback identifies the snippet and location within the snippet that the error occurred, similar to how a line number and a class would be given with an IDE. The location within the code snippets is displayed as `#ID:line-number` where the ID identifies the snippet and the line-number identifies the line within the snippet. The `/list` command can then be used to view the snippets, and `/list n` where n is the number corresponding with a snippet Id to narrow down the listed snippets. The `/list` command can take multiple IDs: `/list 1 3` to narrow the output down to just the offending snippets. Example:
+
+```Java
+jshell> int divide(int x, int y) {
+   ...> return x / y;
+   ...> }
+|  created method divide(int,int)
+
+jshell> divide(4, 2)
+$2 ==> 2
+
+jshell> divide(5, 0)
+|  java.lang.ArithmeticException thrown: / by zero
+|        at divide (#1:2)
+|        at (#3:1)
+
+jshell> /list
+
+   1 : int divide(int x, int y) {
+       return x / y;
+       }
+   2 : divide(4, 2)
+   3 : divide(5, 0)
+
+jshell> /list 1 3
+
+   1 : int divide(int x, int y) {
+       return x / y;
+       }
+   3 : divide(5, 0)
+```
