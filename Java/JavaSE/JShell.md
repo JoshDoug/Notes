@@ -18,6 +18,23 @@ JShell is a typical REPL useful for exploring APIs and code snippets.
 
 Snippets of Java code entered into JShell are immediately evaluated, feedback about results, actions performed, and errors are shown. Use verbose mode to get more feedback.
 
+Example snippets:
+
+* `int x = 10` - assign variables, no need to add a semicolon
+* `x + x` - evaluate expressions, even though this doesn't explicitly assign the result, JShell well give it an Id that can be used to access the result again
+* `2 + 2` - same as above, this is assigned to a 'scratch variable', which is accessible via its Id
+
+Mutliline snippets can be entered and the prompt will switch to `...>` until the snippet is entered:
+
+```Java
+jshell> String twice(String s) {
+   ...>   return s + s;
+   ...> }
+|  created method twice(String)
+```
+
+No public/private is necessary when creating methods. To change a method just reenter it to overwrite the previous definition. Definitions can also be changed in incompatible ways, such as changing the type of a method or variable, this 'replaces' it instead of 'modifying' it.
+
 ## Commands
 
 * `/help`
