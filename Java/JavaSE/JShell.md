@@ -5,6 +5,7 @@ Using JShell, the Java 9 REPL.
 * [Official Java Shell User Guide](https://docs.oracle.com/javase/9/jshell/toc.htm)
 * [JShell - Java Platform SE Tools Reference](https://docs.oracle.com/javase/9/tools/jshell.htm#JSWOR-GUID-C337353B-074A-431C-993F-60C226163F00)
 * [CalliCoder - JShell Introduction](https://www.callicoder.com/java-9-jshell-repl-tutorial/)
+* [Interacting with an application using JShell and Netbeans](https://www.youtube.com/watch?v=d6YcG4zEYKc)
 
 ## Intro
 
