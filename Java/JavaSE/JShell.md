@@ -307,3 +307,5 @@ Setting module path when starting JShell: `jshell --module-path myOwnModulePath 
 Setting module path and other options within a JShell session: `/env --add-modules my.module --module-path myModulePath --class-path myClassPath` (not sure if this is correct or how exactly it works yet, TKTK).
 
 Using `/env` without options will list all the currently set options (nothing by default).
+
+For more details about the options see `/help context` which will give a rundown of each configurable option.
