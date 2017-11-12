@@ -103,7 +103,7 @@ If the precision of `PI` is changed, and verbose mode is in use, then JShell wil
 jshell> BigDecimal PI = new BigDecimal("3.141592653589793238462643383")
 PI ==> 3.141592653589793238462643383
 |  replaced variable PI : BigDecimal
-|    update modified method volume(double) which cannot be invoked until this error is corrected: 
+|    update modified method volume(double) which cannot be invoked until this error is corrected:
 |      bad operand types for binary operator '*'
 |        first type:  double
 |        second type: java.math.BigDecimal
@@ -116,7 +116,7 @@ And repeat warnings if a method currently incompatible with `PI` is invoked:
 
 ```Java
 jshell> volume(2)
-|  attempted to call method volume(double) which cannot be invoked until this error is corrected: 
+|  attempted to call method volume(double) which cannot be invoked until this error is corrected:
 |      bad operand types for binary operator '*'
 |        first type:  double
 |        second type: java.math.BigDecimal
@@ -169,7 +169,7 @@ At a method call's open parenthesis, tab completion will list possible parameter
 
 ```Java
 jshell> "hello".startsWith(
-startsWith(   
+startsWith(
 
 jshell> "hello".startsWith(
 Signatures:
