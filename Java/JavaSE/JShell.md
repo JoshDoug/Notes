@@ -39,10 +39,12 @@ No public/private is necessary when creating methods. To change a method just re
 
 ## Commands
 
+JShell commands control the environment and display information within a session. Commands are distinguished from snippets by a leading forward slash, `/`.
+
 * `/help`
 * `/exit`
 * `/list` - list currently active snippets typed in or read with `/open`
-  * `/list -start` - list the automatically evaluated start-up snippets
+  * `/list -start` - list the automatically evaluated start-up snippets, these are numbered and prefixed with `s` (presumably short for 'start')
   * `/list -all`  - list all snippets including failed, overwritten, dropped, and start-up snippets
   * `/list <name>` - list snuppets with the specified name (preference for active snippets)
   * `/list <id>` - list the snippet with the specified id
@@ -51,6 +53,11 @@ No public/private is necessary when creating methods. To change a method just re
   * `/set feedback concise` - lowers the amount of feedback
   * `/set feedback normal` - set default feedback
   * `/set feedback verbose` - set verbose feedback, same as starting JShell with `-v` option
+* `/vars` - list currently active variables, to see more options tab complete after enterings the command
+  * `/vars -all`
+  * `/vars -start` - no startup variables are set by default in JDK9
+  * `/vars 1` or `/vars $1` - list snippet 1 which is a variable, both options can be used, difference between them is unclear.
+* `/methods` - list currently active methods. Sames as `/vars`, `/methods` has `-all` and `-start` options as well as options to select specific method snippets
 
 ## Forward References
 
