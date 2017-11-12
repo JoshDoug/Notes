@@ -278,4 +278,12 @@ The search feature works similarly to history searching in Bash. Use `C-r` to en
 * `C-r` - start search, and search further back through history
 * `C-s` - return to more recent history matches
 
-Macros cna be defined with `C-x (`, enter text and finished with `C-x )`, and `C-x e` to use. But I don't really understand them.
+Macros cna be defined with `C-x (`, enter text and finished with `C-x )`, and `C-x e` to use. But I don't really understand them. TKTK.
+
+### External Editor
+
+An editor can be used to edit and create snippets. JShell can be configured to use a specific editor. To edit all existing snippets at one use `/edit` with an option, to edit a specific option use `/edit` with a specific snippet name or ID. E.g. edit the `volume` method defined in the Forward References section: `/edit volume`.
+
+Setting the editor. This can be done with the `/set` command, `/set editor nvim` which will set the editor for the session. If an editor is not set then JShell will check the following environment variables in this order: `JSHELLEDITOR`, `VISUAL`, and `EDITOR`. If none of these are set then a simple editor is used (probably vi?).
+
+New variables, methods, and classes can be defined with the editor, semicolons will still be automatically added when saving and exiting the editor. Exiting the editor restores the JShell prompt.
