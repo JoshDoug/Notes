@@ -40,7 +40,7 @@ No public/private is necessary when creating methods. To change a method just re
 
 ## Commands
 
-JShell commands control the environment and display information within a session. Commands are distinguished from snippets by a leading forward slash, `/`.
+JShell commands control the environment and display information within a session. Commands are distinguished from snippets by a leading forward slash, `/`. Tab after a command to see options, tab again to see a synopis, and tab again to see full documentation for the command.
 
 * `/help`
 * `/exit`
@@ -49,6 +49,7 @@ JShell commands control the environment and display information within a session
   * `/list -all`  - list all snippets including failed, overwritten, dropped, and start-up snippets
   * `/list <name>` - list snuppets with the specified name (preference for active snippets)
   * `/list <id>` - list the snippet with the specified id
+  * `/l` - short alias for `/list`, will also tab complete but doesn't need to be
 * Set feedback level
   * `/set feedback silent` - no feedback, simplifies prompt
   * `/set feedback concise` - lowers the amount of feedback
@@ -58,7 +59,9 @@ JShell commands control the environment and display information within a session
   * `/vars -all`
   * `/vars -start` - no startup variables are set by default in JDK9
   * `/vars 1` or `/vars $1` - list snippet 1 which is a variable, both options can be used, difference between them is unclear.
+  * `/v` - short alias
 * `/methods` - list currently active methods. Sames as `/vars`, `/methods` has `-all` and `-start` options as well as options to select specific method snippets
+  * `/m` - short alias
 
 ## Forward References
 
