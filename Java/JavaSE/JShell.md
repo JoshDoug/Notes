@@ -228,3 +228,43 @@ jshell> Graphics | = frame.getGraphics()
 ```
 
 Assuming the JFrame in the prior example was called frame, and `|` represent the final cursor position.
+
+## Editing
+
+JShell supports editing input at the `jshell` prompt and editing in an external editor. Shell editing enables editing of snippets and commands as they're entered, and to retrieve and previously ented snippets and commands. Alterantively an external editor can be chosen, which is more convenient for multiline snippets.
+
+### Shell Editing
+
+Shell editing in JShell is built on [JLine2](https://github.com/jline/jline2/wiki/Using-JLine), which is functionally similar to BSD `editline` and GNU [`readline`](https://tiswww.case.edu/php/chet/readline/rluserman.html) in Emacs mode.
+
+#### Input Line Navigation
+
+Editing via the prompt, by editing the current line or accessing snippet history. The input line can be navigated with the Ctrl key and Meta/Alt key.
+
+* Left Arrow & Right Arrow, or `C-b` & `C-f` - navigating back and forth by single characters within a line, common Emacs shortcuts
+* Up Arrow & Down Arrow - move through history
+* `C-a` & `C-e` - move to the start and end of the current line
+* `M-b` & `M-f` - move backawards and forwards one word
+
+#### History Navigation
+
+Using example:
+
+```Java
+jshell> class FooBar {
+   ...> int x;
+   ...> int y;
+   ...> }
+|  created class FooBar
+```
+
+Once entered, this class can be edited by using the Up Arrow to move to it in history and edit specific lines (this will move to a line in history, not the snippet as a whole). To move through history by snippets use `C-Up Arrow`. Of course this conflicts with a popular macOS keyboard shortcut, but this just jumps to the first line of each snippet.
+
+#### Input Line Modification
+
+* Delete, or `C-d` - delete the character at or after the cursor, as opposd to backspace - deleting the character at or before the cursor
+* `C-k` - delete the text from the cursor to the end of the line
+* `M-d` - delete the text from the cursor to the end of the word
+* `C-w` - delete the text from the cursor to the start of the word/previous whitespace
+* `C-y` - paste the most recently deleted text into the line (using the commands above, but not including backspace or `C-d`)
+* `M-y` - after `C-y`, `M-y` cycles through previously deleted text
