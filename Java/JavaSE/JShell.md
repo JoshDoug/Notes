@@ -42,7 +42,7 @@ No public/private is necessary when creating methods. To change a method just re
 
 JShell commands control the environment and display information within a session. Commands are distinguished from snippets by a leading forward slash, `/`. Tab after a command to see options, tab again to see a synopis, and tab again to see full documentation for the command.
 
-* `/help`
+* `/help`, `/help intro`, `/help /list` or `/help list` or `/he l`
 * `/exit`
 * `/list` - list currently active snippets typed in or read with `/open`
   * `/list -start` - list the automatically evaluated start-up snippets, these are numbered and prefixed with `s` (presumably short for 'start')
@@ -297,3 +297,13 @@ External code is accessible within a JShell sesssion, classes through the class 
 This can be set when starting JShell: `jshell --class-path myClassPath`, where the class path is either a path or an environment variable containing a path (TKTK?). The code the class path points to must be compiled into class files in directories or JAR files. Code in the default package, aka the unnamed package (?), can't be accessed from JShell. After setting the class path, the packages can be imported into the session.
 
 Alternatively the `/env` command can be used from within the session: `/env --class-path myClassPath`, this will reset the execution state, relaoding any current snippets with the new class path setting.
+
+#### Setting Module Options
+
+JShell supports modules. The module path can be set, additional modules to resolve specified, and module exports given. These options, same as class path, can be set as options when running JShell or with the `/env` command during a session.
+
+Setting module path when starting JShell: `jshell --module-path myOwnModulePath  --add-modules my.module`
+
+Setting module path and other options within a JShell session: `/env --add-modules my.module --module-path myModulePath --class-path myClassPath` (not sure if this is correct or how exactly it works yet, TKTK).
+
+Using `/env` without options will list all the currently set options (nothing by default).
