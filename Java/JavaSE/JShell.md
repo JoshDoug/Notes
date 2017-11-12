@@ -260,6 +260,8 @@ jshell> class FooBar {
 
 Once entered, this class can be edited by using the Up Arrow to move to it in history and edit specific lines (this will move to a line in history, not the snippet as a whole). To move through history by snippets use `C-Up Arrow`. Of course this conflicts with a popular macOS keyboard shortcut, but this just jumps to the first line of each snippet.
 
+This doesn't seem to work as expected for multiline snippets, the line is simply entered as a new snippet on its own, instead of editing that part of the existing snippet.
+
 #### Input Line Modification
 
 * Delete, or `C-d` - delete the character at or after the cursor, as opposd to backspace - deleting the character at or before the cursor
@@ -268,3 +270,12 @@ Once entered, this class can be edited by using the Up Arrow to move to it in hi
 * `C-w` - delete the text from the cursor to the start of the word/previous whitespace
 * `C-y` - paste the most recently deleted text into the line (using the commands above, but not including backspace or `C-d`)
 * `M-y` - after `C-y`, `M-y` cycles through previously deleted text
+
+#### Search and More
+
+The search feature works similarly to history searching in Bash. Use `C-r` to enter search, enter a search string and the closest match will be found, use `C-r` again to go to a prior match, or `C-s` to return to a more recent match.
+
+* `C-r` - start search, and search further back through history
+* `C-s` - return to more recent history matches
+
+Macros cna be defined with `C-x (`, enter text and finished with `C-x )`, and `C-x e` to use. But I don't really understand them.
