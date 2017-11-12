@@ -194,3 +194,24 @@ jshell> "hello".startsWith(
 ```
 
 Tabbing again will provide additional documentation (e.g. different parameters), and tabbing again will list all possible completions.
+
+## Snippet Transformation
+
+Importing a class can be done with `Shift+Tab i`, `Shift` and `Tab` at the same time, then followed by `i`. JShell will then provide an option for importing the class, more than one import option could be provided. E.g. `new JFrame<Shift+Tab i>`.
+
+This expression can be converted into a variable declaration with `Shift+Tab v`. So starting with: `jshell> new JFrame("Demo")` and using the keyboard combiniation would result in: `jshell> JFrame  = new JFrame("Demo")`, with the cursor placed before the equals ready to enter the variable name.
+
+If the result of an expression hasn't been imported then `Shift+Tab v` can be used to create the variable and import the class:
+
+```Java
+jshell> frame.getGraphics() <Shift+Tab v>
+0: Do nothing
+1: Create variable
+2: import: java.awt.Graphics. Create variable
+Choice: 2
+Imported: java.awt.Graphics
+
+jshell> Graphics | = frame.getGraphics()
+```
+
+Assuming the JFrame in the prior example was called frame, and `|` represent the final cursor position.
