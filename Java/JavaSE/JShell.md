@@ -49,7 +49,7 @@ JShell commands control the environment and display information within a session
   * `/list -all`  - list all snippets including failed, overwritten, dropped, and start-up snippets
   * `/list <name>` - list snuppets with the specified name (preference for active snippets)
   * `/list <id>` - list the snippet with the specified id
-  * `/l` - short alias for `/list`, will also tab complete but doesn't need to be
+  * `/l` - short alias/abbreviation for `/list`, will also tab complete but doesn't need to be, this also works with options, e.g. `/l -a` to list all
 * Set feedback level
   * `/set feedback silent` - no feedback, simplifies prompt
   * `/set feedback concise` - lowers the amount of feedback
@@ -62,6 +62,8 @@ JShell commands control the environment and display information within a session
   * `/v` - short alias
 * `/methods` - list currently active methods. Sames as `/vars`, `/methods` has `-all` and `-start` options as well as options to select specific method snippets
   * `/m` - short alias
+
+Commands can be abbreviated provided the abbreviation is unique to a command, e.g. `/se fe v` to set feedback to verbose, this works because `/se` doesn't conflict but just `/s` would conflict with `/save`, and `fe` doesn't conflict, although just `f` would conflict with `format`, and `v` works with `verbose` which is the only feedback argument that starts with v.
 
 ## Forward References
 
