@@ -287,3 +287,13 @@ An editor can be used to edit and create snippets. JShell can be configured to u
 Setting the editor. This can be done with the `/set` command, `/set editor nvim` which will set the editor for the session. If an editor is not set then JShell will check the following environment variables in this order: `JSHELLEDITOR`, `VISUAL`, and `EDITOR`. If none of these are set then a simple editor is used (probably vi?).
 
 New variables, methods, and classes can be defined with the editor, semicolons will still be automatically added when saving and exiting the editor. Exiting the editor restores the JShell prompt.
+
+### External Code
+
+External code is accessible within a JShell sesssion, classes through the class path, modules can be accessed through the module path, additional modules setting, and module exports setting.
+
+#### Setting the Class Path
+
+This can be set when starting JShell: `jshell --class-path myClassPath`, where the class path is either a path or an environment variable containing a path (TKTK?). The code the class path points to must be compiled into class files in directories or JAR files. Code in the default package, aka the unnamed package (?), can't be accessed from JShell. After setting the class path, the packages can be imported into the session.
+
+Alternatively the `/env` command can be used from within the session: `/env --class-path myClassPath`, this will reset the execution state, relaoding any current snippets with the new class path setting.
