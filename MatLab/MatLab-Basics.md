@@ -6,6 +6,8 @@ Everything is a matrix, when `a = 1`, `a` is a 1x1 matrix.
 * [MathWorks Tutorials](https://uk.mathworks.com/support)
 * [MatLab Academy](https://matlabacademy.mathworks.com/)
 * [MatLab Scripts](https://uk.mathworks.com/help/matlab/learn_matlab/scripts.html)
+* [MatLab Getting Started Tutorials](https://uk.mathworks.com/help/matlab/getting-started-with-matlab.html)
+* [MatLab Examples - Language, Maths, Graphics, Data Visualisation, Animation, Images, etc](https://uk.mathworks.com/help/matlab/examples.html)
 
 ## Comments
 
@@ -102,6 +104,8 @@ Trimming and processing strings:
 * Remove leading and trailing whitespace: `strtrim(s)`
 
 ### Matrices
+
+* [Matrix Manipulation](https://uk.mathworks.com/help/matlab/examples/matrix-manipulation.html)
 
 * `a = [1,2;3,4]` or `a = [1 2;3 4]`, commas don't seem to matter. This would set up a 2x2 matrix.
 
