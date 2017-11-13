@@ -3,8 +3,10 @@
 Graphing and graphics with MatLab.
 
 * [MatLab Documentation](https://uk.mathworks.com/help/)
-* [MathWorks 2-D and 3-D Plots](https://uk.mathworks.com/help/matlab/learn_matlab/plots.html)
+* [MathWorks 2-D and 3-D Plots](https://uk.mathworks.com/help/matlab/learn_matlab/plots.html) and [2-D and 3-D Plots](https://uk.mathworks.com/help/matlab/2-and-3d-plots.html)
 * [MatLab Plot Examples, 2-D & 3-D](https://uk.mathworks.com/help/matlab/examples.html)
+* [Types of MatLab Plots](https://uk.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html)
+* [MatLab Graphics](https://uk.mathworks.com/help/matlab/graphics.html)
 
 ## 2D Plots
 
@@ -67,8 +69,15 @@ subplot(2,2,4); mesh(X,Y,Z); title('X,Y,Z');
 
 ## Surf & Mesh
 
+* [surf](https://uk.mathworks.com/help/matlab/ref/surf.html)
+* [surface](https://uk.mathworks.com/help/matlab/ref/surface.html)
+
 These functions are useful for plotting 3-D coordinates, `mesh` creates a wireframe, `surf` creates a wireframe with filled surfaces.
 
 ## Graphing and Drawing
 
 * `gcf` returns a handle to the current figure, or creates one if no figures are active.
+
+## Light
+
+* [Light Overview](https://uk.mathworks.com/help/matlab/visualize/lighting-overview.html)
