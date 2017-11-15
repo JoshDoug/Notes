@@ -81,3 +81,7 @@ These functions are useful for plotting 3-D coordinates, `mesh` creates a wirefr
 ## Light
 
 * [Light Overview](https://uk.mathworks.com/help/matlab/visualize/lighting-overview.html)
+
+## [Plotting MatLab's Logo](https://uk.mathworks.com/help/matlab/examples/creating-the-matlab-logo.html)
+
+Note: The membrane function is built in purely for the purpose of recreating the logo, which is why it's not available in MatLab alternative Octave.
