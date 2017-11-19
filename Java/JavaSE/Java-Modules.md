@@ -101,4 +101,34 @@ Reflection is no longer all powerful when confronted with the module system and 
 
 #### Implied Readability
 
-Implied readability covers the use of transitive dependencies. For example, `java.sql` makes use of `java.xml`, but use of the `java.sql` API will likley also return xml objects and as such use of `java.sql` will likely result in a dependency on `java.xml` in the module using `java.sql` (still following?). As such it makes sense for `java.sql` to pass on it's xml dependency to classes that are dependent on it, this can be done with the `transitive` keyword used in conjunction with `requries`. The transitive dependency declaration for `java.sql` would be: `requrires transitive java.xml`, so now any module using `java.sql` will also have a dependency on `java.xml` automatically. This is used in aggregator modules such as `java.se` and `java.se.ee` which contain no code and instead aggregate several modules so that the list of modules to `require` is shortened, this is done by `java.se`'s module descriptor listing all the relevant modules as `require transitive`.
+Implied readability covers the use of transitive dependencies. For example, `java.sql` makes use of `java.xml`, but use of the `java.sql` API will likley also return xml objects and as such use of `java.sql` will likely result in a dependency on `java.xml` in the module using `java.sql` (still following?). As such it makes sense for `java.sql` to pass on its xml dependency to classes that are dependent on it, this can be done with the `transitive` keyword used in conjunction with `requries`. The transitive dependency declaration for `java.sql` would be: `requrires transitive java.xml`, so now any module using `java.sql` will also have a dependency on `java.xml` automatically. This is used in aggregator modules such as `java.se` and `java.se.ee` which contain no code and instead aggregate several modules so that the list of modules to `require` is shortened, this is done by `java.se`'s module descriptor listing all the relevant modules as `require transitive`.
+
+#### Qualified Exports
+
+It will sometimes be useful to expose a package only to certain other modules, and this can be done with *qualified exports*. An example of a qualified export can be found in the `java.xml` module descriptor:
+
+```Java
+mdoule java.xml {
+    ...
+    exports com.sun.xml.internal.stream.writers to java.xml.ws;
+    ...
+}
+```
+
+This resricts the `com.sun.xml.internal.stream.writers` to just `java.xml.ws`. Multiple module names, seperated by a comma, can be provided as targets for a qualified export.
+
+It's probably best to avoid using qualified exports if possible, although in cases such as the JDK with a large legacy code base it may be useful as a means to migrate to modules.
+
+#### Module Resolution and the Module Path
+
+Modules are resolved from the *module path*, as opposed to the classpath. Whereas the classpath is a flat list of types, the module path contains only modules, and these modules carry explicit information on what packages they export, making the module path efficiently indexable. The Java runtime and compiler know exactly which module to resolve from the module path when looking for types from a given package. Previously a scan through the whole classpath was the only way to locate an arbritary type.
+
+When an application packaged as a module is run, it needs all of its dependencies as well. Module resolution is the process of computing a minimal required set of modules fiven a dependency graph and a *root module* chosen from tha graph. Every module reachable from the root module ends up in the set of *resolved modules*. Mathematically speaking, this amounts to computing the *transitive closure* of the dependency graph.
+
+When modules are resolved some checks are performed, e.g. two modules with the same name will lead to an error at startup (rather than a run-time classloading failure). Another check is for uniqueness of exported packages, only one module on the module path may expose a given package. "Split Packages" is discussed on page 94 of the book.
+
+Versions - these are deliberately outside the scope of the module system. Versioned modules are discussed on page 106 of the book.
+
+#### Using the Modular JDK Without Modules
+
+### Chapter 3: Working with Modules
