@@ -3,7 +3,7 @@
 *A module is a set of packages designed for reuse.*
 
 * Java 9 Modularity book
-* [Java 9 Modularitt book code examples](https://github.com/java9-modularity/examples)
+* [Java 9 Modularity book code examples](https://github.com/java9-modularity/examples)
 
 ## Java 9 Modularity Notes
 
@@ -130,5 +130,7 @@ When modules are resolved some checks are performed, e.g. two modules with the s
 Versions - these are deliberately outside the scope of the module system. Versioned modules are discussed on page 106 of the book.
 
 #### Using the Modular JDK Without Modules
+
+With Java 9 modules are opt-in, prior applications should continue to work as before without any modifications. When the module system is not explicitly used then the classpath continues to be used as it would in prior versions. But when the module system is not being explicitly used, it is still being used because the JDK now uses the module system, as a result all code compiled outside a module is added to an *unnamed module*. This unnamed module reads all other modules, but you've still got to deal with the classpath. This implicit use of the module system voids almost all the benefits. Also running code compiled on a prior version of Java behaves a little differently, with a more lenient form of strong encapsulation being used to avoid breakage. There are some other differences, see the book, page 31.
 
 ### Chapter 3: Working with Modules
