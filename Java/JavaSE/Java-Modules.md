@@ -47,3 +47,23 @@ The module system brings many beneifts, here are some of the most important ones
 * *Scalable Development*: Explicity boundaries enable teams to work in parallel while still creating maintainable codebases. ONly explicitly exported public types are shared, creating boundaries that are automatically enforced by the module system.
 * *Security*: Strong encapsulation is enforced at the deepest layers inside the JVM. This limits the attack surface of the Java runtime. Gaining reflective access to sensitive internal classes is not possible anymore. But what does this mean for libraries that make extensive use of reflection?
 * *Optimisation*: Because the module system knows which modules belong together, including platform modules, no other code needs to be considered during JVM startup. It also opens up the possibility to create a minimal configuration of modules for distribution. Furthermore, whole-program optimisations can be applied to such a set of modules. Before modules, this was much harder, because explicit dependency information was not available and a class could reference any other class from the classpath.
+
+### Chapter 2: Modules and the Modular JDK
+
+The main contents of Java are shipped in `rt.jar`, rt short for runtime, which weighs in at over 60MBs and contains legacy code and bloat such as CORBA. With Java 9's modularity, developers don't need to include that extra cruft in their deployments. Encapsulating classes and having the option of unused modules also dramatically reduces the attack surface of Java.
+
+#### The Modular JDK
+
+A basic step towards a more modular JDK was taken in Java 8 with the introduction of *compact profiles*, which were subsets of packages from the standard library. There were three profiles, `compact1`, `compact2`, and `compact3`, each profile is a superset of the previous, building more packages on top that can be used. This is still very limited compared to the modular system in Java 9.
+
+* `compact1`: Smalled profile with Java core classes and logging and scripting APIs.
+* `compact2`: Extends compact1 with XML, JDBC, and RMI APIs
+* `compact3`: Extends compact2 with security and management APIs
+
+This worked as an intermediate solution, but ultimately a more flexible appraoch was necessary. Java 9 splits the JDK into about 90 platform modules, instead of a monolithic library.
+
+The Java module system does not allow compile-time circular dependencies between modules, which is good as they're generally an indicator of bad design.
+
+* `java --list-modules` - lists all modules in the currently installed JDK
+
+Incubator Modules: A simple way to add unstable implementations for testing purposes while still making clear that the API may change or be removed. This is covered by Java Enhancement Proposal (JEP) 11. An example of this in Java 9 is a new http client, `jdk.incubator.httpclient@9`.
