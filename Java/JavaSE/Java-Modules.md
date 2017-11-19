@@ -67,3 +67,24 @@ The Java module system does not allow compile-time circular dependencies between
 * `java --list-modules` - lists all modules in the currently installed JDK
 
 Incubator Modules: A simple way to add unstable implementations for testing purposes while still making clear that the API may change or be removed. This is covered by Java Enhancement Proposal (JEP) 11. An example of this in Java 9 is a new http client, `jdk.incubator.httpclient@9`.
+
+#### Modular Descriptors
+
+A module descriptor is used to store the metadata of a module, such as its name, and what is exposed, the module descriptor lives in a file called `module-info.java`.
+
+Example `module-info.java` for the `java.prefs` platform module:
+
+```Java
+module java.prefs {
+    requires java.xml;
+
+    exports java.util.prefs;
+}
+```
+
+* `requires` - this keyword indicates a dependency, in this case on `java.xml`
+* A single package from the `java.prefs` module is exported to other modules.
+
+Modules live in a global namespace and as such the module names must be unique. As with packages, conventions such as reverse DNS notation can be used to ensure uniqueness for modules. A module descriptor always starts with the `module` keyword, followed by the name of the module. Then, the body of `module-info.java` describes other characteristics of the module (if any).
+
+The body of the module descriptor specifies a dependency on `java.xml` with the `requries` keyword, dependencies are enforced by the module system and this dependency needs to be declared otherwise it will not compile. The implicit dependency of `java.base` doesn't need to be added, much like it's unneccessary to import `java.lang.String` to a class using strings. A module descriptor can also contain `exports` statements. Strong encapsulation is the default for modules, only when a package is explicitly exported, such as `java.util.prefs` in the example, can it be accessed from other modules.
