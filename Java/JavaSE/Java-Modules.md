@@ -7,6 +7,8 @@
 
 ## Java 9 Modularity Notes
 
+Notes are on concepts and defintions that may be useful to revisit, not general introductory or contextual content. Most headings will be shown for the sake of structure, but may be shortly summarised or not at all, in which case just revisit the book.
+
 ### Chapter 1: Modularity Matters
 
 #### What Is Modularity
@@ -22,3 +24,7 @@ Modules group related code, but beyond that they must adhere to 3 core tenets:
 #### Before Java 9
 
 Java has method encapsulation, basic package encapsulation (protected classes), but it's limited. Interfaces and factories can also be used with dependency injection to provide a level of encapsulation. Maven has helped with compile time dependency management, including managing transient dependencies, and the OSGi framework does run-time managemnt, but more can be done.
+
+#### Jars As Modules
+
+Kind of, but not really.
