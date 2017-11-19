@@ -88,3 +88,17 @@ module java.prefs {
 Modules live in a global namespace and as such the module names must be unique. As with packages, conventions such as reverse DNS notation can be used to ensure uniqueness for modules. A module descriptor always starts with the `module` keyword, followed by the name of the module. Then, the body of `module-info.java` describes other characteristics of the module (if any).
 
 The body of the module descriptor specifies a dependency on `java.xml` with the `requries` keyword, dependencies are enforced by the module system and this dependency needs to be declared otherwise it will not compile. The implicit dependency of `java.base` doesn't need to be added, much like it's unneccessary to import `java.lang.String` to a class using strings. A module descriptor can also contain `exports` statements. Strong encapsulation is the default for modules, only when a package is explicitly exported, such as `java.util.prefs` in the example, can it be accessed from other modules.
+
+#### Readability
+
+By having dependencies explicitly stated in the module descriptor the readability of the structure of an application nad the relationships between the modules is improved.
+
+#### Accessibility
+
+Normal access modifiers still work the same within a module, but importantly even a public class is innaccessible to other modules unless the package it is in is explicity exported. If a package is exported then the code inside behaves in much the same way as pre-Java 9, with protected, -(default, package private), and private all behaving as they used to. This is important when considering the design of an application, it's important to design a package structure where types meant for external consumption are clearly seperated from internal implementation concerns. Essentially exported packages within a module form the API of the module. Even if the exported packages are not intended to signify an official API, third parties might treat them that way.
+
+Reflection is no longer all powerful when confronted with the module system and has to respect the strong encapsulation of a package, but packages that are exported should work the same way with reflection.
+
+#### Implied Readability
+
+Implied readability covers the use of transitive dependencies. For example, `java.sql` makes use of `java.xml`, but use of the `java.sql` API will likley also return xml objects and as such use of `java.sql` will likely result in a dependency on `java.xml` in the module using `java.sql` (still following?). As such it makes sense for `java.sql` to pass on it's xml dependency to classes that are dependent on it, this can be done with the `transitive` keyword used in conjunction with `requries`. The transitive dependency declaration for `java.sql` would be: `requrires transitive java.xml`, so now any module using `java.sql` will also have a dependency on `java.xml` automatically. This is used in aggregator modules such as `java.se` and `java.se.ee` which contain no code and instead aggregate several modules so that the list of modules to `require` is shortened, this is done by `java.se`'s module descriptor listing all the relevant modules as `require transitive`.
