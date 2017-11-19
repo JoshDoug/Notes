@@ -27,4 +27,23 @@ Java has method encapsulation, basic package encapsulation (protected classes), 
 
 #### Jars As Modules
 
-Kind of, but not really.
+Kind of, but not really - has no strong encapsulation, limited to convention which is easily and often ignored.
+
+#### Classpath Hell
+
+Classpath Hell and Jar Hell are common terms in the Java community for a reason, they're bad. Modules can help with this.
+
+#### Java 9 Modules
+
+Java 9 brings a module system for application use, which has also been used within Java itself to modularise the JRE and JDK.
+
+The Java 9 Module System adheres to the 3 core tenets of modualarity, modules can either export or strongly encapsulate packages, and they can express dependencies on other modules explicitly.
+The module system and included metadata provide much more detail about the structure of an application and its dependencies than the flat list of classpath JARs.
+
+The module system brings many beneifts, here are some of the most important ones:
+
+* *Reliable Configuration*: The module system checks whether a given combination of modules satisfies all dependencies before compiling or running code. This leads to fewer run-time errors.
+* *Strong Encapsulation*: Modules explicitly choose what to expose to other modules. Accidental (or intentional) dependencies on internal implementation details are prevented.
+* *Scalable Development*: Explicity boundaries enable teams to work in parallel while still creating maintainable codebases. ONly explicitly exported public types are shared, creating boundaries that are automatically enforced by the module system.
+* *Security*: Strong encapsulation is enforced at the deepest layers inside the JVM. This limits the attack surface of the Java runtime. Gaining reflective access to sensitive internal classes is not possible anymore. But what does this mean for libraries that make extensive use of reflection?
+* *Optimisation*: Because the module system knows which modules belong together, including platform modules, no other code needs to be considered during JVM startup. It also opens up the possibility to create a minimal configuration of modules for distribution. Furthermore, whole-program optimisations can be applied to such a set of modules. Before modules, this was much harder, because explicit dependency information was not available and a class could reference any other class from the classpath.
