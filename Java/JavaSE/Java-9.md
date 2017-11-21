@@ -106,6 +106,17 @@ But how does this work on different operating systems - release a jar per OS? Ki
 * HTML5 Javadoc
 * HTTP/2 Client - on an incubator module (JEP 11) will be added to the standard in a later release
 
+### HTTP/2 Client Support (JEP 110)
+
+* Implements HTTP/2 which was standardised in 2015
+* The new API provides three new classes:
+  * HttpClient - handles creation and sending of requests
+  * HttpRequest - used to construct a request to be sent
+  * HttpResponse - holds the response from the request
+* Replaces the HttpURLConnection API
+
+Is currently an incubator and not part of Java 9 by default, but will be part of JDK 10.
+
 ## Housekeeping
 
 Encapsulate Most Internal APIs
