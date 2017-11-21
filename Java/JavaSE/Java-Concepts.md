@@ -12,7 +12,13 @@ Lots of overlap, not sure why there are two pages for basically the same thing.
 ## Java Acronyms and Lingo
 
 * JSE - Java Specification Request
-* JEP - Java Enhancement Proposal
+* JEP - JDK Enhancement Proposal
+* JDK - Java Development Kit
+* JVM - Java Virtual Machine
+* JRE - Java Runtime Environment
+* JAR - Java Archive
+* PID - Process ID
+* EA - Early Access/Early Adoption
 * POJO - Plain Old Java Object
   * An object that has both attributes and behavior
 * JavaBean
