@@ -74,7 +74,7 @@ Covered in JEP 269
 
 Try out new APIs without having to write a bunch of boilerplate.
 
-Covered in (JShell)[JShell.md].
+Covered in this section by JShell.md.
 
 #### Mutli-Release JAR Files
 
