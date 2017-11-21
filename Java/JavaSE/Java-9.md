@@ -70,9 +70,11 @@ Tool jdeprscan searches for depreactated code: [jdeprscan tool documentation](ht
 
 Covered in JEP 269
 
-#### JShell REPL
+#### JShell REPL (JEP 222)
 
 Try out new APIs without having to write a bunch of boilerplate.
+
+Covered in (JShell)[JShell.md].
 
 #### Mutli-Release JAR Files
 
