@@ -4,6 +4,9 @@
 * [What's new in Java 9 Video](https://youtu.be/9PFcTwRlASY?t=1497)
 * [Blog Post](https://blogs.oracle.com/java/features-in-java-8-and-9)
 * [Keynote that demos JShell, modules, linking modules](https://www.youtube.com/watch?v=e9eSPtpiGkA)
+* [Java 9 Features - List of JEPS](http://openjdk.java.net/projects/jdk9/)
+* [Beyond Java 9](http://openjdk.java.net/projects/jdk/)
+* [Java 10](http://openjdk.java.net/projects/jdk/10)
 
 ## Behind the scenes improvements
 
@@ -27,15 +30,30 @@ Types of support:
 
 ## New features & functionality
 
-### Project Jigsaw - modularised the Java Platform
+### Project Jigsaw (JSR 376) - modularise the Java Platform
 
-* JEP 261: Module System
+A JSR can contain one or more JEPs, here are the JEPs associated with JSR 376:
+
 * JEP 200: The Modular JDK
 * JEP 201: Modular Source Code
 * JEP 220: Modualr Run-Time Images
-* Plus
-  * JEP 260: Encapsulate Most Internal APIs
-  * JEP 282: jlink: The Java Linker
+* JEP 260: Encapsulate Most Internal APIs
+* JEP 261: Module System
+* JEP 282: jlink: The Java Linker
+
+The main goals are to ensure reliable configuration (with a better alternative to the classpath), and strong encapsulation.
+
+* JDK divided into set of modules
+* JDK modules can be convined into a variety of configurations instead of just using a monolithic runtime
+  * Configurations can be used to create equivalents to compact profiles, but are more flexible and useful
+  * Custom configurations can be made with a reduced set of modules
+* Restructures the JDK and JRE runtime images
+  * Improves performance, security, and maintainability
+* Defines a new URI (Uniform Resource Identifier)
+  * The new URI scheme is used for naming modules, classes, and resources that are stored in a runtime image.
+* Makes most of the JDK's internal APIs inaccessible by default
+
+Use the `jdeps` tool, e.g. `jdeps -jdkinternals Example.class` to test for the use of internal APIs.
 
 #### jlink
 
