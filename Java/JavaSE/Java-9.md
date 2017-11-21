@@ -86,6 +86,17 @@ Write JDK-version-specific variants of the same code into a single jar file. Sou
 
 But how does this work on different operating systems - release a jar per OS? Kinda messes up the point of Java surely, or have a runtime environment that can detect the OS and contains a bunch of redundant code for other OSs?
 
+## Process API Updates
+
+* Controls and manages OS processes
+* Update extends Java's ability to interact with the OS
+* The ProcessHandle class provides access to critical data
+  * Examples: native process ID, arguments, command, start time, accumulated CPU time, user, parent process, and descendants
+  * Get PID of the current JVM process
+  * Enumerate processes running in the system
+  * Manage process trees
+  * Manage subprocesses
+
 ## New adopted standards
 
 * Unicode 8.0
