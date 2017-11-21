@@ -9,23 +9,20 @@ Tutorials provided by Oracle:
 
 Lots of overlap, not sure why there are two pages for basically the same thing.
 
-POJO - Plain Old Java Object
+## Java Acronyms and Lingo
 
-* An object that has both attributes and behavior
-
-JavaBean
-
-* A simple POJO whose only behavior is getters and setters
-* Must have a default nullable constructor to conform to the JavaBean specification
-
-DTO - Data Transfer Object
-
-* A JavaBean (kinda) that functions as a transport of data from one layer to another
-* Doesn't need to have a nullable constructor...
-
-DAO - Data Access Object
-
-OSGi - Open Services Gateway Initiative
+* JSE - Java Specification Request
+* JEP - Java Enhancement Proposal
+* POJO - Plain Old Java Object
+  * An object that has both attributes and behavior
+* JavaBean
+  * A simple POJO whose only behavior is getters and setters
+  * Must have a default nullable constructor to conform to the JavaBean specification
+* DTO - Data Transfer Object
+  * A JavaBean (kinda) that functions as a transport of data from one layer to another
+  * Doesn't need to have a nullable constructor...
+* DAO - Data Access Object
+* OSGi - Open Services Gateway Initiative
 
 ## Java Tutorials
 
