@@ -24,3 +24,13 @@ JUnit 5 differs from prior versions in that it is composed of several different 
 ## 2 Installation
 
 Milestone releases are deployed to Maven Central.
+
+### [2.1 Dependency Metadata](http://junit.org/junit5/docs/current/user-guide/#dependency-metadata)
+
+#### 2.1.1 Junit Platform
+
+* GroupID: `org.junit.platform`
+* Version: `1.0.2` (worth noting?)
+* Artficats IDs:
+  * `junit-platform-commons` - Internal common library/utils of JUnit. Not intended to be used outside of JUnit itself.
+  * `junit-platform-console`
