@@ -134,3 +134,41 @@ Versions - these are deliberately outside the scope of the module system. Versio
 With Java 9 modules are opt-in, prior applications should continue to work as before without any modifications. When the module system is not explicitly used then the classpath continues to be used as it would in prior versions. But when the module system is not being explicitly used, it is still being used because the JDK now uses the module system, as a result all code compiled outside a module is added to an *unnamed module*. This unnamed module reads all other modules, but you've still got to deal with the classpath. This implicit use of the module system voids almost all the benefits. Also running code compiled on a prior version of Java behaves a little differently, with a more lenient form of strong encapsulation being used to avoid breakage. There are some other differences, see the book, page 31.
 
 ### Chapter 3: Working with Modules
+
+Practical work - building a hello world module and then a running example project called EasyText.
+
+#### Your First Module
+
+This will examine a Modular Hello World and everything involved in creating and using it.
+
+##### Anatomy of a Module
+
+Starting out with a single class, in a package, leading to a single module. Modules may only contain types that are inside packages, so a package definition is required.
+
+##### Naming Modules
+
+##### Compilation
+
+##### Packaging
+
+##### Running Modules
+
+##### Module Path
+
+##### Linking Modules
+
+#### No Module Is an Island
+
+##### Introducing the EasyText Example
+
+##### A Tale of Two Modules
+
+#### Working with Platform Modules
+
+##### Finding the Right Platform Module
+
+##### Creating a GUI Module
+
+#### The Limits of Encapsulation
+
+##### Interfaces and Instantiation
