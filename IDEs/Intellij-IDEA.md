@@ -78,9 +78,19 @@ Still not totally sure how basic and smart completion differ, although on an emp
 
 ### [General Guidelines](https://www.jetbrains.com/help/idea/2017.1/general-guidelines.html)
 
+#### [Editor](https://www.jetbrains.com/help/idea/2017.1/intellij-idea-editor.html)
+
+#### [Auto-Completing Code](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html)
+
 ### [Langauge and Framework-Specific Guidelines](https://www.jetbrains.com/help/idea/2017.1/language-and-framework-specific-guidelines.html)
 
-#### [Getting Started with Java EE](https://www.jetbrains.com/help/idea/2017.1/developing-a-java-ee-application.html)
+#### [Java SE](https://www.jetbrains.com/help/idea/2017.1/java-se.html)
+
+##### [Creating, Running and Packaging Your First Java Application](https://www.jetbrains.com/help/idea/2017.1/creating-running-and-packaging-your-first-java-application.html)
+
+#### [Java EE](https://www.jetbrains.com/help/idea/2017.1/java-ee.html)
+
+#### [Developing a Java EE Application](https://www.jetbrains.com/help/idea/2017.1/developing-a-java-ee-application.html)
 
 Developing a Java EE Application. Only supported in Ultimate.
 
