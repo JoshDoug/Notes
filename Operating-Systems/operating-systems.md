@@ -18,3 +18,5 @@ Split into sections if this grows, or maybe move notes to OneNote if it doesn't 
 * [RWTH-OS eduOS-rs](https://rwth-os.github.io/eduOS-rs/)
 * [Blog: Writing an OS in Rust](https://os.phil-opp.com/)
 * [Bare Metal Rust: toyos-rs](http://www.randomhacks.net/bare-metal-rust/)
+* [intermezzOS](https://intermezzos.github.io/book/preface.html)
+* [Redox](https://www.redox-os.org/)
