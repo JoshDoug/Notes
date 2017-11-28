@@ -41,5 +41,10 @@ call plug#end()
 * [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 * [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
 * [neco-vim](https://github.com/Shougo/neco-vim)
-* [vim-octave](https://github.com/jvirtanen/vim-octave)
 * [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+* [ale](https://github.com/w0rp/ale)
+
+Plugins that I've not currently got installed:
+
+* [vint](https://github.com/Kuniwak/vint)
+* [vim-octave](https://github.com/jvirtanen/vim-octave)
