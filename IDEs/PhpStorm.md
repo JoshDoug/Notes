@@ -32,7 +32,7 @@ Configuring PhpStorm relies on setting it up in an environment with [XAMPP](http
 
 ##### Using Docker
 
-TODO
+TODO: [Docker Support in PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
 
 ##### [Using MAMP](https://confluence.jetbrains.com/display/PhpStorm/Installing+and+Configuring+MAMP+with+PhpStorm+IDE)
 
@@ -50,3 +50,8 @@ See also: PHP/language-basics.md
 With everything setup and working (PHP, Xdebug, Apache, MySQL, PHPMyAdmin, with no errors showing and a phpinfo page loaded), add everything into PhpStorm.
 
 In settings, add PHP which should automatically find Xdebug, Apache just specifies the location under Deployment > Servers, MySQL is set up in the Databases part, select + and choose MySQL (or whichever relevant DB driver).
+
+Configuring and validating the debugger:
+
+* [Zero-configuration Web Application Debugging with Xdebug and PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm)
+* [Validating the debugging configuration](https://confluence.jetbrains.com/display/PhpStorm/Validating+Your+Debugging+Configuration)
