@@ -317,7 +317,19 @@ For more details about the options see `/help context` which will give a rundown
 Collection examples:
 
 ```Java
+jshell> List<String> animals = List.of("Cat", "Dog", "Elephant", "Lion", "Tiger")
+animals ==> [Cat, Dog, Elephant, Lion, Tiger]
 
+jshell> animals.forEach(animal -> System.out.print(animal + " "))
+Cat Dog Elephant Lion Tiger
+
+
+jshell> Map<String, Integer> myMap = Map.of("one", 1, "two", 2, "three", 3)
+myMap ==> {two=2, three=3, one=1}
+
+
+jshell> Set<Integer> mySet = Set.of(1, 2, 4, 8, 16, 32)
+mySet ==> [32, 4, 8, 2, 1, 16]
 ```
 
 Stream examples:
