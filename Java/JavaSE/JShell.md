@@ -58,10 +58,12 @@ JShell commands control the environment and display information within a session
 * `/vars` - list currently active variables, to see more options tab complete after enterings the command
   * `/vars -all`
   * `/vars -start` - no startup variables are set by default in JDK9
-  * `/vars 1` or `/vars $1` - list snippet 1 which is a variable, both options can be used, difference between them is unclear.
+  * `/vars 1` or `/vars $1` - list snippet 1 which is a variable, both options can be used, difference between them is unclear
   * `/v` - short alias
 * `/methods` - list currently active methods. Sames as `/vars`, `/methods` has `-all` and `-start` options as well as options to select specific method snippets
   * `/m` - short alias
+* `/types` - list the current active types, such as classes, interfaces, and enums
+* `/edit x` - edit a variable, method, or class in a default editor - of course it makes more sense to use on multiline snippets
 
 Commands can be abbreviated provided the abbreviation is unique to a command, e.g. `/se fe v` to set feedback to verbose, this works because `/se` doesn't conflict but just `/s` would conflict with `/save`, and `fe` doesn't conflict, although just `f` would conflict with `format`, and `v` works with `verbose` which is the only feedback argument that starts with v.
 
@@ -309,3 +311,26 @@ Setting module path and other options within a JShell session: `/env --add-modul
 Using `/env` without options will list all the currently set options (nothing by default).
 
 For more details about the options see `/help context` which will give a rundown of each configurable option.
+
+## Examples
+
+Collection examples:
+
+```Java
+
+```
+
+Stream examples:
+
+```Java
+jshell> Stream<Integer> myStream = Stream.of(1, 2, 3, 4, 5)
+myStream ==> java.util.stream.ReferencePipeline$Head@e720b71
+
+jshell> myStream.map(number -> number * number).
+   ...> filter(number -> number % 2 == 0).
+   ...> forEach(System.out::println)
+4
+16
+```
+
+Note that when dealing with multiline streams it's necessary to place the `.` to indicate there's another method call on the prior line, otherwise the snippet will be executed instead.
