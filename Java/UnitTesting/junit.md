@@ -9,6 +9,8 @@ Overview/Introduction to JUnit 5 and the changes from JUnit 4, video: [JUnit 5 b
 * Documentation: [JUnit 5 Docs](http://junit.org/junit5/docs/current/api/)
 * JUnit 5 [User Guide](http://junit.org/junit5/docs/current/user-guide/)
 
+Note: Junit 5 has some issues with the maven-surefire-plugin version 2.20.1, so use 2.19.1 for the time being.
+
 ## 1 Overview
 
 JUnit supports Java 8 or higher.
