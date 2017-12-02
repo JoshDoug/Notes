@@ -35,4 +35,12 @@ Milestone releases are deployed to Maven Central.
 * Version: `1.0.2` (worth noting?)
 * Artficats IDs:
   * `junit-platform-commons` - Internal common library/utils of JUnit. Not intended to be used outside of JUnit itself.
-  * `junit-platform-console`
+  * `junit-platform-console` - Support for discovering and executing tests on the JUnit Platform from the console, see [Console Launcher](http://junit.org/junit5/docs/current/user-guide/#running-tests-console-launcher) for details.
+  * `junit-platform-console-standalone` - An executable JAR with all dependencies included.
+  * `junit-platform-engine` - Public API for test engines, see [Plugging in Your Own Test Engine](http://junit.org/junit5/docs/current/user-guide/#launcher-api-engines-custom) for details.
+  * `junit-platform-gradle-plugin` - Gradle support.
+  * `junit-platform-launcher` - Public API for configuring and launching test plans - typically used by IDEs and build tools, see [JUnit Platform Launcher API](http://junit.org/junit5/docs/current/user-guide/#launcher-api) for details.
+  * `junit-platform-runner` - Runner for executing tests and test suites on the JUnit Platform in a JUnit 4 environment, see [Using JUnit 4 to Run the JUnit Platform](http://junit.org/junit5/docs/current/user-guide/#running-tests-junit-platform-runner) for details.
+  * `junit-platform-suite-api` - Annotations for configuring test suites on the JUnit Platform, support by the [JUnit Platform runner](JUnitPlatform runner) and possibly by third-party `TestEngine` implementations.
+  * `junit-platform-surefire-provider` - Support for discovering and executing tests on the JUnit Platform using [Maven Surefire](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven).
+
