@@ -44,3 +44,12 @@ Milestone releases are deployed to Maven Central.
   * `junit-platform-suite-api` - Annotations for configuring test suites on the JUnit Platform, support by the [JUnit Platform runner](JUnitPlatform runner) and possibly by third-party `TestEngine` implementations.
   * `junit-platform-surefire-provider` - Support for discovering and executing tests on the JUnit Platform using [Maven Surefire](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven).
 
+#### 2.1.2 Junit Jupiter
+
+* GroupID: `org.junit.jupiter`
+* Version: `5.0.2`
+* Artifact IDs:
+  * `junit-jupiter-api` - JUnit Jupiter API for [writing tests](http://junit.org/junit5/docs/current/user-guide/#writing-tests) and [extensions](http://junit.org/junit5/docs/current/user-guide/#extensions)
+  * `junit-jupiter-engine` - JUnit Jupiter test engine implementation, only required at runtime - but it is required and does seem to be the only dependency that needs to be specified within Maven's POM (other than the plugin dependencies which are declared seperately)!
+  * `junit-jupiter-params` - Support for [parameterised tests](http://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests) in JUnit Jupiter.
+  * `junit-jupiter-migrationsupport` - Migration support from JUnit 4 to JUnit Jupiter, only required for running selected JUnit 4 rules.
