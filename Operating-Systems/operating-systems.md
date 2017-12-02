@@ -14,6 +14,7 @@ Split into sections if this grows, or maybe move notes to OneNote if it doesn't 
 
 ### Hobby and Educational Operating Systems
 
+* [Linux Insides - a look at the linux kernel internals](https://0xax.gitbooks.io/linux-insides/content/)
 * [RWTH-OS eduOS](https://rwth-os.github.io/eduOS/) & [eduOS repo](https://github.com/RWTH-OS/eduOS)
 * [RWTH-OS eduOS-rs](https://rwth-os.github.io/eduOS-rs/)
 * [Blog: Writing an OS in Rust](https://os.phil-opp.com/)
