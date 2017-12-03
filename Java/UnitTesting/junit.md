@@ -120,3 +120,60 @@ JUnit Jupiter supported annotations for configuring tests and extending the fram
 Methods annotated with `@Test`, `@TestTemplate`, `@RepeatedTest`, `@BeforeAll`, `@BeforeEach`, `@AfterAll`, or `@AfterEach` annotations must not return a value.
 
 Note: Some annotations may currently be _experimental_, consult the [experimental API table](http://junit.org/junit5/docs/current/user-guide/#api-evolution-experimental-apis) for details.
+
+#### 3.1.1 Meta-Annotations and Composed Annotations
+
+_Reread this section and write it up once I understand it._
+
+### 3.2 Standard Test Class
+
+_*A standard test case.*_, example from JUnit documentation:
+
+```Java
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+class StandardTests {
+
+    @BeforeAll
+    static void initAll() {
+    }
+
+    @BeforeEach
+    void init() {
+    }
+
+    @Test
+    void succeedingTest() {
+    }
+
+    @Test
+    void failingTest() {
+        fail("a failing test");
+    }
+
+    @Test
+    @Disabled("for demonstration purposes")
+    void skippedTest() {
+        // not executed
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @AfterAll
+    static void tearDownAll() {
+    }
+}
+```
+
+Note: Neithe test classes nor test methods need to be `public`.
+
+### 3.3 Display Names
