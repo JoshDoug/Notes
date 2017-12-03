@@ -71,3 +71,24 @@ All the prior listed artifacts have an `optional` dependency in their published 
 ### 2.2 Dependency Diagram
 
 ![Dependency Diagram](http://junit.org/junit5/docs/current/user-guide/images/component-diagram.svg)
+
+## 3 Writing Tests
+
+A first test case example from JUnit 5's documentation:
+
+```Java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class FirstJUnit5Tests {
+
+    @Test
+    void myFirstTest() {
+        assertEquals(2, 1 + 1);
+    }
+
+}
+```
+
+Why is the Assertion import static?
