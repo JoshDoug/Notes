@@ -92,3 +92,31 @@ class FirstJUnit5Tests {
 ```
 
 Why is the Assertion import static?
+
+### 3.1 Annotations
+
+All core annotations are located in the `org.junit.jupiter.api` package in the `junit-jupiter-api` module (Is that a Java 9 module?).
+
+JUnit Jupiter supported annotations for configuring tests and extending the framework:
+
+| Annotation | Description |
+|------------|-------------|
+| @Test | Denotes that a method is a test method, is different to JUnit 4's `@Test` annotation. Such methods are *inherited* unless they are *overridden*. |
+| @ParameterizedTest | Denotes that a method is a [parameterised test](http://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests). Such methods are *inherited* unless they are *overridden*. |
+| @RepeatedTest | Denotes that a method is a test templte for a [repeated test](http://junit.org/junit5/docs/current/user-guide/#writing-tests-repeated-tests). Such methods are *inherited* unless they are *overridden*. |
+| @TestFactory | Denotes that a method is a test factory for [dynamic tests](http://junit.org/junit5/docs/current/user-guide/#writing-tests-dynamic-tests). Such methods are *inherited* unless they are *overridden*. |
+| @TestInstance | Used to configure the [test instance lifecycle](http://junit.org/junit5/docs/current/user-guide/#writing-tests-test-instance-lifecycle) for the annotated test class. Such annotations are *inherited*. |
+| @TestTemplate | Denotes that a method is a [template for test cases](http://junit.org/junit5/docs/current/user-guide/#writing-tests-test-templates) designed to be invoked multiple times depending on the number of invocation contexts returned by the registered [providers](http://junit.org/junit5/docs/current/user-guide/#extensions-test-templates). Such methods are *inherited* unless they are *overridden*. |
+| @DisplayName | Declares a custom display name for the test class or test method. Such annotations are not *inherited*. |
+| @BeforeEach | Denotes that the annotated method should be executed *before* _each_ `@Test`, `@RepeatedTest`, `@ParameterizedTest`, or `@TestFactory` method in the current class; analagous to JUnit 4's `@Before`. Such methods are *inherited* unless they are *overridden*. |
+| @AfterEach | Same as `@BeforeEach`, except after each test, analagous to JUnit 4's `@After`. Such methods are *inherited* unless they are *overridden*. |
+| @BeforeAll | Denotes that the annotated method should be executed *before* _all_ `@Test`, `@RepeatedTest`, `@ParameterizedTest`, or `@TestFactory` method in the current class; analagous to JUnit 4's `@BeforeClass`. Such methods are *inherited* (unless they are *hidden* or *overridden*) and must be `static` (unless the "per-class" [test instance lifecycle](http://junit.org/junit5/docs/current/user-guide/#writing-tests-test-instance-lifecycle) is used). |
+| @AfterAll | Same as `@BeforeAll`, except after all tests, analagous to JUnit 4's `@AfterClass`. Such methods are *inherited* (unless they are *hidden* or *overridden*) and must be `static` (unless the "per-class" [test instance lifecycle](http://junit.org/junit5/docs/current/user-guide/#writing-tests-test-instance-lifecycle) is used). |
+| @Nested | Denotes that the annotated class is a nested, non-static test class. `@BeforeAll` and `@AfterAll` methods cannot be used directly in a `@Nested` test class unless the "per-class: [test instance lifecycle](http://junit.org/junit5/docs/current/user-guide/#writing-tests-test-instance-lifecycle) is used. Such annotations are not *inherited*. |
+| @Tag | Used to declare *tags* for filtering tests, either at the class or method level; analagous to test groups in TestNG (never heard of that) or Categories in JUnit 4. Such annotations are *inherited* at the class level but not at the method level. |
+| @Disabled | Used to *disable* a test class or test method; analagous to JUnit 4's @Ignore. Such annotations are not *inherited*. |
+| @ExtendWith | Used to register custom [extensions](http://junit.org/junit5/docs/current/user-guide/#extensions). Such annotations are *inherited*. |
+
+Methods annotated with `@Test`, `@TestTemplate`, `@RepeatedTest`, `@BeforeAll`, `@BeforeEach`, `@AfterAll`, or `@AfterEach` annotations must not return a value.
+
+Note: Some annotations may currently be _experimental_, consult the [experimental API table](http://junit.org/junit5/docs/current/user-guide/#api-evolution-experimental-apis) for details.
