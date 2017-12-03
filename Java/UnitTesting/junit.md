@@ -7,6 +7,7 @@
 
 * Documentation: [JUnit 5 Docs](http://junit.org/junit5/docs/current/api/)
 * JUnit 5 [User Guide](http://junit.org/junit5/docs/current/user-guide/)
+* [Junit 5 Samples](https://github.com/junit-team/junit5-samples)
 
 Note: Junit 5 has some issues with the maven-surefire-plugin version 2.20.1, so use 2.19.1 for the time being.
 
