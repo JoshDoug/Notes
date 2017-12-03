@@ -1,8 +1,7 @@
 # JUnit info
 
-Example provided by Junit for setting up junit with ant [here](https://github.com/junit-team/junit4/wiki/Getting-started-%E2%80%93-Ant)
-
-Overview/Introduction to JUnit 5 and the changes from JUnit 4, video: [JUnit 5 by Marc Philipp](https://www.youtube.com/watch?v=0qI6_NKFQsY)
+* Example provided by Junit for setting up junit with ant [here](https://github.com/junit-team/junit4/wiki/Getting-started-%E2%80%93-Ant)
+* Overview/Introduction to JUnit 5 and the changes from JUnit 4, video: [JUnit 5 by Marc Philipp](https://www.youtube.com/watch?v=0qI6_NKFQsY)
 
 ## [JUnit 5](http://junit.org/)
 
@@ -31,7 +30,7 @@ Milestone releases are deployed to Maven Central.
 
 #### 2.1.1 JUnit Platform
 
-* GroupID: `org.junit.platform`
+* Group ID: `org.junit.platform`
 * Version: `1.0.2` (worth noting?)
 * Artficats IDs:
   * `junit-platform-commons` - Internal common library/utils of JUnit. Not intended to be used outside of JUnit itself.
@@ -46,7 +45,7 @@ Milestone releases are deployed to Maven Central.
 
 #### 2.1.2 JUnit Jupiter
 
-* GroupID: `org.junit.jupiter`
+* Group ID: `org.junit.jupiter`
 * Version: `5.0.2`
 * Artifact IDs:
   * `junit-jupiter-api` - JUnit Jupiter API for [writing tests](http://junit.org/junit5/docs/current/user-guide/#writing-tests) and [extensions](http://junit.org/junit5/docs/current/user-guide/#extensions)
@@ -56,6 +55,18 @@ Milestone releases are deployed to Maven Central.
 
 #### 2.1.3 JUnit Vintage
 
-* GroupID: `org.junit.vintage`
+* Group ID: `org.junit.vintage`
 * Version: `4.12.2`
 * ArtifactID: `junit-vintage-engine` - JUnit Vintage test engine implementation that allows running JUnit tests written in JUnit 3 or JUnit 4 style, on the new JUnit Platform
+
+#### 2.1.4 Optional Dependencies
+
+All the prior listed artifacts have an `optional` dependency in their published Maven POMs on the `@API Guardian JAR`.
+
+* Group ID: `org.apiguardian`
+* Version: `1.0.0`
+* Artifact ID: `apiguardian-api`
+
+### 2.2 Dependency Diagram
+
+![Dependency Diagram](http://junit.org/junit5/docs/current/user-guide/images/component-diagram.svg)
