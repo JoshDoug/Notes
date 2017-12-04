@@ -264,6 +264,21 @@ The filename of the jar isn't technically important as the module is identified 
 
 ##### Running Modules
 
+Modules can be run using the previously shown example using an exploded module:
+
+```bash
+java --module-path out \
+     --module helloworld/com.javamodularity.helloworld.HelloWorld
+```
+
+This can be simplified when running the modular JAR:
+
+```bash
+java --module-path mods --module helloworld
+```
+
+This is because when the module is packaged into a JAR a manifest is automatically created with the entry point. In both these cases the helloworld module is the root module for execution, the JVM starts from this root module and then resolves any other modules necessary to run the root module from the module path (none in this case). If a module necessary to helloworld wasn't on the module path this would cause an error at startup rather than when the JVM tries to load a non-existant class at runtime.
+
 ##### Module Path
 
 ##### Linking Modules
