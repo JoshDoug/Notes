@@ -281,6 +281,12 @@ This is because when the module is packaged into a JAR a manifest is automatical
 
 ##### Module Path
 
+The module path is a list of paths to individual modules and directories containing modules. Each directory can contain zero or more module definitions, and the module definition can be an exploded module or a modular JAR. Example module path containing all three options: `out/:explodedmodule/:packagedmodule.jar`, here any modules (exploded or JARs) within the `out` dir are included, the exploded module is included, and the modular JAR is included.
+
+Note: on Linux & macOS the module path uses a colon, `:`, as a seperator, while on Windows a semicolon, `;`, is used.
+
+Module selection: if two modules within the same directory on the module path have the same name then the resolver will show an error, however if the two modules are in different directories then the first module is selected and the subsequent modules with the same name are ignored. _*Confusing*_
+
 ##### Linking Modules
 
 #### No Module Is an Island
