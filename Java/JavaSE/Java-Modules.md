@@ -220,6 +220,8 @@ java --module-path out \
      --module helloworld/com.javamodularity.helloworld.HelloWorld
 ```
 
+The flags have shorter alternatives, `-p` can be used insted of `--module-path`, and `-m` instead of `--module`.
+
 Resulting directory structure, aka the *exploded module* format:
 
 ```tree
@@ -246,6 +248,19 @@ So far the 'single-module mode' of the Java compiler has been used, but typicall
 Most of the time the Java compiler isn't interacted with directly, and is instead used via Maven, Gradle, or other build tools. But for comprehensive coverage of the compiler flags and general use of the tool there is [official documentation](https://docs.oracle.com/javase/9/tools/tools-and-command-reference.htm#JSWOR596).
 
 ##### Packaging
+
+Modules can be packaged into JARs in much the same way as before, resulting in *modular* JAR files, which are like a normal JAR file but also containing a *module-info.class*.
+
+To package up the modular Hello World example:
+
+```bash
+mkdir mods
+jar -cfe mods/helloworld.jar com.javamodularity.helloworld.HelloWorld -C out/helloworld .
+```
+
+Here the `-c` stands for create, `-f` for the archive filename (helloworld.jar), `-e` for the 'entry point' or main method (the package declaration and main Class `com.javamodularity.helloworld.HelloWorld`), and `-C` changes to the specified directory and includes the following file or directory. The arguments can be bunched at the start of specified before each argument, both work.
+
+The filename of the jar isn't technically important as the module is identified by the `module-info.class` packaged within the jar.
 
 ##### Running Modules
 
