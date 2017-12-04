@@ -333,7 +333,24 @@ export PATH="/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/bin:$PATH
 
 #### No Module Is an Island
 
+Of course the main advantages of modules come into play when composing more than one of them.
+
 ##### Introducing the EasyText Example
+
+EasyText will be the example project, starting off as a single monolithic module before being split and added to. It's use will be to analyse text complexity. Here are the requirements of the application:
+
+* Must have the ability to add new analysis algorithms without modifying or recompiling existing modules
+* Different frontends (e.g. GUI & CLI) must be able to reuse the same analysis logic
+* Must support different configurations, without recompilation and without deploying all code for each configuration
+
+Technical requirements:
+
+* Read the input text, either from the GUI or an input file
+* Split the text into sentences and words (as many readability formulas work with sentence and/or word level metrics)
+* Run one or more analyses on the text
+* Show the result to the user
+
+These requirements can all be met without modules, but modules certainly help and improve the result.
 
 ##### A Tale of Two Modules
 
