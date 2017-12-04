@@ -139,13 +139,55 @@ Practical work - building a hello world module and then a running example projec
 
 #### Your First Module
 
-This will examine a Modular Hello World and everything involved in creating and using it.
+This will examine a Modular 'Hello World' and everything involved in creating and using it.
 
 ##### Anatomy of a Module
 
 Starting out with a single class, in a package, leading to a single module. Modules may only contain types that are inside packages, so a package definition is required.
 
+Hello World:
+
+```Java
+package com.javamodularity.helloworld;
+
+public class HelloWorld {
+    public static void main(String... args) {
+        System.out.println("Hello Modular World");
+    }
+}
+```
+
+Interesting that the book example uses varargs instead of the typical main String array.
+
+The folder structure of the project:
+
+```tree
+src
+└── helloworld
+    ├── com
+    │   └── javamodularity
+    │       └── helloworld
+    │           └── HelloWorld.java
+    └── module-info.java
+
+5 directories, 2 files
+```
+
+There are two differences to the project structure from a normal Java project. First there is the module folder, helloworld, which encompasses the module and is named after the name of the module. Secondly there is the module descriptor, in the file `module-info.java`. The module descriptor signals to Java that we're working with modules. The module descriptor must always be within the root of the module folder, and is compiled along with other source files into a binary class-file called `module-info.class`.
+
+The module descriptor:
+
+```Java
+module helloworld {
+
+}
+```
+
+This is a minimal module descriptor, just for the purpose of a Hello World example. The module is declared with the `module` keyword, followed by the module name. The module name must match the name of the module directory otherwise it wont compile (although in a single module scenario this isn't the case, but it's still good practice). Although the descriptor is empty it does still implicitly depend on `java.base`. The `module` keyword is only treated as a keyword inside `module-info.java` so this wont affect conflict with the use of `module` as a keyword in other source files, this makes it a restricted keyword.
+
 ##### Naming Modules
+
+Modules convey the high-level structure of an application, so naming is important. Module names live in a gloabl namespace separate from other namespaces in Java. Technically this means a module name can the same as a class, interface, or package, but in practice this should be avoided. Modules names must be unique, the reverse DNS notation for packages can be used, but it's cluncky. It's preferable to choose shorter, more readable module names, although if the module will be part of widely used library then uniqueness is important.
 
 ##### Compilation
 
