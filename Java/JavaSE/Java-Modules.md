@@ -213,6 +213,13 @@ javac -d out/helloworld \
          src/helloworld/module-info.java
 ```
 
+To run:
+
+```bash
+java --module-path out \
+     --module helloworld/com.javamodularity.helloworld.HelloWorld
+```
+
 Resulting directory structure, aka the *exploded module* format:
 
 ```tree
