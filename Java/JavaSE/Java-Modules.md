@@ -289,6 +289,48 @@ Module selection: if two modules within the same directory on the module path ha
 
 ##### Linking Modules
 
+Java 9 has an optional linking phase (inbetween the compile and run-time phases) that can be used to create custom runtime images that only contain the necessary modules to run an application. These are often much smaller than the usual runtime image, which has benefits on storage, overhead, and security.
+
+```bash
+jlink --module-path mods/:$JAVA_HOME/jmods \
+      --add-modules helloworld \
+      --launcher hello=helloworld \
+      --output helloworld-image
+```
+
+* The `--module-path` option constructs the module path, containing mods where the modular JAR is, and the JDK directory where the platform modules are contained. Unlike javac and java, jlink requires that platform modules be explicitly added to the module path.
+* The `--add-modules` options indicates that helloworld is the root module that needs to be runnable in the runtime image.
+* The `--launcher` option defines the entry point to directly run the module in the image.
+* The `--output` option indicates that directory name for the runtime image.
+
+The result is a directory containing essentially a Java runtime completely tailored to running helloworld:
+
+```tree
+.
+├── bin
+│   ├── hello
+│   ├── java
+│   └── keytool
+├── conf
+│   └── ...
+├── include
+│   └── ...
+├── legal
+│   └── ...
+├── lib
+│   └── ...
+└── release
+```
+
+The important parts are `bin/hello`, an executable script that directly launches the helloworld module, and `bin/java` which is the Java runtime capable of resolving only helloworld and its dependencies.
+
+Note: jlink is not added to the system path by default, so it needs to be added manually like so:
+
+```bash
+# Ensure jlink is added to PATH
+export PATH="/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/bin:$PATH"
+```
+
 #### No Module Is an Island
 
 ##### Introducing the EasyText Example
