@@ -191,6 +191,53 @@ Modules convey the high-level structure of an application, so naming is importan
 
 ##### Compilation
 
+Compiling the Hello World example from above as would be done in Java 8:
+
+```bash
+javac -d out src/helloworld/com/javamodularity/helloworld/HelloWorld.java
+```
+
+To run:
+
+```bash
+cd out
+# Tab complete will work for the package name
+java com.javamodularity.helloworld.HelloWorld
+```
+
+Compiling the Hello World example from above using Java 9 modules:
+
+```bash
+javac -d out/helloworld \
+         src/helloworld/com/javamodularity/helloworld/HelloWorld.java \
+         src/helloworld/module-info.java
+```
+
+Resulting directory structure, aka the *exploded module* format:
+
+```tree
+out/
+└── helloworld
+    ├── com
+    │   └── javamodularity
+    │       └── helloworld
+    │           └── HelloWorld.class
+    └── module-info.class
+```
+
+There are two notable differences here:
+
+* `helloworld` is specified as an output directory, reflecting the module name (the directory doesn't have to be the same name, but it's good practice)
+* `module-info.java` is added as a source file to compile, this also triggers the module-aware mode of javac.
+
+###### Compiling multiple modules
+
+So far the 'single-module mode' of the Java compiler has been used, but typically projects will consist of multiple modules either as 3rd party dependencies or different modules within an application. For these cases additional compiler flags have been added: `--module-source-path` and `--module-path`, these are the module-aware counterparts of `-sourcepath` and `-classpath`.
+
+###### Build tools
+
+Most of the time the Java compiler isn't interacted with directly, and is instead used via Maven, Gradle, or other build tools. But for comprehensive coverage of the compiler flags and general use of the tool there is [official documentation](https://docs.oracle.com/javase/9/tools/tools-and-command-reference.htm#JSWOR596).
+
 ##### Packaging
 
 ##### Running Modules
