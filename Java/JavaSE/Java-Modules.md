@@ -352,7 +352,31 @@ Technical requirements:
 
 These requirements can all be met without modules, but modules certainly help and improve the result.
 
+The starting example (chapter3/easytext-singlemodule), easytext, is just a single package within a single module, similar to HelloWorld.
+
 ##### A Tale of Two Modules
+
+In the example the text-analysis algorithm and the main program are seperated into two modules, `easytext.analysis` and `easytext.cli`. This allows the analysis module to be reused with different frontends (a GUI) later on. The cli handles the cli and file parsing logic. The `Main` class in `easytext.analysis` delegates the analysis to the `FleshKincaid` class. As there are now two interdependent modules they need to be compiled with the multimodule mode of javac: `javac -d out --module-source-path src -m easytext.cli`, this specifies the output directory, that the modules are in the src directory, and that the root module is `easytext.cli`. Note `easytext.analysis` doesn't need to be specified in the command because it's listed in the module descriptor for `easytext.cli` and can be found in the specified src directory.
+
+Descriptor for the cli module:
+
+```Java
+module easytext.cli {
+    // Requires analysis module
+    requires easytext.analysis;
+}
+```
+
+Descriptor for the analysis module:
+
+```Java
+module easytext.analysis {
+    // Exports analysis package
+    exports javamodularity.easytext.analysis
+}
+```
+
+The module system will check for cyclic dependencies between modules, although it's still possible between classes of a module (but not really recommended). Cyclic dependencies between classes of different modules are also blocked. So the `analysis` module cannot require the `cli` module without introducing a cyclic dependency. Indirect cyclic dependencies are also blocked, for example if module A depended on module B which depends on module C which depends on module A (there's a nice simple picture in the book). TKTK - create a diagram in StarUML?
 
 #### Working with Platform Modules
 
