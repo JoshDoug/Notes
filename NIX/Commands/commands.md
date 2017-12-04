@@ -6,6 +6,10 @@ ls
 stat
 file
 
+## wget
+
+* `wget -c http://example.com` - [resume a stalled download](https://www.garron.me/en/bits/wget-resume-continue-broken-download.html)
+
 ## Jobs
 
 Jobs, aka tasks or processes, can be managed in several ways on Linux/Unix using the Bash shell, or ZSH and KSH (and more). This will focus on Bash syntax that may or may not work in other shells.
