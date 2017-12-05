@@ -388,6 +388,27 @@ It's necessary to know which platform modules an application depends on as they 
 
 ##### Creating a GUI Module
 
+The GUI module implements a basic javafx GUI which requires & reuses the FleschKincaid analyis module, currently the only available algorithm but this will be added to later. The GUI class imports 7 javafx packages, JavaDoc can be used to see which modules these are in. To see what packages a module exports and what modules a module requires from the CLI use the `--describe-module` option, e.g. `java --describe-module javafx.controls`. Most modern IDEs will also automatically import modules into the module descriptor. The easytext GUI requires two javafx modules: `javafx.graphics` and `javafx.controls`.
+
+The GUI also needs to export it's own package so that the javafx.graphics module can access it via reflection to instantiate it as the GUI extends the Application class. Yeah that's confusing and I don't really understand it and yes it seems to be a cyclic dependency, although not an explicit one as that's avoided via reflection. Technically because it's using reflection the dependency only happens at runtime, whereas the cyclic dependency blocking is only enforced at compile time. The resulting module descriptor is:
+
+```Java
+module easytext.gui {
+    exports javamodularity.easytext.gui to javafx.graphics;
+
+    requires javafx.graphics;
+    requires javafx.controls;
+    requires easytext.analysis;
+}
+```
+
+Using the qualified export ensures that only javafx.graphics is capable of accessing the main GUI class.
+
 #### The Limits of Encapsulation
+
+So far the easytext application has both GUI and CLI frontends which can be swapped and use the analysis code which is also modularised. The nexts steps are to:
+
+* Uncouple the frontends from the FleshKincaid class/concrete analysis implementations
+* Frontends should be able to discover new analysis implementations in new modules without any code changes.
 
 ##### Interfaces and Instantiation
