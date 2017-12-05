@@ -412,3 +412,5 @@ So far the easytext application has both GUI and CLI frontends which can be swap
 * Frontends should be able to discover new analysis implementations in new modules without any code changes.
 
 ##### Interfaces and Instantiation
+
+An interface can be used to provide a stable abstraction for analysis algorithms, but how do you instantiate an instance of an algorithm? Indirection!
