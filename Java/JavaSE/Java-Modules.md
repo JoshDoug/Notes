@@ -380,7 +380,11 @@ The module system will check for cyclic dependencies between modules, although i
 
 #### Working with Platform Modules
 
+Platform modules come with the Java runtime and provide functionality such as XML parsers, GUI toolkits, and other typical standard library features. They behave the same as application modules but are included with the JDK. EasyText will be extended and as a result will result on some platform modules explicitly, so far it's only relied on java.base which is an implicit dependency.
+
 ##### Finding the Right Platform Module
+
+It's necessary to know which platform modules an application depends on as they need to be specified in the module-descriptor. To list all the platform modules run `java --list-modules`, pipe it through `column` to make it easier to read. There are different types of platform modules such as `java.*`, `javafx.*` and `jdk.*`, the `jdk.*` modules contain JDK-specific code and can vary across JDK implementations.
 
 ##### Creating a GUI Module
 
