@@ -2,6 +2,8 @@
 
 Split into sections if this grows, or maybe move notes to OneNote if it doesn't make sense here.
 
+Will also include notes on virtualisation, as that relates to operating systems.
+
 ## Links
 
 ### Firmware, Bootloaders, Intel ME
