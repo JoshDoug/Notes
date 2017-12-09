@@ -57,6 +57,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Eclipse OpenJ9 Repo](https://github.com/eclipse/openj9)
 * [Java Collections Cheat Sheet](https://zeroturnaround.com/rebellabs/java-collections-cheat-sheet/)
 * [Building a Self Sufficient Docker Cluster - Java Code Geeks](https://www.javacodegeeks.com/2017/07/building-self-sufficient-docker-cluster.html)
+* [How to Convert CSV to JSON in Java](http://www.novixys.com/blog/convert-csv-json-java/)
 
 ## Haskell
 
@@ -91,6 +92,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [ES6 Modules in Chrome M61+](https://medium.com/dev-channel/es6-modules-in-chrome-canary-m60-ba588dfb8ab7)
 * [IETF Localhost](https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-06)
 * [Web Streams - for Pi Plex Container content upload project](https://jakearchibald.com/2016/streams-ftw/)
+* [Getting Started with Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)
 
 ### WASM
 
@@ -110,3 +112,4 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Setting up CI/D with Jenkins & Blue Ocean Dev.to blog post](https://dev.to/jalogut/setup-continuos-integrationdelivery-system-in-just-4-steps-with-jenkins-pipelines-and-blue-ocean)
 * [The `yes` Unix Command](https://matthias-endler.de/2017/yes/)
 * [Test Doubles - Fakes, Mocks and Stubs](https://dev.to/milipski/test-doubles---fakes-mocks-and-stubs)
+* [Generate GIFs, screenshots, and videos from a P5js sketch](https://www.npmjs.com/package/docode) & [GitHub page](https://mgs.github.io/docode/)
