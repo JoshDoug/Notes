@@ -12,6 +12,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Docker in Dicker and play-with-docker](https://sreeninet.wordpress.com/2016/12/23/docker-in-docker-and-play-with-docker/)
 * [Get Started with Docker for Mac](https://docs.docker.com/docker-for-mac/)
 * [Get started with Docker Machine and a local VM](https://docs.docker.com/machine/get-started/)
+* [K8s Developer Guide](https://github.com/kubernetes/community/tree/master/contributors/devel)
 
 ## IntelliJ IDEA
 
@@ -21,26 +22,23 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [IDEA 2017.3 JUnit 5 Support](https://blog.jetbrains.com/idea/2017/11/intellij-idea-2017-3-junit-support/)
 * [IDEA 2017.3 Release Blog Post](https://blog.jetbrains.com/idea/2017/11/intellij-idea-2017-3-smarter-coding-assistance-better-debugger-run-dashboard-frameworks-support-and-more/)
 * [Code smells blog post](https://blog.jetbrains.com/idea/2017/09/code-smells-too-many-problems/)
+* [Debugger: Filtering Arrays & Collections in IntelliJ IDEA](https://blog.jetbrains.com/idea/2017/07/debugger-filtering-arrays-collections-in-intellij-idea-2017-2/)
 
 ## Linux
 
 * [Performance Analysis in Linux](https://www.collabora.com/news-and-blog/blog/2017/03/21/performance-analysis-in-linux/)
+* [Oxax GitBook - Linux Inside](https://www.gitbook.com/book/0xax/linux-insides/details)
 
 ## Windows
 
 * [Ubuntu Binaries on Windows 10's Linux Subsystem](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
-
-## WASM
-
-* [Mozilla Blog: Compiling to WebAssembly: It’s Happening!](https://hacks.mozilla.org/2015/12/compiling-to-webassembly-its-happening/)
-* [Compiling Rust to WASM - Rust for the Web, Hello Rust!](https://www.hellorust.com/news/native-wasm-target.html) && [Repo](https://github.com/badboy/hellorust/blob/master/setup/wasm-target.md)
-* [Rocket - Rust WASM Game](https://aochagavia.github.io/blog/rocket---a-rust-game-running-on-wasm/)
-* [Broccoli plugin for compiling from Rust to WASM](https://github.com/glimmerjs/broccoli-rust2wasm)
+* [Windows Console Documentation](https://docs.microsoft.com/en-us/windows/console/)
 
 ## Git & GitHub
 
 * [Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 * [Stackoverflow - when to git rebase instead of git merge](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
+* [Adding and Editing Wiki Pages Locally](https://help.github.com/articles/adding-and-editing-wiki-pages-locally/)
 
 ## Java
 
@@ -55,6 +53,10 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Maven POM Reference](https://maven.apache.org/pom.html)
 * [Maven Available Plugins](https://maven.apache.org/plugins/index.html)
 * [Maven JAR Plugin](https://maven.apache.org/plugins/maven-jar-plugin/)
+* [First Cup of Java EE Tutorial](https://javaee.github.io/firstcup/)
+* [Eclipse OpenJ9 Repo](https://github.com/eclipse/openj9)
+* [Java Collections Cheat Sheet](https://zeroturnaround.com/rebellabs/java-collections-cheat-sheet/)
+* [Building a Self Sufficient Docker Cluster - Java Code Geeks](https://www.javacodegeeks.com/2017/07/building-self-sufficient-docker-cluster.html)
 
 ## Haskell
 
@@ -70,16 +72,41 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [YAHT - Yet Another Haskell Tutorial](http://www.umiacs.umd.edu/~hal/docs/daume02yaht.pdf) (PDF)
 * [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf) (PDF)
 
-## Vim & Neovim
+## Editors & IDEs
+
+* [Atom IDE](https://ide.atom.io/) & [blog announcement](https://blog.atom.io/2017/09/12/announcing-atom-ide.html)
+* [Langserver](http://langserver.org/)
+
+### Vim & Neovim
 
 * [Starting - nvim startup options](https://neovim.io/doc/user/starting.html)
+
+### Emacs
+
+* [Evil Mode](https://www.emacswiki.org/emacs/Evil)
+
+## Web
+
+* [How to Set Up HTTPS Locally](https://deliciousbrains.com/https-locally-without-browser-privacy-errors/)
+* [ES6 Modules in Chrome M61+](https://medium.com/dev-channel/es6-modules-in-chrome-canary-m60-ba588dfb8ab7)
+* [IETF Localhost](https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-06)
+* [Web Streams - for Pi Plex Container content upload project](https://jakearchibald.com/2016/streams-ftw/)
+
+### WASM
+
+* [Mozilla Blog: Compiling to WebAssembly: It’s Happening!](https://hacks.mozilla.org/2015/12/compiling-to-webassembly-its-happening/)
+* [Compiling Rust to WASM - Rust for the Web, Hello Rust!](https://www.hellorust.com/news/native-wasm-target.html) && [Repo](https://github.com/badboy/hellorust/blob/master/setup/wasm-target.md)
+* [Rocket - Rust WASM Game](https://aochagavia.github.io/blog/rocket---a-rust-game-running-on-wasm/)
+* [Broccoli plugin for compiling from Rust to WASM](https://github.com/glimmerjs/broccoli-rust2wasm)
+* [Get Started with Rust, WebAssemnly, and Webpack](https://medium.com/@ianjsikes/get-started-with-rust-webassembly-and-webpack-58d28e219635)
 
 ## Misc
 
 * [Google Omaha Server (Google Update) Repo](https://github.com/Crystalnix/omaha-server), [Google Omaha Server Site](https://www.crystalnix.com/case-study/google-omaha), [Wiki](https://github.com/Crystalnix/omaha-server/wiki), and [Slideshare powerpoint](https://www.slideshare.net/DmitriyLyfar/omaha-google-update-server)
-* [Web Streams - for Pi Plex Container content upload project](https://jakearchibald.com/2016/streams-ftw/)
 * [Effective Dart: Design](https://www.dartlang.org/guides/language/effective-dart/design) interesting read & guidelines
 * [rysnc](https://rsync.samba.org/)
 * [Julia Evans blog, cus it's good](https://jvns.ca/)
 * [ngrok - tunnelling](https://ngrok.com/)
 * [Setting up CI/D with Jenkins & Blue Ocean Dev.to blog post](https://dev.to/jalogut/setup-continuos-integrationdelivery-system-in-just-4-steps-with-jenkins-pipelines-and-blue-ocean)
+* [The `yes` Unix Command](https://matthias-endler.de/2017/yes/)
+* [Test Doubles - Fakes, Mocks and Stubs](https://dev.to/milipski/test-doubles---fakes-mocks-and-stubs)
