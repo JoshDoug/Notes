@@ -100,3 +100,26 @@ Here an addition to the FreightWagon table will increment the number owned in th
 
 To remove a trigger: `DROP TRIGGER increment_freight_number;`
 
+### Auto Increment Alternative (for Oracle DBs prior to 12c, such as 11g)
+
+* [Oracle: How to Create an Auto Increment Field Using Sequence](http://www.tech-recipes.com/rx/19736/oracle-how-to-create-an-auto-increment-field-using-sequence/)
+
+Using a Sequence:
+
+```SQL
+CREATE sequence driverSeq start with 1
+increment by 1;
+
+INSERT INTO DRIVER /* Test */
+(DriverID, DriverType)
+VALUES (driverSeq.nextval, 'Driver');
+```
+
+Can also have min and max values:
+
+```SQL
+Create sequence sequence_name start with value
+increment by value
+minvalue value
+maxvalue value;
+```
