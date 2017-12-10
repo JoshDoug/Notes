@@ -97,3 +97,6 @@ CREATE OR REPLACE TRIGGER decrement_freight_number
 ```
 
 Here an addition to the FreightWagon table will increment the number owned in the FreightWagonType table, and a delete will decrement it.
+
+To remove a trigger: `DROP TRIGGER increment_freight_number;`
+
