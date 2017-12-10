@@ -33,6 +33,8 @@ Parts to cover:
 
 ## Oracle SQL Useful Snippets
 
+Check the Oracle Server type and version: `SELECT * FROM V$VERSION`
+
 Get a list of commands to drop all the tables of a database (copy and run the output of the command to actually drop the tables):
 
 `select 'drop table '||table_name||' cascade constraints;' from user_tables;`
@@ -50,3 +52,48 @@ ORDER BY cols.table_name, cols.position;
 ```
 
 It's Oracle, so replace 'TABLE_NAME' with the name of the table and ensure it is in upper case.
+
+Oracle SQL [Triggers](https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_7004.htm), example tables with triggers:
+
+```SQL
+CREATE TABLE FreightWagonType
+(
+FreightWagonTypeID  number(3) PRIMARY KEY,
+FreightWagonType    varchar2(24) NOT NULL,
+NumberOwned         number(3) DEFAULT 0 /* hope this works */
+)
+
+CREATE TABLE FreightWagon
+(
+SerialNumber    number(5) PRIMARY KEY
+    REFERENCES RollingStock(SerialNumber),
+FreightWagonTypeID number(3)
+    REFERENCES FreightWagonType(FreightWagonTypeID)
+TareWeight      number(4) NOT NULL,
+MaxPayload      number(4) NOT NULL,
+Capacity        number(4),
+Description     varchar2(1024) NOT NULL
+)
+
+/* Increment number of Freight Wagons owned */
+CREATE OR REPLACE TRIGGER increment_freight_number
+    AFTER INSERT ON FREIGHTWAGON
+    FOR EACH ROW
+    BEGIN
+        UPDATE FREIGHTWAGONTYPE
+        SET FREIGHTWAGONTYPE.NUMBEROWNED = FREIGHTWAGONTYPE.NUMBEROWNED + 1
+        WHERE FREIGHTWAGONTYPE.FREIGHTWAGONTYPEID = :NEW.FreightWagonTypeID;
+    END;
+
+/* Decrement number of Freight Wagons owned */
+CREATE OR REPLACE TRIGGER decrement_freight_number
+    AFTER DELETE ON FREIGHTWAGON
+    FOR EACH ROW
+    BEGIN
+        UPDATE FREIGHTWAGONTYPE
+        SET FREIGHTWAGONTYPE.NUMBEROWNED = FREIGHTWAGONTYPE.NUMBEROWNED - 1
+        WHERE FREIGHTWAGONTYPE.FREIGHTWAGONTYPEID = :OLD.FreightWagonTypeID;
+    END;
+```
+
+Here an addition to the FreightWagon table will increment the number owned in the FreightWagonType table, and a delete will decrement it.
