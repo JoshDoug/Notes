@@ -58,6 +58,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Java Collections Cheat Sheet](https://zeroturnaround.com/rebellabs/java-collections-cheat-sheet/)
 * [Building a Self Sufficient Docker Cluster - Java Code Geeks](https://www.javacodegeeks.com/2017/07/building-self-sufficient-docker-cluster.html)
 * [How to Convert CSV to JSON in Java](http://www.novixys.com/blog/convert-csv-json-java/)
+* [Making FlameGraphs with Containerized Java](http://blog.alicegoldfuss.com/making-flamegraphs-with-containerized-java/)
 
 ## Haskell
 
@@ -94,7 +95,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Web Streams - for Pi Plex Container content upload project](https://jakearchibald.com/2016/streams-ftw/)
 * [Getting Started with Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)
 
-### WASM
+### [WASM](http://webassembly.org/)
 
 * [Mozilla Blog: Compiling to WebAssembly: It’s Happening!](https://hacks.mozilla.org/2015/12/compiling-to-webassembly-its-happening/)
 * [Compiling Rust to WASM - Rust for the Web, Hello Rust!](https://www.hellorust.com/news/native-wasm-target.html) && [Repo](https://github.com/badboy/hellorust/blob/master/setup/wasm-target.md)
@@ -113,3 +114,4 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [The `yes` Unix Command](https://matthias-endler.de/2017/yes/)
 * [Test Doubles - Fakes, Mocks and Stubs](https://dev.to/milipski/test-doubles---fakes-mocks-and-stubs)
 * [Generate GIFs, screenshots, and videos from a P5js sketch](https://www.npmjs.com/package/docode) & [GitHub page](https://mgs.github.io/docode/)
+* [Cocoa framework to install application updates from GitHub releases](https://github.com/macmade/GitHubUpdates)
