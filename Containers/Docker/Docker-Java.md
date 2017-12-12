@@ -2,6 +2,8 @@
 
 * Lynda.com course on using Java with Docker.
 * [Java in a World of Containers](https://www.youtube.com/watch?v=t0HkM7g5bxA)
+* [docker-java API Client](https://github.com/docker-java/docker-java)
+* [Spotify's Docker Java API Client](https://github.com/spotify/docker-client)
 
 ## Create a Java Docker Image
 
