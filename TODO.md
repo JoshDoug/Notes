@@ -59,6 +59,8 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [Building a Self Sufficient Docker Cluster - Java Code Geeks](https://www.javacodegeeks.com/2017/07/building-self-sufficient-docker-cluster.html)
 * [How to Convert CSV to JSON in Java](http://www.novixys.com/blog/convert-csv-json-java/)
 * [Making FlameGraphs with Containerized Java](http://blog.alicegoldfuss.com/making-flamegraphs-with-containerized-java/)
+* [Mozilla Java WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+* [Oracle WebSocket Documentation](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html)
 
 ## Haskell
 
