@@ -22,5 +22,18 @@ Directives:
 
 ## Types
 
+* ints, floats, doubles, long doubles, signed and unsigned, etc
 * float - floating point number
-* double - like float, but with twice the memory for larger floating point numbers
+* double - like float, but with twice the memory for larger floating point numbers. In print statements its designation is `lf` for 'long float'.
+* booleans - Boolean types are not defined in the original C standard, so 0 is false, 1 is true. As of C99 boolean types have been added.
+
+Use the `sizeof()` function to check the size of a type, e.g. `sizeof(char)`, `sizeof(unsigned short)`, or even `sizeof(void)`:
+
+```C
+printf("Storage size for an unsigned int: %lu bytes \n", sizeof(unsigned int));
+```
+
+## Basic IO
+
+* `puts` - writes every char from the null-terminated string `\0` and on additional newline character `\n` to stdout.
+* `printf`
