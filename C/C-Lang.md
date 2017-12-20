@@ -33,7 +33,17 @@ Use the `sizeof()` function to check the size of a type, e.g. `sizeof(char)`, `s
 printf("Storage size for an unsigned int: %lu bytes \n", sizeof(unsigned int));
 ```
 
+### Strings
+
+There is no String type in C, Strings are just stored in arrays of type char.
+
+* `strcmp(str1, str2)` - compare two strings
+* `strcpy(dest, src)` - copy _src_ onto _dest_
+* `memcpy(dest, src, n)` - copy _n_ chars from _src_ to _dest_
+* `strlen(str)` - compute length of string
+
 ## Basic IO
 
 * `puts` - writes every char from the null-terminated string `\0` and on additional newline character `\n` to stdout.
-* `printf`
+* `printf` - print formatter, display multiple types of data
+* `scanf` - printf's counterpart, used to read data input
