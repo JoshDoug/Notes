@@ -31,4 +31,45 @@ Default Paths and File Names:
 * `tut-install` - represents the base install directory for the Java EE Tutorial after installing GlassFish Server or the SDK and run the Update Tool, e.g. `as-install-parent/docs/javaee-tutorial`
 * `domain-dir` - represents the directory in which a domain's configuration is stored, e.g. `as-install/domains/domain1`
 
+### Part 1: Introduction
+
+### Chapter 1: Overview
+
+Chapter introduces Java EE application development, covers development basics, Java EE architecture & APIs, important terms & concepts, and how to approach Java EE application programming, assembly, & depolyment.
+
+#### Introduction to Java EE
+
+The Java EE platform developed through the Java Community Process (JCP), expert groups create Java Specification Requests (JSRs) to define the various Java EE Technologies to help provide tools, software and APIs that can be used to build distributed, transactional, portable applications that are fast, secure, performant, and reliable.
+
+The Java EE platform used a simplified programming model (compared to what?), XML descriptors are optional and instead a developer can use annotations directly in a Java source file. There's also dependency injection, helping to hide the creation and lookup of resources from application code, but I don't really understand that yet.
+
+#### Java EE 8 Platform Highlights
+
+* HTML5 and HTTP/2 Support
+* [Java API for JSON Binding](https://javaee.github.io/tutorial/overview008.html#java-api-for-json-binding)
+* [Java EE Security API](https://javaee.github.io/tutorial/overview008.html#java-ee-security-api)
+* [Java API for JSON Processing](https://javaee.github.io/tutorial/overview008.html#java-api-for-json-processing) improvements, such as JSON Pointer, Patch, and Merge Patch.
+* New features for:
+  * RESTful web services ([Java API for RESTful Web Services](https://javaee.github.io/tutorial/overview008.html#java-api-for-restful-web-services))
+  * Servlets ([Java Servlet Technology](https://javaee.github.io/tutorial/overview008.html#java-servlet-technology))
+  * JavaServer Faces ([JavaServer Faces Technology](https://javaee.github.io/tutorial/overview008.html#javaserver-faces-technology))
+  * Contexts and Dependency Injections features ([CDI for Java EE](https://javaee.github.io/tutorial/overview008.html#contexts-and-dependency-injection-for-java-ee))
+  * JavaBean validation ([Been Validation](https://javaee.github.io/tutorial/overview008.html#bean-validation))
+
+#### Java EE Application Model
+
+#### Distributed Multitiered Applications
+
+#### Java EE Containers
+
+#### Web Services Support
+
+#### Java EE Application Assembly and Deployment
+
+#### Java EE 8 APIs
+
+#### Java EE 8 APIs in the Java Platform, Standard Edition 8
+
+#### GlassFish Server Tools
+
 ## [First Cup Tutorial](https://javaee.github.io/firstcup/toc.html)
