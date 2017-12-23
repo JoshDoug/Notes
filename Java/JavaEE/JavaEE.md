@@ -85,11 +85,26 @@ Java EE Components: Java EE applications are made up of components which are a s
 
 [More info on the tutorial site](https://javaee.github.io/tutorial/overview004.html).
 
-#### Java EE Containers
+#### [Java EE Containers](https://javaee.github.io/tutorial/overview005.html)
 
-#### Web Services Support
+_Write this section up at a later date once I can make sense of the marketing speel_.
+
+#### [Web Services Support](https://javaee.github.io/tutorial/overview006.html)
+
+Java EE platform provides XML APIs and tools for designing, developing, testing, and deploying web services that use open XML-based standards and transport protocols.
+
+SOAP (Simple Object Access Protocol) Transport Protocol - An XML-based protocol that is transmitted over HTTP. following the HTTP request-and-response model.
+
+WSDL (Web Services Description Language) Standard Formt - A standardised XML format for describing network services, description includes the name, location and ways to communicate with the service. GlassFish Server provides a tool for generating the WSDL spec of a web service that uses remote procedure calls to communicate with clients.
 
 #### Java EE Application Assembly and Deployment
+
+A Java EE application is packaged into one or more standard units for deployment to any Java EE platform-compliant system. Each unit contains:
+
+* A functional component or components, such as an enterprise bean, web page, servlet, or applet
+* An optional deployment descriptor that describes its content
+
+Once a Java EE unit has been produced, it is ready to be deployed. Deployment typically involves using a platform’s deployment tool to specify location-specific information, such as a list of local users who can access it and the name of the local database. Once deployed on a local platform, the application is ready to run.
 
 #### Java EE 8 APIs
 
