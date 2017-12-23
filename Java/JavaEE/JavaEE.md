@@ -58,7 +58,32 @@ The Java EE platform used a simplified programming model (compared to what?), XM
 
 #### Java EE Application Model
 
+Lots of corporate jargon and marketing speak, but basically Java EE provides a basis for creating complex enterprise level applications.
+
 #### Distributed Multitiered Applications
+
+The Java EE platform uses a distributed multitiered application model for enterprise applications, kinda like MVC on steroids. Application logic is divided into components according to function, and the applications components that make up a Java EE application are installed on various machines depending on the tier in the multitiered Java EE environment to which the application belongs (or it could all be on one machine, of course).
+
+A typical multitiered application would have a client application/webpage, a Java EE Server, and a Database:
+
+* Client-tier components run on the client machine (Application Client &/or Web Pages).
+* Web-tier components run on the Java EE server (JavaServer Faces Pages).
+* Business-tier components run on the Java EE server (Enterprise Beans).
+* Enterprise information system (EIS)-tier software runs on the EIS server (Databases).
+
+Security: it does some stuff for you? Unclear from the description.
+
+Java EE Components: Java EE applications are made up of components which are a self-contained functional software unit that is assembled into a Java EE application with its related classes and files and that communicates with other components. The Java EE spec defines the following components:
+
+* Application clients and applets are components that run on the client.
+* Java Servlet, JavaServer Faces, and JavaServer Pages (JSP) technology components are web components that run on the server.
+* EJB components (enterprise beans) are business components that run on the server.
+
+> "Java EE components are written in the Java programming language and are compiled in the same way as any program in the language. The differences between Java EE components and "standard" Java classes are that Java EE components are assembled into a Java EE application, they are verified to be well formed and in compliance with the Java EE specification, and they are deployed to production, where they are run and managed by the Java EE server."
+
+*So...they're normal Java but they run on a Java EE Server?*
+
+[More info on the tutorial site](https://javaee.github.io/tutorial/overview004.html).
 
 #### Java EE Containers
 
