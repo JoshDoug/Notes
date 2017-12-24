@@ -85,6 +85,36 @@ Json.createObjectBuilder()
         .build();
 ```
 
+More complex object creation example from the Lynda.com JSON Processing course, with nested arrays, nested object, and nested objects within nested arrays:
+
+```Java
+JsonObject jsonObject = Json.createObjectBuilder()
+    .add("title", "JSON-Processing With Java EE")
+    .add("chapters", Json.createArrayBuilder()
+                            .add("Introduction")
+                            .add("1. JSON and Java")
+                            .add("2. JSON-Processing API Features")
+                            .add("3. The Java EE JSON Object Model")
+                            .add("4. The Java EE JSON Streaming Model")
+                            .add("Conclusion"))
+    .add("release", true)
+    .add("length", 60)
+    .add("sourceCode", Json.createObjectBuilder()
+                            .add("repositoryName", "JSON-Processing-with-Java-EE")
+                            .add("url", "github.com/readlearncode"))
+    .add("complementaryCourse", Json.createArrayBuilder()
+                            .add(Json.createObjectBuilder()
+                                    .add("title", "RESTful Service with JAX-RS 2.0")
+                                    .add("length", 120))
+                            .add(Json.createObjectBuilder()
+                                    .add("titel", "Java Enterprise Edition Introduction")
+                                    .add("length", 130)))
+    .addNull("notes")
+    .build();
+```
+
+Note: `build()` can be called on each array/object builder nested within the object being created, but it's only *necessary* to call it on the parent JSON object that's being created.
+
 ### Streaming Model
 
 ## [JSON-B API](http://json-b.net/)
