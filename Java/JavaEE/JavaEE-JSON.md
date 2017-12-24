@@ -33,6 +33,58 @@ Consists of 3 packages:
 
 ### Object Model
 
+Principle APIs:
+
+* `JsonBuilder`
+* `JsonReader`
+* `JsonWriter`
+
+JsonValue Class Hierarchy:
+
+![JsonValue Class Hierarchy](../../Assets/JsonValue-Class-Hierarchy.png)
+
+JsonValue types are immutable, so while the JsonObject and JsonArray objects support Map and List features respectively, they only support a subset of them. They also support new Java 8 features for Maps and Lists.
+
+JsonValue types: `ARRAY`, `OBJECT`, `STRING`, `NUMBER`, `TRUE`, `FALSE`, `NULL`, accessinble via the `getValueType()` method.
+For comparison in a unit test the types of JsonValue can be accessed like so: `JsonValue.ValueType.OBJECT` for Object, etc.
+
+Loading a JSON Object from a String:
+
+```Java
+JsonReader jsonReader = Json.createReader(new StringReader(JSON));
+JsonObject jsonObject = jsonReader.readObject();
+jsonReader.close();
+```
+
+Loading a JSON Object from a file:
+
+```Java
+JsonReader jsonReader = Json.createReader(new FileReader(pathString));
+JsonObject jsonObject = jsonReader.readObject();
+jsonReader.close();
+```
+
+Creating a Model from Code:
+
+```JSON
+{
+    "name": "Josh",
+    "likes": [
+        "Gingerbread",
+        "Tea"
+    ]
+}
+```
+
+```Java
+Json.createObjectBuilder()
+        .add("name", "Josh")
+        .add("likes", Json.createArrayBuilder()
+                        .add("Gingerbread")
+                        .add("Tea"))
+        .build();
+```
+
 ### Streaming Model
 
 ## [JSON-B API](http://json-b.net/)
