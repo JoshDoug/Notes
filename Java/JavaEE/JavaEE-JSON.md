@@ -131,4 +131,17 @@ It has two principal interfaces, in the `javax.json.stream` package:
 * JsonParser
 * JsonGenerator
 
+JSON events, e.g. `JsonParser.Event.START_OBJECT` (enums):
+
+* `START_OBJECT`
+* `END_OBJECT`
+* `START_ARRAY`
+* `END_ARRAY`
+* `KEY_NAME`
+* `VALUE_STRING`
+* `VALUE_NUMBER`
+* `VALUE_TRUE`
+* `VALUE_FALSE`
+* `VALUE_NULL`
+
 ## [JSON-B API](http://json-b.net/)
