@@ -172,4 +172,43 @@ while (parser.hasNext()) {
 }
 ```
 
+Example code to create a complex Json Object and then write it to a String (this could easily be changed to a file, etc):
+
+```Java
+StringWriter stringWriter = new StringWriter();
+JsonGenerator generator = Json.createGenerator(stringWriter);
+
+generator.writeStartObject()
+            .write("title","JSON-Processing With Java EE")
+            .writeStartArray("chapters")
+                .write("Introduction")
+                .write("1. JSON and Java")
+                .write("2. JSON-Processing API features")
+                .write("3. The Java EE JSON Object model")
+                .write("4. The Java EE JSON Streaming model")
+                .write("Conclusion")
+            .writeEnd()
+            .write("released",JsonValue.TRUE)
+            .write("length",90)
+            .writeStartObject("sourceCode")
+                .write("repositoryName", "JSON-Processing-with-Java-EE")
+                .write("url","github.com/readlearncode")
+            .writeEnd()
+            .writeStartArray("complementaryCourse")
+                .writeStartObject()
+                    .write("title", "RESTful Service with JAX-RS 2.0")
+                    .write("length", 120)
+                .writeEnd()
+                .writeStartObject()
+                    .write("title", "Java Enterprise Edition Introduction")
+                    .write("length", 130)
+                .writeEnd()
+            .writeEnd()
+            .write("notes", JsonValue.NULL)
+        .writeEnd();
+generator.close();
+
+String jsonString = stringWriter.toString();
+```
+
 ## [JSON-B API](http://json-b.net/)
