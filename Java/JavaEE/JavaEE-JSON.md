@@ -117,4 +117,18 @@ Note: `build()` can be called on each array/object builder nested within the obj
 
 ### Streaming Model
 
+The streaming model reads JSON data one element at a time and fires an event each time it reaches one of the following elements:
+
+* The start and end of an object
+* The start and end of an array
+* A key name
+* Any string, number, Boolean, and NULL value
+
+The parser stops at each event, it can then either process or discard it. It moves on to the next event until all elements in the JSON data stream have been parsed. This is a very effecient low-level API for passing large quantities of JSON data.
+
+It has two principal interfaces, in the `javax.json.stream` package:
+
+* JsonParser
+* JsonGenerator
+
 ## [JSON-B API](http://json-b.net/)
