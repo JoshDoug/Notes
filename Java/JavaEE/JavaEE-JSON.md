@@ -31,6 +31,13 @@ Consists of 3 packages:
   * Plugin implementations
   * For implementers and isn't necessary to know in order to use JSON.
 
+Dependency coordinates:
+
+* Group ID: `javax.json`, Artifact ID: `javax.json-api`, Version: `1.1`
+* Group ID: `org.glassfish`, Artifact ID: `javax.json`, Version: `1.1`
+
+The `javax.json:javax.json-api:1.1` is the set of interfaces that define the spec, `org.glassfish:javax.json:1.1` is the reference implementation (RI) of those interfaces.
+
 ### Object Model
 
 Principle APIs:
