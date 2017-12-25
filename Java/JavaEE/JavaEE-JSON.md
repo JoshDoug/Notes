@@ -144,4 +144,32 @@ JSON events, e.g. `JsonParser.Event.START_OBJECT` (enums):
 * `VALUE_FALSE`
 * `VALUE_NULL`
 
+Example code that walks through a JSON object and prints the event type, key name and values (including nested Arrays and Objects):
+
+```Java
+JsonParser parser = Json.createParser(new StringReader(JSON));
+
+while (parser.hasNext()) {
+    JsonParser.Event event = parser.next();
+    switch (event) {
+        case START_ARRAY:
+        case END_ARRAY:
+        case START_OBJECT:
+        case END_OBJECT:
+        case VALUE_FALSE:
+        case VALUE_NULL:
+        case VALUE_TRUE:
+            System.out.println(event.toString());
+            break;
+        case KEY_NAME:
+            System.out.print(event.toString() + " " + parser.getString() + " - ");
+            break;
+        case VALUE_STRING:
+        case VALUE_NUMBER:
+            System.out.println(event.toString() + " " + parser.getString());
+            break;
+    }
+}
+```
+
 ## [JSON-B API](http://json-b.net/)
