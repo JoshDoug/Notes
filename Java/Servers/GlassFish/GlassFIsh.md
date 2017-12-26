@@ -13,6 +13,8 @@ Prefix a command with the absolute or relative path to asadmin and then the subc
 `asadmin` subcommands:
 
 * `list-domains` subcommand [documentation](https://docs.oracle.com/cd/E19798-01/821-1758/list-domains-1/index.html).
+* `start-domain` subcommand, when domain is specified it defaults to `domain1`, to specify a domain: `start-domain domain2`
+* `stop-domain domain1` - stop domain1.
 
 ## GlassFish 4
 
