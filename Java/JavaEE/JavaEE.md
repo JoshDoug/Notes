@@ -108,6 +108,61 @@ Once a Java EE unit has been produced, it is ready to be deployed. Deployment ty
 
 #### Java EE 8 APIs
 
+Summaries of the technologies required by the Java EE platform and the APIs used in Java EE applications.
+
+##### Enterprise JavaBeans Technology
+
+An Enterprise JavaBeans (EJB) component, or enterprise bean, is a body of code that has fields and methods to implement modules of business logic and is used as a building block, standalone or with other EJBs to execute business logic on the Java EE server.
+
+Enterprise beans are either session beans or message-driven beans:
+
+* A session bean
+* A message-driven bean
+
+##### Java Servlet Technology
+
+##### JavaServer Faces Technology
+
+##### JavaServer Pages Technology
+
+##### JavaServer Pages Standard Tag Library
+
+##### Java Persistence API
+
+##### Java Transaction API
+
+##### Java API for RESTful Web Services
+
+##### Managed Beans
+
+##### Contexts and Dependency Injection for Java EE
+
+##### Dependency Injection for Java
+
+##### Bean Validation
+
+##### Java Message Service API
+
+##### Java EE Connector Architecture
+
+##### JavaMail API
+
+##### Java Authorization Contract for Containers
+
+##### Java Authentication Service Provider Interface for Containers
+
+##### Java EE Security API
+
+##### Java API for WebSocket
+
+##### Java API for JSON Processing
+
+##### Java API for JSON Binding
+
+##### Concurrency Utilities for Java EE
+
+##### Batch Applications for the Java Platform
+
 #### Java EE 8 APIs in the Java Platform, Standard Edition 8
 
 #### GlassFish Server Tools
