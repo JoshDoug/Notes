@@ -13,6 +13,7 @@ Notes on JavaEE or whatever it ends up being called
 * [Java EE Tutorial Repo](https://github.com/javaee/tutorial)
 * [First Cup Tutorial](https://javaee.github.io/firstcup/), [First CUP ToC](https://javaee.github.io/firstcup/toc.html), and [First Cup Repo](https://github.com/javaee/firstcup-examples)
 * [JCP - Java Community Process](jcp.org) - spec development process
+* [Java EE 7 Example Application - Cargo Tracker](https://github.com/javaee/cargotracker)
 
 ## History, Present, Future (Present being Java EE7)
 
