@@ -12,6 +12,29 @@ Notes on JavaEE or whatever it ends up being called
 * [Java EE Tutorial](https://javaee.github.io/tutorial/) & [ToC](https://javaee.github.io/tutorial/toc.html)
 * [Java EE Tutorial Repo](https://github.com/javaee/tutorial)
 * [First Cup Tutorial](https://javaee.github.io/firstcup/), [First CUP ToC](https://javaee.github.io/firstcup/toc.html), and [First Cup Repo](https://github.com/javaee/firstcup-examples)
+* [JCP - Java Community Process](jcp.org) - spec development process
+
+## History, Present, Future (Present being Java EE7)
+
+History:
+
+* JPE Project - 1998
+* J2EE 1.2 - 1999, Enterprise Java Platform with 10 specs such as Servlet, JSP, EJB, JMS, RMI/IOP
+* J2EE 1.3 - 2001, 13 specs, Focus on Robustness, with CMP, Connector Architecture added
+* J2EE 1.4 - 2003, 20 specs, Focus on Web Services, with Web Services, Managed, Deploymnet, Asynchronous Connector added
+* Java EE 5 - 2006, 23 specs Focus on ease of development, Annotations, EJB 3.0, Persistence API, New and Updated Web Services (shift from XML & configuration to Annotations and convention)
+* Java EE 6 - 2009, 28 specs, Focus on flexibility, extensibility, profiles, CDI, RESTful web services, EJB Lite, Managed Beans 1.0, and more.
+* Java EE 7 - 2013, 28+ specs (33 APIs/Specs?), growth slows, fine tuning and improved programmer friendliness.
+* Java EE 8 - focus on Cloud and Microservices, improvements to Servlets, CDI, JSON-P, JSF, JAX-RS, Bean Validation, and addition of JSON-B, Security, Configuration, and Health Check - 37 APIs?
+* Java EE 9 or whatever comes next will continue this focus on cloud and microservices.
+
+Java EE is:
+
+* A set of APIs and runtime
+* Consists of 28+ specifications
+* All Java SE APIs can be used in combination with any Java EE component
+* Annotation-based configuration, XML is (mostly?) optional, and convention over configuration
+* Contexts and Dependency Injection (CDI)
 
 ## [Java EE Tutorial](https://javaee.github.io/tutorial/toc.html)
 
