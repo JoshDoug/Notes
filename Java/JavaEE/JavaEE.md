@@ -37,6 +37,30 @@ Java EE is:
 * Annotation-based configuration, XML is (mostly?) optional, and convention over configuration
 * Contexts and Dependency Injection (CDI)
 
+## Java EE Server Implementations
+
+There are over 20 compliant Java EE implementations, here's a shortlist of some of the more popular options:
+
+* GlassFish (Reference Implementation from Oracle, but moving to Eclipse?)
+* Oracel WebLogic (Oracle's commercial implementation)
+* Apache TomEE (Supports the Web Profile subset of Java EE APIs)
+* Apache Tomcat (Doesn't fully implement Java EE either)
+* RedHat JBoss Enterprise Platform
+* WildFly
+* WebSphere Liberty by IBM, built atop OpenLiberty
+* Payara (Commercially supported and built on top of GlassFish)
+
+Full Platform offers a complete Java EE solution for complete enterprise solutions, whereas the web profile offers only those technologies that are necessary for a fully functioning web application.
+
+## Application Layers
+
+Examples of the typical APIs that make up each layer of a typical Java EE application:
+
+* Presentation Layer: JSP, JSF, JAX-RS, WebSockets, Servlet
+* Business Layer: Facade, EJB, Entities
+* Data Access Layer: JPA, JCA, JMS, Batch Processing
+* Crosscutting Layer: Bean Validation, CDI, Interceptor, Transaction, Security, JSON-P
+
 ## [Java EE Tutorial](https://javaee.github.io/tutorial/toc.html)
 
 ### Preface
