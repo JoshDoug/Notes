@@ -2,15 +2,19 @@
 
 * [JetBrains Confluence Page](https://confluence.jetbrains.com)
 
-## [Meet IntelliJ IDEA](https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html)
+## [Meet IntelliJ IDEA](https://www.jetbrains.com/help/idea/meet-intellij-idea.html)
 
 Starter page linking to tutorials.
 
-### [Discover IntelliJ IDEA](https://www.jetbrains.com/help/idea/2017.1/discover-intellij-idea.html)
+## [Install and set up IntelliJ IDEA](https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html)
+
+Covers setup on macOS, Windows, Linux, and using Toolbox.
+
+## [Discover IntelliJ IDEA](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)
 
 Walkthrough of the IDE.
 
-#### User Interface
+### User Interface
 
 You can access most tool windows via a shortcut and then interact with them, to then return to the editor just hit esc.
 
@@ -26,7 +30,7 @@ You can access most tool windows via a shortcut and then interact with them, to 
 
 To toggle between hiding & showing all tool windows: ⇧⌘F12 (Shift-Command-Fn-F12).
 
-#### Editor Basics - The most useful editor shortcuts
+### Editor Basics - The most useful editor shortcuts
 
 |Action|Description|
 |------|-----------|
@@ -54,7 +58,7 @@ To toggle between hiding & showing all tool windows: ⇧⌘F12 (Shift-Command-Fn
 
 ***E.g. with the cursor in a variable, this will highlight where else the variable is used and allow to shift between them with `⌘G`. Not sure what exactly symbol refers to though...
 
-#### Code Completion
+### Code Completion
 
 Access basic completion by pressing `^Space` to get basic suggestions for variables, types, methods, expressions, etc. Press it again to get more results, including private members and non-imported static members.
 
