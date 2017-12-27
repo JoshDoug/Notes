@@ -21,3 +21,7 @@ JSF is part of the presentation* layer and is used for web frontend user interfa
 * Alternative template frameworks (pluggable ecosystem), such as PrimeFaces
 
 * Presentation layer typically includes JSP, JSF, JAX-RS, WebSockets, and Servlet.
+
+## IntelliJ
+
+To add JSF support to a basic web project (Tomcat with a Web Module template) is not at all obvious, go to Project Settings (`⌘;`) > Modules, right click the Web dropdown under the Project Module name, choose `+ add` and JSF should be listed there, then the option to download/setup the JSF jars will be available and IntelliJ will work.
