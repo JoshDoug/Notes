@@ -140,6 +140,39 @@ Inspections are built-in static code analysis tools to help find possible bugs, 
 
 To perform code analysis on an entire project use *Analyse > Inspect* Code from the main menu, or by slecting *Analyse > Run Inspection by Name*
 
+### Code style and formatting
+
+See also:
+
+* [Code Style settings](https://www.jetbrains.com/help/idea/code-style.html)
+* [Java Code Style settings](https://www.jetbrains.com/help/idea/code-style-java.html)
+
+Useful formatting shortcuts:
+
+|Action|Shortcut|
+|------|--------|
+|Reformat code|`⌥⌘L`|
+|Auto-indent lines|`⌃⌥I`|
+|Optimize imports|`⌃⌥O`|
+
+### [Version control basics](https://www.jetbrains.com/help/idea/discover-intellij-idea.html#VCSBasics)
+
+### Make
+
+### Running and debugging
+
+### Application servers
+
+### Working with build tools (Maven/Gradle)
+
+## [Mastering IntelliJ IDEA keyboard shortcuts](https://www.jetbrains.com/help/idea/mastering-intellij-idea-keyboard-shortcuts.html)
+
+## [IntelliJ IDEA Pro Tips](https://www.jetbrains.com/help/idea/intellij-idea-pro-tips.html)
+
+## [Keep IntelliJ IDEA up to date](https://www.jetbrains.com/help/idea/keep-intellij-idea-up-to-date.html)
+
+Use Toolbox.
+
 ### [Keyboard Shortcuts](https://www.jetbrains.com/help/idea/2017.1/keyboard-shortcuts-you-cannot-miss.html)
 
 ### [Pro Tips](https://www.jetbrains.com/help/idea/2017.1/intellij-idea-pro-tips.html)
