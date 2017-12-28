@@ -93,7 +93,52 @@ Navigate within a file using `⌘F12`, this brings up a modal version of the Str
 
 #### Select in
 
-*Not sure I get the purpose of this?*
+Highlight the current file in a particular tool window (or Finder) with `⌥F1`.
+
+### Quick pop-ups
+
+|Action|Shortcut|
+|------|--------|
+|Documentation|`F1`|
+|Quick definition|`⌥Space`|
+|Show usages|`⌥⌘F7`|
+|Show implementation|`⌥⌘B`|
+
+### Refactoring basics
+
+* [In-depth refactoring info](https://www.jetbrains.com/help/idea/refactoring-source-code.html)
+
+|Action|Shortcut|
+|------|--------|
+|Rename|`⇧F6`|
+|Extract variable|`⌥⌘V`|
+|Extract field|`⌥⌘F`|
+|Extract a constant|`⌥⌘C`|
+|Extract a method|`⌥⌘M`|
+|Extract a parameter|`⌥⌘P`|
+|Inline|`⌥⌘N`|
+|Copy|`F5`|
+|Move|`F6`|
+|Refactor this|`⌃T`|
+
+Copy and Move refer to methods and fields, instead of currently highlighted code. Need to explore further.
+
+### Finding usages
+
+* [In-depth Finding Usage info](https://www.jetbrains.com/help/idea/finding-usages.html)
+
+Find Usages helps quickly find all pieces of code referencing the symbol at the caret/cursor, no matter if the symbol is a class, method, field, parameter, or another statement. Use `⌥F7` and get a list of references grouped by usage, type, module, and file.
+
+* To set custom option for Find Usages use: `⌥⇧⌘F7` or the settings option on the Find Usages panel toolbar
+* To use plain text search, use Find in Path with `⇧⌘F`
+
+### Inspections
+
+* [In-depth Code Inspection info](https://www.jetbrains.com/help/idea/code-inspection.html)
+
+Inspections are built-in static code analysis tools to help find possible bugs, locate dead code, detect perf issues, and improve overall code structure. Most inspections point to where the problem is and even offer a quick fix to deal with it using `⌥⏎` (alt-enter) to off one or more fixes.
+
+To perform code analysis on an entire project use *Analyse > Inspect* Code from the main menu, or by slecting *Analyse > Run Inspection by Name*
 
 ### [Keyboard Shortcuts](https://www.jetbrains.com/help/idea/2017.1/keyboard-shortcuts-you-cannot-miss.html)
 
