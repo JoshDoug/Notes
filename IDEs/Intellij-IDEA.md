@@ -28,9 +28,11 @@ You can access most tool windows via a shortcut and then interact with them, to 
 |Terminal|`⌥F12`|
 |Editor|`Esc`|
 
-To toggle between hiding & showing all tool windows: ⇧⌘F12 (Shift-Command-Fn-F12).
+To toggle between hiding & showing all tool windows: `⇧⌘F12` (Shift-Command-Fn-F12).
 
 ### Editor Basics - The most useful editor shortcuts
+
+* [Editor Basics page - more useful editor info](https://www.jetbrains.com/help/idea/editor-basics.html)
 
 |Action|Description|
 |------|-----------|
@@ -58,19 +60,40 @@ To toggle between hiding & showing all tool windows: ⇧⌘F12 (Shift-Command-Fn
 
 ***E.g. with the cursor in a variable, this will highlight where else the variable is used and allow to shift between them with `⌘G`. Not sure what exactly symbol refers to though...
 
+Note: to try and find the shortcut for an action use the _Find action_ with `⇧⌘A` (Shift-Command-A), type an actions name to see its shortcut or to call it.
+
 ### Code Completion
+
+* [Auto-Completing Code for in-depth info](https://www.jetbrains.com/help/idea/auto-completing-code.html)
 
 Access basic completion by pressing `^Space` to get basic suggestions for variables, types, methods, expressions, etc. Press it again to get more results, including private members and non-imported static members.
 
 Access smart completion by pressing `^⇧Space`, this offers options relevant to the context inlcuding chains.
 
-[Statement Completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#statements_completion) is iniated by pressing `⇧⌘⏎`, this will automatically add missing parentheses, brackets, braces, and the necessary formatting.
+[Statement Completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#statements_completion) is iniated by pressing `⇧⌘⏎`, this will automatically add missing parentheses, brackets, braces, and the necessary formatting.
 
 To see suggested parameters for any method or constructor press `⌘P`.
 
-The [PostFix Completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#postfix_completion)
+The [PostFix Completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#postfix_completion) feature helps transform an already typed expression to anothero ne, based on the postfix typed after a dot.
 
-Still not totally sure how basic and smart completion differ, although on an empty line smart sometimes adds code without providing options, such as methods and arguments in methods. In other cases, such as calling a method on an object, basic and smart will have the same options. Further reading on [basic completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#basic_completion) and [smart completion](https://www.jetbrains.com/help/idea/2017.1/auto-completing-code.html#smart_completion)
+Still not totally sure how basic and smart completion differ, although on an empty line smart sometimes adds code without providing options, such as methods and arguments in methods. In other cases, such as calling a method on an object, basic and smart will have the same options. Further reading on [basic completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion) and [smart completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#smart_completion).
+
+### Navigation
+
+#### Recent Files
+
+* Use `⌘E` to bring up a window showing tool windows and recent files.
+* Navigate to a Class: `⌘O` brings up a search box that can be used to search for Classes
+* Navigate to a File: `⇧⌘O` brings up a search box that can be used to search for files or folders (might need to end folder names with a Slash character)
+* Navigate to a Symbol: `⌥⌘O` brings up a search box that can be used to find a method or field by its name
+
+#### Structure
+
+Navigate within a file using `⌘F12`, this brings up a modal version of the Structure tool window (it doesn't open or use the normal structure tool window, even if it's already open).
+
+#### Select in
+
+*Not sure I get the purpose of this?*
 
 ### [Keyboard Shortcuts](https://www.jetbrains.com/help/idea/2017.1/keyboard-shortcuts-you-cannot-miss.html)
 
