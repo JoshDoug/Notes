@@ -6,15 +6,15 @@
 
 Starter page linking to tutorials.
 
-## [Install and set up IntelliJ IDEA](https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html)
+### [Install and set up IntelliJ IDEA](https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html)
 
 Covers setup on macOS, Windows, Linux, and using Toolbox.
 
-## [Discover IntelliJ IDEA](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)
+### [Discover IntelliJ IDEA](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)
 
 Walkthrough of the IDE.
 
-### User Interface
+#### User Interface
 
 You can access most tool windows via a shortcut and then interact with them, to then return to the editor just hit esc.
 
@@ -30,7 +30,7 @@ You can access most tool windows via a shortcut and then interact with them, to 
 
 To toggle between hiding & showing all tool windows: `⇧⌘F12` (Shift-Command-Fn-F12).
 
-### Editor Basics - The most useful editor shortcuts
+#### Editor Basics - The most useful editor shortcuts
 
 * [Editor Basics page - more useful editor info](https://www.jetbrains.com/help/idea/editor-basics.html)
 
@@ -62,7 +62,7 @@ To toggle between hiding & showing all tool windows: `⇧⌘F12` (Shift-Command-
 
 Note: to try and find the shortcut for an action use the _Find action_ with `⇧⌘A` (Shift-Command-A), type an actions name to see its shortcut or to call it.
 
-### Code Completion
+#### Code Completion
 
 * [Auto-Completing Code for in-depth info](https://www.jetbrains.com/help/idea/auto-completing-code.html)
 
@@ -78,24 +78,24 @@ The [PostFix Completion](https://www.jetbrains.com/help/idea/auto-completing-cod
 
 Still not totally sure how basic and smart completion differ, although on an empty line smart sometimes adds code without providing options, such as methods and arguments in methods. In other cases, such as calling a method on an object, basic and smart will have the same options. Further reading on [basic completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion) and [smart completion](https://www.jetbrains.com/help/idea/auto-completing-code.html#smart_completion).
 
-### Navigation
+#### Navigation
 
-#### Recent Files
+##### Recent Files
 
 * Use `⌘E` to bring up a window showing tool windows and recent files.
 * Navigate to a Class: `⌘O` brings up a search box that can be used to search for Classes
 * Navigate to a File: `⇧⌘O` brings up a search box that can be used to search for files or folders (might need to end folder names with a Slash character)
 * Navigate to a Symbol: `⌥⌘O` brings up a search box that can be used to find a method or field by its name
 
-#### Structure
+##### Structure
 
 Navigate within a file using `⌘F12`, this brings up a modal version of the Structure tool window (it doesn't open or use the normal structure tool window, even if it's already open).
 
-#### Select in
+##### Select in
 
 Highlight the current file in a particular tool window (or Finder) with `⌥F1`.
 
-### Quick pop-ups
+#### Quick pop-ups
 
 |Action|Shortcut|
 |------|--------|
@@ -104,7 +104,7 @@ Highlight the current file in a particular tool window (or Finder) with `⌥F1`.
 |Show usages|`⌥⌘F7`|
 |Show implementation|`⌥⌘B`|
 
-### Refactoring basics
+#### Refactoring basics
 
 * [In-depth refactoring info](https://www.jetbrains.com/help/idea/refactoring-source-code.html)
 
@@ -123,7 +123,7 @@ Highlight the current file in a particular tool window (or Finder) with `⌥F1`.
 
 Copy and Move refer to methods and fields, instead of currently highlighted code. Need to explore further.
 
-### Finding usages
+#### Finding usages
 
 * [In-depth Finding Usage info](https://www.jetbrains.com/help/idea/finding-usages.html)
 
@@ -132,7 +132,7 @@ Find Usages helps quickly find all pieces of code referencing the symbol at the 
 * To set custom option for Find Usages use: `⌥⇧⌘F7` or the settings option on the Find Usages panel toolbar
 * To use plain text search, use Find in Path with `⇧⌘F`
 
-### Inspections
+#### Inspections
 
 * [In-depth Code Inspection info](https://www.jetbrains.com/help/idea/code-inspection.html)
 
@@ -140,7 +140,7 @@ Inspections are built-in static code analysis tools to help find possible bugs, 
 
 To perform code analysis on an entire project use *Analyse > Inspect* Code from the main menu, or by slecting *Analyse > Run Inspection by Name*
 
-### Code style and formatting
+#### Code style and formatting
 
 See also:
 
@@ -155,23 +155,27 @@ Useful formatting shortcuts:
 |Auto-indent lines|`⌃⌥I`|
 |Optimize imports|`⌃⌥O`|
 
-### [Version control basics](https://www.jetbrains.com/help/idea/discover-intellij-idea.html#VCSBasics)
+#### [Version control basics](https://www.jetbrains.com/help/idea/discover-intellij-idea.html#VCSBasics)
 
-### Make
+#### Make
 
-### Running and debugging
+#### Running and debugging
 
-### Application servers
+#### Application servers
 
-### Working with build tools (Maven/Gradle)
+#### Working with build tools (Maven/Gradle)
 
-## [Mastering IntelliJ IDEA keyboard shortcuts](https://www.jetbrains.com/help/idea/mastering-intellij-idea-keyboard-shortcuts.html)
+### [Mastering IntelliJ IDEA keyboard shortcuts](https://www.jetbrains.com/help/idea/mastering-intellij-idea-keyboard-shortcuts.html)
 
-## [IntelliJ IDEA Pro Tips](https://www.jetbrains.com/help/idea/intellij-idea-pro-tips.html)
+### [IntelliJ IDEA Pro Tips](https://www.jetbrains.com/help/idea/intellij-idea-pro-tips.html)
 
-## [Keep IntelliJ IDEA up to date](https://www.jetbrains.com/help/idea/keep-intellij-idea-up-to-date.html)
+### [Keep IntelliJ IDEA up to date](https://www.jetbrains.com/help/idea/keep-intellij-idea-up-to-date.html)
 
 Use Toolbox.
+
+### [Getting Help](https://www.jetbrains.com/help/idea/getting-help.html)
+
+## [Configuring Project and IDE Settings](https://www.jetbrains.com/help/idea/configuring-the-ide.html)
 
 ### [Keyboard Shortcuts](https://www.jetbrains.com/help/idea/2017.1/keyboard-shortcuts-you-cannot-miss.html)
 
