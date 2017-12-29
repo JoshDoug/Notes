@@ -5,6 +5,7 @@ Notes on JavaEE or whatever it ends up being called
 ## Links to Documentation and Tutorials
 
 * [Oracle Java EE 7 Documentation](https://docs.oracle.com/javaee/7/index.html)
+* [Oracle Java EE 7 Tutorial](https://docs.oracle.com/javaee/7/tutorial/)
 * [Java EE Spec Repo](https://github.com/javaee/javaee-spec) & [Java EE GitHub Spec Site](https://javaee.github.io/javaee-spec/)
 * [Java EE 8 Spec Docs ?](https://javaee.github.io/javaee-spec/javadocs/)
 * [List of Java EE Specs and Reference Implementations](https://javaee.github.io/javaee-spec/Specifications)
@@ -14,6 +15,7 @@ Notes on JavaEE or whatever it ends up being called
 * [First Cup Tutorial](https://javaee.github.io/firstcup/), [First CUP ToC](https://javaee.github.io/firstcup/toc.html), and [First Cup Repo](https://github.com/javaee/firstcup-examples)
 * [JCP - Java Community Process](jcp.org) - spec development process
 * [Java EE 7 Example Application - Cargo Tracker](https://github.com/javaee/cargotracker)
+* [List of Web containers](https://en.wikipedia.org/wiki/Web_container)
 
 ## History, Present, Future (Present being Java EE7)
 
@@ -36,6 +38,58 @@ Java EE is:
 * All Java SE APIs can be used in combination with any Java EE component
 * Annotation-based configuration, XML is (mostly?) optional, and convention over configuration
 * Contexts and Dependency Injection (CDI)
+
+## Java EE 8 Specifications
+
+Spec and version, JSR, included in Web Profile
+
+* _Java EE Platform_
+  * Java Platform, Enterprise Edition 8 (Java EE 8), JSR 366
+* _Web Application Technologies_
+  * Java API for WebSocket 1.1, JSR 356, Yes
+  * Java API for JSON Binding 1.0, JSR 367, Yes
+  * Java API for JSON Processing 1.1, JSR 374, Yes
+  * Java Servlet 4.0, JSR 369, Yes
+  * JavaServer Faces 2.3, JSR 372, Yes
+  * Expression Language 3.0, JSR 341, Yes
+  * JavaServer Pages 2.3, JSR 245, Yes
+  * Standard Tag Library for JavaServer Pages (JSTL) 1.2, JSR 52, Yes
+* _Enterprise Application Technologies_
+  * Batch Applications for the Java Platform 1.0, JSR 352
+  * Concurrency Utilities for Java EE 1.0, JSR 236
+  * Contexts and Dependency Injection for Java 2.0, JSR 365, Yes
+  * Dependency Injection for Java 1.0, JSR 330, Yes
+  * Bean Validation 2.0, JSR 380, Yes
+  * Enterprise JavaBeans 3.2, JSR 345, Yes
+  * Interceptors 1.2, JSR 318, Yes
+  * Java EE Connector Architecture 1.7, JSR 322
+  * Java Persistence 2.2, JSR 338, Yes
+  * Common Annotations for the Java Platform 1.3, JSR 250, Yes
+  * Java Message Service API 2.0, JSR 343
+  * Java Transaction API (JTA) 1.2, JSR 907, Yes
+  * JavaMail 1.6, JSR 919
+* _Web Services Technologies_
+  * Java API for RESTful Web Services (JAX-RS) 2.1, JSR 370, Yes
+  * Implementing Enterprise Web Services 1.3, JSR 109
+  * Web Services Metadata for the Java Platform 2.1, JSR 181
+  * Java API for XML-Based RPC (JAX-RPC) 1.1 (Optional), JSR 101
+  * Java API for XML Registries (JAXR) 1.0 (Optional), JSR 93
+* _Management and Security Technologies_
+  * Java EE Security API 1.0, JSR 375, Yes
+  * Java Authentication Service Provider Interface for Containers 1.1, JSR 196, Yes
+  * Java Authorization Contract for Containers 1.5, JSR 115
+  * Java EE Application Deployment 1.2  (Optional), JSR 88
+  * J2EE Management 1.1, JSR 77
+  * Debugging Support for Other Languages 1.0 JSR 45, Yes
+* _Java EE-related Specs in Java SE_
+  * Java Management Extensions (JMX) 2.0, JSR 3
+  * SOAP with Attachments API for Java (SAAJ) Specification 1.3, JSR 67
+  * Streaming API for XML (StAX) 1.0, JSR 173
+  * Java API for XML Processing (JAXP) 1.6, JSR 206
+  * Java Database Connectivity 4.0, JSR 221
+  * Java Architecture for XML Binding (JAXB) 2.2, JSR 222
+  * Java API for XML-Based Web Services (JAX-WS) 2.2, JSR 224
+  * JavaBeans Activation Framework (JAF) 1.1, JSR 925
 
 ## Java EE Server Implementations
 
