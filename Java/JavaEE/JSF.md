@@ -50,6 +50,14 @@ JSF is part of the presentation* layer and is used for web frontend user interfa
 
 Note: *Might be outdated*
 
+JSF is the standard for web-development frameworks in Java, based on the MVC paradigm and is addtionally (like most web-frameworks) component-based and event-orientated.
+
+JSF applications are typically built using Facelets, xml/xhtml components. Prior to this other templating languages such as JSP and Shale Clay were also used.
+
+The rest of the Quick Start guide is laughably outdated or non-functional.
+
+### [MyFaces Core User Guide](https://myfaces.apache.org/wiki/core/user-guide.html)
+
 ## IntelliJ
 
 To add JSF support to a basic web project (Tomcat with a Web Module template) is not at all obvious, go to Project Settings (`⌘;`) > Modules, right click the Web dropdown under the Project Module name, choose `+ add` and JSF should be listed there, then the option to download/setup the JSF jars will be available and IntelliJ will work.
