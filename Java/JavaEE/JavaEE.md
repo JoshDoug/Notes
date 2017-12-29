@@ -29,6 +29,7 @@ History:
 * Java EE 6 - 2009, 28 specs, Focus on flexibility, extensibility, profiles, CDI, RESTful web services, EJB Lite, Managed Beans 1.0, and more.
 * Java EE 7 - 2013, 28+ specs (33 APIs/Specs?), growth slows, fine tuning and improved programmer friendliness.
 * Java EE 8 - focus on Cloud and Microservices, improvements to Servlets, CDI, JSON-P, JSF, JAX-RS, Bean Validation, and addition of JSON-B, Security, Configuration, and Health Check - 37 APIs?
+  * [What's new in Java EE 8](http://www.oracle.com/technetwork/java/javaee/overview/index.html)
 * Java EE 9 or whatever comes next will continue this focus on cloud and microservices.
 
 Java EE is:
@@ -39,43 +40,43 @@ Java EE is:
 * Annotation-based configuration, XML is (mostly?) optional, and convention over configuration
 * Contexts and Dependency Injection (CDI)
 
-## Java EE 8 Specifications
+## [Java EE 8 Specifications](http://www.oracle.com/technetwork/java/javaee/tech/index.html)
 
-Spec and version, JSR, included in Web Profile
+Spec and version, JSR, Yes (if included in Web Profile), _*bold and italic*_ if new/updated
 
 * _Java EE Platform_
-  * Java Platform, Enterprise Edition 8 (Java EE 8), JSR 366
+  * _*Java Platform, Enterprise Edition 8 (Java EE 8), JSR 366*_
 * _Web Application Technologies_
-  * Java API for WebSocket 1.1, JSR 356, Yes
-  * Java API for JSON Binding 1.0, JSR 367, Yes
-  * Java API for JSON Processing 1.1, JSR 374, Yes
-  * Java Servlet 4.0, JSR 369, Yes
-  * JavaServer Faces 2.3, JSR 372, Yes
+  * _*Java API for WebSocket 1.1, JSR 356, Yes*_
+  * _*Java API for JSON Binding 1.0, JSR 367, Yes*_
+  * _*Java API for JSON Processing 1.1, JSR 374, Yes*_
+  * _*Java Servlet 4.0, JSR 369, Yes*_
+  * _*JavaServer Faces 2.3, JSR 372, Yes*_
   * Expression Language 3.0, JSR 341, Yes
   * JavaServer Pages 2.3, JSR 245, Yes
   * Standard Tag Library for JavaServer Pages (JSTL) 1.2, JSR 52, Yes
 * _Enterprise Application Technologies_
   * Batch Applications for the Java Platform 1.0, JSR 352
   * Concurrency Utilities for Java EE 1.0, JSR 236
-  * Contexts and Dependency Injection for Java 2.0, JSR 365, Yes
+  * _*Contexts and Dependency Injection for Java 2.0, JSR 365, Yes*_
   * Dependency Injection for Java 1.0, JSR 330, Yes
-  * Bean Validation 2.0, JSR 380, Yes
+  * _*Bean Validation 2.0, JSR 380, Yes*_
   * Enterprise JavaBeans 3.2, JSR 345, Yes
   * Interceptors 1.2, JSR 318, Yes
   * Java EE Connector Architecture 1.7, JSR 322
-  * Java Persistence 2.2, JSR 338, Yes
-  * Common Annotations for the Java Platform 1.3, JSR 250, Yes
+  * _*Java Persistence 2.2, JSR 338, Yes*_
+  * _*Common Annotations for the Java Platform 1.3, JSR 250, Yes*_
   * Java Message Service API 2.0, JSR 343
   * Java Transaction API (JTA) 1.2, JSR 907, Yes
-  * JavaMail 1.6, JSR 919
+  * _*JavaMail 1.6, JSR 919*_
 * _Web Services Technologies_
-  * Java API for RESTful Web Services (JAX-RS) 2.1, JSR 370, Yes
+  * _*Java API for RESTful Web Services (JAX-RS) 2.1, JSR 370, Yes*_
   * Implementing Enterprise Web Services 1.3, JSR 109
   * Web Services Metadata for the Java Platform 2.1, JSR 181
   * Java API for XML-Based RPC (JAX-RPC) 1.1 (Optional), JSR 101
   * Java API for XML Registries (JAXR) 1.0 (Optional), JSR 93
 * _Management and Security Technologies_
-  * Java EE Security API 1.0, JSR 375, Yes
+  * _*Java EE Security API 1.0, JSR 375, Yes*_
   * Java Authentication Service Provider Interface for Containers 1.1, JSR 196, Yes
   * Java Authorization Contract for Containers 1.5, JSR 115
   * Java EE Application Deployment 1.2  (Optional), JSR 88
