@@ -24,6 +24,13 @@ With `int value1 = 10;` & `int value2 = 10`:
 * Postfix: `System.out.println(value1++);` - output would be 10, but `value` would now be 11.
 * Prefix: `System.out.println(++value2);` - ouput and value would be 11.
 
+Using underscore, '_', seperators in lengthy numbers:
+
+* `long bigNum = 10_000_000`
+* `long bigNum = 10000000`
+* Both have the same value in Java, but the first uses underscores so it is easier to read.
+* Introduced in Java 7
+
 Using `BigDecimal`, because `double` isn't always exact:
 
 ```Java
@@ -66,6 +73,10 @@ boolean example = (num != 0);
 ```
 
 Here example would be false. This is neater than using a redundant if-else statement to evaluate the expression and then set the boolean value.
+
+## Objects
+
+An object is an instance of a class. A nonprimitive variable references an object, objects can have multiple references.
 
 ## Conditional Logic
 
