@@ -55,7 +55,9 @@ String formattedBigNum = formatter.format(bigNum);
 System.out.println(formattedBigNum);
 ```
 
-The output here would be the String: `10,000,000`, nicely formatted.
+* The output here would be the String: `10,000,000`, nicely formatted.
+* The formatter can be configured by using a `Locale` instance in the constructor method (`NumberFormat.getNumberInstance(locale)`)
+* Same can be done for currency: `NumberFormat.getCurrencyInstance(new Locale("da", "DK"));`, this would format the currency for Denmark.
 
 Using `BigDecimal`, because `double` isn't always exact:
 
@@ -103,6 +105,15 @@ Here example would be false. This is neater than using a redundant if-else state
 ## Objects
 
 An object is an instance of a class. A nonprimitive variable references an object, objects can have multiple references.
+
+## Dates & Time
+
+Java 8 introduced a new Date and Time API.
+
+* `LocalDate`
+* `LocalDateTime`
+* `LocalTime`
+* `DateTimeFormatter`
 
 ## Conditional Logic
 
