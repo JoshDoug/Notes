@@ -118,6 +118,32 @@ An arbritary number of values can be passed to a method witih a construct called
 
 While it would be possible to just have an array as a parameter and set that up before calling the method, this simplifies the process. To use varargs, the type of the last parameter is followed by an ellipsis, a space, and  the parameter name. The method can be called with any number of that parameter, including none.
 
+An example, but quite a bad example:
+
+```Java
+public int addValues(String ... values) {
+  int result = 0;
+  for(String value : values) {
+    result += Integer.parseInt(value);
+  }
+  return result;
+}
+```
+
+The main method can also use varargs (although you don't get any real benefit from it?):
+
+```Java
+public static void main(String ... args) {
+  // Code
+}
+
+// Instead of:
+
+public static void main(String[] args) {
+  // Code
+}
+```
+
 ## [Autoboxing](https://docs.oracle.com/javase/1.5.0/docs/guide/language/autoboxing.html)
 
 Java feature that aids the management and conversion between `Integer` and `int`.
