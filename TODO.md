@@ -84,6 +84,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 ### Vim & Neovim
 
 * [Starting - nvim startup options](https://neovim.io/doc/user/starting.html)
+* [Vim-Galore](https://github.com/mhinz/vim-galore)
 
 ### Emacs
 

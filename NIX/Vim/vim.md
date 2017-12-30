@@ -14,6 +14,7 @@ Tutorials and useful links:
 * [Neovim Wiki Plugin List](https://github.com/neovim/neovim/wiki/Related-projects#plugins)
 * [Vim File Explorer](http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/)
 * [Awesome Vim - list of resources and tutorials etc](https://github.com/akrawchyk/awesome-vim)
+* [Vim-Galore](https://github.com/mhinz/vim-galore)
 
 ## Vim Modes
 
