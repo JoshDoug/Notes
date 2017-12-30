@@ -106,15 +106,6 @@ Here example would be false. This is neater than using a redundant if-else state
 
 An object is an instance of a class. A nonprimitive variable references an object, objects can have multiple references.
 
-## Dates & Time
-
-Java 8 introduced a new Date and Time API.
-
-* `LocalDate`
-* `LocalDateTime`
-* `LocalTime`
-* `DateTimeFormatter`
-
 ## Conditional Logic
 
 If-Else shorthand: `String s = condition ? trueValue : falseValue;`, condition can be an expression in parentheses as well as a primitive boolean.
@@ -173,12 +164,14 @@ But I guess it cuts down on the number of parantheses which is a plus.
 * Fluent, Immutable, Thread Safe, Easy to use
 * Interoperable with java.util.Date/Calendar
 * ISO 8601
+* Introduced with Java 8
 
 Usage:
 
-LocalDate
-LocalTime
-LocalDateTime
+* `LocalDate`
+* `LocalDateTime`
+* `LocalTime`
+* `DateTimeFormatter`
 
 For logging: `Instant.now()`
 
