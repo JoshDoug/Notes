@@ -15,6 +15,20 @@ Because a `char` is a primitive it has no methods of its own, but the static `Ch
 
 When comparing strings use the `String` classes equals methods.
 
+#### String Building
+
+To avoid allocating multiple objects when manipulating many Strings, the `StringBuilder` class can be used.
+
+```Java
+StringBuilder sb = new StringBuilder("Hello")
+    .append(", ")
+    .append("World")
+    .append("!");
+System.out.println(sb); // Implicitly calls .toString() on sb
+```
+
+This could be done in one line, but it's just to demonstrate the use. It would most likely make sense to use when constructing a string from variables whose values are not known ahead of time (e.g. when looping through an array) or with user input.
+
 ### Numbers
 
 Postfix and Prefix Incrementing:
@@ -30,6 +44,7 @@ Using underscore, '_', seperators in lengthy numbers:
 * `long bigNum = 10000000`
 * Both have the same value in Java, but the first uses underscores so it is easier to read.
 * Introduced in Java 7
+* Another example: `double value = 1_234_567.89`
 
 Formatting primitives when converting them to strings:
 
