@@ -31,6 +31,17 @@ Using underscore, '_', seperators in lengthy numbers:
 * Both have the same value in Java, but the first uses underscores so it is easier to read.
 * Introduced in Java 7
 
+Formatting primitives when converting them to strings:
+
+```Java
+long bigNum = 10_000_000;
+NumberFormat formatter = NumberFormat.getNumberInstance();
+String formattedBigNum = formatter.format(bigNum);
+System.out.println(formattedBigNum);
+```
+
+The output here would be the String: `10,000,000`, nicely formatted.
+
 Using `BigDecimal`, because `double` isn't always exact:
 
 ```Java
