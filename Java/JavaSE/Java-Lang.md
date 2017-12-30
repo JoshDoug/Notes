@@ -110,6 +110,26 @@ An object is an instance of a class. A nonprimitive variable references an objec
 
 If-Else shorthand: `String s = condition ? trueValue : falseValue;`, condition can be an expression in parentheses as well as a primitive boolean.
 
+Switch statement, because I always forget the syntax:
+
+```Java
+switch (monthNumber) {
+    case 1:
+        System.out.println("The month is January");
+        break;
+    case 2:
+        System.out.println("The month is February");
+        break;
+    case 3:
+        System.out.println("The month is March");
+        break;
+    default:
+        System.out.println("A month after March");
+}
+```
+
+As of Java 7 switch statements work with Strings as well as int, byte, char, and short.
+
 ## Lambdas
 
 Lambdas are just functions, useful to replace code like anonymous inner classes.
