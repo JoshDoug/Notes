@@ -102,6 +102,38 @@ boolean example = (num != 0);
 
 Here example would be false. This is neater than using a redundant if-else statement to evaluate the expression and then set the boolean value.
 
+## Arrays
+
+Simple arrays:
+
+* `int[] ints = {1, 2};`
+* `int ints[] = {1, 2};` - valid but weird
+* Not resizable, size can either be set manually, or implicitly (see above, each array will have a lenght of 2)
+* `String[] strings = {"This", "is", "a", "String", "array"};` - can create arrays of objects as well
+* `int[] sized = new int[10];` - create an empty array with a size of 10
+
+Manipulating arrays:
+
+* `Arrays.sort(ints);` - use the Arrays class static methods to manipulate arrays
+* `System.arraycopy(sized, 5, copied, 0, 5)` - copy array sized from index 5 into copied from 0 to 5
+
+Two-dimensional arrays (always forget these exist):
+
+```Java
+String[][] states = new String[3][2]; // Kind of like a matrix?
+states[0][0] = "California";
+states[0][1] = "Sacramento";
+
+states[1][0] = "Oregon";
+states[1][1] = "Salem";
+
+states[2][0] = "Washington";
+states[2][1] = "Olympia";
+```
+
+* When using `states.length` this will refer to the outermost array/leftmost array, in this case the number is 3.
+* Arrays can have more than 2 dimensions, but this would be quite an unusual use case.
+
 ## Objects
 
 An object is an instance of a class. A nonprimitive variable references an object, objects can have multiple references.
