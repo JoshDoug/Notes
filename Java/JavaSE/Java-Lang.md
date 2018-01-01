@@ -111,6 +111,7 @@ Simple arrays:
 * Not resizable, size can either be set manually, or implicitly (see above, each array will have a lenght of 2)
 * `String[] strings = {"This", "is", "a", "String", "array"};` - can create arrays of objects as well
 * `int[] sized = new int[10];` - create an empty array with a size of 10
+* `Object objects[] = new Object[10];` - Example array of Objects (other than String)
 
 Manipulating arrays:
 
@@ -137,6 +138,15 @@ states[2][1] = "Olympia";
 ## Objects
 
 An object is an instance of a class. A nonprimitive variable references an object, objects can have multiple references.
+
+## Constants
+
+While Java does have a `const` keyword, it's not implemented. Instead the `final` keyword is used.
+
+Constants can be usefully used on a class instead of using enums like so: `public static final String EXAMPLE = "ExampleValue";`, these don't need to be encapsulated and can be public because they're a constant.
+
+* It's convention to make a static constant upper case.
+* Constants can be local variables as well: `final String example = "exampleValue";`
 
 ## Conditional Logic
 
