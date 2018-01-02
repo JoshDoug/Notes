@@ -147,3 +147,15 @@ public static void main(String[] args) {
 ## [Autoboxing](https://docs.oracle.com/javase/1.5.0/docs/guide/language/autoboxing.html)
 
 Java feature that aids the management and conversion between `Integer` and `int`.
+
+## Static Initializer
+
+A code block declared as static that contains code which will be run before the first use of the class it is in. This code block only gets run once and will only be run if the class is used.
+
+```Java
+static {
+  // Code goes here
+}
+```
+
+Multiple static blocks can be included anyway in the class source, before variable declarations, before the constructor, after the constructor, between methods, it doesn't matter, but the static blocks will themselves be executed in the order they appear. Any usage of the class they are included in will cause the blocks to be run, e.g. initialising the class or calling a static method of the class, but initialsing a 2nd class or calling a static method again will not cause the blocks to be executed, they will only every execute once.
