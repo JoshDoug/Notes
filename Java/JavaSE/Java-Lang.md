@@ -148,6 +148,10 @@ Constants can be usefully used on a class instead of using enums like so: `publi
 * It's convention to make a static constant upper case.
 * Constants can be local variables as well: `final String example = "exampleValue";`
 
+## Enums
+
+Short for enumeration, enums can be nested within a class (like an anonymous class) or as a separate class.
+
 ## Conditional Logic
 
 If-Else shorthand: `String s = condition ? trueValue : falseValue;`, condition can be an expression in parentheses as well as a primitive boolean.
