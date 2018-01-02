@@ -154,8 +154,18 @@ A code block declared as static that contains code which will be run before the 
 
 ```Java
 static {
-  // Code goes here
+  // Static initializer code goes here
 }
 ```
 
 Multiple static blocks can be included anyway in the class source, before variable declarations, before the constructor, after the constructor, between methods, it doesn't matter, but the static blocks will themselves be executed in the order they appear. Any usage of the class they are included in will cause the blocks to be run, e.g. initialising the class or calling a static method of the class, but initialsing a 2nd class or calling a static method again will not cause the blocks to be executed, they will only every execute once.
+
+## Instance Field Initializer
+
+Similar to a static initialiser, this is a code block that gets executed before an object of a class is instantiated. It's different in that it is executed for each object that is created of the class. This is a useful way to ensure certain code is executed regardless of which constructor is called without duplicating it or wrapping it in a method (and a method would be unable to assign to a final/constant member)).
+
+```Java
+{
+  // Instance field initializer code goes here
+}
+```
