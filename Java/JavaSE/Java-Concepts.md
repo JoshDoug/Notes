@@ -169,3 +169,34 @@ Similar to a static initialiser, this is a code block that gets executed before 
   // Instance field initializer code goes here
 }
 ```
+
+## Nested Classes: Member Class, Local Inner Class, Anonymous Inner Class
+
+TODO: Check these are all accuarate, they seem to conflict with Oracle's explainer.
+
+* [Oracle's nested class examples](https://docs.oracle.com/javase/tutorial/java/javaOO/whentouse.html)
+
+What are they? What's the difference?
+
+* A member class is a class within a class, declared simply as a class. It can be static or non-static.
+* An inner class is declared within a method and cannot contain any static methods or attributes.
+* An anonymous class extends a superclass
+
+If this example is in a method it's an inner class, but if it's just nested within another class then it's a member class:
+
+```Java
+class {
+  // Methods and generic class code
+}
+```
+
+This is an example of an inner class, which would be nested within a method:
+
+```Java
+new Object() { // Doesn't have to be object, it could extend another class
+  // Methods and generic class code
+  public void open() {
+    System.out.println("Open!");
+  }
+}.open();
+```
