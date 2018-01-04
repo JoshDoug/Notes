@@ -219,3 +219,5 @@ String jsonString = stringWriter.toString();
 ```
 
 ## [JSON-B API](http://json-b.net/)
+
+* [Part 1 of 4 part series on JSON-B](https://www.ibm.com/developerworks/java/library/j-javaee8-json-binding-1/index.html)
