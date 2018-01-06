@@ -200,3 +200,9 @@ new Object() { // Doesn't have to be object, it could extend another class
   }
 }.open();
 ```
+
+## Reflection API
+
+* [Java 9 Class Documentation](https://docs.oracle.com/javase/9/docs/api/java/lang/Class.html)
+
+Can be used to instantiate, interrogate, and manipulate classes. The reflection API can be used to break encapsulation but with the strong encapsulation introduced in Java 9 with the module system the reflection API is slightly more limited. It can also be used to dynamically instantiate. You can also walk up an inheritance tree, and much more.
