@@ -206,3 +206,11 @@ new Object() { // Doesn't have to be object, it could extend another class
 * [Java 9 Class Documentation](https://docs.oracle.com/javase/9/docs/api/java/lang/Class.html)
 
 Can be used to instantiate, interrogate, and manipulate classes. The reflection API can be used to break encapsulation but with the strong encapsulation introduced in Java 9 with the module system the reflection API is slightly more limited. It can also be used to dynamically instantiate. You can also walk up an inheritance tree, and much more.
+
+## Using Assert
+
+Asserts can be used by adding the command line `-ea` when running the application. An assert is a Java keyword that throws an exception when the expression returns false.
+
+* `assert false;` - throws an exception
+* `assert checkInput(input)` - throws an exception if the method returns false
+* `assert true;` - doesn't throw an exception
