@@ -42,3 +42,24 @@ public Connection connect() throws SQLException {
 ```
 
 Example code isn't necessarily good code.
+
+## Example Query Code
+
+```Java
+Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+ResultSet resultSet = statement.executeQuery("SELECT * FROM states");
+resultSet.last();
+System.out.println("Number of rows: " + resultSet.getRow());
+
+if (resultSet != null) {
+    resultSet.close();
+}
+if (statement != null) {
+    statement.close();
+}
+if (connection != null) {
+    connection.close();
+}
+```
+
+Example code isn't necessarily good code, sacrficises try-catch for readability.
