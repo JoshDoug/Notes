@@ -15,3 +15,30 @@ There are four types of drivers, because of course:
 * Type 4: 100% Java thing driver - a single driver, downside here is a different driver is needed for each database type
 
 The typical driver used will be the Type 4 MySQL JDBC driver, coordinates: `mysql:mysql-connector-java:5.1.45`
+
+## Example Connection Code
+
+```Java
+private final String USERNAME = "dbuser";
+private final String PASSWORD = "dbpassword";
+private final String CONN_STRING = "jdbc:mysql://localhost/explorecalifornia";
+
+public Connection connect() throws SQLException {
+
+    Connection connection = null;
+    try {
+        connection = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
+        System.out.println("Connection successful.");
+        retun connection;
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+        return null;
+    } finally {
+        if (connection != null) {
+            connection.close();
+        }
+    }
+}
+```
+
+Example code isn't necessarily good code.
