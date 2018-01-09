@@ -34,6 +34,29 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 
 * Create & run a jenkinsci/blueocean container: `docker run -d -p 8080:8080 jenkinsci/blueocean`
 
+#### PHP
+
+Docker provides several 'offical image' types for PHP, a CLI version, ZTS enabled, on Debian Jessie, with FPM enabled, with Apache httpd included, and several combinations of those options. These are provided for major versions 5.6, 7.0, 7.1, and 7.2.
+
+#### MariaDB
+
+* [Docker Store - MariaDB page, scroll down for ReadMe](https://store.docker.com/images/mariadb)
+
+* ```docker container run -d --name test-mariadb --env-file env.list -p 3306:3306 -v `pwd`:/docker-entrypoint-initdb.d mariadb:latest```
+* Shared volume contains a DB export script on the host, which is automatically picked up and executed by mariadb when in the `docker-entrypoint-initdb.d` directory in the container.
+* The `env.list` contains all the environment variables, instead of manually setting them each time. It can be in the same directory that's shared with the container because it will be ignored (anything without a `.sql`, `.sh`, or `.sql.gz` file extension is ignored), or in another folder, specified with a relative path
+* The port forwarding is only necessary when remotely accessing the DB (e.g. via the host), it's not necessary when using other containers in conjunction with mariadb as they should be linked differently.
+
+Env list:
+
+```conf
+# MariaDB environment variables for test setup
+MYSQL_ROOT_PASSWORD=example-password # Replace with proper password
+MYSQL_DATABASE=example-db-name
+MYSQL_USER=dbuser # Non-root user
+MYSQL_PASSWORD=dbpassword # Replace with proper password
+```
+
 ### Old Contaienr Commands - could possibly be deprecated and removed in the future
 
 * `docker ps` - see running containers
