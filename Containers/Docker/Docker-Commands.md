@@ -36,11 +36,12 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 
 #### PHP
 
+* [PHP on Docker Cloud](https://store.docker.com/images/php)
+* [Integration with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
+
 Docker provides several 'offical image' types for PHP, a CLI version, ZTS enabled, on Debian Jessie, with FPM enabled, with Apache httpd included, and several combinations of those options (all options include the CLI). These are provided for major versions 5.6, 7.0, 7.1, and 7.2.
 
 The basic PHP & Apache install work well and require minimal configuration. Linking to a database container may involve some basic work.
-
-* [Integration with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
 
 Setting up debug support (using xDebug) with PhpStorm requires a few extra steps:
 
@@ -90,9 +91,63 @@ MYSQL_PASSWORD=dbpassword # Replace with proper password
 
 #### Container Orchestration - PHP & MariaDB
 
-If you're working with containers your probably want to be working with everything in containers. Using the above examples it would make sense to have a database such as MariaDB running in a container and accessible from the PHP/Apache container.
+If you're working with containers your probably want to be working with everything in containers. Of course that's going to involve multiple containers because working with everything in a single container kind of ruins the point. Using the above examples it would make sense to have a database such as MariaDB running in a container and accessible from the PHP/Apache container.
 
-TODO: Well hopefully I'll figure out how to do that at some point and note it down here. or TKTK?
+With the example below there is an application container containing the PHP code and Apache httpd, this exposes port 80 to port 8080 on the host. There is also the database container, but this doesn't need to expose any ports to the host as only the application will be accessing it and they share a docker created overlay network (i think?). Note that the volumes for each start with `./`, relative paths require this otherwise `docker-compose` believes they are named volumes which require some extra configuration.
+
+Only the PHP/Apache httpd container requires a Dockerfile, the database can be configured with the `env.list`, database script, and the compose file. The PHP/Apache httpd Dockerfile includes an extra line from before, `docker-php-ext-install pdo_mysql` to install the PDO drivers for MySQL.
+
+The `docker-compose.yml` file:
+
+```YAML
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "8080:80"
+    volumes:
+     - ./src/:/var/www/html/
+  db:
+    image: "mariadb:latest"
+    volumes:
+      - ./db-data:/docker-entrypoint-initdb.d
+    env_file: env.list
+```
+
+The Dockerfile for PHP and Apache httpd:
+
+```Dockerfile
+FROM php:5.6-apache
+
+RUN pecl install xdebug-2.5.5 \
+    && docker-php-ext-enable xdebug \
+    && docker-php-ext-install pdo_mysql
+
+# Set up debugger
+RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini
+
+# Provide host ip, on a mac the special dns name can be used
+RUN echo "xdebug.remote_host=docker.for.mac.localhost" >> /usr/local/etc/php/php.ini
+
+# COPY src/ /var/www/html/ - only necessary when creating an image, not useful for general development
+```
+
+The environment variable file for the database, with demo passwords (replace with actual passwords):
+
+```conf
+# MariaDB environment variables for test setup
+MYSQL_ROOT_PASSWORD=my-secret-pw
+MYSQL_DATABASE=explorecalifornia
+MYSQL_USER=dbuser
+MYSQL_PASSWORD=dbpassword
+```
+
+TODO/TKTK : add a basic corresponding project with a simple database and link the repo here so that setup involves cloning the repo and running `docker-compose.yml` to demonstrate it.
+
+Note: When using Compose it isn't necessary to add the runtime arguments to PhpStorm's runtime configuration.
+
+Note: With PhpStorm, if docker-compose will not run then check `Preferences > Docker > Tools` and check the entry for docker-compose, if it is just `docker-compose` then try specifying the absolute path (run `which docker-compose`).
 
 ### Old Contaienr Commands - could possibly be deprecated and removed in the future
 
