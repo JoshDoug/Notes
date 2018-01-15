@@ -88,6 +88,12 @@ MYSQL_USER=dbuser # Non-root user
 MYSQL_PASSWORD=dbpassword # Replace with proper password
 ```
 
+#### Container Orchestration - PHP & MariaDB
+
+If you're working with containers your probably want to be working with everything in containers. Using the above examples it would make sense to have a database such as MariaDB running in a container and accessible from the PHP/Apache container.
+
+TODO: Well hopefully I'll figure out how to do that at some point and note it down here. or TKTK?
+
 ### Old Contaienr Commands - could possibly be deprecated and removed in the future
 
 * `docker ps` - see running containers
