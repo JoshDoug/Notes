@@ -45,7 +45,7 @@ The basic PHP & Apache install work well and require minimal configuration. Link
 
 Setting up debug support (using xDebug) with PhpStorm requires a few extra steps:
 
-* Configure Docker within PhpStorm, set it to use a Dockerfile. Configure the Dockerfile as needed, e.g. bind ports `8080:80`, bind mounts `pwd/src:/var/www/html`, set an image tag and container name. That seems to be the minimum configuration necessary.
+* Configure Docker within PhpStorm, set a configuratoin to use the Dockerfile. Add configuration arguments as needed, e.g. bind ports `8080:80`, bind mounts `pwd/src:/var/www/html`, set an image tag and container name. That seems to be the minimum configuration necessary within PhpStorm.
 * Next add a Docker file that sets up xDebug and configures it
 * Make sure that the Xdebug browser extension is installed and that PhpStorm is listening
 * At this point if the container is running and a break point is enabled it should just work, the container can be run in normal mode and then PhpStorm will automatically switch to debug mode.
@@ -149,7 +149,7 @@ Note: When using Compose it isn't necessary to add the runtime arguments to PhpS
 
 Note: With PhpStorm, if docker-compose will not run then check `Preferences > Docker > Tools` and check the entry for docker-compose, if it is just `docker-compose` then try specifying the absolute path (run `which docker-compose`).
 
-### Old Contaienr Commands - could possibly be deprecated and removed in the future
+### Old Container Commands - could possibly be deprecated and removed in the future
 
 * `docker ps` - see running containers
 * `docker ps -a` - see all containers, including stopped containers
