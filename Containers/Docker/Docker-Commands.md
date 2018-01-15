@@ -36,7 +36,38 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 
 #### PHP
 
-Docker provides several 'offical image' types for PHP, a CLI version, ZTS enabled, on Debian Jessie, with FPM enabled, with Apache httpd included, and several combinations of those options. These are provided for major versions 5.6, 7.0, 7.1, and 7.2.
+Docker provides several 'offical image' types for PHP, a CLI version, ZTS enabled, on Debian Jessie, with FPM enabled, with Apache httpd included, and several combinations of those options (all options include the CLI). These are provided for major versions 5.6, 7.0, 7.1, and 7.2.
+
+* [Integration with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
+
+The basic PHP & Apache install work well and require minimal configuration. Linking to a database container may involve some basic work.
+
+Setting up debug support (using xDebug) with PhpStorm requires a few extra steps:
+
+* Configure Docker within PhpStorm, set it to use a Dockerfile. Configure the Dockerfile as needed, e.g. bind ports `8080:80`, bind mounts `pwd/src:/var/www/html`, set an image tag and container name. That seems to be the minimum configuration necessary.
+* Next add a Docker file that sets up xDebug and configures it
+* Make sure that the Xdebug browser extension is installed and that PhpStorm is listening
+* At this point if the container is running and a break point is enabled it should just work, the container can be run in normal mode and then PhpStorm will automatically switch.
+
+```Dockerfile
+FROM php:7.1-apache
+
+RUN pecl install xdebug-2.5.5 \
+    && docker-php-ext-enable xdebug
+
+# Set up debugger
+RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini
+
+# Provide host ip, on a mac the special dns name can be used:
+# https://docs.docker.com/docker-for-mac/networking/#there-is-no-docker0-bridge-on-macos
+# Optionally this could be set as an environment variable for better cross platform compatibility
+RUN echo "xdebug.remote_host=docker.for.mac.localhost" >> /usr/local/etc/php/php.ini
+
+# COPY src/ /var/www/html/ - only for production
+# Add `-v src/:/var/www/html` to PhpStorm's Docker runtime configuration arguments, not including the backticks
+```
+
+Note: Possible alternative to using the special docker dns name would be the xdebug `xdebug.remote_connect_back=1` option which gets the host ip from the headers, which has possible safety issues but should be fine on a local development environment. See [xdebug remote connect back documentation](https://xdebug.org/docs/all_settings#remote_connect_back).
 
 #### MariaDB
 
