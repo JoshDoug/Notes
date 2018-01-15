@@ -76,6 +76,10 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [YAHT - Yet Another Haskell Tutorial](http://www.umiacs.umd.edu/~hal/docs/daume02yaht.pdf) (PDF)
 * [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.pdf) (PDF)
 
+## Rust
+
+* [Elegant Rust API Design](https://deterministic.space/elegant-apis-in-rust.html)
+
 ## Editors & IDEs
 
 * [Atom IDE](https://ide.atom.io/) & [blog announcement](https://blog.atom.io/2017/09/12/announcing-atom-ide.html)
@@ -85,6 +89,7 @@ List of sites, material, and documentation to read, tutorials to work through, e
 
 * [Starting - nvim startup options](https://neovim.io/doc/user/starting.html)
 * [Vim-Galore](https://github.com/mhinz/vim-galore)
+* [Vim and Java](http://www.averywagar.com/post/configuring-vim-for-java-development)
 
 ### Emacs
 

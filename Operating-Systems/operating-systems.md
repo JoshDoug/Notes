@@ -23,3 +23,4 @@ Will also include notes on virtualisation, as that relates to operating systems.
 * [Bare Metal Rust: toyos-rs](http://www.randomhacks.net/bare-metal-rust/)
 * [intermezzOS](https://intermezzos.github.io/) & [GitHub repos](https://github.com/intermezzos)
 * [Redox](https://www.redox-os.org/)
+* [Standford OS Rust course](https://web.stanford.edu/class/cs140e/)
