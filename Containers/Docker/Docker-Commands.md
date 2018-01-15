@@ -38,16 +38,16 @@ docker container run -d --name web -p 8080:8080 -v `pwd`/webapp.war:/opt/jboss/w
 
 Docker provides several 'offical image' types for PHP, a CLI version, ZTS enabled, on Debian Jessie, with FPM enabled, with Apache httpd included, and several combinations of those options (all options include the CLI). These are provided for major versions 5.6, 7.0, 7.1, and 7.2.
 
-* [Integration with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
-
 The basic PHP & Apache install work well and require minimal configuration. Linking to a database container may involve some basic work.
+
+* [Integration with PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/Docker+Support+in+PhpStorm)
 
 Setting up debug support (using xDebug) with PhpStorm requires a few extra steps:
 
 * Configure Docker within PhpStorm, set it to use a Dockerfile. Configure the Dockerfile as needed, e.g. bind ports `8080:80`, bind mounts `pwd/src:/var/www/html`, set an image tag and container name. That seems to be the minimum configuration necessary.
 * Next add a Docker file that sets up xDebug and configures it
 * Make sure that the Xdebug browser extension is installed and that PhpStorm is listening
-* At this point if the container is running and a break point is enabled it should just work, the container can be run in normal mode and then PhpStorm will automatically switch.
+* At this point if the container is running and a break point is enabled it should just work, the container can be run in normal mode and then PhpStorm will automatically switch to debug mode.
 
 ```Dockerfile
 FROM php:7.1-apache
