@@ -63,3 +63,23 @@ if (connection != null) {
 ```
 
 Example code isn't necessarily good code, sacrficises try-catch for readability.
+
+## Working with a ResultSet
+
+Result sets can either be forward read only, or scrollable.
+
+A result set that can only be read forward is commonly read using a while loop like so:
+
+Whereas a scrollable result set has more options for how to read it, here are some of the methods:
+
+* Methods that move the cursor:
+  * `resultSet.beforeFirst();`
+  * `resultSet.first();`
+  * `resultSet.last();`
+  * `resultSet.afterLast();`
+  * `resultSet.absolute(int row);`
+* Methods that return a boolean:
+  * `resultSet.isBeforeFirst();`
+  * `resultSet.isFirst();`
+  * `resultSet.isLast();`
+  * `resultSet.isAfterLast();`
