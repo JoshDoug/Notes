@@ -19,3 +19,12 @@ Why DevOps? - According to Puppet Labs
 * High-performing IT organisations deploy more frequently, fail less, and recover faster.
 * Lean management and continuous delivery practices help deliver value faster.
 * High performance is achievable whether your apps are greenfield, brownfield, or legacy. What?
+
+## CAMS Model
+
+DevOps core values:
+
+* Culture
+* Automation
+* Measurement - need metrics, but need to watch the right metrics
+* Sharing - openness and transparency
