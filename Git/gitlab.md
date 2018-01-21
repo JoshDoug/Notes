@@ -9,6 +9,7 @@
 * [GitLab Runners](https://docs.gitlab.com/ee/ci/runners/README.html)
 * [Official GitLab Runner](https://docs.gitlab.com/runner/)
 * [Testing PHP Projects](https://docs.gitlab.com/ce/ci/examples/php.html)
+* [GitLab Docker Images](https://docs.gitlab.com/omnibus/docker/README.html) - note the default admin username is `root`.
 
 ## Quick Start Notes
 
@@ -18,3 +19,6 @@ When a pipeline runs successfully (no non-zero return values), then a green chec
 
 ### What is `.gitlab-ci.yml`
 
+### [Testing PHP Projects](https://docs.gitlab.com/ce/ci/examples/php.html)
+
+TODO: Test a PHP Project
