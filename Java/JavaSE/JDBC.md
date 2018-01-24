@@ -122,3 +122,37 @@ WHERE price <= maxPrice;
 END //
 DELIMITER ;
 ```
+
+### Handling multiple values from stored procedures
+
+```Java
+CallableStatement stmt = conn.prepareCall("{call exampleStoredProcedure2(?, ?)})";
+stmt.setDouble(1, attribute); // Set the Parameter, same as before
+stmt.registerOutParameter("total", Types.INTEGER); // Set the 2nd Parameter, `"total"` or `2` would both work
+ResultSet resultSet = stmt.executeQuery(); // Execute the statement, same as before
+int total = stmt.getInt("total"); // stmt.getInt(2); would also work
+```
+
+The SQL that sets the OUT variable can be anywhere, but the SQL query that will return the result set needs to be run last.
+
+Example Stored Procedure from the Lynda.com JDBC course:
+
+```SQL
+GetToursWithCountByPrice
+************************
+
+DROP PROCEDURE IF EXISTS GetToursWithCountByPrice;
+
+DELIMITER //
+CREATE PROCEDURE GetToursWithCountByPrice(IN maxPrice DOUBLE, OUT total INT)
+BEGIN
+
+SELECT Count(*) INTO total FROM tours
+WHERE price <= maxPrice;
+
+SELECT * FROM tours
+WHERE price <= maxPrice;
+
+END //
+DELIMITER ;
+```
