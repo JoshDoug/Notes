@@ -156,3 +156,7 @@ WHERE price <= maxPrice;
 END //
 DELIMITER ;
 ```
+
+## Using JavaBeans with JDBC
+
+Create a typical Java class with private attributes/variables that mirror the column names of the table from which you want to get and manipulate a field from, a field being the equivalent of an instance or object. Like a typical class it should also have getters and setters for each private attribute.
