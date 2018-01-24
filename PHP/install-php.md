@@ -5,7 +5,7 @@
 From source: don't.
 
 Using a package manager: brew, which installs source but automates process.
-PHP specific info when using brew here: https://github.com/Homebrew/homebrew-php
+PHP specific info when using brew [here](https://github.com/Homebrew/homebrew-php)
 
 Using pre-installed system php: avoid if possible (outdated).
 
@@ -36,7 +36,7 @@ php71-fpm installed with homebrew, php71-fpm restart|start|stop, and using defau
 
 brew install phpmyadmin
 
-Neat tool for creating a blowfish hash: http://www.passwordtool.hu/blowfish-password-hash-generator
+Neat tool for [creating a blowfish hash](http://www.passwordtool.hu/blowfish-password-hash-generator)
 Hopefully safe...only using in a testing environment though.
 
 #### [Configuring pma user](http://foundationphp.com/tutorials/pma_config.php)
@@ -59,4 +59,6 @@ Most of a help option to find other commands.
 
 Just download and install, make sure errors are on etc.
 
-## Docker, Vagrant, etc...
+* [Adding/changing addtional PHP versions in MAMP (free version)](https://stackoverflow.com/questions/16783558/how-can-i-add-additional-php-versions-to-mamp)
+
+## Docker, Vagrant, etc
