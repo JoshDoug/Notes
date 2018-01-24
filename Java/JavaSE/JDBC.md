@@ -83,3 +83,13 @@ Whereas a scrollable result set has more options for how to read it, here are so
   * `resultSet.isFirst();`
   * `resultSet.isLast();`
   * `resultSet.isAfterLast();`
+
+## Prepared Statements
+
+Prepated statements are similar to PHP's PDO prepared statements.
+
+```Java
+PreparedStatement stmt = conn.prepareStatement(SQL); // SQL could be in a String variable
+stmt.setDouble(1, attribute); //P arameters are not 0-indexed, they start at 1
+stmt.executeQuery(); // No need to pass the SQL statement in here as it was added earlier
+```
