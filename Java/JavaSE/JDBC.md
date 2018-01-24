@@ -93,3 +93,32 @@ PreparedStatement stmt = conn.prepareStatement(SQL); // SQL could be in a String
 stmt.setDouble(1, attribute); //P arameters are not 0-indexed, they start at 1
 stmt.executeQuery(); // No need to pass the SQL statement in here as it was added earlier
 ```
+
+## Stored Procedures
+
+Stored procedures are kind of like an SQL query that's added directly to the database and can be called from there, instead of having the query embedded in application code, maybe?
+
+Using it in Java, instead of passing an SQL query to the statement, the name of the stored procedure is used with similar syntax to a function:
+
+```Java
+CallableStatement stmt = conn.prepareCall("{call exampleStoredProcedure(?)})";
+stmt.setDouble(1, attribute); // Set the Parameter, same as before
+ResultSet resultSet = stmt.executeQuery(); // Execute the statement, same as before
+```
+
+Example Stored Procedure from the Lynda.com JDBC course:
+
+```SQL
+GetToursByPrice()
+*****************
+
+DROP PROCEDURE IF EXISTS GetToursByPrice;
+
+DELIMITER //
+CREATE PROCEDURE GetToursByPrice(IN maxPrice DOUBLE)
+BEGIN
+SELECT * FROM tours
+WHERE price <= maxPrice;
+END //
+DELIMITER ;
+```
