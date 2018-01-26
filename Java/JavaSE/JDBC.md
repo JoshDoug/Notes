@@ -163,3 +163,10 @@ Create a typical Java class with private attributes/variables that mirror the co
 
 This can then be used to encaspulate reading, inserting, and updating the database along with a manager type class dedicated to managing/creating/retrieving the bean using a set of SQL statements.
 
+## Managing Data with Updateable Result Sets
+
+Result sets can be marked as updateable and then directly altered instead of using an `UPDATE` SQL statement. This approach may not always make sense and not all DBMS support updatable result sets.
+
+* When creating the prepared statement, use the `ResultSet.CONCUR_UPDATABLE` option: `conn.prepareStatement(sql, ResultSet.CONCUR_UPDATABLE);`
+* Update fields on a particular row: `resultSet.updateString("usesrname", "New Username");`
+* Alternatively using a bean: `resultSet.updateString("usesrname", bean.getUsername());`
