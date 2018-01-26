@@ -160,3 +160,6 @@ DELIMITER ;
 ## Using JavaBeans with JDBC
 
 Create a typical Java class with private attributes/variables that mirror the column names of the table from which you want to get and manipulate a field from, a field being the equivalent of an instance or object. Like a typical class it should also have getters and setters for each private attribute.
+
+This can then be used to encaspulate reading, inserting, and updating the database along with a manager type class dedicated to managing/creating/retrieving the bean using a set of SQL statements.
+
