@@ -3,6 +3,8 @@
 Covers notes on HTTP Servers, the related *AMP* stack, other stacks and integrating with related components.
 Notes should be scoped to mention of and a quick summary of a server and relevant versions, links to sites and documentation, and info on integrating with other relevant components. If the explanation gets beyond a certain point it should be moved into its own file.
 
+* [Digital Ocean blog post - Apache vs Nginx](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
+
 ## Apache HTTPD 2.4
 
 ### Combined with PHP
