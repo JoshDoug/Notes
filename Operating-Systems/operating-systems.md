@@ -13,6 +13,7 @@ Will also include notes on virtualisation, as that relates to operating systems.
 * [ME Cleaner](https://github.com/corna/me_cleaner)
 * [heads-wiki](http://osresearch.net/) and [heads github](https://github.com/osresearch/heads)
 * [Tianocore EDK II Wiki](https://github.com/tianocore/tianocore.github.io/wiki/EDK-II) and [GitHub repo](https://github.com/tianocore/edk2)
+* [Linux Boot](https://www.linuxboot.org/)
 
 ### Hobby and Educational Operating Systems
 
