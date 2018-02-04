@@ -145,3 +145,94 @@ Five practices for continuous delivery:
   * Integration & acceptance testing with Robot, Protractor, Cucumber, Selenium, Sauce Labs
 * Artifact repository - Artifactory, Nexus, Docker Hub (or internal Docker registry)
 * Deployment - Rundeck, Deployinator
+
+## Reliability Engineering
+
+Engineering doesn't end with deployment.
+
+* MTTF - Mean Time to Failure
+* MTBF - Mean Time Between Failures
+
+Note - haven't taken notes for reliability engineering. Enterprise level deployment devops isn't relevant to me.
+
+### Metrics and Monitoring
+
+TKTK
+
+### Logging
+
+* Centralised logs.
+* Only log what needs to be logged
+* Only store logs as long as they might be needed
+* Log all you can, but only alert what you must respond to
+* Clearly define log errors
+* Logs change
+
+TKTK
+
+### SRE Toolchain
+
+Monitoring tools:
+
+* graphite
+* grafana
+* statsd
+* ganglia
+* InfluxDB
+* OpenTSDB
+* metrics.dropwizard.io
+* Pingdom
+* Datadog
+* Netuitive
+* Ruxit
+* Librato
+* New Relic
+* AppDynamics
+* Container monitoring tools:
+  * Prometheus
+  * Sysdig
+
+Log Management:
+
+* Splunk
+* Sumo Logic
+* Elk stack
+* Pagerduty
+* VictorOps
+* Flapjack.io
+* Statuspage.io
+
+TKTK
+
+## Resources
+
+Books I will never read (in order of 10 to 1 for some reason):
+
+* Visible Ops
+* Continuous Delivery by Jez Humble & David Farley
+* Release It!
+* Effectivce DevOps
+* Lean Software Development, An Agile Toolkit
+* Web Operations
+* The Practice of Cloud System Administration
+* The DevOps Handbook
+* Leading The Transformation
+* The Phoenix Project - top recommendation
+
+Twitter:
+
+* garethr
+* devopsdotcom
+* ashimmy
+* ernestmueller
+* wickett
+
+Newsletters:
+
+* DevOps Weekly
+
+Websites:
+
+* Devops.com
+* DZone & InfoQ have DevOps channels/categories
+* devopscafe.org - also a podcast

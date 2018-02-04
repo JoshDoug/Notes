@@ -126,3 +126,4 @@ List of sites, material, and documentation to read, tutorials to work through, e
 * [RasPi VPN](http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing/)
 * [Data Science at the CLI Book](https://www.datascienceatthecommandline.com/)
 * [Java Continuous Delivery](https://www.safaribooksonline.com/library/view/continuous-delivery-in/9781491986011/ch01.html)
+* [The Twelve-Factor App](https://12factor.net/)
