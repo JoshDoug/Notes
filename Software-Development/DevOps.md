@@ -204,6 +204,13 @@ Log Management:
 
 TKTK
 
+## Security & DevOps
+
+* [Gauntlt](http://gauntlt.org/)
+* Security should be brought into the fold in the same way Ops was with DevOps, instead of the chuck it over the wall mentality.
+
+TKTK
+
 ## Resources
 
 Books I will never read (in order of 10 to 1 for some reason):
