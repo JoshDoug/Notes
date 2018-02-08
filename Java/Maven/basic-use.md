@@ -58,4 +58,8 @@ Additions to the POM that may be necessary:
 
 This set the compiler version manually, otherwise Maven has a strange habit of defaulting to 1.5...which it doesn't support. This also sets the encoding to avoid the 'build is platform dependent' warning message.
 
-With a basic he
+With a basic hello world, this can now be compiled, packaged, installed, and run.
+
+* `mvn compile` will simply compile the class(es)
+* `mvn package` will package it into a jar (or war)
+* `mvn install` will add the jar to the local maven cache (`.m2`)
