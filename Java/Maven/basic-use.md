@@ -2,6 +2,7 @@
 
 * [Spring's Maven Guide is a great generic introduction to Maven](https://spring.io/guides/gs/maven/)
   * Covers using dependencies, tests, typical commands, packaging
+* [Maven's 5 minute guide](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 
 Generate a default project with a `groupdId`, `artifactId`, and optionally `version` with the quickstart archetype like so: `mvn archetype:generate -DgroupId=com.joshdoug.app -DartifactId=hello -Dversion=0.0.1 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`, replace examples as appropiate. This will create a project with the standard project structure. Alternatively `mvn archetype:generate` can be used which is interactive. This will automatically include JUnit as a dependency (version 3.8.1?!).
 
