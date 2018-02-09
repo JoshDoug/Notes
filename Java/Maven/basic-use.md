@@ -1,5 +1,8 @@
 # Basic Maven Usage
 
+* [Spring's Maven Guide is a great generic introduction to Maven](https://spring.io/guides/gs/maven/)
+  * Covers using dependencies, tests, typical commands, packaging
+
 Generate a default project with a `groupdId`, `artifactId`, and optionally `version` with the quickstart archetype like so: `mvn archetype:generate -DgroupId=com.joshdoug.app -DartifactId=hello -Dversion=0.0.1 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`, replace examples as appropiate. This will create a project with the standard project structure. Alternatively `mvn archetype:generate` can be used which is interactive. This will automatically include JUnit as a dependency (version 3.8.1?!).
 
 Alternatively use a basic POM and set up the directory structure manually, POM example:
@@ -61,5 +64,27 @@ This set the compiler version manually, otherwise Maven has a strange habit of d
 With a basic hello world, this can now be compiled, packaged, installed, and run.
 
 * `mvn compile` will simply compile the class(es)
-* `mvn package` will package it into a jar (or war)
-* `mvn install` will add the jar to the local maven cache (`.m2`)
+* `mvn package` will package it into a jar (or war), it will also compile it first and run any tests
+* `mvn install` will add the jar to the local maven cache (`.m2`), this will also compile, run tests, and package the project
+
+## Adding dependencies
+
+Just add the dependencies to the pom as normal, example:
+
+```XML
+<dependencies>
+    <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.9.9</version>
+    </dependency>
+</dependencies>
+```
+
+Here joda-time provides an alternative Time library to use.
+
+Dependency scopes:
+
+* `compile` - the default scope, they should be available at compile-time
+* `provided` - dependencies that are required for compiling the project code, but will be provided at runtime by a container running the code (e.g. the Java Servlet API)
+* `test` - used for compiling and running tests, but not required for building or running the project's runtime code
