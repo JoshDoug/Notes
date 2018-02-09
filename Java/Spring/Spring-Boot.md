@@ -80,11 +80,9 @@ Example Maven POM:
 
 * [Gradle config](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-gradle-installation)
 
-Interestingly, is Spring-Boot also a build tool as well as an application framework? It's touted as being able to create an executable jar that contains all the dependencies needed to run. Nice.
-Or package as a WAR.
+Spring-Boot builds on top of Maven/Gradle to easily create and package executable jars, wars, etc.
 
-Has opinions, okay? If you have opinions, it will submit to them, cool?
-Has an embedded Tomcat Server...nice? But if you want you can use Jetty instead by bringing those dependencies onto the classpath and Tomcat will step aside. Okay, hadn't heard of Jetty before - hosted on Eclipse.org, project page is not confidence inspiring (and last major update was in 2015..).
+Has an embedded Tomcat Server...nice? But if you want you can use Jetty instead by bringing those dependencies onto the classpath and Tomcat will step aside.
 
 Auto-config and component scanning in an appropriate application context.
 
