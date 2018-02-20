@@ -1,13 +1,15 @@
 # C# Langauge Basics & Characteristics
 
 Characteristics of C#:
+
 * Strongly typed
 * Object Orientated
 * Supports multiple programming paradigms: imperative, declarative, functional, generic
 
 C# and the .NET Framework:
-* .NET supports C#, Visual Basic, JScript, F#?, and others
-* .NET is at the core of ASP.NET, Windows Forms, Windows Presentation Foundation (WPF), and more
+
+* .NET supports C#, Visual Basic, JScript, F#, and others
+* .NET is at the core of ASP.NET, Windows Presentation Foundation (WPF), and more
 
 C# Versions:
 
