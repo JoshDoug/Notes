@@ -1,5 +1,9 @@
 # C# Langauge Basics & Characteristics
 
+* [C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [C# Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/index)
+* [MS Docs: Getting started with C#](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/index)
+
 Characteristics of C#:
 
 * Strongly typed
