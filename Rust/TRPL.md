@@ -17,3 +17,22 @@ Installing on Rust on Linux or macOS can be done by running a single line in a s
 * Local Documentation: `rustup doc`
 * Version: `rustc --version` or `rustc -V` (lowercase v is for verbose output)
   * Output: `rustc 1.22.1 (05e2e1c41 2017-11-22)`:`rustc x.y.z (commit-hash yyyy-mm-dd)`
+
+### 1.2 Hello World
+
+Create a project directory and a `main.rs` file within it containing:
+
+```Rust
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+The Rust style is to indent by four spaces, not a tab.
+
+* Compile it: `rustc main.rs`
+* Run it: `./main` which outputs `Hello, world!`.
+
+#### Hello, Cargo
+
+Cargo is Rust's build system and package manager. Cargo makes a lot of these tasks easier and streamlines them by building the code, downloading the libaries a project depends on, and building those dependencies.
