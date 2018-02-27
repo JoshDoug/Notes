@@ -8,6 +8,7 @@
 * [Running the example: Part 2](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar)
 * [How-to Docs](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#howto)
 * [Spring Guides](https://spring.io/guides)
+* [Spring Initalizr](https://start.spring.io/)
 
 ## [Getting Started](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started)
 
@@ -90,13 +91,8 @@ Automatic servlet mappings - nice
 
 Dispatcher Servlet - handles all URL requests to root contexts
 
-* hmm okay
-
 Embedded Databases and DML/DLL
 DML - Data Manipulation Language
 DDL - Data Definition Language
 
 JPA - Java Persistence API
-
-Spring Intializr - bootstrap your application now https://start.spring.io/
-Generates a project, i selected stuff that i don't understand.
