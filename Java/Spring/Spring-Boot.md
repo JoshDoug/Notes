@@ -83,7 +83,18 @@ Example Maven POM:
 
 Spring-Boot builds on top of Maven/Gradle to easily create and package executable jars, wars, etc.
 
+### Embedded Tomcat
+
 Has an embedded Tomcat Server...nice? But if you want you can use Jetty instead by bringing those dependencies onto the classpath and Tomcat will step aside.
+
+Congfiguring embedded Tomcat can be done by adding to the `application.yml` or `application.properties` file(s):
+
+* `server.port=8000`
+* `server.address=n`, `server.contextPath=n`, etc
+* Session-based configs (cookies, timeouts, etc)
+* Error page path
+* Full list is in the class code: `org.springframework.boot.autoconfigure.web.ServerProperties`
+* Compression can be enabled with `server.compression.enabled=true` (more compression options than this)
 
 Auto-config and component scanning in an appropriate application context.
 
