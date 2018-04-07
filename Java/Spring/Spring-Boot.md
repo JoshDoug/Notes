@@ -9,6 +9,7 @@
 * [How-to Docs](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#howto)
 * [Spring Guides](https://spring.io/guides)
 * [Spring Initalizr](https://start.spring.io/)
+* [Spring Boot and Java 9](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-with-Java-9)
 
 ## [Getting Started](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started)
 
