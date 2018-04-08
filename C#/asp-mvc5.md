@@ -37,6 +37,8 @@ Constraints:
 
 View Model - a View Model is a model specifically built for a view which includes any data and rules specific to that view.
 
+* View model encapsulates all the data necessary for a View in the event that multiple POCOs/Models are necessary for the View.
+
 ### Razor Views
 
 Use `@` to write blocks of code, HTML can be used dynamically (no need to escape the C# like with PHP) within these blocks
@@ -44,3 +46,23 @@ Use `@` to write blocks of code, HTML can be used dynamically (no need to escape
 ### Partial Views
 
 Pretty straightforward.
+
+## Data, Databases, Entity Framework
+
+Using the Entity Framework, an O/RM (Object/Relational Mapper) which maps an object to a tuple in a database.
+
+* `DbContext` - gateway to the database
+* LINQ is used to query DB sets
+
+### Database-first vs Code-first
+
+Probably easiest to go code-first, but database-first is more traditional.
+
+* Database-first - involves designing a database and the classes can be generated from the tables
+* Code-first - the database is generated from the model classes
+
+Using code-first:
+
+* Enable migrations using the Package Manager Console (Tools > NuGet Package Manager > Package Manager Console)
+* Run `enable-migrations` from the console
+* After the initial migratoin(?) run `Add-Migration MigrationName` and `Update-Database`
