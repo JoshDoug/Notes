@@ -37,6 +37,8 @@ const anInteger int = 44
 const anInteger = 45 // No need for : with a const
 ```
 
+Multiple assignments are supported: `i1, i2, i3 := 12, 45, 68` - probably all have to be the same type?
+
 Types:
 
 * `bool`
@@ -55,6 +57,7 @@ Types:
   * `Interfaces`
   * `Channels`
 * Data management: `Pointers` yep Go supports pointers, reference variables
+* Math: `math/big` package includes types for working with decimal numbers
 
 Functions can return variables (kind of like MatLab) and by providing returns it will infer the variables, example:
 
@@ -69,6 +72,31 @@ stringLength, _ := fmt.Println(str1, str2, str3) // Print the length of the stri
 ```
 
 Avoiding assigning a variable is useful because you need to use any assigned variables.
+
+## Strings
+
+* `strings.ToUpper(str)`
+* `strings.ToLower(str)`
+* `str1 == str2` - case sensitive string comparison
+* `strings.EqualFold(str1, str2)` - case insensitive comparison
+
+## Math Operators
+
+Numeric types don't implicitly convert, so you can't add an int to a float.
+
+Using `math/big`:
+
+```Go
+var b1, b2, b3, bigSum big.Float
+b1.SetFloat64(23.5)
+b2.SetFloat64(65.1)
+b3.SetFloat64(76.3)
+
+bigSum.Add(&b1, &b2).Add(&bigSum, &b3) // Use pointers, you can chain the Add method!
+fmt.Printf("BigSum = %.10g\n", &bigSum) // Needs to be passed as a pointer, not directly
+```
+
+* `math` package includes useful functions and constants such as `math.Pi`
 
 ## Output
 
