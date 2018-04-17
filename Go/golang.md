@@ -73,6 +73,43 @@ stringLength, _ := fmt.Println(str1, str2, str3) // Print the length of the stri
 
 Avoiding assigning a variable is useful because you need to use any assigned variables.
 
+### Pointers
+
+Referencing values with pointers:
+
+* Create a pointer: `var p *int` - creates a pointer for an int, but it doesn't point to anything yet
+* Pointers can be changed at runtime to point at other values
+
+Make the pointer use safe:
+
+```Go
+var p *int
+
+if p != nil {
+    fmt.Println("Value of p:", *p)
+} else {
+    fmt.Println("p is nil")
+}
+
+var v int = 42 // Could var v := 42 be used here as well?
+p = &v // connect the pointer to the variable
+
+if p != nil {
+    fmt.Println("Value of p:", *p)
+} else {
+    fmt.Println("p is nil")
+}
+
+// Can set pointers implicitly:
+var floatVal float64 = 42.13
+floatPtr := &floatVal
+fmt.Println("Value 1:", *floatPtr)
+
+*floatPtr = *floatPtr / 31
+fmt.Println("Value 1:", *floatPtr) // Print pointer
+fmt.Println("Value 1:", floatVal) // Print underlying value, both are changed
+```
+
 ## Strings
 
 * `strings.ToUpper(str)`
