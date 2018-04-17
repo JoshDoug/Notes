@@ -98,6 +98,33 @@ fmt.Printf("BigSum = %.10g\n", &bigSum) // Needs to be passed as a pointer, not 
 
 * `math` package includes useful functions and constants such as `math.Pi`
 
+## Dates and Times
+
+Working with dates and times using the `time` package:
+
+```Go
+// Params: year, date constant, day, hour, minute, second, nano second, timezone
+t := time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
+fmt.Printf("Go released at %s\n", t)
+
+now := time.Now()
+fmt.Printf("The time now is %s\n", now)
+
+// You can use methods from the time object that's returned
+fmt.Printf("The month is", t.Month())
+fmt.Printf("The day is", t.Day()) // Numeric
+fmt.Printf("The weekday is", t.Weekday()) // Day name
+
+tomorrow := t.AddDate(0, 0, 1)
+fmt.Printf("Tomorrow is %v, %v %v, %v\n", tomorrow.Weekday(), tomorrow.Month(), tomorrow.Day(), tomorrow.Year())
+
+// Much neater date time formats using constants or using a format string:
+longFormat := "Monday, January 2, 2006" // Sets the date format, not the content
+fmt.Println("Tomorrow is", tomorrow.Format(longFormat))
+shortFormat := "1/2/06"
+fmt.Println("Tomorrow is", tomorrow.Format(shortFormat))
+```
+
 ## Output
 
 ### Printing
