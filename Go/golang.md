@@ -195,6 +195,41 @@ for i := range keys {
 
 Structs are groupings of related values and optionally methods. There's no inheritance supported.
 
+```Go
+// Struct to group pointers of a docker client and associated host URL
+type Handler struct {
+  dc      *client.Client
+  hostUrl *url.URL
+}
+```
+
+Functions as methods of custom types:
+
+```Go
+// Can also make the struct and method names lowercase
+type Dog struct {
+    Breed string
+    Weight int
+    Sound string
+}
+
+// Pass a pointer otherwise a copy is made
+func (d *Dog) Speak() {
+    fmt.Println(d.Sound)
+}
+
+func main() {
+    poodle := Dog{
+        "Poodle",
+        37,
+        "Woof",
+    }
+
+    fmt.Println(poodle)
+    poodle.Speak()
+}
+```
+
 ## Math Operators
 
 Numeric types don't implicitly convert, so you can't add an int to a float.
