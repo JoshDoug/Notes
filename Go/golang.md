@@ -222,7 +222,7 @@ func main() {
     poodle := Dog{
         "Poodle",
         37,
-        "Woof",
+        "Woof", // Final comma is required if assignment is multiline like this
     }
 
     fmt.Println(poodle)
