@@ -81,3 +81,34 @@ func checkError(err error) {
     }
 }
 ```
+
+## Misc
+
+### Working with folders and filepaths
+
+Walking directories:
+
+```Go
+root, _ := filepath.Abs(".") // Absolute path to current directory
+fmt.Println("Processing path", root)
+
+err := filepath.Walk(root, processPath)
+
+if err != nil {
+    fmt.Println("error:", err)
+}
+
+func processPath(path string, info os.FileInfo, err error) error {
+    if err != nil {
+        return err // A non nil error will stop the directory walk
+    }
+    if path != "." {
+        if info.IsDir() {
+            fmt.Println("Directory:", path)
+        } else {
+            fmt.Println("File:", file)
+        }
+    }
+    return nil
+}
+```
