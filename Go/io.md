@@ -22,6 +22,26 @@ str, _ := reader.ReadString('\n') // Using single string makes it a byte value?
 fmt.Println(str)
 ```
 
+### Read a file
+
+```Go
+func main() {
+    fileName := "./hello.txt"
+
+    content, err := ioutil.ReadFile(filename)
+    checkError(err)
+
+    result := string(content) // Convert content from bytes to a string
+    fmt.Println("Read from file:", result)
+}
+
+func checkError(err error) {
+    if err != nil {
+        panic(error)
+    }
+}
+```
+
 ## Output
 
 ### Printing
@@ -33,3 +53,31 @@ fmt.Println(str)
 * `fmt.Printf("Variable types: %T, %T, %T, %T\n", str1, aNumber, aBoolean, aFloat)` get the type of the variable
   * To print the full contents of a struct (including field names) use `"%+v"`
 * `fmt.Sprintf("Variable types: %T, %T, %T, %T\n", str1, aNumber, aBoolean, aFloat)` return as a string and print it
+
+## Writing to a file
+
+```Go
+func main() {
+    content := "Hello from Go!"
+
+    file, err := os.Create("./fromString.txt")
+    checkError(err)
+    defer file.Close()
+
+    ln, err := io.WriteString(file, content)
+    checkError(err)
+
+    fmt.Printf("All done with file of %v characters", ln)
+
+    // Write binary file
+
+    bytes := []byte(content)
+    ioutil.WriteFile("./fromBytes.txt", bytes, 0644)
+}
+
+func checkError(err error) {
+    if err != nil {
+        panic(error)
+    }
+}
+```
