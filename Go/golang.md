@@ -110,12 +110,44 @@ fmt.Println("Value 1:", *floatPtr) // Print pointer
 fmt.Println("Value 1:", floatVal) // Print underlying value, both are changed
 ```
 
-## Strings
+### Strings
 
 * `strings.ToUpper(str)`
 * `strings.ToLower(str)`
 * `str1 == str2` - case sensitive string comparison
 * `strings.EqualFold(str1, str2)` - case insensitive comparison
+
+### Arrays and Slices
+
+Recommended to use slices instead of arrays to represent ordered collections of values.
+
+Array:
+
+```Go
+var colours[3] string // [3] doesn't can have spaces either side
+colours[0] = "Red"
+colours[1] = "Green"
+colours[2] = "Blue"
+fmt.Println(colours)
+
+// Array literal
+var numbers = [5] int {5,3,1,2,4}
+fmt.Println(numbers)
+fmt.Println("Number of colours:", len(colours))
+fmt.Println("Number of numbers:", len(numbers))
+```
+
+Slices:
+
+```Go
+// Empty [] indicates a slice, with a number it would be an array
+var colors = [] string {"Red", "Green", "Blue"}
+fmt.Println(colors)
+
+colors = append(colors, "Purple") // Will return a new slice reference so set the original slice to it
+```
+
+Slices are resizable, have a built in append function, and more.
 
 ## Math Operators
 
