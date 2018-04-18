@@ -16,3 +16,19 @@ func main() {
     fmt.Println(myError)
 }
 ```
+
+Find out if an item is in a data structure like a map:
+
+```Go
+attendance := map[string][bool]{
+    "Ann": true,
+    "Mike": true}
+}
+attended, ok := attendance["Mike"]
+
+if ok {
+    fmt.Println("Mike attended?", attended)
+} else {
+    fmt.Println("No info for Mike")
+}
+```
