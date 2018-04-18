@@ -62,3 +62,14 @@ func fullName(f, l string) (full string, length int) {
     return // No need to explicitly return the values as they're named in the sig
 }
 ```
+
+## Deferring function calls
+
+Using the `defer` keyword sets the code to execute after everything else in the function has finished, so in this case the output would read: "Open the file" and then "Close the file". Defers are in lifo order: last in, first out.
+
+```Go
+func main() {
+    defer fmt.Println("Close the file")
+    fmt.Println("Open the file")
+}
+```
