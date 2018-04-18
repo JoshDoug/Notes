@@ -52,3 +52,13 @@ func fullName(f, l string) (string, int) {
 
 fullName, nameLength := fullName("Josh", "String")
 ```
+
+Another example, here the value names are declared in the function signature:
+
+```Go
+func fullName(f, l string) (full string, length int) {
+    full = f + " " + l // No need for := as the type is already assigned and doesn't need to be infered
+    length = len(full)
+    return // No need to explicitly return the values as they're named in the sig
+}
+```
