@@ -39,3 +39,16 @@ func addAllValues(values ...int) int {
     return sum
 }
 ```
+
+Functions can return multiple values, most commonly this is a normal return value and an error, the error is `nil` if nothings gone wrong. This is important because Go doesn't have conventional structured syntax handling. Example:
+
+```Go
+// Go typically doesn't include get, that's not a Go convention
+func fullName(f, l string) (string, int) {
+    full := f + " " + l
+    length := len(full)
+    return full, length
+}
+
+fullName, nameLength := fullName("Josh", "String")
+```
