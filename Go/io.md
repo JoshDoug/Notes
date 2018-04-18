@@ -139,3 +139,38 @@ func main() {
     fmt.Print(content)
 }
 ```
+
+### Parsing JSON
+
+Struct has to match the JSON object type names, but capitalisation doesn't matter. The struct doesn't have to match the entire JSON object either, just the types you're interested in.
+
+```Go
+type Tour struct {
+    Name, Price string
+}
+
+func main() {
+    content := contentFromServer(url) // pretend above example is refactored to a function
+    tours := toursFromJson(content)
+
+    for _, tour := range tours {
+        price, _, _ := big.ParseFloat(tours.Price, 10, 2, big.ToZero)
+        fmt.Printf("%v ($%.2f)\n", tour.Name, price)
+    }
+}
+
+func toursFromJson(content string) []Tour {
+    tours := make([]Tour, 0, 20)
+
+    decoder := json.NewDecoder(strings.NewReader(content))
+    _, err := decoder.Token()
+    checkError(err)
+
+    var tour Tour
+    for decoder.More() {
+        err := decoder.Decode(&tour)
+        checkError(err)
+        tours = append(tours, tour)
+    }
+}
+```
