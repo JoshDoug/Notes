@@ -1,6 +1,8 @@
 # Go Interfaces
 
-Go does support interfaces. In Go a method is a memeber of a type, not a class. A method can be attatched to a struct and enforced with an interface. The method signatures of the implementing struct has to be identical. If a custom struct has the matching name of an interface, then it must implement it in exactly the same way (has to have same number and type of arguments etc)
+Go does support interfaces. In Go a method is a memeber of a type, not a class. A method can be attatched to a struct and enforced with an interface. The method signatures of the implementing struct has to be identical. If a custom struct has the matching name of an interface, then it must implement it in exactly the same way (has to have same number and type of arguments etc).
+
+Every value in Go is an instance of a type, and every type is an implementation of at least one interface.
 
 ```Go
 type animal interface {
