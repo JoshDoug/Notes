@@ -112,3 +112,30 @@ func processPath(path string, info os.FileInfo, err error) error {
     return nil
 }
 ```
+
+### Read a text file from the web
+
+```Go
+func main() {
+    url := "http://services.explorecalifornia.org/json/tours.php"
+
+    resp, err := http.Get(url)
+
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Printf("Response type: %T\n", resp)
+
+    defer resp.Body.Close()
+
+    bytes, err := ioutil.ReadAll(resp.Body)
+
+    if err != nil {
+        panic(err)
+    }
+
+    content := string(bytes)
+    fmt.Print(content)
+}
+```
