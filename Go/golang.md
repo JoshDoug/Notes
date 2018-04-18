@@ -149,6 +149,52 @@ colors = append(colors, "Purple") // Will return a new slice reference so set th
 
 Slices are resizable, have a built in append function, and more.
 
+### Maps
+
+As with Slices and Arrays(?) memory needs to be allocated with `make()`, example using maps:
+
+```Go
+states := make(map[string]string) // Make a map to store strings with a key of type string
+
+states["WA"] = "Washington"
+states["OR"] = "Oregon"
+states["CA"] = "California"
+fmt.Println(states)
+
+california := states["CA"]
+fmt.Println(california)
+
+delete(states, "OR")
+fmt.Println(states)
+
+states["NY"] = "New York"
+
+// Loop through, k for key, v for value
+for k, v := range states {
+    fmt.Println("%v: %v\n", k, v) // No guarentted order
+}
+
+keys := make([]string, len(states))
+i := 0
+for k := range states {
+    keys[i] = k
+    i++
+}
+sort.Strings(keys) // Requires the "sort" package
+
+fmt.Println("\nSorted")
+
+// Now print in alphabetical order
+for i := range keys {
+    fmt.Println(states[keys[i]])
+}
+
+```
+
+## Structs
+
+Structs are groupings of related values and optionally methods. There's no inheritance supported.
+
 ## Math Operators
 
 Numeric types don't implicitly convert, so you can't add an int to a float.
@@ -203,6 +249,7 @@ fmt.Println("Tomorrow is", tomorrow.Format(shortFormat))
 * `fmt.Printf("Boolean: %v\n", aBoolean)` will insert the result of the boolean into the string
 * `fmt.Printf("Float: %.2f\n", aFloat)` will insert the float into the string and round to 2 decimal places
 * `fmt.Printf("Variable types: %T, %T, %T, %T\n", str1, aNumber, aBoolean, aFloat)` get the type of the variable
+  * To print the full contents of a struct (including field names) use `"%+v"`
 * `fmt.Sprintf("Variable types: %T, %T, %T, %T\n", str1, aNumber, aBoolean, aFloat)` return as a string and print it
 
 ## Input
