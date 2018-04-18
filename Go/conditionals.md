@@ -79,3 +79,53 @@ switch {
 Switches can also include a locally set variable as with an If statement. The `fallthrough` statement can be used to make the switch statement fall through as would happen in Java, basically the reverse of the `break` statement.
 
 ## Loops
+
+Again, no parenthese necessary:
+
+```Go
+for i := 0; i < 10; i++ {
+    fmt.Println("Increment:", i)
+}
+```
+
+Slices and Arrays can also be looped through:
+
+```Go
+colors := []string {"Red", "Green", "Blue"}
+
+for i := 0; i < len(colors); i++ {
+    fmt.Println(colors[i])
+}
+
+// Alternatively the range keyword can be used:
+// Set i to the current index on each loop, same result as prior for loop
+for i := range colors {
+    fmt.Println(colors[i])
+}
+```
+
+Go doesn't have traditional while loops but these can be mimicked by leaving the pre and post conditions:
+
+```Go
+sum := 1
+for sum < 1000 {
+    sum += sum
+    fmt.Println("Sum:", sum)
+}
+```
+
+## Note
+
+The `continue` and `break` statements work in much the same way as they do in other languages.
+
+## GoTo
+
+Go also supports GoTo statements..
+
+```Go
+if i > 10 {
+    goto endofprogram
+}
+
+endofprogram : fmt.Println("end of program")
+```
