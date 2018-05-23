@@ -12,7 +12,14 @@ IJulia can be used by installing the `IJulia` package with `Pkg.add("IJulia")`, 
 
 IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and can include embedded, inline code samples that are runnable.
 
+* Start IJulia notebook: `using IJulia; notebook()`
+* Start detached IJulia notebook: `using IJulia; notebook(detached=true)`
 * Shift + Enter - runs an inline code sample.
+
+## REPL
+
+* `exit()` or `^D` to exit
+* `^L` to clear console
 
 ## Language Basics
 
