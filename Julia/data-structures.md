@@ -32,3 +32,26 @@ pop!(phonebook, "Kramer")
 ```
 
 Dictariones aren't ordered so indexes cannot be used to retrieve items, instead an index will be interpreted as a key.
+
+## Arrays
+
+Arrays are essentially mutable tuples, they are mutable ordered collections. They can contain multiple types.
+
+```
+names = ["Ted", "Robyn", "Barney", "Lily", "Marshall"]
+fibonacci = [1, 1, 2, 3, 5, 8, 13]
+mixture = [1, 1, 2, 3, "Ted", "Robyn"]
+
+names[3] # Returns "Barney"
+names[3] = "Baby Bop" # Set index 3 to "Baby Bop" (strange name)
+```
+
+Arrays can also be edited using `push!` and `pop!` functions.
+
+* Push adds an element to the end of an array
+* Pop removes the last element of an array
+
+```Julia
+push!(fibonacci, 21) # Add 21 to the end of the array
+pop!(fibonacci) # Remove the last value of the array (21)
+```
