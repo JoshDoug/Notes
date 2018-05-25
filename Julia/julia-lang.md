@@ -28,3 +28,40 @@ IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and
 * `;` to use a shell command, *prefix* it with a semicolon
 * `#` single line comment
 * `#=` starts a multiline comments, `=#` ends a multiline comment
+
+### Strings
+
+Julia String documentation [here](https://docs.julialang.org/en/stable/manual/strings/).
+
+* `s1 = "I am a string"`
+* `s2 = """I am also a \n\n\nstring."` - this can be a multiline string with formating etc, it can also include quotation marks
+* `char = 'a'` - single quotes create chars, not strings (single quoting multiple characters will cause an error)
+
+String interpolation can be done using the `$` sign to insert existing variables into a string and to evaluate expressions within a string.
+
+```Julia
+name = "Josh"
+num_fingers = 10
+num_toes = 10
+
+println("My name is $name.")
+println("I have $num_fingers fingers and $num_toes toes.")
+println("That is $(num_fingers + num_toes) digits in all!")
+```
+
+String concatentation:
+
+```Julia
+s3 = "How many cats ";
+s4 = "is too many cats?";
+😺 = 10
+
+string(s3, s4)
+string("I don't know, but ", 😺, " is too few.")
+```
+
+This can also be done with string interpolation.
+
+* `s3*s4` - looks like multiplying but it concatenates them
+* `$s3$s4` - and string interpolation
+* `"hi "^100` - concatenate the string `"hi "` 100 times.
