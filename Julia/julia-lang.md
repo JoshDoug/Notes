@@ -188,3 +188,20 @@ else
     println(N)
 end
 ```
+
+Ternary operators:
+
+```Julia
+x = 5
+y = 8
+
+# Long version
+if x > y
+    x
+else
+    y
+end
+
+# Short version using ternary operator
+(x > y) ? x : y
+```
