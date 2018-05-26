@@ -159,3 +159,32 @@ twod = [i + j for i in 1:m, j in 1:n]
 # 3D Array example
 threed = [(i + j)^k for i in 1:5, j in 1:5, k in 2:2:6]
 ```
+
+## Conditionals
+
+Julia has the trusty old if statement and some shorthands, but no switch statements!
+
+```Julia
+if condition
+    # Do something
+elseif condition
+    # Do something
+else
+    # Do something
+end
+```
+
+Example using FizzBuzz:
+
+```Julia
+N = 42
+if (N % 3 == 0) & (N % 5 == 0)
+    println("FizzBuzz")
+elseif N % 3 == 0
+    println("Fizz")
+elseif N % 5 == 0
+    println("Buzz")
+else
+    println(N)
+end
+```
