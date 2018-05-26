@@ -146,3 +146,16 @@ for i in 1:m, j in 1:n
 end
 B
 ```
+
+Alternatively, the more "Julia" way to create this addition table would be with _array comprehension_.
+
+```Julia
+# 1D array comprehension
+oned = [x for x in 1:10]
+
+# Addition table example
+twod = [i + j for i in 1:m, j in 1:n]
+
+# 3D Array example
+threed = [(i + j)^k for i in 1:5, j in 1:5, k in 2:2:6]
+```
