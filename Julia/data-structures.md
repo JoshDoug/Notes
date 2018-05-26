@@ -31,6 +31,11 @@ phonebook["Kramer"] = "555-FILK" # Add Kramer to the phonebook
 pop!(phonebook, "Kramer")
 ```
 
+* `d = Dict()` creates an empty dictionary with any types: `Dict{Any,Any}`
+* `d = Dict("Josh" => 8675309)` initialises a dictionary of type `Dict{String,Int64}` and the key-value pair `"Josh":8675309`
+* `d = Dict{Any, Any}("Josh" => 8675309)` is the same as the above, but sets the types to `Any`
+* Initialising with multiple entries of different types will also set the type to `Any`
+
 Dictariones aren't ordered so indexes cannot be used to retrieve items, instead an index will be interpreted as a key.
 
 ## Arrays
