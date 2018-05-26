@@ -122,3 +122,27 @@ for friend in myfriends
     println("Hi $friend, it's great to see you!")
 end
 ```
+
+Addition table example, where every entry is the sum of its row and column indices:
+
+```Julia
+m, n = 5, 5 # Can initialise multiple variables on a single line
+A = fill(0, (m, n)) # Creates a 5x5 two dimensional array
+
+# Set the addition table values
+for i in 1:m
+    for j in 1:n
+        A[i, j] = i + j
+    end
+end
+
+A # Output the table
+
+# For loop syntactic sugar
+B = fill(0, (m, n))
+
+for i in 1:m, j in 1:n
+    B[i, j] = i + j
+end
+B
+```
