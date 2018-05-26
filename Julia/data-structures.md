@@ -36,6 +36,8 @@ Dictariones aren't ordered so indexes cannot be used to retrieve items, instead 
 ## Arrays
 
 Arrays are essentially mutable tuples, they are mutable ordered collections. They can contain multiple types.
+Arrays are passed by reference, so with `newarray = oldarray`, altering the `newarray` will also change the `oldarray`.
+To make a new copy of an array use the `copy` function: `newarray = copy(oldarray)`
 
 ```
 names = ["Ted", "Robyn", "Barney", "Lily", "Marshall"]
