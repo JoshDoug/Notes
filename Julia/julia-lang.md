@@ -27,7 +27,7 @@ IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and
 
 * `;` use a semicolon to suppress output for a statement, postfixed, much likes MatLab does.
 * `?` prefix a question mark to get docs for a function
-* `;` to use a shell command, *prefix* it with a semicolon
+* `;` to use a shell command, _prefix_ it with a semicolon
 * `#` single line comment
 * `#=` starts a multiline comments, `=#` ends a multiline comment
 
@@ -67,3 +67,58 @@ This can also be done with string interpolation.
 * `s3*s4` - looks like multiplying but it concatenates them
 * `$s3$s4` - and string interpolation
 * `"hi "^100` - concatenate the string `"hi "` 100 times.
+
+## Loops
+
+While looops:
+
+```Julia
+while condition
+    # Do something
+end
+```
+
+Examples:
+
+```Julia
+# Example 1
+n = 0
+while n < 10
+    n += 1
+    println(n)
+end
+
+# Example 2
+myfriends = ["Ted", "Robyn", "Barney", "Lily", "Marshall"]
+
+i = 1
+while i <= length(myfriends)
+    friend = myfriends[i]
+    println("Hi $friend, it's great to see you!")
+    i += 1
+end
+```
+
+For loops:
+
+```Julia
+for var in loop_iterable
+    # Do Something
+end
+```
+
+Examples:
+
+```Julia
+# Example 1
+for n in 1:10
+    println(n)
+end
+
+# Example 2
+myfriends = ["Ted", "Robyn", "Barney", "Lily", "Marshall"]
+
+for friend in myfriends
+    println("Hi $friend, it's great to see you!")
+end
+```
