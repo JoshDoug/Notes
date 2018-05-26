@@ -1,5 +1,7 @@
 # Julia Language
 
+* [JuliaBox Tutorial Notebooks](https://github.com/JuliaComputing/JuliaBoxTutorials)
+
 ## Juno
 
 Juno is the defacto IDE for Julia, and is a plugin for Atom. Julia can also be used via the REPL on the command line or with a text editor.
