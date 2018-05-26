@@ -50,8 +50,8 @@ names[3] = "Baby Bop" # Set index 3 to "Baby Bop" (strange name)
 
 Arrays can also be edited using `push!` and `pop!` functions.
 
-* Push adds an element to the end of an array
-* Pop removes the last element of an array
+* Push adds an element to the end of an array: `push!(an_array, "value")`
+* Pop removes the last element of an array: `pop!(an_array)`
 
 ```Julia
 push!(fibonacci, 21) # Add 21 to the end of the array
