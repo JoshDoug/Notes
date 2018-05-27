@@ -205,3 +205,13 @@ end
 # Short version using ternary operator
 (x > y) ? x : y
 ```
+
+Short circuit evalutation:
+
+Boolean expressions can be compared like so: `a & b` for two expressions or values a and b. Julia will evaluate this expression eagerly, so: `false & (println("hi"); true)` prints "hi" to stdout before returning false.
+
+On the other hand, when we replace `&` with `&&`, as in `a && b` we get short-circuit evaluation. `b` is only evaluated if `a` is true, which can help us out if evaluating `b` is expensive. For example:
+
+* `false && (println("hi"); true)` returns false without printing "hi".
+
+This means we can use `a && b` to conditionally evaluate `b` if `a` is true!
