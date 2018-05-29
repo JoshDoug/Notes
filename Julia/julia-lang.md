@@ -238,9 +238,15 @@ f(42)
 sayhi2(name) = println("Hi $name, it's great to see you!")
 f2(x) = x^2
 
-# Anonymous function examples
+# Anonymous function examples bound to a variable
 sayhi3 = name -> println("Hi $name, it's great to see you!")
 f3 = x -> x^2
 ```
 
 The long, short, and anonymous functions are all called with the same syntax.
+
+TODO: Look up Julia's anonymous functions
+
+### Duck-typing
+
+Julia functions will just work on whatever inputs make sense - *"if it quacks like a duck, it's a duck"*, so the `sayhi` function example above will work with integers as well as strings, and `f` will work on a matrix. This will not work on inputs that don't make sense, when no behaviour is defined for it.
