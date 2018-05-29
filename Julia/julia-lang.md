@@ -215,3 +215,32 @@ On the other hand, when we replace `&` with `&&`, as in `a && b` we get short-ci
 * `false && (println("hi"); true)` returns false without printing "hi".
 
 This means we can use `a && b` to conditionally evaluate `b` if `a` is true!
+
+## Functions
+
+Julia function can be declared in a few ways, the most typical is similar to most languages, declaring with a keyword, function name, parameters, function logic, and then a function end. Julia doesn't require the usage of return statements, but does support them, otherwise Julia just returns whatever is on the last line of the function.
+
+```Julia
+function sayhi(name)
+    println("Hi $name, it's great to see you!")
+end
+
+function f(x)
+    x^2
+end
+
+# Calling the functions
+sayhi("C-3PO")
+f(42)
+
+# Shorter versions of these functions:
+
+sayhi2(name) = println("Hi $name, it's great to see you!")
+f2(x) = x^2
+
+# Anonymous function examples
+sayhi3 = name -> println("Hi $name, it's great to see you!")
+f3 = x -> x^2
+```
+
+The long, short, and anonymous functions are all called with the same syntax.
