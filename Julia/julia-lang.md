@@ -250,3 +250,17 @@ TODO: Look up Julia's anonymous functions
 ### Duck-typing
 
 Julia functions will just work on whatever inputs make sense - *"if it quacks like a duck, it's a duck"*, so the `sayhi` function example above will work with integers as well as strings, and `f` will work on a matrix. This will not work on inputs that don't make sense, when no behaviour is defined for it.
+
+### Mutating vs. non-mutating functions
+
+By convention, functions followed by `!` alter/mutate their contents, and functions lacking `!` do not, e.g. `sort` and `sort!`.
+
+```Julia
+a = [3, 5, 2]
+b = sort(a)
+a # Output a, a is unchanged
+b # Output b, b is the sorted version of a
+
+sort!(a)
+a # a is now sorted
+```
