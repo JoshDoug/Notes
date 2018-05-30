@@ -264,3 +264,14 @@ b # Output b, b is the sorted version of a
 sort!(a)
 a # a is now sorted
 ```
+
+### Some higher order functions
+
+Higher order functions take other functions as their inputs, this makes them a great place to use anonymous functions!
+
+Looking at map, this is a higher order functions which applies the input function to every element of the data structure passed to it, examples:
+
+* `map(f, [1, 2, 3])` the function `f` (shown above) squares its input, so each value of the array/vector is passed to `f` and squared.
+* `map(x -> x^3, [1, 2, 3])` here the anon function is used, and cubes each value of the array/vector
+* `broadcast(f, [1, 2, 3])`, `broadcast` is a generalisation of `map`, so it can do everything `map` does and more.
+* `f.([1, 2, 3])`, here's some syntactic sugar to use `broadcast` via a shorthand `.`, this is different from `f([1, 2, 3])` which would try and square the entire vector
