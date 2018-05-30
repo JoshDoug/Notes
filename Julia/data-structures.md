@@ -44,7 +44,7 @@ Arrays are essentially mutable tuples, they are mutable ordered collections. The
 Arrays are passed by reference, so with `newarray = oldarray`, altering the `newarray` will also change the `oldarray`.
 To make a new copy of an array use the `copy` function: `newarray = copy(oldarray)`
 
-```
+```Julia
 names = ["Ted", "Robyn", "Barney", "Lily", "Marshall"]
 fibonacci = [1, 1, 2, 3, 5, 8, 13]
 mixture = [1, 1, 2, 3, "Ted", "Robyn"]
@@ -72,7 +72,7 @@ favorites = [["koobideh", "chocolate", "eggs"],["penguins", "cats", "sugarglider
 
 #= Output:
 2-element Array{Array{String,1},1}:
- String["koobideh", "chocolate", "eggs"]   
+ String["koobideh", "chocolate", "eggs"]
  String["penguins", "cats", "sugargliders"]
 =#
 
@@ -80,8 +80,8 @@ numbers = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
 
 #= Output:
 3-element Array{Array{Int64,1},1}:
- [1, 2, 3]   
- [4, 5]      
+ [1, 2, 3]
+ [4, 5]
  [6, 7, 8, 9]
 =#
 ```
@@ -110,13 +110,13 @@ The array has 4 rows, 3 columns, and 2 layers.
 [:, :, 1] =
  0.806548  0.0587993  0.414702
  0.668817  0.664251   0.483232
- 0.933614  0.460968   0.38814 
+ 0.933614  0.460968   0.38814
  0.983742  0.698005   0.467232
 
 [:, :, 2] =
- 0.180356  0.0633663  0.960375 
+ 0.180356  0.0633663  0.960375
  0.840386  0.195604   0.0780185
- 0.797932  0.814768   0.677171 
- 0.955011  0.763886   0.490048 
+ 0.797932  0.814768   0.677171
+ 0.955011  0.763886   0.490048
 =#
 ```
