@@ -20,6 +20,7 @@ IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and
 
 ## REPL
 
+* [Julia REPL Documentation](https://docs.julialang.org/en/latest/stdlib/REPL/)
 * `exit()` or `^D` to exit
 * `^L` to clear console
 
@@ -68,7 +69,7 @@ This can also be done with string interpolation.
 * `$s3$s4` - and string interpolation
 * `"hi "^100` - concatenate the string `"hi "` 100 times.
 
-## Loops
+### Loops
 
 While looops:
 
@@ -160,7 +161,7 @@ twod = [i + j for i in 1:m, j in 1:n]
 threed = [(i + j)^k for i in 1:5, j in 1:5, k in 2:2:6]
 ```
 
-## Conditionals
+### Conditionals
 
 Julia has the trusty old if statement and some shorthands, but no switch statements!
 
@@ -216,7 +217,7 @@ On the other hand, when we replace `&` with `&&`, as in `a && b` we get short-ci
 
 This means we can use `a && b` to conditionally evaluate `b` if `a` is true!
 
-## Functions
+### Functions
 
 Julia function can be declared in a few ways, the most typical is similar to most languages, declaring with a keyword, function name, parameters, function logic, and then a function end. Julia doesn't require the usage of return statements, but does support them, otherwise Julia just returns whatever is on the last line of the function.
 
@@ -247,11 +248,11 @@ The long, short, and anonymous functions are all called with the same syntax.
 
 TODO: Look up Julia's anonymous functions
 
-### Duck-typing
+#### Duck-typing
 
 Julia functions will just work on whatever inputs make sense - *"if it quacks like a duck, it's a duck"*, so the `sayhi` function example above will work with integers as well as strings, and `f` will work on a matrix. This will not work on inputs that don't make sense, when no behaviour is defined for it.
 
-### Mutating vs. non-mutating functions
+#### Mutating vs. non-mutating functions
 
 By convention, functions followed by `!` alter/mutate their contents, and functions lacking `!` do not, e.g. `sort` and `sort!`.
 
@@ -265,7 +266,7 @@ sort!(a)
 a # a is now sorted
 ```
 
-### Some higher order functions
+#### Some higher order functions
 
 Higher order functions take other functions as their inputs, this makes them a great place to use anonymous functions!
 
