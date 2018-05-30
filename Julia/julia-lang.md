@@ -24,6 +24,10 @@ IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and
 * `exit()` or `^D` to exit
 * `^L` to clear console
 
+## Packages
+
+* Package listings at [pkg.julialang.org](https://pkg.julialang.org/) and [juliaobserver.com](https://juliaobserver.com/)
+
 ## Language Basics
 
 * `;` use a semicolon to suppress output for a statement, postfixed, much likes MatLab does.
