@@ -1,5 +1,7 @@
 # Plotting
 
+* [Julia Plots Docs](http://docs.juliaplots.org/latest/)
+* [Julia Plots Tutorial](http://docs.juliaplots.org/latest/tutorial/)
 * [Plotting in Julia](https://julialang.org/downloads/plotting.html)
 * [Plots backends](http://docs.juliaplots.org/latest/backends/)
 * [PlotlyJS.jl GitHub](https://github.com/sglyon/PlotlyJS.jl)

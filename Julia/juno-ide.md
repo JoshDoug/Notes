@@ -1,5 +1,6 @@
 # Juno - Julia IDE
 
+* [Basic Usage Manual](http://docs.junolab.org/latest/man/basic_usage.html)
 * [Atom.jl](https://github.com/JunoLab/Atom.jl)
 * [Juno.jl](https://github.com/JunoLab/Juno.jl)
 
