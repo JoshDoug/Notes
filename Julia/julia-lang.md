@@ -1,5 +1,6 @@
 # Julia Language
 
+* [Julia Documentation](https://docs.julialang.org/en/stable/)
 * [JuliaBox Tutorial Notebooks](https://github.com/JuliaComputing/JuliaBoxTutorials)
 
 ## Juno
@@ -32,7 +33,7 @@ Julia has about 1800 native registered packages and growing. Julia also has firs
 
 The first use of a package on a given Julia installation requires it to be explicitly added: `Pkg.add("Example")`. The package can then be loaded for a notebook, REPL, program, etc (each session) using the `using` keyword: `using Example`.
 
-* `Pkg.add("Colors")
+* `Pkg.add("Colors")`
 * `using Colors`
 * `palette = distinguishable_colors(100)` - use package
 * `rand(palette, 3, 3)`
