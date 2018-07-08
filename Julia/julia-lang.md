@@ -12,6 +12,7 @@ Juno is the defacto IDE for Julia, and is a plugin for Atom. Julia can also be u
 IJulia can be used by installing the `IJulia` package with `Pkg.add("IJulia")`, then simply run `notebook()` from the REPL.
 
 * [Using Git and Jupyter notebooks together](http://timstaley.co.uk/posts/making-git-and-jupyter-notebooks-play-nice/)
+* [Getting Started with Jupyter and Julia](https://lectures.quantecon.org/jl/getting_started.html)
 
 IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and can include embedded, inline code samples that are runnable.
 
