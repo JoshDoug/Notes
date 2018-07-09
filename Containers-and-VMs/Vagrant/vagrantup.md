@@ -26,3 +26,8 @@ Installation, just install VirtualBox and Vagrant.
 * Vagrant commands can be used on machines using their id without being in the same directory, e.g.
   * To stop a vm: `vagrant halt 1a2b3c4d`
   * To remove a vm: `vagrant destroy 1a2b3c4d`
+
+## Vagrant Synced Folders
+
+Folders between the host and vagrant box can be synced by configuring the VagrantFile, by default the folder containing the Vagrantfile is shared with the `/vagrant' folder on the vm.
+To add a synced folder edit the Vagrantfile: `config.vm.synced_folder "../test-data", "/vagrant_data"`.
