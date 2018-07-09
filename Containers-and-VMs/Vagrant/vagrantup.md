@@ -31,3 +31,8 @@ Installation, just install VirtualBox and Vagrant.
 
 Folders between the host and vagrant box can be synced by configuring the VagrantFile, by default the folder containing the Vagrantfile is shared with the `/vagrant' folder on the vm.
 To add a synced folder edit the Vagrantfile: `config.vm.synced_folder "../test-data", "/vagrant_data"`.
+
+## Vagrant Networking
+
+The first networking option in the Vagrantfile is an insecure portforward, instead the latter options specifying `127.0.0.1`, localhost, or a specific IP address are safer to use: `config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"`.
+Additionally to setup a private host only network use: `config.vm.network "private_network", type: "dhcp"`, this will create a private network with Virtualbox(?) accessible only via the host.
