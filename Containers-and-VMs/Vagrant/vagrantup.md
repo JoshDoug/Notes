@@ -52,3 +52,34 @@ end
 The username and password for the graphical shell are both `vagrant`.
 
 There can be some additional options required when using different providers.
+
+## Vagrant Provisioners
+
+These are scripts defined within the Vagrantfile or externally in a seperate file. By default provisioners are executed the first time a box runs and are used to set up a box for a particular purpose, e.g. install software, set configurations, copy files across to the box. There are also a Docker provisioner and configuration management provisioners for Chef, Puppet, Ansible, and Salt.
+
+Adding Nginx to a box, the base section/code block is included but commented out in the default Vagrantfile:
+
+```Vagrantfile
+config.vm.provision "shell", inline: <<-SHELL
+  sudo apt-get update
+  sudo apt-get install -y nginx
+end
+```
+
+To do this with an external provisioner file:
+
+```Vagrantfile
+config.vm.provision "shell", path: "provisioner/nginx-install.sh"
+end
+```
+
+and with the provisioner script at the relative path `provisioners/nginx-install.sh`
+
+```Vagrantfile
+sudo apt-get update
+sudo apt-get install -y nginx
+```
+
+These provisions need* to be applied on the first run, if the box has already been booted once then it needs to be removed, `vagrant destroy`, and then run `vagrant up` which will start up a fresh box.
+
+*Vagrant includes options to run these scripts on each boot in case that is required with a `run:always` parameter.
