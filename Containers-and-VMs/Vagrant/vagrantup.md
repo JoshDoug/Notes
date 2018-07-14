@@ -83,3 +83,10 @@ sudo apt-get install -y nginx
 These provisions need* to be applied on the first run, if the box has already been booted once then it needs to be removed, `vagrant destroy`, and then run `vagrant up` which will start up a fresh box.
 
 *Vagrant includes options to run these scripts on each boot in case that is required with a `run:always` parameter.
+
+## Vagrant multi-machine Vagrantfile
+
+Typically applications are deployed on mulitple servers, with a database server/container/vm and an application server, this is also possible with Vagrant. These multi-box Vagrant setups can then be connected via a private network.
+
+To connect to a box via SSH the command needs to specify the box name: `vagrant ssh node`
+
