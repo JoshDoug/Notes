@@ -2,6 +2,9 @@
 
 * [Julia Documentation](https://docs.julialang.org/en/stable/)
 * [JuliaBox Tutorial Notebooks](https://github.com/JuliaComputing/JuliaBoxTutorials)
+* [Cheatsheet](http://math.mit.edu/~stevenj/Julia-cheatsheet.pdf)
+* [JuliaDocs Getting Started](https://docs.julialang.org/en/stable/manual/getting-started/#Getting-Started-1)
+* [Julia Editor Support](https://github.com/JuliaEditorSupport)
 
 ## Juno
 
