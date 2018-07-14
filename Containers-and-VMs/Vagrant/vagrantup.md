@@ -3,7 +3,8 @@
 Installation, just install VirtualBox and Vagrant.
 
 * [Vagrant](https://www.vagrantup.com/)
-* [Find Boxes](https://app.vagrantup.com/boxes/search)
+* [Find Boxes with Vagrant Cloud](https://app.vagrantup.com/boxes/search)
+* [Vagrant Plugins](https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins)
 
 ## Running your first box
 
@@ -18,6 +19,7 @@ Installation, just install VirtualBox and Vagrant.
 * Check status of all vagrant boxes: `vagrant global-status`
 * Start a box: `vagrant up`
 * Suspend a box: `vagrant suspend`
+* Resume/unsuspend a box: `vagrant resume`
 * Forcefully shut down: `vagrant halt`
 * Remove a vm: `vagrant destroy`
 * SSH into a vm: `vagrant ssh`, when SSH'd in running `exit` will return you to the host cli
@@ -27,6 +29,9 @@ Installation, just install VirtualBox and Vagrant.
   * To stop a vm: `vagrant halt 1a2b3c4d`
   * To remove a vm: `vagrant destroy 1a2b3c4d`
 * List local boxes: `vagrant box list`
+* Run provisioners again: `vagrant up --provision`, to stop the provisioners running use `--no-provision`
+
+Tip for removing multiple VMs on macOS: select hash id with `CMD + Alt` key for rectangular text selection and copy it to clipboard (easier than remembering SED & AWK args), run `vagrant destroy $(pbpaste)`, this will still require confirming you want to destroy each box, might be possible to automate this with the `yes` command.
 
 ### Vagrant Snapshots
 
@@ -135,7 +140,7 @@ When a Vagrant base box is created a Vagrantfile is packaged with it (right?).
 * To package a box run the command `vagrant package --vagrantfile config/Vagrantfile --output node_dev_env.box`
   * Here the vagrantfile to be packaged with the box is specified by a relative path, in this case in a config dir, and the name of the box is specified with the `--output` argument.
   * Vagrant will halt the box if it is running before starting the packaging process
-* To add the box to the local box cache: `vagrant add box_name box_name.box`, first parameters sets the name of the box, the second specifies the box created during the packaging process
+* To add the box to the local box cache: `vagrant box add box_name box_name.box`, first parameters sets the name of the box, the second specifies the box created during the packaging process
 * The box can then be used locally: `vagrant init box_name`
 
 ## Vagrant Cloud
@@ -150,3 +155,7 @@ Finally the box can be released so that it is publically accessible, there's a b
 * Packaged Vagrantfile
 * Vagrantfile at `~/.vagrant.d` (if it exists, sets user-profile defaults)
 * Local environment Vagrantfile
+
+## Vagrant Plugins
+
+TKTK/TODO
