@@ -118,3 +118,14 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-16.04" # Should this be here?
 end
 ```
+
+## Creating a Vagrant base box
+
+When a Vagrant base box is created a Vagrantfile is packaged with it (right?).
+
+* To package a box run the command `vagrant package --vagrantfile config/Vagrantfile --output node_dev_env.box`
+  * Here the vagrantfile to be packaged with the box is specified by a relative path, in this case in a config dir, and the name of the box is specified with the `--output` argument.
+  * Vagrant will halt the box if it is running before starting the packaging process
+* To add the box to the local box cache: `vagrant add box_name box_name.box`, first parameters sets the name of the box, the second specifies the box created during the packaging process
+* The box can then be used locally: `vagrant init box_name`
+
