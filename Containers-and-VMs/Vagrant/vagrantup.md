@@ -28,6 +28,14 @@ Installation, just install VirtualBox and Vagrant.
   * To remove a vm: `vagrant destroy 1a2b3c4d`
 * List local boxes: `vagrant box list`
 
+### Vagrant Snapshots
+
+Vagrant supports vm snapshotting for several providers, usable with a few commands:
+
+* vagrant snapshot save snap_name
+* vagrant snapshot list
+* vagrant snapshot restore snap_name
+
 ## Vagrant Synced Folders
 
 Folders between the host and vagrant box can be synced by configuring the VagrantFile, by default the folder containing the Vagrantfile is shared with the `/vagrant' folder on the vm.
