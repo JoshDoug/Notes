@@ -26,6 +26,7 @@ Installation, just install VirtualBox and Vagrant.
 * Vagrant commands can be used on machines using their id without being in the same directory, e.g.
   * To stop a vm: `vagrant halt 1a2b3c4d`
   * To remove a vm: `vagrant destroy 1a2b3c4d`
+* List local boxes: `vagrant box list`
 
 ## Vagrant Synced Folders
 
