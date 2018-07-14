@@ -130,3 +130,8 @@ When a Vagrant base box is created a Vagrantfile is packaged with it (right?).
 * To add the box to the local box cache: `vagrant add box_name box_name.box`, first parameters sets the name of the box, the second specifies the box created during the packaging process
 * The box can then be used locally: `vagrant init box_name`
 
+## Vagrant file load order
+
+* Packaged Vagrantfile
+* Vagrantfile at `~/.vagrant.d` (if it exists, sets user-profile defaults)
+* Local environment Vagrantfile
