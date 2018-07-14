@@ -23,6 +23,12 @@ IJulia sets up a Jupyter notebook which is accessed via a browser (normally) and
 * Start detached IJulia notebook: `using IJulia; notebook(detached=true)`
 * Shift + Enter - runs an inline code sample.
 
+Slightly more complex but most likely better way to install IJulia, this seems to ensure the Julia version stays up to date:
+
+* Install Jupyter (without using Anaconda) with pip: `pip install jupyter` (might need to use `pip3`)
+* In the Julia REPL use: `ENV["JUPYTER"]="jupyter"`
+* Install the IJulia package: `Pkg.add("IJulia")`, if it's already installed then it can be either removed or switched from using the environment variable
+
 ## REPL
 
 * [Julia REPL Documentation](https://docs.julialang.org/en/latest/stdlib/REPL/)
