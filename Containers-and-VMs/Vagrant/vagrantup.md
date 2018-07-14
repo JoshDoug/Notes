@@ -130,6 +130,13 @@ When a Vagrant base box is created a Vagrantfile is packaged with it (right?).
 * To add the box to the local box cache: `vagrant add box_name box_name.box`, first parameters sets the name of the box, the second specifies the box created during the packaging process
 * The box can then be used locally: `vagrant init box_name`
 
+## Vagrant Cloud
+
+The packaged Vagrant base box can be uploaded to Vagrant's free public hosting, Vagrant Cloud. Private boxes require a payed account.
+Adding a box requires a free account, then a new box can be added from the dash which leads to a form where the org/name, visibility, description, version, and version description are set.
+Once this is done the packaged box can be upload by adding a provider, alternatively an external URL can be used if the box is hosted elsewhere.
+Finally the box can be released so that it is publically accessible, there's a button to release the box which will lead to another page where another release button can be selected (just to be extra sure you don't accidentally release a box?). The box will now be publically access using the `vagrant init` command.
+
 ## Vagrant file load order
 
 * Packaged Vagrantfile
