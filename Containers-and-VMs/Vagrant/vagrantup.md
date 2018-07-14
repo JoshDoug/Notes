@@ -90,3 +90,31 @@ Typically applications are deployed on mulitple servers, with a database server/
 
 To connect to a box via SSH the command needs to specify the box name: `vagrant ssh node`
 
+Stripped down example of a mongo and node multi-machine setup:
+
+```Ruby
+Vagrant.configure("2") do |config|
+
+  config.vm.define "mongo" do |mongo|
+    mongo.vm.box = "bento/ubuntu-16.04"
+    mongo.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+    end
+    mongo.vm.network "private_network", ip: "192.168.33.20"
+    mongo.vm.provision "file", source: "files/mongod.conf", destination: "~/mongod.conf"
+    mongo.vm.provision "shell", path: "provisioners/install-mongo.sh"
+  end
+
+  config.vm.define "node" do |node|
+    node.vm.box = "bento/ubuntu-16.04"
+    node.vm.network "forwarded_port", guest: 3000, host: 8080
+    node.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+    end
+    node.vm.network "private_network", ip: "192.168.33.10"
+    node.vm.provision "shell", path: "provisioners/install-node.sh"
+  end
+
+  config.vm.box = "bento/ubuntu-16.04" # Should this be here?
+end
+```
