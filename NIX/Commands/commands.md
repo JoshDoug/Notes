@@ -2,9 +2,10 @@
 
 Any command sufficiently complex *cough* GREP *cough*, will/should be broken out into its own file.
 
-ls
-stat
-file
+* ls
+* stat
+* file
+* [`pidof`](https://linux.die.net/man/8/pidof) - find the process ID of a running program
 
 ## wget
 
