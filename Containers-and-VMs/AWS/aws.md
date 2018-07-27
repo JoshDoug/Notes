@@ -2,6 +2,13 @@
 
 * [AWS News Blog](https://aws.amazon.com/blogs/aws/)
 
+## Temp, AWS Service List
+
+* AWS Elastic Beanstalk
+* AWS OpsWorks
+* AWS CloudFormation
+* AWS CodeDeploy
+
 ## Data
 
 ### EBS
@@ -19,6 +26,8 @@ There are two types of EBS volumes: standard volumes and provisioned IOPS volume
 * [Amazon S3 Website](https://aws.amazon.com/s3/)
 
 ### RDS (Amazon Relational Data Service)
+
+Supports MySQL, Postgres, Aurora, MariaDB, Oracle, SQL Server
 
 ## Networking
 
