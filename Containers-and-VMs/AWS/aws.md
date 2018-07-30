@@ -71,3 +71,23 @@ AWS has locations in several geographic regions, and each region has availabilit
 ### AMI
 
 An AMI (Amazon Machine Image) is a base image, used to launch instances or clone environments from. Similar to a Docker Image (although for a VM instead of a container)?
+
+## Amazon Fully Managed Services
+
+### Elastic Beanstalk
+
+Most convenient, least control. Fully managed service, just upload the application, supported platforms include:
+
+* Apache Tomcat
+* Apache HTTPD Server for PHP and Python applications
+* NGINX or HTTPD for Node.js applications
+* Passenger or Puma for Ruby applications
+* Microsoft IIS 7.5, 8.0, and 8.5 for .NET apps
+* Java SE
+* Docker
+* Go
+
+Beanstalk can also automatically pushing application & server logs to S3.
+
+Config files can be written in YAML or JSON.
+
