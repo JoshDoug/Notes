@@ -91,3 +91,15 @@ Beanstalk can also automatically pushing application & server logs to S3.
 
 Config files can be written in YAML or JSON.
 
+### OpsWorks
+
+OpsWorks balances convenience and control and has two offerings, AWS OpsWorks for Chef Automate, and AWS OpsWorks Stacks.
+
+Chef is used for configuration. OpsWorks provides two primary parts to the OpsWorks service, the OpsWorks provisioning enginge, and the OpsWorks agent.
+
+#### Stacks
+
+Organised into Layers and Stacks. A stack contains several layers such as a Web Server, App Server, and Database, multiple Stacks of these might include test, staging, and production environments.
+
+#### Chef Automate
+
