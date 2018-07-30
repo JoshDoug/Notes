@@ -103,3 +103,10 @@ Organised into Layers and Stacks. A stack contains several layers such as a Web 
 
 #### Chef Automate
 
+### CloudFormation
+
+Cloudfoundation and Cloudformer(?).
+
+#### CloudFormer
+
+CloudFormer helps to create a CloudFormation template from an existing stack. CloudFormer is itself a CloudFormation stack.
