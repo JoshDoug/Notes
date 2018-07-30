@@ -9,7 +9,7 @@
 * AWS CloudFormation
 * AWS CodeDeploy
 
-## Data
+## Data Storage
 
 ### EBS
 
@@ -21,9 +21,25 @@ There are two types of EBS volumes: standard volumes and provisioned IOPS volume
 * IOPS volumes can be used to specify I/O performance
 * EBS volumes are stored on S3
 
+### EFS
+
+File storage.
+
 ### S3 (Simple Storage Service)
 
 * [Amazon S3 Website](https://aws.amazon.com/s3/)
+
+S3 has no defined limit, it can scale and grow with the storage needs of an organisation, but each object is limited to 5TB.
+
+Object storage. Objects are stored in a flat organisation, referred to as buckets in S3 and retrieved by a unique ID (key). The flat hierarchy allows for greater scalability and faster retrieval than a normal file hierachy.
+
+RRS - Reduced Redundancy Storage, this comes at a reduced cost and can be used for easily reproduced data.
+
+S3 works on an eventual consistency model, so the objects are highly available and highly durable, but the data consistency is only achieved eventually. It takes time to propagate the changes to all the replicas.
+
+### Glacier
+
+Object storage used for archiving data, data retrieval time is several hours and should only be used for very infrequently accessed data. High durability is guaranteed and Glacier has a much lower cost than S3 (which it is built on).
 
 ### RDS (Amazon Relational Data Service)
 
@@ -50,6 +66,7 @@ AWS has locations in several geographic regions, and each region has availabilit
 * [EC2 Getting Started Guide](https://docs.aws.amazon.com/console/ec2/EC2_GetStarted.html)\
 * [EC2 Getting Started with Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html)
 * [Using EC2 through the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-ec2.html)
+* [EC2 Console](http://console.aws.amazon.com/ec2)
 
 ### AMI
 
