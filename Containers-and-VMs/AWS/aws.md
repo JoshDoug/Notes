@@ -1,5 +1,6 @@
 # Amazon Web Services
 
+* [AWS Documentation](https://aws.amazon.com/documentation/)
 * [AWS News Blog](https://aws.amazon.com/blogs/aws/)
 
 ## Temp, AWS Service List
@@ -152,6 +153,8 @@ Lambda is a serverless architecture.
 ### Identity and Access Management (IAM)
 
 Don't use the master account to access or manage resources, create seperate users, groups, roles, and permissions in IAM and only allow access where necessary and only to the specific resources that are needed.
+
+### Virtual Private Cloud (VPC)
 
 ## Caching
 
