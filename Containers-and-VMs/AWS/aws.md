@@ -136,3 +136,29 @@ Not really sure what this does.
 ### Simple Notification Service (SNS)
 
 Similar to an observer pattern, but application instead of class level. Can be used to monitor the health of an application.
+
+### AWS CloudSearch
+
+A search engine, providing fast, reliable, relevant, and quality results to a query.
+
+### Amazon API Gateway
+
+A fully managed service.
+
+### AWS Lambda
+
+Lambda is a serverless architecture.
+
+### Identity and Access Management (IAM)
+
+Don't use the master account to access or manage resources, create seperate users, groups, roles, and permissions in IAM and only allow access where necessary and only to the specific resources that are needed.
+
+## Caching
+
+### AWS Elasticache
+
+Supports two popular caching engines, Memcached and Redis.
+
+### AWS CloudFront
+
+CloudFront is a CDN service with regional caching.
