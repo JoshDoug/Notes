@@ -128,3 +128,7 @@ Basically, SQS provides a buffer for messages sent between components.
 ### Simple Workflow Service (SWF)
 
 Not really sure what this does.
+
+### Simple Notification Service (SNS)
+
+Similar to an observer pattern, but application instead of class level. Can be used to monitor the health of an application.
