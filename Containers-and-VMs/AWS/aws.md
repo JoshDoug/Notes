@@ -72,7 +72,7 @@ AWS has locations in several geographic regions, and each region has availabilit
 
 An AMI (Amazon Machine Image) is a base image, used to launch instances or clone environments from. Similar to a Docker Image (although for a VM instead of a container)?
 
-## Amazon Fully Managed Services
+## Amazon Services
 
 ### Elastic Beanstalk
 
@@ -110,3 +110,21 @@ Cloudfoundation and Cloudformer(?).
 #### CloudFormer
 
 CloudFormer helps to create a CloudFormation template from an existing stack. CloudFormer is itself a CloudFormation stack.
+
+### CodeDeploy
+
+* Component service
+* Coordinates deployments across EC2 instances
+* Not framework, language, or stack dependent
+* Scalableh
+
+### Simple Message Queue Service (SQS)
+
+Reliable, highly scalable, distributed system for passing messegaes between application components.
+Allows for decoupling and improved failure tolerance. These queues allow components to communicate asynchronously, to support concurrency and remain highly available, and to better hanlde load spikes.
+
+Basically, SQS provides a buffer for messages sent between components.
+
+### Simple Workflow Service (SWF)
+
+Not really sure what this does.
