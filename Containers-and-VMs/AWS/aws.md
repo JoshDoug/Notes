@@ -45,6 +45,10 @@ Object storage used for archiving data, data retrieval time is several hours and
 
 Supports MySQL, Postgres, Aurora, MariaDB, Oracle, SQL Server
 
+### Amazon DynamoDB
+
+NoSQL, non-relational, schema-less. Data is stored on SSDs and auto replicated across multiple availability zones, data speed is very fast.
+
 ## Networking
 
 * Elastic IPs - static but not instance specific, instead they are created at the account level and easily mapped and remapped to instances. This allows for simple failovers between servers to easily reroute traffic, this also works great for rolling out  application update.
