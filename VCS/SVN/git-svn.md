@@ -39,3 +39,10 @@ Using a handy container to simulate the server hosting the SVN repo.
   * Clone (or in svn lingo 'checkout') the project trunk: `svn co svn://localhost:3961/jds-repo/test-project/trunk .`
   * Instead of the whole project just the trunk is cloned as that's where the actual project code will live, the `.` at the end avoids the trunk directory being created locally
   * The local base project dir should now contain a `.svn` directory
+  * Clone the project with `git svn`: `git svn clone svn://127.0.0.1:3961/jds-repo/test-project/trunk .` - these seems to need the localhost ip instead of hostname.
+* Start adding some files:
+  * `echo "Hello World" > test.txt` in the svn working dir (locally copy)
+  * `svn status` to see the current state of the repo
+  * `svn add test.txt` to add the file to the repo
+  * `svn commit -m "Add test file"` to commit the file with a commit message
+  * `git svn rebase` to pull that change into the `git svn` repo. **Not totally sure this is the right/best option but it works.**
