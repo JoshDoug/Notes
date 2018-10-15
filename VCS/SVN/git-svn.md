@@ -34,3 +34,8 @@ Using a handy container to simulate the server hosting the SVN repo.
   * Create the project root: `svn mkdir svn://localhost:3961/jds-repo/test-project -m "Create project root" --username jds`
   * Create the trunk, tags, and branches directories with this format: `svn mkdir svn://localhost:3961/jds-repo/test-project/trunk -m "Create project trunk"`
   * Note when creating the trunk the username didn't need to be supplied again
+* Clone project:
+  * Create the base project dir and cd into it: `mkdir test-project && cd test-project`
+  * Clone (or in svn lingo 'checkout') the project trunk: `svn co svn://localhost:3961/jds-repo/test-project/trunk .`
+  * Instead of the whole project just the trunk is cloned as that's where the actual project code will live, the `.` at the end avoids the trunk directory being created locally
+  * The local base project dir should now contain a `.svn` directory
