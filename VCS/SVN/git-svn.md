@@ -15,7 +15,7 @@ Using a handy container to simulate the server hosting the SVN repo.
 * Setup svn admin password: `docker exec -t svn-server htpasswd -b /etc/subversion/passwd user pass` (substitue a username for user and a password for pass)
 * `docker pause svn-server`
 * `docker unpause svn-server`
-* Check connection: `svn info svn://localhost:3960` - this will fail if there are no repos, but the error message should indiciate whether the client successfully connected to the container, might also need to try `127.0.0.1` instead of `localhost`
+* Check connection: `svn info svn://localhost:3960` - this will fail if there are no repos, but the error message should indiciate whether the client successfully connected to the container, might also need to try `127.0.0.1` instead of `localhost`, to check a specific project use `svn info svn://127.0.0.1:3960/Test2` or via `http`: `svn info http://127.0.0.1/svn/Test2` (http requires the `/svn/` path included for some reason)
 * Create a repo locally with `svnadmin create Test`
 * Create a repo via the container (only works for garethflowers svn server container): `docker exec -it container-name svnadmin create repo-name`
 * Clone repo with `git svn clone svn://127.0.0.1:3960/Test2` or over HTTP with a username `git svn clone http://127.0.0.1/svn/Test2 --username jds`
