@@ -8,14 +8,16 @@
 
 ### svnadmin
 
-### svnlook
-
 ### svnserve
 
 Start and svn server: `svnserve -d -r /Full/Path/To/Repo/Dirs` where the repo is in the directory that svnserve points to (I think?).
 E.g. `svnserve -d -r /Users/jds/Documents/Repos` and there's a repo within called `TestRepo`, with the path `/Users/jds/Documents/Repos/TestRepo`.
 This repo can be accessed like other svn repos via the computers IP address (try either localhost, `127.0.0.1`, or the computers local ip address e.g. `192.168.1.15`).
 To stop `svnserve` run `killall svnserve` or terminate it from Activity Monitor.
+
+### svnlook
+
+### svnsync
 
 ### svn
 
