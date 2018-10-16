@@ -7,6 +7,8 @@ Using a handy container to simulate the server hosting the SVN repo.
 * [GitHub hosting Docker image details](https://github.com/elleFlorio/svn-docker)
 * [Alternative svn container](https://hub.docker.com/r/garethflowers/svn-server/)
 * [And related GitHub repo](https://github.com/garethflowers/docker-svn-server)
+* [Archived blog post: Installation and Configuration of SVN](https://web.archive.org/web/20110314195306/http://www.duchnik.com:80/tutorials/vc/installing-and-configuring-svn-on-centos)
+* [Archived blog post: SVN Command Reference & Repo Setup Steps](https://web.archive.org/web/20110314195306/http://www.duchnik.com:80/tutorials/vc/installing-and-configuring-svn-on-centos)
 
 ## Setup elleFlorio
 
