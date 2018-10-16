@@ -39,6 +39,10 @@ A repository holding multiple projects can be set up in a couple ways. One optio
 
 ### [Chapter 2: Basic Usage](http://svnbook.red-bean.com/en/1.7/svn.tour.html)
 
+#### Getting Data into Your Repository
+
+There are two ways to do this: `svn import` and `svn add`.
+
 ### [Chapter 9: Subversion Complete Reference](http://svnbook.red-bean.com/en/1.7/svn.ref.html)
 
 Complete reference of all subversion commands.
