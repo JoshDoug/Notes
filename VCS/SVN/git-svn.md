@@ -9,6 +9,9 @@ Using a handy container to simulate the server hosting the SVN repo.
 * [And related GitHub repo](https://github.com/garethflowers/docker-svn-server)
 * [Archived blog post: Installation and Configuration of SVN](https://web.archive.org/web/20110314195306/http://www.duchnik.com:80/tutorials/vc/installing-and-configuring-svn-on-centos)
 * [Archived blog post: SVN Command Reference & Repo Setup Steps](https://web.archive.org/web/20110314195306/http://www.duchnik.com:80/tutorials/vc/installing-and-configuring-svn-on-centos)
+* [Git Docs: git-svn](https://git-scm.com/docs/git-svn)
+* [Git Book: Git and Subversion](https://git-scm.com/book/en/v1/Git-and-Other-Systems-Git-and-Subversion)
+* [Atlassian: git-svn tips & tricks](https://www.atlassian.com/blog/git/git-svn-tips-and-tricks)
 
 ## Setup elleFlorio
 
