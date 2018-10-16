@@ -68,11 +68,16 @@ Working locally:
 Pull incoming changes:
 
 * `git svn rebase` - this is similar to a `git pull` when working with `git` or `svn update` when working with `svn`, you should stash or commit local changes before doing this
-* `git svn fetch` - fetches the data but doesn't update the local commits
+* `git svn fetch` - fetches the data but doesn't update the local commits, this doesn't seem to cause issues with uncommited changes in the local working directory, the changes can then be merged using a rebase, e.g. in the IntelliJ VCS Git Log section
 
 Pushing to the remote:
 
 * `git svn dcommit` - do something?
+
+Ignoring files:
+
+* `git svn show-ignore` - show any files currently ignored by svn
+* `git svn create-ignore` - add any files currently ignored by svn to a `.gitignore`, probably don't want to commit this though
 
 ### Simple git svn workflow
 
@@ -81,3 +86,5 @@ Pushing to the remote:
 * Make changes
 * Commit changes: `git svn commit`
 * Push changes: `git svn dcommit`
+
+* Might be an idea to alias a command or script that covers `git stash && git svn rebase && git stash pop`
