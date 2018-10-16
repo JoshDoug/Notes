@@ -88,3 +88,11 @@ Ignoring files:
 * Push changes: `git svn dcommit`
 
 * Might be an idea to alias a command or script that covers `git stash && git svn rebase && git stash pop`
+
+## Using git-svn and IntelliJ IDEA
+
+IDEA doesn't seem to be git-svn aware despite some efforts by the community to make it work well with git-svn, maybe I'm just not finding the right settings. But IntelliJ works just fine as a local git client, then for git-svn specific commands the terminal can be used. Examples:
+
+* Update working directory with no unstaged changes: `git svn rebase`
+* Fetch changes: `git svn fetch`, then merge using the rebase command, this allows the local directory to be updated even if it contains local changes
+* Push changes: `git svn dcommit` - same as `svn update`
