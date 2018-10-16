@@ -38,6 +38,24 @@ To stop `svnserve` run `killall svnserve` or terminate it from Activity Monitor.
   * `svn update` - update all code (think this should be run in repo root..)
   * `svn update /path/to/file` - update specific file or directory (not sure if this can be a relative path or just absolute)
 
+* Add:
+  * `svn add /path/to/newFile` - add file to svn versioning
+
+* Commit:
+  * `svn commit` - update all code (run from repo root or with path to repo root?)
+  * `svn commit /path/to/file` - commit specific files instead of every changed file
+  * `svn commit -m "Useful commit message"` - add commit message inline (instead of opening default editor)
+
+* Diff:
+  * `svn diff` - list differences between local working copy and the repository
+  * `svn diff /path/to/file` - list differences between local file and file on the repository
+
+Other commands:
+
+* delete
+* rename
+* copy
+
 ## Hosting an SVN repository
 
 Repository access URLs
