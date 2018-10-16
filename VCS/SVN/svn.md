@@ -29,6 +29,12 @@ Repository access URLs
 | `svn://` | Access via custom protocol to an svnserve server |
 | `svn+ssh://` | Same as `svn://`, but through an SSH tunnel |
 
+### Repository Structue: Trunks, Tags, and Branches
+
+More of a convention. Project has a main directory called `trunk` which is the primary directory for the project files. Branches are copies of the project where changes are being worked on and are stored in the `branch` directory. Finally the `tag` directory is used to store important snapshots of the repository, such as release versions.
+
+A repository holding multiple projects can be set up in a couple ways. One option is top level `trunk`, `branch`, and `tag` directories which have a directory under them for each project. so the trunk directory has projects 1, 2, and 3, and the branch and tag folders also have directories for projects 1, 2, and 3. The other option is for each project to have a top level folder and then the trunk, branch, and tag directories are within the project folder.
+
 ## SVN Book
 
 ### [Chapter 2: Basic Usage](http://svnbook.red-bean.com/en/1.7/svn.tour.html)
