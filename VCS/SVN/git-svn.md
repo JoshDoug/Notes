@@ -13,6 +13,16 @@ Using a handy container to simulate the server hosting the SVN repo.
 * [Git Book: Git and Subversion](https://git-scm.com/book/en/v1/Git-and-Other-Systems-Git-and-Subversion)
 * [Atlassian: git-svn tips & tricks](https://www.atlassian.com/blog/git/git-svn-tips-and-tricks)
 
+## Notes to self
+
+Local setup:
+
+* svn stuff is in `~/Learning/svn`
+* svn test-repo is in `./testing-git-svn/temp-svn-root/`
+* git-svn test-repo is in `./testing-git-svn/git-svn-root/`
+* repos root is in `./testing-git-svn/alt-svn-root` which contains the `jds-root` repo
+* since all the repo info already exists it should be fine (hopefully) to just use the `docker run` command to start the server, the local repo should already contain the config and user/password so that doesn't need setting up
+
 ## Setup elleFlorio
 
 * Create a folder for where all the SVN repos will be stored and cd into it (so the `pwd` docker volume command picks it up)
