@@ -76,6 +76,11 @@ More of a convention. Project has a main directory called `trunk` which is the p
 
 A repository holding multiple projects can be set up in a couple ways. One option is top level `trunk`, `branch`, and `tag` directories which have a directory under them for each project. so the trunk directory has projects 1, 2, and 3, and the branch and tag folders also have directories for projects 1, 2, and 3. The other option is for each project to have a top level folder and then the trunk, branch, and tag directories are within the project folder.
 
+## SVN Ignore
+
+* [SVN ignore documentation](http://svnbook.red-bean.com/nightly/en/svn.advanced.props.special.ignore.html)
+* [Stackoverflow answer for SVN ignore](https://stackoverflow.com/questions/86049/how-do-i-ignore-files-in-subversion)
+
 ## SVN Book
 
 ### [Chapter 2: Basic Usage](http://svnbook.red-bean.com/en/1.7/svn.tour.html)
