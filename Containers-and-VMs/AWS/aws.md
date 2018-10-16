@@ -2,6 +2,7 @@
 
 * [AWS Documentation](https://aws.amazon.com/documentation/)
 * [AWS News Blog](https://aws.amazon.com/blogs/aws/)
+* [AWS Simple Monthyl Calculator](https://calculator.s3.amazonaws.com/index.html)
 
 ## Temp, AWS Service List
 
@@ -72,6 +73,11 @@ AWS has locations in several geographic regions, and each region has availabilit
 * [EC2 Getting Started with Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html)
 * [Using EC2 through the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-ec2.html)
 * [EC2 Console](http://console.aws.amazon.com/ec2)
+* [Install a LAMP Stack on Amazon Linux 2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html)
+
+### Generating a Key Pair
+
+Under network and security > Key Pairs.
 
 ### AMI
 
@@ -165,3 +171,7 @@ Supports two popular caching engines, Memcached and Redis.
 ### AWS CloudFront
 
 CloudFront is a CDN service with regional caching.
+
+### AWS Bastion Hosts
+
+* [AWS Bastion Docs](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html)
