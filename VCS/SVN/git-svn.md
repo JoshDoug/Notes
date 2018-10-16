@@ -45,9 +45,32 @@ Using a handy container to simulate the server hosting the SVN repo.
   * Instead of the whole project just the trunk is cloned as that's where the actual project code will live, the `.` at the end avoids the trunk directory being created locally
   * The local base project dir should now contain a `.svn` directory
   * Clone the project with `git svn`: `git svn clone svn://127.0.0.1:3961/jds-repo/test-project/trunk .` - these seems to need the localhost ip instead of hostname.
+    * or maybe `git svn clone svn://127.0.0.1:3961/jds-repo/test-project . -s`
 * Start adding some files:
   * `echo "Hello World" > test.txt` in the svn working dir (locally copy)
   * `svn status` to see the current state of the repo
   * `svn add test.txt` to add the file to the repo
   * `svn commit -m "Add test file"` to commit the file with a commit message
   * `git svn rebase` to pull that change into the `git svn` repo. **Not totally sure this is the right/best option but it works.**
+
+## Using git-svn
+
+Cloning the repo:
+
+* `git svn clone uri/to/repo` - this clones (or inits and fetchs) the repo. Depending on the size of the repo this can take a long time, for a repo with 100s or 1000s of commits it could take several hours or days
+* `git svn clone uri/to/repo -T trunk -b branches - t tags` - tells git the layout of the repo, if these directories are named differently then change accordingly
+* `git svn clone uri/to/repo -s` - a shorthand for the above if the repo follows the standard directory layout
+
+Working locally:
+
+* `git svn commit -am "Add and commit some test file"`
+
+Pull incoming changes:
+
+* `git svn rebase` - this is similar to a `git pull` when working with `git` or `svn update` when working with `svn`, you should stash or commit local changes before doing this
+* `git svn fetch` - fetches the data but doesn't update the local commits
+
+Pushing to the remote:
+
+* `git svn dcommit` - do something?
+
