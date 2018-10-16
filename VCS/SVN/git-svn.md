@@ -74,3 +74,10 @@ Pushing to the remote:
 
 * `git svn dcommit` - do something?
 
+### Simple git svn workflow
+
+* TKTK: Stash or commit any local changes: `git stash` or `git svn commit`
+* Update local working copy: `git svn rebase`
+* Make changes
+* Commit changes: `git svn commit`
+* Push changes: `git svn dcommit`
