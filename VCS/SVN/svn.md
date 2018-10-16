@@ -19,10 +19,24 @@ To stop `svnserve` run `killall svnserve` or terminate it from Activity Monitor.
 
 ### svn
 
+* `svn help` - typical nix style help command
+  * `svn help help`
+  * `svn help add`
+
 * Clone repo:
-  * `svn clone https://svn.apache.org/repos/asf/subversion/trunk subversion`
+  * `svn checkout https://svn.apache.org/repos/asf/subversion/trunk subversion`
   * `svn co https://svn.apache.org/repos/asf/subversion/trunk subversion`
   * `svn co svn://localhost:3960/repo-name/trunk repo-name`
+
+* List: `svn list svn://localhost:3961/jds-repo/test-project/trunk`
+
+* Status: `svn status` - only provides local info
+  * `svn status -u` - add working revision and incoming changes info
+  * `svn status -v` - full revision info on every item
+
+* Update:
+  * `svn update` - update all code (think this should be run in repo root..)
+  * `svn update /path/to/file` - update specific file or directory (not sure if this can be a relative path or just absolute)
 
 ## Hosting an SVN repository
 
