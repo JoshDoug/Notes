@@ -1,4 +1,4 @@
-# Vue.js
+# Vue.js - revisit this when 3.0 ships
 
 * [Vue Site](https://vuejs.org/)
 * [Guide/Introduction](https://vuejs.org/v2/guide/)
