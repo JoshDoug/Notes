@@ -15,3 +15,5 @@ To create a project use the command: `npm init create-react-app my-project` or a
 * `npm run build` - bundles the app into static files for production.
 * `npm test` - starts the test runner.
 * `npm run eject` - removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+
+Alternatively `create react app` can be installed globally like other tools: `npm install -g create-react-app` and then just `create-react-app my-project` to create a new project.
