@@ -5,6 +5,7 @@
 * [Cheatsheet](http://math.mit.edu/~stevenj/Julia-cheatsheet.pdf)
 * [JuliaDocs Getting Started](https://docs.julialang.org/en/stable/manual/getting-started/#Getting-Started-1)
 * [Julia Editor Support](https://github.com/JuliaEditorSupport)
+* [Creating a Project](https://docs.julialang.org/en/latest/stdlib/Pkg/#Creating-your-own-projects-1)
 
 ## Juno
 
@@ -34,6 +35,8 @@ Slightly more complex but most likely better way to install IJulia, this seems t
 * [Julia REPL Documentation](https://docs.julialang.org/en/latest/stdlib/REPL/)
 * `exit()` or `^D` to exit
 * `^L` to clear console
+* `]` to use the `Pkg` prompt
+* `;` to use `shell`
 
 ## Language Basics
 
