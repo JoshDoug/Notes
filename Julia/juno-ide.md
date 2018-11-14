@@ -12,3 +12,7 @@ Troubleshooting: for error `Pkg.add("Atom")`, run Julia repl from a shell outsid
 ## Shortcuts
 
 * Run a section of code
+
+## Settings
+
+Project settings - Juno doesn't pick up environments automatically, but the flag `--project` can be added to the Atom Julia Client package settings under 'additional Julia Startup Arguments' section.
