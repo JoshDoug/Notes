@@ -3,6 +3,7 @@
 * [AWS Documentation](https://aws.amazon.com/documentation/)
 * [AWS News Blog](https://aws.amazon.com/blogs/aws/)
 * [AWS Simple Monthyl Calculator](https://calculator.s3.amazonaws.com/index.html)
+* [AWS Free Tier Signup](https://aws.amazon.com/free/)
 
 ## Temp, AWS Service List
 
