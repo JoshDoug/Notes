@@ -10,4 +10,4 @@
 * [Gadfly](http://gadflyjl.org/stable/) & [Gadfly Tutorial](http://gadflyjl.org/stable/tutorial.html#Tutorial-1)
 
 There are a few different ways to plot in Julia, including using PyPlot, this section will look at using `Plots.jl`.
-Plots.jl allow seamless changing of backends such as `gr()`, and `plotlyjs()` backends. I don't know what that means though.
+Plots.jl provides a consistent API which allows seamless changing of backends such as `gr()`, and `plotlyjs()` backends.
