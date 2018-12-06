@@ -9,3 +9,8 @@
 * [Rust Language Server (RLS)](https://github.com/rust-lang-nursery/rls) - currently incubating in the Rust Nursery.
 * [Learning Rust Tutorial](https://learning-rust.github.io/)
 * [Rust WASM blog post](https://mgattozzi.com/rust-wasm)
+
+## Visual Studio Plugin Support
+
+* [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates#overview)
+* [Rusty Code](https://marketplace.visualstudio.com/items?itemName=saviorisdead.RustyCode#overview)
