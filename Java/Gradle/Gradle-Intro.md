@@ -1,8 +1,11 @@
-# Gradle Introduction
-so far, nicer than Maven's intro..
-https://docs.gradle.org/3.4.1/userguide/userguide.html#gsc.tab=0
-# Chapter 1. Introduction
-## Brief Introduction
+# [Gradle Introduction](https://docs.gradle.org/3.4.1/userguide/userguide.html#gsc.tab=0)
+
+So far, nicer than Maven's intro..
+
+## Chapter 1. Introduction
+
+### Brief Introduction
+
 A very flexible general purpose built tool like Ant. - hmm need to look into Ant more, TKTK
 Switchable, build-by-convention frameworks like Maven, but without the lock in. Nice, maven's 'everything should be maven approach is...great until you need something that isn't a maven project'
 
@@ -18,15 +21,18 @@ Groovy build scripts - more stuff to learn, yay?
 
 A rich domain model for describing your build - what?
 
-# Chapter 2. Overview
-https://docs.gradle.org/3.4.1/userguide/overview.html
-## 2.1 Features
+## Chapter 2. [Overview](https://docs.gradle.org/3.4.1/userguide/overview.html)
+
+### 2.1 Features
+
 A list of some of Gradle's features:
 
 Declarative builds and build-by-convention
+
 * At the heart of Gradle lies a rich DSL (Domain Specific Language) based on Groovy. Provides declarative Language elements that can be assembled as one likes. Those elements also provide build-by-convention support for Java, Groovy, OSGi, Web, and Scala projects.
 
 Language for dependency based programming
+
 * stuff
 
 Structure your build
@@ -59,8 +65,4 @@ The Gradle wrapper
 Free and open source
 *
 
-## 2.2 Why Groovy?
-
-
-
-Buffer
+### 2.2 Why Groovy?
