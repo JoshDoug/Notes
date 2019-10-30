@@ -2,6 +2,10 @@
 
 Info on Databases and related tools & utilities.
 
+## Types of Databases and how they differ
+
+So Relational, NoSQL, Document, Object stores, Graph, Key Value, In-Memory, etc etc.
+
 ## List of SQL Servers and basic summaries about them
 
 * [MySQL](https://www.mysql.com/)
