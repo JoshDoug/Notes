@@ -4,15 +4,13 @@
 * [AWS News Blog](https://aws.amazon.com/blogs/aws/)
 * [AWS Simple Monthyl Calculator](https://calculator.s3.amazonaws.com/index.html)
 * [AWS Free Tier Signup](https://aws.amazon.com/free/)
+* [AWS Tools](https://aws.amazon.com/tools/)
 
-## Temp, AWS Service List
+## Compute
 
-* AWS Elastic Beanstalk
-* AWS OpsWorks
-* AWS CloudFormation
-* AWS CodeDeploy
+## Containers
 
-## Data Storage
+## Storage
 
 ### EBS
 
@@ -30,27 +28,13 @@ File storage.
 
 ### S3 (Simple Storage Service)
 
-* [Amazon S3 Website](https://aws.amazon.com/s3/)
+* [S3 Notes](S3.md).
 
-S3 has no defined limit, it can scale and grow with the storage needs of an organisation, but each object is limited to 5TB.
+## Database
 
-Object storage. Objects are stored in a flat organisation, referred to as buckets in S3 and retrieved by a unique ID (key). The flat hierarchy allows for greater scalability and faster retrieval than a normal file hierachy.
+## Security, Identity, & Compliance
 
-RRS - Reduced Redundancy Storage, this comes at a reduced cost and can be used for easily reproduced data.
-
-S3 works on an eventual consistency model, so the objects are highly available and highly durable, but the data consistency is only achieved eventually. It takes time to propagate the changes to all the replicas.
-
-### Glacier
-
-Object storage used for archiving data, data retrieval time is several hours and should only be used for very infrequently accessed data. High durability is guaranteed and Glacier has a much lower cost than S3 (which it is built on).
-
-### RDS (Amazon Relational Data Service)
-
-Supports MySQL, Postgres, Aurora, MariaDB, Oracle, SQL Server
-
-### Amazon DynamoDB
-
-NoSQL, non-relational, schema-less. Data is stored on SSDs and auto replicated across multiple availability zones, data speed is very fast.
+* [IAM Notes](IAM.md)
 
 ## Networking
 
