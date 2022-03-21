@@ -21,3 +21,21 @@ IAM Entites
 
 Principals
 * A person or application that uses the AWS account root user, an IAM user, or an IAM role to sign in and make requests to AWS. Principals include federated users and assumed roles.
+
+### [Users in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html)
+
+Only service control policies (SCPs) in organizations can restrict the permissions that are granted to the root user.
+
+#### [IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html#intro-identity-users)
+
+IAM users are users within the AWS account. Each user can have a password to access the AWS Console, and/or an access key to make programmatic requests. Users can also be applications, an IAM user doesn't have to be a person. E.g. you might create a user for an on-premise application that needs AWS access.
+
+#### [Permissions and policies in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html)
+
+TODO
+
+#### [What is ABAC](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html)
+
+Attribute-based access control is an authorisation strategy that defines permissions based on attributes....
+
+TODO
