@@ -5,6 +5,15 @@
 * [AWS Simple Monthyl Calculator](https://calculator.s3.amazonaws.com/index.html)
 * [AWS Free Tier Signup](https://aws.amazon.com/free/)
 * [AWS Tools](https://aws.amazon.com/tools/)
+* [AWS Getting Started](https://aws.amazon.com/getting-started/)
+
+## [Overview of Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html?pg=gs&sec=syj&refid=ce1f55b8-6da8-4aa2-af36-3f11e9a449ae)
+
+Basic stuff that is obvious to anyone familiar with cloud computing.
+
+### [Amazon Web Services Cloud](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/amazon-web-services-cloud-platform.html)
+
+Section has a brief summary for every(?) service AWS offers.
 
 ## Compute
 
