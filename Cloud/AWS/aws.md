@@ -6,6 +6,7 @@
 * [AWS Free Tier Signup](https://aws.amazon.com/free/)
 * [AWS Tools](https://aws.amazon.com/tools/)
 * [AWS Getting Started](https://aws.amazon.com/getting-started/)
+* [AWS Glossary](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html)
 
 ## [Overview of Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html?pg=gs&sec=syj&refid=ce1f55b8-6da8-4aa2-af36-3f11e9a449ae)
 
